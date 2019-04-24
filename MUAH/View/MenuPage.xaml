@@ -31,7 +31,10 @@
             </Button.Background>
         </Button>
         <Image HorizontalAlignment="Left" Height="87" Margin="90,20,0,0" VerticalAlignment="Top" Width="300" Source="ms-appx:///Assets/coop.png"/>
-        <RelativePanel x:Name="pnlBackGround" HorizontalAlignment="Left" Height="820" Margin="425,107,0,0" VerticalAlignment="Top" Width="860" Background="#FFC12626">
+        <RelativePanel x:Name="pnlBackGround" HorizontalAlignment="Left" Height="820" Margin="425,107,0,0" VerticalAlignment="Top" Width="860">
+            <RelativePanel.Background>
+                <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/food frame.jpg"/>
+            </RelativePanel.Background>
             <RelativePanel x:Name="pnlSmørrebrød" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Margin="30,30,-695,-658" Background="#FFF7F7F7" d:IsHidden="True">
                 <TextBlock x:Name="txtHåndmadderUspecificeret" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Håndmadder uspecificeret" VerticalAlignment="Top" Height="32" Width="250" Margin="55,17,-163,-17"/>
                 <TextBlock x:Name="txtHåndmadderSpecificeret" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Håndmadder specificeret" VerticalAlignment="Top" Height="32" Width="250" Margin="55,49,-163,-49"/>

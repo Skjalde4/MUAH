@@ -107,8 +107,6 @@ namespace MUAH.View
         
         #endregion
 
-        
-
         #region Smørrebrød franskbrød product id
 
         private const int smørrebrødHåndmadderUspecificeretF = 50;
@@ -158,6 +156,10 @@ namespace MUAH.View
         private const int sandwichSerano = 84;
         
         #endregion
+
+        private const double Brunch7SlagsEnhedspris = 139.95;
+        private const double Brunch10SlagsEnhedspris = 159.95;
+        private const double Brunch14SlagsEnhedspris = 199.95;
 
         #region Checkbox metoder i buffet
 
@@ -295,6 +297,96 @@ namespace MUAH.View
             return antal.ToString();
         }
 
+        private void enabledDisabled(CheckBox chkFood, Button btnAdd, Button btnSub, TextBlock txtBlock)
+        {
+            if (chkFood.IsChecked == true)
+            {
+                btnAdd.IsEnabled = true;
+                btnSub.IsEnabled = true;
+            }
+            else
+            {
+                btnAdd.IsEnabled = false;
+                btnSub.IsEnabled = false;
+                txtBlock.Text = "0";
+            }
+        }
+
+        private void enabelDisabelBrunch(bool isEnabeled)
+        {
+            List<CheckBox> brunchCheckboxes = new List<CheckBox>()
+            { chkBrunchRøræg, chkBrunchPølser, chkBrunchLeverpostej, chkBrunchPandekage, chkBrunchOmelet, chkBrunchPorretærte, chkBrunchLaks,
+                chkBrunchGræskYoghurt, chkBrunchCroissant, chkBrunchFrikadeller, chkBrunchHonningmelon, chkBrunchBrie, chkBrunchMellemlageret,
+                chkBrunchLageret};
+            
+            foreach (var items in brunchCheckboxes)
+            {
+                items.IsEnabled = isEnabeled;
+            }
+
+            btnPlusBrunch.IsEnabled = isEnabeled;
+            btnMinusBrunch.IsEnabled = isEnabeled;
+
+        }
+
+        private bool validateBrunchCheckbox(CheckBox chkBrunchSlags)
+        {
+            bool result = false;
+
+            do
+            {
+                if (chkBrunchSlags.IsChecked == true && chkBrunch10Slags.IsChecked == false && chkBrunch14Slags.IsChecked == false)
+                {
+                    chkBrunch10Slags.IsEnabled = false;
+                    chkBrunch14Slags.IsEnabled = false;
+                    result = true; 
+                    break;}
+
+                if (chkBrunchSlags.IsChecked == false && chkBrunch10Slags.IsChecked == false && chkBrunch14Slags.IsChecked == false)
+                {
+                    chkBrunch10Slags.IsEnabled = true;
+                    chkBrunch14Slags.IsEnabled = true;
+                    result = false;
+                    break;
+                }
+
+                if (chkBrunchSlags.IsChecked == true && chkBrunch7Slags.IsChecked == false && chkBrunch14Slags.IsChecked == false)
+                {
+                    chkBrunch7Slags.IsEnabled = false;
+                    chkBrunch14Slags.IsEnabled = false;
+                    result = true;
+                    break;
+                }
+
+                if (chkBrunchSlags.IsChecked == false && chkBrunch7Slags.IsChecked == false && chkBrunch14Slags.IsChecked == false)
+                {
+                    chkBrunch7Slags.IsEnabled = true;
+                    chkBrunch14Slags.IsEnabled = true;
+                    result = false;
+                    break;
+                }
+
+                if (chkBrunchSlags.IsChecked == true && chkBrunch7Slags.IsChecked == false && chkBrunch10Slags.IsChecked == false)
+                {
+                    chkBrunch7Slags.IsEnabled = false;
+                    chkBrunch10Slags.IsEnabled = false;
+                    result = true;
+                    break;
+                }
+
+                if (chkBrunchSlags.IsChecked == false && chkBrunch7Slags.IsChecked == false && chkBrunch10Slags.IsChecked == false)
+                {
+                    chkBrunch7Slags.IsEnabled = true;
+                    chkBrunch10Slags.IsEnabled = true;
+                    result = false;
+                    break;
+                }
+                break;
+            } while (true);
+
+           return result;
+        }
+
         #region Grid loading
 
         private void Grid_Loading(FrameworkElement sender, object args)
@@ -308,8 +400,6 @@ namespace MUAH.View
             imgKoldtbord.Visibility = Visibility.Visible;
             imgSmørrebrød.Visibility = Visibility.Visible;
             imgTapas.Visibility = Visibility.Visible;
-
-            
         }
 
         #endregion
@@ -1301,22 +1391,6 @@ namespace MUAH.View
             OrderToList(false, forretLaksemousse, txtForretLaksemousse.Text, Convert.ToDouble(txtForretLaksemoussePris.Text), Convert.ToInt32(txtAntalLaksemousse.Text));
         }
 
-        private void enabledDisabled(CheckBox chkFood, Button btnAdd, Button btnSub, TextBlock txtBlock)
-        {
-            if (chkFood.IsChecked == true)
-            {
-                btnAdd.IsEnabled = true;
-
-                btnSub.IsEnabled = true;
-            }
-            else
-            {
-                btnAdd.IsEnabled = false;
-                btnSub.IsEnabled = false;
-                txtBlock.Text = "0";
-            }
-        }
-
         private void ChkVarmrøgetLaks_Click(object sender, RoutedEventArgs e)
         {
             enabledDisabled(chkVarmrøgetLaks, btnPlusVarmrøgetLaks, btnMinusVarmrøgetLaks, txtAntalVarmrøgetLaks);
@@ -1886,8 +1960,39 @@ namespace MUAH.View
         }
 
 
+
+
         #endregion
 
-       
+        //Disse gør det samme, det er bare to forskellige måder. 
+        private void ChkBrunch7Slags_Click(object sender, RoutedEventArgs e)
+        {
+            bool checkStatus = validateBrunchCheckbox(chkBrunch7Slags);
+            enabelDisabelBrunch(checkStatus);
+        }
+
+        private void ChkBrunch10Slags_Click(object sender, RoutedEventArgs e)
+        {
+            enabelDisabelBrunch(validateBrunchCheckbox(chkBrunch10Slags));
+        }
+
+        private void ChkBrunch14Slags_Click(object sender, RoutedEventArgs e)
+        {
+            List<CheckBox> brunchCheckboxes = new List<CheckBox>()
+            { chkBrunchRøræg, chkBrunchPølser, chkBrunchLeverpostej, chkBrunchPandekage, chkBrunchOmelet, chkBrunchPorretærte, chkBrunchLaks,
+                chkBrunchGræskYoghurt, chkBrunchCroissant, chkBrunchFrikadeller, chkBrunchHonningmelon, chkBrunchBrie, chkBrunchMellemlageret,
+                chkBrunchLageret};
+
+            enabelDisabelBrunch(false);
+            foreach (var items in brunchCheckboxes)
+            {
+                items.IsChecked = chkBrunch14Slags.IsChecked;
+            }
+        }
+
+        private void BtnPlusBrunch_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

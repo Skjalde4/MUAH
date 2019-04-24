@@ -146,6 +146,8 @@
   <ItemGroup>
     <Content Include="Assets\basket.png" />
     <Content Include="Assets\brunch 1.jpg" />
+    <Content Include="Assets\brunch2.jpg" />
+    <Content Include="Assets\brunch3.jpg" />
     <Content Include="Assets\buffet.jpg" />
     <Content Include="Assets\coop.png" />
     <Content Include="Assets\food frame.jpg" />

@@ -1269,8 +1269,6 @@ namespace MUAH.View
         private void BtnPlusÆblekage_Click(object sender, RoutedEventArgs e)
         {
             txtAntalÆblekage.Text = addAntal(txtAntalÆblekage.Text);
-
-
         }
 
         private void BtnMinusÆblekage_Click(object sender, RoutedEventArgs e)

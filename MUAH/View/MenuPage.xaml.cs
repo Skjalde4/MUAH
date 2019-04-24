@@ -80,6 +80,61 @@ namespace MUAH.View
 
         #endregion
 
+        #region Smørrebrød rugbrød product id
+
+        private const int smørrebrødHåndmadderUspecificeretR = 28;
+        private const int smørrebrødHåndmadderSpecificeretR = 29;
+        private const int smørrebrødHøjtbelagtUspecificeretR = 30;
+        private const int smørrebrødÆgTomatR = 31;
+        private const int smørrebrødÆgRejerR = 32;
+        private const int smørrebrødRullepølseR = 33;
+        private const int smørrebrødFrikadelleR = 34;
+        private const int smørrebrødFlæskestegR = 35;
+        private const int smørrebrødLeverpostejR = 36;
+        private const int smørrebrødDyrlægensR = 37;
+        private const int smørrebrødRoastbeefR = 38;
+        private const int smørrebrødFiskefiletR = 39;
+        private const int smørrebrødStjernekasterR = 40;
+        private const int smørrebrødStjerneskudR = 41;
+        private const int smørrebrødSkinkeR = 42;
+        private const int smørrebrødOksebrystR = 43;
+        private const int smørrebrødKalkunR = 44;
+        private const int smørrebrødTatarR = 45;
+        private const int smørrebrødMørbradbøfR = 46;
+        private const int smørrebrødBrieR = 47;
+        private const int smørrebrødMellemlageretR = 48;
+        private const int smørrebrødLageretR = 49;
+        
+
+        #endregion
+
+        #region Smørrebrød franskbrød product id
+
+        private const int smørrebrødHåndmadderUspecificeretF = 28;
+        private const int smørrebrødHåndmadderSpecificeretF = 29;
+        private const int smørrebrødHøjtbelagtUspecificeretF = 30;
+        private const int smørrebrødÆgTomatF = 31;
+        private const int smørrebrødÆgRejerF = 32;
+        private const int smørrebrødRullepølseF = 33;
+        private const int smørrebrødFrikadelleF = 34;
+        private const int smørrebrødFlæskestegF = 35;
+        private const int smørrebrødLeverpostejF = 36;
+        private const int smørrebrødDyrlægensF = 37;
+        private const int smørrebrødRoastbeefF = 38;
+        private const int smørrebrødFiskefiletF = 39;
+        private const int smørrebrødStjernekasterF = 40;
+        private const int smørrebrødStjerneskudF = 41;
+        private const int smørrebrødSkinkeF = 42;
+        private const int smørrebrødOksebrystF = 43;
+        private const int smørrebrødKalkunF = 44;
+        private const int smørrebrødTatarF = 45;
+        private const int smørrebrødMørbradbøfF = 46;
+        private const int smørrebrødBrieF = 47;
+        private const int smørrebrødMellemlageretF = 48;
+        private const int smørrebrødLageretF = 49;
+
+        #endregion
+
         #region Checkbox metoder i buffet
 
         private void CheckMeet()
@@ -337,16 +392,17 @@ namespace MUAH.View
 
         #endregion     
 
-        #region Plus/Minus smørrebrød rugbrød
+        #region SmørrebrødToListRugbrød
 
         private void BtnPlusHåndmadderUspecificeretRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtHåndmadderUspecificeretRugbrød.Text = addAntal(txtHåndmadderUspecificeretRugbrød.Text);
+            txtAntalHåndmadderUspecificeretRugbrød.Text = addAntal(txtAntalHåndmadderUspecificeretRugbrød.Text);
+            OrderToList(true, smørrebrødHåndmadderUspecificeretR, txtHåndmadderUspecificeret.Text, Convert.ToDouble(txtHåndmadderUspecificeretPris.Text), Convert.ToInt32(txtAntalHåndmadderUspecificeretRugbrød.Text));
         }
 
         private void BtnMinusHåndmadderUspecificeretRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtHåndmadderUspecificeretRugbrød.Text = subAntal(txtHåndmadderUspecificeretRugbrød.Text);
+            txtAntalHåndmadderUspecificeretRugbrød.Text = subAntal(txtAntalHåndmadderUspecificeretRugbrød.Text);
         }
 
         private void BtnPlusHåndmadderSpecificeretRugbrød_Click(object sender, RoutedEventArgs e)
@@ -565,12 +621,12 @@ namespace MUAH.View
 
         private void BtnPlusHåndmadderUspecificeretFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtHåndmadderUspecificeretFranskbrød.Text = addAntal(txtHåndmadderUspecificeretFranskbrød.Text);
+            txtAntalHåndmadderUspecificeretFranskbrød.Text = addAntal(txtAntalHåndmadderUspecificeretFranskbrød.Text);
         }
 
         private void BtnMinusHåndmadderUspecificeretFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtHåndmadderUspecificeretFranskbrød.Text = subAntal(txtHåndmadderUspecificeretFranskbrød.Text);
+            txtAntalHåndmadderUspecificeretFranskbrød.Text = subAntal(txtAntalHåndmadderUspecificeretFranskbrød.Text);
         }
 
         private void BtnPlusHåndmadderSpecificeretFranskbrød_Click(object sender, RoutedEventArgs e)
@@ -781,6 +837,15 @@ namespace MUAH.View
         private void BtnMinusLageretFranskbrød_Click(object sender, RoutedEventArgs e)
         {
             txtLageretFranskbrød.Text = subAntal(txtLageretFranskbrød.Text);
+        }
+        #endregion
+
+        #region checkbox smørrebrød
+
+        private void ChkHåndmadderUspecificeret_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkHåndmadderUspecificeret, btnPlusHåndmadderUspecificeretRugbrød, btnMinusHåndmadderUspecificeretRugbrød, txtAntalHåndmadderUspecificeretRugbrød);
+            enabledDisabled(chkHåndmadderUspecificeret, btnPlusHåndmadderUspecificeretFranskbrød, btnMinusHåndmadderUspecificeretFranskbrød, txtAntalHåndmadderUspecificeretFranskbrød);
         }
         #endregion
 
@@ -1473,5 +1538,7 @@ namespace MUAH.View
 
 
         #endregion
+
+        
     }
 }

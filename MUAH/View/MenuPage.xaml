@@ -17,11 +17,11 @@
         <Button x:Name="btnHovedret" Content="Hovedret" HorizontalAlignment="Left" Height="70" Margin="90,255,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnHovedret_Click"/>
         <Button x:Name="btnDessert" Content="Dessert" HorizontalAlignment="Left" Height="70" Margin="90,330,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnDessert_Click"/>
         <Button x:Name="btnSalater" Content="Salater" HorizontalAlignment="Left" Height="70" Margin="90,405,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnSalater_Click"/>
-        <Button x:Name="btnBrunch" Content="Brunch" HorizontalAlignment="Left" Height="70" Margin="90,480,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnBrunch_Click"/>
+        <Button x:Name="btnBrunch" Content="Brunch" HorizontalAlignment="Left" Height="70" Margin="90,780,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnBrunch_Click"/>
         <Button x:Name="btnTapas" Content="Tapas" HorizontalAlignment="Left" Height="70" Margin="90,555,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnTapas_Click"/>
         <Button x:Name="btnSandwich" Content="Sandwich" HorizontalAlignment="Left" Height="70" Margin="90,630,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnSandwich_Click"/>
         <Button x:Name="btnKoldtbord" Content="Koldtbord" HorizontalAlignment="Left" Height="70" Margin="90,705,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnKoldtbord_Click"/>
-        <Button x:Name="btnSmørrebrød" Content="Smørrebrød" HorizontalAlignment="Left" Height="70" Margin="90,780,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnSmørrebrød_Click"/>
+        <Button x:Name="btnSmørrebrød" Content="Smørrebrød" HorizontalAlignment="Left" Height="70" Margin="90,480,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnSmørrebrød_Click"/>
         <Button x:Name="btnSpecials" Content="Specials" HorizontalAlignment="Left" Height="70" Margin="90,855,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnSpecials_Click"/>
         <Button x:Name="btnForret" Content="Forret" HorizontalAlignment="Left" Height="70" Margin="90,180,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnForret_Click"/>
         <Button x:Name="btnBuffet" Content="Buffet" HorizontalAlignment="Left" Height="70" Margin="90,107,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnBuffet_Click_1"/>
@@ -35,7 +35,7 @@
             <RelativePanel.Background>
                 <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/food frame.jpg"/>
             </RelativePanel.Background>
-            <RelativePanel x:Name="pnlSmørrebrød" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Margin="30,30,-695,-658" Background="#FFF7F7F7" d:IsHidden="True">
+            <RelativePanel x:Name="pnlSmørrebrød" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Margin="30,30,-695,-658" Background="#FFF7F7F7">
                 <TextBlock x:Name="txtHåndmadderUspecificeret" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Håndmadder uspecificeret" VerticalAlignment="Top" Height="32" Width="250" Margin="55,17,-163,-17"/>
                 <TextBlock x:Name="txtHåndmadderSpecificeret" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Håndmadder specificeret" VerticalAlignment="Top" Height="32" Width="250" Margin="55,49,-163,-49"/>
                 <TextBlock x:Name="txtHøjtbelagt" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Højtbelagt uspecificeret" VerticalAlignment="Top" Height="32" Width="250" Margin="55,81,-163,-81"/>
@@ -74,19 +74,19 @@
 
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,305,-338,-312" Height="27" Width="65" Text="Kr. 28,00"/>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,337,-338,-344" Height="27" Width="65" Text="Kr. 28,00"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,81,-338,-88" Height="27" Width="65" Text="Kr. 25,00"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,113,-338,-120" Height="27" Width="65" Text="Kr. 18,00"/>
+                <TextBlock x:Name="txtHøjtbelagtUspecificeretPris" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,81,-338,-88" Height="27" Width="65" Text="Kr. 25,00"/>
+                <TextBlock x:Name="txtÆgTomatPris" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,113,-338,-120" Height="27" Width="65" Text="Kr. 18,00"/>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,145,-338,-152" Height="27" Width="65" Text="Kr. 25,00"/>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,177,-338,-184" Height="27" Width="65" Text="Kr. 25,00"/>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,209,-338,-216" Height="27" Width="65" Text="Kr. 25,00"/>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,241,-338,-248" Height="27" Width="65" Text="Kr. 25,00"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,17,-338,-24" Height="27" Width="65" Text="Kr. 12,00"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,49,-338,-56" Height="27" Width="65" Text="Kr. 15,00"/>
+                <TextBlock x:Name="txtHåndmadderUspecificeretPris" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,17,-338,-24" Height="27" Width="65" Text="Kr. 12,00"/>
+                <TextBlock x:Name="txtHåndmadderSpecificeretPris" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,49,-338,-56" Height="27" Width="65" Text="Kr. 15,00"/>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Franskbrød" VerticalAlignment="Top" Margin="651,0,-651,0"/>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Rugbrød" VerticalAlignment="Top" Margin="525,0,-525,0"/>
-                <TextBlock x:Name="txtHåndmadderUspecificeretRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,17,-518,-17"/>
-                <TextBlock x:Name="txtHåndmadderUspecificeretFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,17,-650,-17"/>
-                <Button x:Name="btnPlusHåndmadderUspecificeretRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,20,-525,-20" Click="BtnPlusHåndmadderUspecificeretRugbrød_Click">
+                <TextBlock x:Name="txtAntalHåndmadderUspecificeretRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,17,-518,-17"/>
+                <TextBlock x:Name="txtAntalHåndmadderUspecificeretFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,17,-650,-17"/>
+                <Button x:Name="btnPlusHåndmadderUspecificeretRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,20,-525,-20" Click="BtnPlusHåndmadderUspecificeretRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -94,7 +94,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusHåndmadderUspecificeretRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,20,-568,-20" Click="BtnMinusHåndmadderUspecificeretRugbrød_Click">
+                <Button x:Name="btnMinusHåndmadderUspecificeretRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,20,-568,-20" Click="BtnMinusHåndmadderUspecificeretRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
@@ -107,12 +107,12 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnPlusHåndmadderUspecificeretFranskbrød" Content="" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="15" Margin="657,22,-657,-22" Click="BtnPlusHåndmadderUspecificeretFranskbrød_Click" Height="15">
+                <Button x:Name="btnPlusHåndmadderUspecificeretFranskbrød" Content="" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="15" Margin="657,22,-657,-22" Click="BtnPlusHåndmadderUspecificeretFranskbrød_Click" Height="15" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="btnMinusHåndmadderUspecificeretFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,22,-700,-22" Click="BtnMinusHåndmadderUspecificeretFranskbrød_Click">
+                <Button x:Name="btnMinusHåndmadderUspecificeretFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,22,-700,-22" Click="BtnMinusHåndmadderUspecificeretFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
@@ -724,6 +724,28 @@
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
+                <CheckBox x:Name="chkHåndmadderUspecificeret" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,12,0,0" Click="ChkHåndmadderUspecificeret_Click"/>
+                <CheckBox x:Name="chkHåndmadderSpecificeret" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,44,0,-32"/>
+                <CheckBox x:Name="chkHøjtbelagtUspecificeret" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,76,0,-64"/>
+                <CheckBox x:Name="chkÆgTomat" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,108,0,-96"/>
+                <CheckBox x:Name="chkÆgTomat_Copy" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,140,0,-128"/>
+                <CheckBox x:Name="chkÆgTomat_Copy1" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,172,0,-160"/>
+                <CheckBox x:Name="chkÆgTomat_Copy2" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,204,0,-192"/>
+                <CheckBox x:Name="chkÆgTomat_Copy3" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,236,0,-224"/>
+                <CheckBox x:Name="chkÆgTomat_Copy4" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,268,0,-256"/>
+                <CheckBox x:Name="chkÆgTomat_Copy5" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,300,0,-288"/>
+                <CheckBox x:Name="chkÆgTomat_Copy6" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,332,0,-320"/>
+                <CheckBox x:Name="chkÆgTomat_Copy7" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,364,0,-352"/>
+                <CheckBox x:Name="chkÆgTomat_Copy8" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,396,0,-384"/>
+                <CheckBox x:Name="chkÆgTomat_Copy9" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,428,0,-416"/>
+                <CheckBox x:Name="chkÆgTomat_Copy10" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,460,0,-448"/>
+                <CheckBox x:Name="chkÆgTomat_Copy11" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,492,0,-480"/>
+                <CheckBox x:Name="chkÆgTomat_Copy12" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,524,0,-512"/>
+                <CheckBox x:Name="chkÆgTomat_Copy13" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,556,0,-544"/>
+                <CheckBox x:Name="chkÆgTomat_Copy14" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,588,0,-576"/>
+                <CheckBox x:Name="chkÆgTomat_Copy15" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,620,0,-608"/>
+                <CheckBox x:Name="chkÆgTomat_Copy16" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,652,0,-640"/>
+                <CheckBox x:Name="chkÆgTomat_Copy17" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,684,0,-672"/>
             </RelativePanel>
             <RelativePanel x:Name="pnlBuffet" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Margin="30,30,-30,-30" Background="#FFF7F7F7" d:IsHidden="True">
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="SAMMENSÆT DIN EGEN BUFFET" VerticalAlignment="Top" Height="48" Width="385" Margin="230,10,-380,0" FontWeight="Bold" FontSize="24"/>
@@ -1454,7 +1476,7 @@
                 <Button x:Name="btnTilføjTilKurvKoldtbord" Content="Tilføj til kurv" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Margin="580,716,-685,-716"/>
             </RelativePanel>
             <RelativePanel x:Name="pnlSpecials" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30" d:IsHidden="True"/>
-            <RelativePanel x:Name="pnlSalater" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30">
+            <RelativePanel x:Name="pnlSalater" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30" d:IsHidden="True">
                 <TextBlock x:Name="txtBroccolisalatInfo" HorizontalAlignment="Left" Height="113" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="56,127,-218,-220" FontSize="16" FontWeight="Bold">
                     <Run Text="Broccolisalat m. rødvinsdressing og bacon"/>
                     <LineBreak/>

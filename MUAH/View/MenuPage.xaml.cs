@@ -1270,58 +1270,72 @@ namespace MUAH.View
         private void BtnPlusÆblekage_Click(object sender, RoutedEventArgs e)
         {
             txtAntalÆblekage.Text = addAntal(txtAntalÆblekage.Text);
-
+            OrderToList(true, dessertÆblekage, txtDessertÆblekage.Text, Convert.ToDouble(txtDessertÆblekagePris.Text),Convert.ToInt32(txtAntalÆblekage.Text));
 
         }
 
         private void BtnMinusÆblekage_Click(object sender, RoutedEventArgs e)
         {
-            
+            txtAntalÆblekage.Text = subAntal(txtAntalÆblekage.Text);
+            OrderToList(false, dessertÆblekage, txtDessertÆblekage.Text, Convert.ToDouble(txtDessertÆblekagePris.Text),Convert.ToInt32(txtAntalÆblekage.Text));
         }
 
         private void BtnPlusChokolademousse_Click(object sender, RoutedEventArgs e)
         {
+            txtAntalChokolademousse.Text = addAntal(txtAntalChokolademousse.Text);
+            OrderToList(true, dessertChokolademousse, txtDessertChokolademousse.Text, Convert.ToDouble(txtDessertChokolademoussePris.Text),Convert.ToInt32(txtAntalChokolademousse.Text));
 
         }
 
         private void BtnMinusChokolademousse_Click(object sender, RoutedEventArgs e)
         {
-            
+            txtAntalChokolademousse.Text = subAntal(txtAntalChokolademousse.Text);
+            OrderToList(false, dessertChokolademousse, txtDessertChokolademousse.Text, Convert.ToDouble(txtDessertChokolademoussePris.Text),Convert.ToInt32(txtAntalChokolademousse.Text));
+
         }
 
         private void BtnPlusPassionsmousse_Click(object sender, RoutedEventArgs e)
         {
+            txtAntalPassionsmousse.Text = addAntal(txtAntalPassionsmousse.Text);
+            OrderToList(true, dessertPassionsmousse, txtDessertPassionsmousse.Text, Convert.ToDouble(txtDessertPassionsmoussePris.Text),Convert.ToInt32(txtAntalPassionsmousse.Text));
 
         }
 
         private void BtnMinusPassionsmousse_Click(object sender, RoutedEventArgs e)
         {
+            txtAntalPassionsmousse.Text = subAntal(txtAntalPassionsmousse.Text);
+            OrderToList(false, dessertPassionsmousse, txtDessertPassionsmousse.Text, Convert.ToDouble(txtDessertPassionsmoussePris.Text),Convert.ToInt32(txtAntalPassionsmousse.Text));
 
         }
 
         private void BtnPlusSkovbærtærte_Click(object sender, RoutedEventArgs e)
         {
-
+            txtAntalSkovbærtærte.Text = addAntal(txtAntalSkovbærtærte.Text);
+            OrderToList(true, dessertSkovbærtærte, txtDessertSkovbærtærte.Text, Convert.ToDouble(txtDessertSkovbærtærtePris.Text),Convert.ToInt32(txtAntalSkovbærtærte.Text));
         }
 
         private void BtnMinusSkovbærtærte_Click(object sender, RoutedEventArgs e)
         {
-
+            txtAntalSkovbærtærte.Text = subAntal(txtAntalSkovbærtærte.Text);
+            OrderToList(false, dessertSkovbærtærte, txtDessertSkovbærtærte.Text, Convert.ToDouble(txtDessertSkovbærtærtePris.Text),Convert.ToInt32(txtAntalSkovbærtærte.Text));
         }
 
         private void BtnPlusFriskFrugt_Click(object sender, RoutedEventArgs e)
         {
-
+            txtAntalFriskFrugt.Text = addAntal(txtAntalFriskFrugt.Text);
+            OrderToList(true, dessertFriskFrugt, txtDessertFriskFrugt.Text, Convert.ToDouble(txtDessertFriskFrugtPris.Text),Convert.ToInt32(txtAntalFriskFrugt.Text));
         }
 
         private void BtnMinusFriskFrugt_Click(object sender, RoutedEventArgs e)
         {
-
+            txtAntalFriskFrugt.Text = subAntal(txtAntalFriskFrugt.Text);
+            OrderToList(false, dessertFriskFrugt, txtDessertFriskFrugt.Text, Convert.ToDouble(txtDessertFriskFrugtPris.Text),Convert.ToInt32(txtAntalFriskFrugt.Text));
         }
 
         private void BtnPlusHindbærmousse_Click(object sender, RoutedEventArgs e)
         {
-
+            txtAntalFriskFrugt.Text = addAntal(txtAntalFriskFrugt.Text);
+            OrderToList(true, dessertFriskFrugt, txtDessertFriskFrugt.Text, Convert.ToDouble(txtDessertFriskFrugtPris.Text),Convert.ToInt32(txtAntalFriskFrugt.Text));
         }
 
         private void BtnMinusHindbærmousse_Click(object sender, RoutedEventArgs e)

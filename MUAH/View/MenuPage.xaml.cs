@@ -71,6 +71,15 @@ namespace MUAH.View
 
         #endregion
 
+        #region Salat product id
+
+        private const int salatBroccolisalat = 24;
+        private const int salatGrønsalat = 25;
+        private const int salatTomatsalat = 26;
+        private const int salatPastasalat = 27;
+
+        #endregion
+
         #region Checkbox metoder i buffet
 
         private void CheckMeet()
@@ -221,13 +230,7 @@ namespace MUAH.View
             imgSmørrebrød.Visibility = Visibility.Visible;
             imgTapas.Visibility = Visibility.Visible;
 
-            txtKoldtbord.Visibility = Visibility.Collapsed;
-            txtBuffet.Visibility = Visibility.Collapsed;
-            txtSandwich.Visibility = Visibility.Collapsed;
-            txtSmørrebrød.Visibility = Visibility.Collapsed;
-            txtTapas.Visibility = Visibility.Collapsed;
-            txtBrunch.Visibility = Visibility.Collapsed;
-
+            
         }
 
         #endregion
@@ -269,12 +272,6 @@ namespace MUAH.View
                 imgSmørrebrød.Visibility = Visibility.Collapsed;
                 imgTapas.Visibility = Visibility.Collapsed;
 
-                txtKoldtbord.Visibility = Visibility.Collapsed;
-                txtBrunch.Visibility = Visibility.Collapsed;
-                txtBuffet.Visibility = Visibility.Collapsed;
-                txtSandwich.Visibility = Visibility.Collapsed;
-                txtSmørrebrød.Visibility = Visibility.Collapsed;
-                txtTapas.Visibility = Visibility.Collapsed;
             }
 
             foreach (var items in myPanels)
@@ -286,7 +283,6 @@ namespace MUAH.View
         private void BtnSmørrebrød_Click(object sender, RoutedEventArgs e)
         {
             HidePanels(pnlSmørrebrød);
-            txtSmørrebrød.Visibility = Visibility.Visible;
         }
 
         private void BtnDessert_Click(object sender, RoutedEventArgs e)
@@ -307,13 +303,11 @@ namespace MUAH.View
         private void BtnBrunch_Click(object sender, RoutedEventArgs e)
         {
             HidePanels(pnlBrunch);
-            txtBrunch.Visibility = Visibility.Visible;
         }
 
         private void BtnTapas_Click(object sender, RoutedEventArgs e)
         {
             HidePanels(pnlTapas);
-            txtTapas.Visibility = Visibility.Visible;
         }
 
         private void BtnSalater_Click(object sender, RoutedEventArgs e)
@@ -324,13 +318,11 @@ namespace MUAH.View
         private void BtnSandwich_Click(object sender, RoutedEventArgs e)
         {
             HidePanels(pnlSandwich);
-            txtSandwich.Visibility = Visibility.Visible;
         }
 
         private void BtnKoldtbord_Click(object sender, RoutedEventArgs e)
         {
             HidePanels(pnlKoldtbord);
-            txtKoldtbord.Visibility = Visibility.Visible;
         }
 
         private void BtnSpecials_Click(object sender, RoutedEventArgs e)
@@ -341,7 +333,6 @@ namespace MUAH.View
         private void BtnBuffet_Click_1(object sender, RoutedEventArgs e)
         {
             HidePanels(pnlBuffet);
-            txtBuffet.Visibility = Visibility.Visible;
         }
 
         #endregion     
@@ -1265,7 +1256,8 @@ namespace MUAH.View
 
         #endregion
 
-        
+        #region DessertToList
+
         private void BtnPlusÆblekage_Click(object sender, RoutedEventArgs e)
         {
             txtAntalÆblekage.Text = addAntal(txtAntalÆblekage.Text);
@@ -1405,6 +1397,68 @@ namespace MUAH.View
         private void ChkDessertBlåbærCheesecake_Click(object sender, RoutedEventArgs e)
         {
             enabledDisabled(chkDessertBlåbærCheesecake, btnPlusBlåbærCheesecake, btnMinusBlåbærCheesecake, txtAntalBlåbærCheesecake);
+        }
+
+        #endregion
+
+        private void BtnPlusBroccolisalat_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void BtnMinusBroccolisalat_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnPlusGrønsalat_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnMinusGrønsalat_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnPlusTomatsalat_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnMinusTomatsalat_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnPlusPastasalat_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnMinusPastasalat_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ChkBroccolisalat_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ChkGrønssalat_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ChkTomatsalat_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ChkPastasalat_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

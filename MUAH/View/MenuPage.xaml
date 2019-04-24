@@ -1454,8 +1454,8 @@
                 <Button x:Name="btnTilføjTilKurvKoldtbord" Content="Tilføj til kurv" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Margin="580,716,-685,-716"/>
             </RelativePanel>
             <RelativePanel x:Name="pnlSpecials" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30" d:IsHidden="True"/>
-            <RelativePanel x:Name="pnlSalater" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30" d:IsHidden="True">
-                <TextBlock x:Name="txtBroccolisalatInfo" HorizontalAlignment="Left" Height="113" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="55,135,-218,-228" FontSize="16" FontWeight="Bold">
+            <RelativePanel x:Name="pnlSalater" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30">
+                <TextBlock x:Name="txtBroccolisalatInfo" HorizontalAlignment="Left" Height="113" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="56,127,-218,-220" FontSize="16" FontWeight="Bold">
                     <Run Text="Broccolisalat m. rødvinsdressing og bacon"/>
                     <LineBreak/>
                     <Run/>
@@ -1467,14 +1467,14 @@
                 <TextBlock x:Name="txtBroccolisalatPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="230,207,-268,-245" FontWeight="Bold">
                     <Run FontSize="24" Text="35.00"/>
                 </TextBlock>
-                <CheckBox x:Name="chkBroccolisalat" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,96,-31,-89"/>
-                <TextBlock x:Name="txtBroccolisalatNavn" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="56,96,-229,-106" FontSize="24" FontWeight="Bold">
+                <CheckBox x:Name="chkBroccolisalat" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,93,-31,-89" Click="ChkBroccolisalat_Click"/>
+                <TextBlock x:Name="txtBroccolisalatNavn" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="56,93,-229,-106" FontSize="24" FontWeight="Bold">
                     <Run Text="Broccolisalat"/>
                     <LineBreak/>
                     <Run/>
                 </TextBlock>
                 <TextBlock x:Name="txtTomatsalatNavn" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="Klassisk tomatsalat" VerticalAlignment="Top" Width="235" Margin="477,93,-650,-103" FontSize="24" FontWeight="Bold"/>
-                <TextBlock x:Name="txtTomatsalatInfo" HorizontalAlignment="Left" Height="142" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" Margin="461,127,-647,-264" FontSize="16" FontWeight="Bold">
+                <TextBlock x:Name="txtTomatsalatInfo" HorizontalAlignment="Left" Height="142" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" Margin="477,127,-647,-264" FontSize="16" FontWeight="Bold">
                     <Run Text="Klassisk tomatsalat m. frisk spinat, mozarella og hjemmelavet grøn pesto"/>
                     <LineBreak/>
                     <Run/>
@@ -1483,11 +1483,11 @@
                     <LineBreak/>
                     <Run FontWeight="Normal" Text="(Mimimum 4 kuverter)"/>
                 </TextBlock>
-                <TextBlock x:Name="txtTomatsalatPris" HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="659,233,-697,-269" FontWeight="Bold">
+                <TextBlock x:Name="txtTomatsalatPris" HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="659,214,-697,-250" FontWeight="Bold">
                     <Run FontSize="24" Text="30.00"/>
                 </TextBlock>
-                <CheckBox x:Name="chkTomatsalat" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="438,93,-438,-86"/>
-                <TextBlock x:Name="txtGrønsalatInfo" HorizontalAlignment="Left" Height="113" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="54,357,-217,-450" FontSize="16" FontWeight="Bold">
+                <CheckBox x:Name="chkTomatsalat" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="451,93,-438,-86" Click="ChkTomatsalat_Click"/>
+                <TextBlock x:Name="txtGrønsalatInfo" HorizontalAlignment="Left" Height="113" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="56,357,-217,-450" FontSize="16" FontWeight="Bold">
                     <Run Text="Grøn blandet salat m. feta, oliven og valgfri dressing"/>
                     <LineBreak/>
                     <Run/>
@@ -1499,10 +1499,10 @@
                 <TextBlock x:Name="txtGrønsalatPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="229,429,-267,-467" FontWeight="Bold">
                     <Run FontSize="24" Text="35.00"/>
                 </TextBlock>
-                <CheckBox x:Name="chkGrønssalat" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="30,318,-30,-311"/>
-                <TextBlock x:Name="txtGrønsalatNavn" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="55,318,-228,-328" FontSize="24" FontWeight="Bold" Text="Grøn salat"/>
+                <CheckBox x:Name="chkGrønssalat" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,318,-30,-311" Click="ChkGrønssalat_Click"/>
+                <TextBlock x:Name="txtGrønsalatNavn" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="56,318,-228,-328" FontSize="24" FontWeight="Bold" Text="Grøn salat"/>
                 <Button x:Name="btnTilføjTilKurvSalat" Content="Tilføj til kurv" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Margin="580,716,-685,-716"/>
-                <TextBlock x:Name="txtPastasalatInfo" HorizontalAlignment="Left" Height="113" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="460,370,-623,-463" FontSize="16" FontWeight="Bold">
+                <TextBlock x:Name="txtPastasalatInfo" HorizontalAlignment="Left" Height="113" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="477,357,-623,-450" FontSize="16" FontWeight="Bold">
                     <Run Text="Frisk pasta m. grønt og dressing"/>
                     <LineBreak/>
                     <Run/>
@@ -1511,13 +1511,81 @@
                     <LineBreak/>
                     <Run FontWeight="Normal" Text="(Mimimum 4 kuverter)"/>
                 </TextBlock>
-                <TextBlock x:Name="txtPastasalatPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="635,442,-673,-480" FontWeight="Bold">
+                <TextBlock x:Name="txtPastasalatPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="659,429,-697,-467" FontWeight="Bold">
                     <Run FontSize="24" Text="30.00"/>
                 </TextBlock>
-                <CheckBox x:Name="chkPastasalat" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="436,331,-436,-324"/>
-                <TextBlock x:Name="txtPastasalatNavn" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="461,331,-634,-341" FontSize="24" FontWeight="Bold" Text="Pastasalat"/>
+                <CheckBox x:Name="chkPastasalat" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="451,318,-436,-311" Click="ChkPastasalat_Click"/>
+                <TextBlock x:Name="txtPastasalatNavn" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="477,318,-634,-328" FontSize="24" FontWeight="Bold" Text="Pastasalat"/>
+                <TextBlock x:Name="txtAntalBroccolisalat" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="266,247,-236,-247"/>
+                <Button x:Name="btnPlusBroccolisalat" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="243,250,-243,-250" Click="BtnPlusBroccolisalat_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
+                    </Button.Background>
+                    <Button.FocusVisualPrimaryBrush>
+                        <ImageBrush Stretch="Fill"/>
+                    </Button.FocusVisualPrimaryBrush>
+                </Button>
+                <Button x:Name="btnMinusBroccolisalat" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="286,250,-286,-250" Click="BtnMinusBroccolisalat_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
+                    </Button.Background>
+                    <Button.FocusVisualPrimaryBrush>
+                        <ImageBrush Stretch="Fill"/>
+                    </Button.FocusVisualPrimaryBrush>
+                </Button>
+                <TextBlock x:Name="txtAntalGrønsalat" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="280,465,-250,-465"/>
+                <Button x:Name="btnPlusGrønsalat" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="257,468,-257,-468" Click="BtnPlusGrønsalat_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
+                    </Button.Background>
+                    <Button.FocusVisualPrimaryBrush>
+                        <ImageBrush Stretch="Fill"/>
+                    </Button.FocusVisualPrimaryBrush>
+                </Button>
+                <Button x:Name="btnMinusGrønsalat" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="300,468,-300,-468" Click="BtnMinusGrønsalat_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
+                    </Button.Background>
+                    <Button.FocusVisualPrimaryBrush>
+                        <ImageBrush Stretch="Fill"/>
+                    </Button.FocusVisualPrimaryBrush>
+                </Button>
+                <TextBlock x:Name="txtAntalTomatsalat" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="677,258,-647,-258"/>
+                <Button x:Name="btnPlusTomatsalat" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="654,261,-654,-261" Click="BtnPlusTomatsalat_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
+                    </Button.Background>
+                    <Button.FocusVisualPrimaryBrush>
+                        <ImageBrush Stretch="Fill"/>
+                    </Button.FocusVisualPrimaryBrush>
+                </Button>
+                <Button x:Name="btnMinusTomatsalat" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="697,261,-697,-261" Click="BtnMinusTomatsalat_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
+                    </Button.Background>
+                    <Button.FocusVisualPrimaryBrush>
+                        <ImageBrush Stretch="Fill"/>
+                    </Button.FocusVisualPrimaryBrush>
+                </Button>
+                <TextBlock x:Name="txtAntalPastasalat" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="677,472,-647,-472"/>
+                <Button x:Name="btnPlusPastasalat" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="654,475,-654,-475" Click="BtnPlusPastasalat_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
+                    </Button.Background>
+                    <Button.FocusVisualPrimaryBrush>
+                        <ImageBrush Stretch="Fill"/>
+                    </Button.FocusVisualPrimaryBrush>
+                </Button>
+                <Button x:Name="btnMinusPastasalat" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="697,475,-697,-475" Click="BtnMinusPastasalat_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
+                    </Button.Background>
+                    <Button.FocusVisualPrimaryBrush>
+                        <ImageBrush Stretch="Fill"/>
+                    </Button.FocusVisualPrimaryBrush>
+                </Button>
             </RelativePanel>
-            <RelativePanel x:Name="pnlDessert" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Margin="30,30,-30,-30" Background="#FFF7F7F7">
+            <RelativePanel x:Name="pnlDessert" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Margin="30,30,-30,-30" Background="#FFF7F7F7" d:IsHidden="True">
                 <TextBlock x:Name="txtDessertÆblekage" HorizontalAlignment="Left" Height="83" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="56,63,-203,-125" FontSize="16" FontWeight="Bold">
                     <Run Text="Gammeldags æblekage m. rasp, ribsgele og flødeskum"/>
                     <LineBreak/>
@@ -1754,25 +1822,14 @@
         <Image x:Name="imgBuffet" HorizontalAlignment="Left" Height="205" Margin="957,412,0,0" VerticalAlignment="Top" Width="315" Source="ms-appx:///Assets/buffet.jpg" d:IsHidden="True"/>
         <Image x:Name="imgTapas" HorizontalAlignment="Left" Height="205" Margin="497,637,0,0" VerticalAlignment="Top" Width="315" Source="ms-appx:///Assets/tapas.jpg" d:IsHidden="True"/>
         <Image x:Name="imgKoldtbord" HorizontalAlignment="Left" Height="205" Margin="957,637,0,0" VerticalAlignment="Top" Width="315" Source="ms-appx:///Assets/koldtbord.jpg" d:IsHidden="True"/>
-        <TextBlock x:Name="txtKoldtbord" HorizontalAlignment="Left" Height="49" Margin="464,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="782" FontSize="11" FontWeight="Bold" d:IsHidden="True">
-            <Run Text="Skal du holde jule, påske eller bare en helt almindelig frokost? Så er vores kolde bord lige noget for dig. Det kolde bord passer til næsten alle anledninger, så hvorfor ikke lade din gæster selv vælge, hvad de vil have på deres tallerken."/>
-        </TextBlock>
-        <TextBlock x:Name="txtBuffet" HorizontalAlignment="Left" Height="60" Margin="464,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="782" FontSize="11" FontWeight="Bold" d:IsHidden="True"><Run Text="Skal der være fest, så lad der være fest"/><Run Text=". Sa"/><Run Text="mmensætte din egen menu med dine favoritter, "/><Run Text="så er du sikker på, at det bliver en god fest! God mad = glade gæster."/></TextBlock>
-        <TextBlock x:Name="txtSandwich" HorizontalAlignment="Left" Height="80" Margin="464,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="782" FontSize="11" FontWeight="Bold" d:IsHidden="True">
-            <Run Text="Har du glemt frokosten eller havde du lidt for travlt i morges - frygt ej. I super Brugsen tilbyder vi nemlig frisk smurte sandwich lige som du vil have den."/>
-            <Run Text=" "/>
-            <Run Text="Du kan både vælge mellem 4 slags brød og mere end 10 forskellige sandwich.  "/>
-        </TextBlock>
-        <TextBlock x:Name="txtSmørrebrød" HorizontalAlignment="Center" Height="70" Margin="464,67,254,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="782" FontSize="11" FontWeight="Bold" d:IsHidden="True">
-            <Run Text="Nogle gange er der ikke noget mere lækkert end et klassisk stykke smørrebrød. Hos os finder du alle de velkendte favoritter og dermed noget til en hver smag. Vi har alt fra en leverpostejsmad med bacon, æg med rejer til stjerneskud med paneret og dampet fisk."/>
-        </TextBlock>
-        <TextBlock x:Name="txtTapas" HorizontalAlignment="Center" Height="58" Margin="464,67,254,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="782" FontSize="11" FontWeight="Bold" d:IsHidden="True"><Run Text="Spanske tapas-anretnnninger er hver is"/><Run Text="ær"/><Run Text=" små himmerigsmundefulde i sig selv. De fungerer perfekt som appetitvækkere, mellemmåltider eller som snacks, som du kan hygge dig med enten alene eller i selskab med gode venner eller familie. "/></TextBlock>
-        <TextBlock x:Name="txtBrunch" HorizontalAlignment="Left" Height="77" Margin="464,70,0,0" Text="Skal familien overraskes med lækker morgenmad, eller vil du invitere gæster til brunch? Så er vores sammensæt-selv-brucnh en oplagt mulighed. Det er en hyggelig og uformel løsning, som altid falder i god jord hos det fleste. I vores sammensæt-selv brucnh er der noget for en hver smag." TextWrapping="Wrap" VerticalAlignment="Top" Width="782" FontSize="11" FontWeight="Bold" d:IsHidden="True"/>
         <Button x:Name="btnRetur" Content="" HorizontalAlignment="Left" Margin="1345,870,0,0" VerticalAlignment="Top" Height="57" Width="55" Click="BtnRetur_Click">
             <Button.Background>
                 <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/retur.png"/>
             </Button.Background>
         </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="445,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="315" Foreground="#FFC71515" FocusVisualPrimaryBrush="#FFBD0B1C" FontSize="36">
+            <Run FontWeight="Bold" Text="- Mad ud af huset"/>
+        </TextBlock>
 
     </Grid>
 </Page>

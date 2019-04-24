@@ -427,216 +427,218 @@ namespace MUAH.View
         private void BtnMinusHåndmadderUspecificeretRugbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalHåndmadderUspecificeretRugbrød.Text = subAntal(txtAntalHåndmadderUspecificeretRugbrød.Text);
+            OrderToList(false, smørrebrødHåndmadderUspecificeretR, txtHåndmadderUspecificeret.Text, Convert.ToDouble(txtHåndmadderUspecificeretPris.Text), Convert.ToInt32(txtAntalHåndmadderUspecificeretRugbrød.Text));
         }
+
 
         private void BtnPlusHåndmadderSpecificeretRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtHåndmadderSpecificeretRugbrød.Text = addAntal(txtHåndmadderSpecificeretRugbrød.Text);
+             txtAntalHåndmadderSpecificeretRugbrød.Text = addAntal(txtAntalHåndmadderSpecificeretRugbrød.Text);
         }
 
         private void BtnMinusHåndmadderSpecificeretRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtHåndmadderSpecificeretRugbrød.Text = subAntal(txtHåndmadderSpecificeretRugbrød.Text);
+              txtAntalHåndmadderSpecificeretRugbrød.Text = subAntal(txtAntalHåndmadderSpecificeretRugbrød.Text);
         }
 
         private void BtnPlusHøjtbelagtRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtHøjbelagtRugbrød.Text = addAntal(txtHøjbelagtRugbrød.Text);
+            txtAntalHøjbelagtRugbrød.Text = addAntal(txtAntalHøjbelagtRugbrød.Text);
         }
 
         private void BtnMinusHøjtbelagtRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtHøjbelagtRugbrød.Text = subAntal(txtHøjbelagtRugbrød.Text);
+              txtAntalHøjbelagtRugbrød.Text = subAntal(txtAntalHøjbelagtRugbrød.Text);
         }
 
         private void BtnPlusÆgTomatRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtÆgTomatRugbrød.Text = addAntal(txtÆgTomatRugbrød.Text);
+              txtAntalÆgTomatRugbrød.Text = addAntal(txtAntalÆgTomatRugbrød.Text);
         }
 
         private void BtnMinusÆgTomatRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtÆgTomatRugbrød.Text = subAntal(txtÆgTomatRugbrød.Text);
+             txtAntalÆgTomatRugbrød.Text = subAntal(txtAntalÆgTomatRugbrød.Text);
         }
 
         private void BtnPlusÆgRejerRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtÆgRejerRugbrød.Text = addAntal(txtÆgRejerRugbrød.Text);
+             txtAntalÆgRejerRugbrød.Text = addAntal(txtAntalÆgRejerRugbrød.Text);
         }
 
         private void BtnMinusÆgRejerRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtÆgRejerRugbrød.Text = subAntal(txtÆgRejerRugbrød.Text);
+            txtAntalÆgRejerRugbrød.Text = subAntal(txtAntalÆgRejerRugbrød.Text);
         }
 
         private void BtnPlusRullepølseRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtRullepølseRugbrød.Text = addAntal(txtRullepølseRugbrød.Text);
+            txtAntalRullepølseRugbrød.Text = addAntal(txtAntalRullepølseRugbrød.Text);
         }
 
         private void BtnMinusRullepølseRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtRullepølseRugbrød.Text = subAntal(txtRullepølseRugbrød.Text);
+            txtAntalRullepølseRugbrød.Text = subAntal(txtAntalRullepølseRugbrød.Text);
         }
 
         private void BtnPlusFrikadelleRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtFrikadelleRugbrød.Text = addAntal(txtFrikadelleRugbrød.Text);
+            txtAntalFrikadelleRugbrød.Text = addAntal(txtAntalFrikadelleRugbrød.Text);
         }
 
         private void BtnMinusFrikadlleRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtFrikadelleRugbrød.Text = subAntal(txtFrikadelleRugbrød.Text);
+            txtAntalFrikadelleRugbrød.Text = subAntal(txtAntalFrikadelleRugbrød.Text);
         }
 
         private void BtnPlusFlæskestegRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtFlæskestegRgbrød.Text = addAntal(txtFlæskestegRgbrød.Text);
+            txtAntalFlæskestegRgbrød.Text = addAntal(txtAntalFlæskestegRgbrød.Text);
         }
 
         private void BtnMinusFlæskestegRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtFlæskestegRgbrød.Text = subAntal(txtFlæskestegRgbrød.Text);
+            txtAntalFlæskestegRgbrød.Text = subAntal(txtAntalFlæskestegRgbrød.Text);
         }
 
         private void BtnPlusLeverpostejRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtLeverposteRugbrød.Text = addAntal(txtLeverposteRugbrød.Text);
+            txtAntalLeverposteRugbrød.Text = addAntal(txtAntalLeverposteRugbrød.Text);
         }
 
         private void BtnMinusLeverpostejRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtLeverposteRugbrød.Text = subAntal(txtLeverposteRugbrød.Text);
+            txtAntalLeverposteRugbrød.Text = subAntal(txtAntalLeverposteRugbrød.Text);
         }
 
         private void BtnPlusDyrlægensRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtDyrlægensRugbrød.Text = addAntal(txtDyrlægensRugbrød.Text);
+            txtAntalDyrlægensRugbrød.Text = addAntal(txtAntalDyrlægensRugbrød.Text);
         }
 
         private void BtnMinusDyrlægensRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtDyrlægensRugbrød.Text = subAntal(txtDyrlægensRugbrød.Text);
+            txtAntalDyrlægensRugbrød.Text = subAntal(txtAntalDyrlægensRugbrød.Text);
         }
 
         private void BtnPlusRoastbeefRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtRoastbeefRugbrød.Text = addAntal(txtRoastbeefRugbrød.Text);
+            txtAntalRoastbeefRugbrød.Text = addAntal(txtAntalRoastbeefRugbrød.Text);
         }
 
         private void BtnMinusRoastbeefRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtRoastbeefRugbrød.Text = subAntal(txtRoastbeefRugbrød.Text);
+            txtAntalRoastbeefRugbrød.Text = subAntal(txtAntalRoastbeefRugbrød.Text);
         }
 
         private void BtnPlusFiskefiletRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtFiskefiletRugbrød.Text = addAntal(txtFiskefiletRugbrød.Text);
+            txtAntalFiskefiletRugbrød.Text = addAntal(txtAntalFiskefiletRugbrød.Text);
         }
 
         private void BtnMinusFiskefiletRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtFiskefiletRugbrød.Text = subAntal(txtFiskefiletRugbrød.Text);
+            txtAntalFiskefiletRugbrød.Text = subAntal(txtAntalFiskefiletRugbrød.Text);
         }
 
         private void BtnPlusStjernekasterRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtStjernekasterRugbrød.Text = addAntal(txtStjernekasterRugbrød.Text);
+            txtAntalStjernekasterRugbrød.Text = addAntal(txtAntalStjernekasterRugbrød.Text);
         }
 
         private void BtnMinusStjernekasterRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtStjernekasterRugbrød.Text = subAntal(txtStjernekasterRugbrød.Text);
+            txtAntalStjernekasterRugbrød.Text = subAntal(txtAntalStjernekasterRugbrød.Text);
         }
 
         private void BtnPlusStjerneskudRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtStjerneskudRugbrød.Text = addAntal(txtStjerneskudRugbrød.Text);
+            txtAntalStjerneskudRugbrød.Text = addAntal(txtAntalStjerneskudRugbrød.Text);
         }
 
         private void BtnMinusStjerneskudRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtStjerneskudRugbrød.Text = subAntal(txtStjerneskudRugbrød.Text);
+            txtAntalStjerneskudRugbrød.Text = subAntal(txtAntalStjerneskudRugbrød.Text);
         }
 
         private void BtnPlusSkinkeRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtSkinkeRugbrød.Text = addAntal(txtSkinkeRugbrød.Text);
+            txtAntalSkinkeRugbrød.Text = addAntal(txtAntalSkinkeRugbrød.Text);
         }
 
         private void BtnMinusSkinkeRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtSkinkeRugbrød.Text = subAntal(txtSkinkeRugbrød.Text);
+            txtAntalSkinkeRugbrød.Text = subAntal(txtAntalSkinkeRugbrød.Text);
         }
 
         private void BtnPlusOksebrystRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtOksebrystRugbrød.Text = addAntal(txtOksebrystRugbrød.Text);
+            txtAntalOksebrystRugbrød.Text = addAntal(txtAntalOksebrystRugbrød.Text);
         }
 
         private void BtnMinusOksebrystRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtOksebrystRugbrød.Text = subAntal(txtOksebrystRugbrød.Text);
+            txtAntalOksebrystRugbrød.Text = subAntal(txtAntalOksebrystRugbrød.Text);
         }
 
         private void BtnPlusKalkunRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtKalkunRugbrød.Text = addAntal(txtKalkunRugbrød.Text);
+            txtAntalKalkunRugbrød.Text = addAntal(txtAntalKalkunRugbrød.Text);
         }
 
         private void BtnMinusKalkunRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtKalkunRugbrød.Text = subAntal(txtKalkunRugbrød.Text);
+             txtAntalKalkunRugbrød.Text = subAntal(txtAntalKalkunRugbrød.Text);
         }
 
         private void BtnPlusTatarRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtTatarRugbrød.Text = addAntal(txtTatarRugbrød.Text);
+            txtAntalTatarRugbrød.Text = addAntal(txtAntalTatarRugbrød.Text);
         }
 
         private void BtnMinusTatarRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtTatarRugbrød.Text = subAntal(txtTatarRugbrød.Text);
+            txtAntalTatarRugbrød.Text = subAntal(txtAntalTatarRugbrød.Text);
         }
 
         private void BtnPlusMørbradRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtMørbradRugbrød.Text = addAntal(txtMørbradRugbrød.Text);
+            txtAntalMørbradRugbrød.Text = addAntal(txtAntalMørbradRugbrød.Text);
         }
 
         private void BtnMinusMørbradRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtMørbradRugbrød.Text = subAntal(txtMørbradRugbrød.Text);
+            txtAntalMørbradRugbrød.Text = subAntal(txtAntalMørbradRugbrød.Text);
         }
 
         private void BtnPlusBrieRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtBrieRugbrød.Text = addAntal(txtBrieRugbrød.Text);
+            txtAntalBrieRugbrød.Text = addAntal(txtAntalBrieRugbrød.Text);
         }
 
         private void BtnMinusBrieRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtBrieRugbrød.Text = subAntal(txtBrieRugbrød.Text);
+            txtAntalBrieRugbrød.Text = subAntal(txtAntalBrieRugbrød.Text);
         }
 
         private void BtnPlusMellemlageretRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtMellemlageretRugbrød.Text = addAntal(txtMellemlageretRugbrød.Text);
+            txtAntalMellemlageretRugbrød.Text = addAntal(txtAntalMellemlageretRugbrød.Text);
         }
 
         private void BtnMinusMellemlageretRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtMellemlageretRugbrød.Text = subAntal(txtMellemlageretRugbrød.Text);
+            txtAntalMellemlageretRugbrød.Text = subAntal(txtAntalMellemlageretRugbrød.Text);
         }
 
         private void BtnPlusLageretRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtLageretRugbrød.Text = addAntal(txtLageretRugbrød.Text);
+            txtAntalLageretRugbrød.Text = addAntal(txtAntalLageretRugbrød.Text);
         }
 
         private void BtnMinusLageretRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtLageretRugbrød.Text = subAntal(txtLageretRugbrød.Text);
+            txtAntalLageretRugbrød.Text = subAntal(txtAntalLageretRugbrød.Text);
         }
 
         #endregion
@@ -655,212 +657,212 @@ namespace MUAH.View
 
         private void BtnPlusHåndmadderSpecificeretFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtHåndmadderSpecificeretFranskbrød.Text = addAntal(txtHåndmadderSpecificeretFranskbrød.Text);
+            txtAntalHåndmadderSpecificeretFranskbrød.Text = addAntal(txtAntalHåndmadderSpecificeretFranskbrød.Text);
         }
 
         private void BtnMinusHåndmadderSpecificeretFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtHåndmadderSpecificeretFranskbrød.Text = subAntal(txtHåndmadderSpecificeretFranskbrød.Text);
+            txtAntalHåndmadderSpecificeretFranskbrød.Text = subAntal(txtAntalHåndmadderSpecificeretFranskbrød.Text);
         }
 
         private void BtnPlusHøjtbelagtFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtHøjtbelagtFranskbrød.Text = addAntal(txtHøjtbelagtFranskbrød.Text);
+            txtAntalHøjtbelagtFranskbrød.Text = addAntal(txtAntalHøjtbelagtFranskbrød.Text);
         }
 
         private void BtnMinusHøjtbelagtFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtHøjtbelagtFranskbrød.Text = subAntal(txtHøjtbelagtFranskbrød.Text);
+            txtAntalHøjtbelagtFranskbrød.Text = subAntal(txtAntalHøjtbelagtFranskbrød.Text);
         }
 
         private void BtnPlusÆgTomatFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtÆgTomatFranskbrød.Text = addAntal(txtÆgTomatFranskbrød.Text);
+            txtAntalÆgTomatFranskbrød.Text = addAntal(txtAntalÆgTomatFranskbrød.Text);
         }
 
         private void BtnMinusÆgTomatFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtÆgTomatFranskbrød.Text = subAntal(txtÆgTomatFranskbrød.Text);
+            txtAntalÆgTomatFranskbrød.Text = subAntal(txtAntalÆgTomatFranskbrød.Text);
         }
 
         private void BtnPlusÆgRejerFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtÆgRejerFranskbrød.Text = addAntal(txtÆgRejerFranskbrød.Text);
+            txtAntalÆgRejerFranskbrød.Text = addAntal(txtAntalÆgRejerFranskbrød.Text);
         }
 
         private void BtnMinusÆgRejerFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtÆgRejerFranskbrød.Text = subAntal(txtÆgRejerFranskbrød.Text);
+            txtAntalÆgRejerFranskbrød.Text = subAntal(txtAntalÆgRejerFranskbrød.Text);
         }
 
         private void BtnPlusRullepølseFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtRullepølseFranskbrød.Text = addAntal(txtRullepølseFranskbrød.Text);
+            txtAntalRullepølseFranskbrød.Text = addAntal(txtAntalRullepølseFranskbrød.Text);
         }
 
         private void BtnMinusRullepølseFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtRullepølseFranskbrød.Text = subAntal(txtRullepølseFranskbrød.Text);
+            txtAntalRullepølseFranskbrød.Text = subAntal(txtAntalRullepølseFranskbrød.Text);
         }
 
         private void BtnPlusFrikadelleFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtFrikadelleFranskbrød.Text = addAntal(txtFrikadelleFranskbrød.Text);
+            txtAntalFrikadelleFranskbrød.Text = addAntal(txtAntalFrikadelleFranskbrød.Text);
         }
 
         private void BtnMinusFrikadelleFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtFrikadelleFranskbrød.Text = subAntal(txtFrikadelleFranskbrød.Text);
+            txtAntalFrikadelleFranskbrød.Text = subAntal(txtAntalFrikadelleFranskbrød.Text);
         }
 
         private void BtnPlusFlæskestegFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtFlæskestegFranskbrød.Text = addAntal(txtFlæskestegFranskbrød.Text);
+            txtAntalFlæskestegFranskbrød.Text = addAntal(txtAntalFlæskestegFranskbrød.Text);
         }
 
         private void BtnMinusFlæskestegFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtFlæskestegFranskbrød.Text = subAntal(txtFlæskestegFranskbrød.Text);
+            txtAntalFlæskestegFranskbrød.Text = subAntal(txtAntalFlæskestegFranskbrød.Text);
         }
 
         private void BtnPlusLeverpostejFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtLeverpostejFranskbrød.Text = addAntal(txtLeverpostejFranskbrød.Text);
+            txtAntalLeverpostejFranskbrød.Text = addAntal(txtAntalLeverpostejFranskbrød.Text);
         }
 
         private void BtnMinusLeverpostejFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtLeverpostejFranskbrød.Text = subAntal(txtLeverpostejFranskbrød.Text);
+            txtAntalLeverpostejFranskbrød.Text = subAntal(txtAntalLeverpostejFranskbrød.Text);
         }
 
         private void BtnPlusDyrlægensFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtDyrlægensFranskbrød.Text = addAntal(txtDyrlægensFranskbrød.Text);
+            txtAntalDyrlægensFranskbrød.Text = addAntal(txtAntalDyrlægensFranskbrød.Text);
         }
 
         private void BtnMinusDyrlægensFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtDyrlægensFranskbrød.Text = subAntal(txtDyrlægensFranskbrød.Text);
+            txtAntalDyrlægensFranskbrød.Text = subAntal(txtAntalDyrlægensFranskbrød.Text);
         }
 
         private void BtnPlusRoastbeefFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtRoastbeefFranskbrød.Text = addAntal(txtRoastbeefFranskbrød.Text);
+            txtAntalRoastbeefFranskbrød.Text = addAntal(txtAntalRoastbeefFranskbrød.Text);
         }
 
         private void BtnMinusRoastbeefFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtRoastbeefFranskbrød.Text = subAntal(txtRoastbeefFranskbrød.Text);
+            txtAntalRoastbeefFranskbrød.Text = subAntal(txtAntalRoastbeefFranskbrød.Text);
         }
 
         private void BtnPlusFiskefiletFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtFiskefiletFranskbrød.Text = addAntal(txtFiskefiletFranskbrød.Text);
+            txtAntalFiskefiletFranskbrød.Text = addAntal(txtAntalFiskefiletFranskbrød.Text);
         }
 
         private void BtnMinusFiskefiletFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtFiskefiletFranskbrød.Text = subAntal(txtFiskefiletFranskbrød.Text);
+            txtAntalFiskefiletFranskbrød.Text = subAntal(txtAntalFiskefiletFranskbrød.Text);
         }
 
         private void BtnPlusStjernekasterFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtStjernekasterFranskbrød.Text = addAntal(txtStjernekasterFranskbrød.Text);
+            txtAntalStjernekasterFranskbrød.Text = addAntal(txtAntalStjernekasterFranskbrød.Text);
         }
 
         private void BtnMinusStjernekasterFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtStjernekasterFranskbrød.Text = subAntal(txtStjernekasterFranskbrød.Text);
+            txtAntalStjernekasterFranskbrød.Text = subAntal(txtAntalStjernekasterFranskbrød.Text);
         }
 
         private void BtnPlusStjerneskudFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-           txtStjerneSkudFranskbrød.Text = addAntal(txtStjerneSkudFranskbrød.Text);
+            txtAntalStjerneSkudFranskbrød.Text = addAntal(txtAntalStjerneSkudFranskbrød.Text);
         }
 
         private void BtnMinusStjerneskudFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtStjerneSkudFranskbrød.Text = subAntal(txtStjerneSkudFranskbrød.Text);
+            txtAntalStjerneSkudFranskbrød.Text = subAntal(txtAntalStjerneSkudFranskbrød.Text);
         }
 
         private void BtnPlusSkinkeFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtSkinkeFranskbrød.Text = addAntal(txtSkinkeFranskbrød.Text);
+            txtAntalSkinkeFranskbrød.Text = addAntal(txtAntalSkinkeFranskbrød.Text);
         }
 
         private void BtnMinusSkinkeFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtSkinkeFranskbrød.Text = subAntal(txtSkinkeFranskbrød.Text);
+            txtAntalSkinkeFranskbrød.Text = subAntal(txtAntalSkinkeFranskbrød.Text);
         }
 
         private void BtnPlusOksebrystFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtOksebrystFranskbrød.Text = addAntal(txtOksebrystFranskbrød.Text);
+            txtAntalOksebrystFranskbrød.Text = addAntal(txtAntalOksebrystFranskbrød.Text);
         }
 
         private void BtnMinusOksebrystFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtSkinkeFranskbrød.Text = subAntal(txtSkinkeFranskbrød.Text);
+            txtAntalSkinkeFranskbrød.Text = subAntal(txtAntalSkinkeFranskbrød.Text);
         }
 
         private void BtnPlusKalkunFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtKalkunFranskbrød.Text = addAntal(txtKalkunFranskbrød.Text);
+            txtAntalKalkunFranskbrød.Text = addAntal(txtAntalKalkunFranskbrød.Text);
         }
 
         private void BtnMinusKalkunFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtKalkunFranskbrød.Text = subAntal(txtKalkunFranskbrød.Text);
+            txtAntalKalkunFranskbrød.Text = subAntal(txtAntalKalkunFranskbrød.Text);
         }
 
         private void BtnPlusTatarFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtTatarFranskbrød.Text = addAntal(txtTatarFranskbrød.Text);
+            txtAntalTatarFranskbrød.Text = addAntal(txtAntalTatarFranskbrød.Text);
         }
 
         private void BtnMinusTatarFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtTatarFranskbrød.Text = subAntal(txtTatarFranskbrød.Text);
+            txtAntalTatarFranskbrød.Text = subAntal(txtAntalTatarFranskbrød.Text);
         }
 
         private void BtnPlusMørbradFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtMørbradFranskbrød.Text = addAntal(txtMørbradFranskbrød.Text);
+            txtAntalMørbradFranskbrød.Text = addAntal(txtAntalMørbradFranskbrød.Text);
         }
 
         private void BtnMinusMørbradFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtMørbradFranskbrød.Text = subAntal(txtMørbradFranskbrød.Text);
+            txtAntalMørbradFranskbrød.Text = subAntal(txtAntalMørbradFranskbrød.Text);
         }
 
         private void BtnPlusBrieFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtMinusBrieFranskbrød.Text = addAntal(txtMinusBrieFranskbrød.Text);
+            txtAntalMinusBrieFranskbrød.Text = addAntal(txtAntalMinusBrieFranskbrød.Text);
         }
 
         private void BtnMinusBrieFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtMinusBrieFranskbrød.Text = subAntal(txtMinusBrieFranskbrød.Text);
+            txtAntalMinusBrieFranskbrød.Text = subAntal(txtAntalMinusBrieFranskbrød.Text);
         }
 
         private void BtnPlusMellemlageretFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtMellemlageretFranskbrød.Text = addAntal(txtMellemlageretFranskbrød.Text);
+            txtAntalMellemlageretFranskbrød.Text = addAntal(txtAntalMellemlageretFranskbrød.Text);
         }
 
         private void BtnMinusMellemlageretFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtMellemlageretFranskbrød.Text = subAntal(txtMellemlageretFranskbrød.Text);
+            txtAntalMellemlageretFranskbrød.Text = subAntal(txtAntalMellemlageretFranskbrød.Text);
         }
 
         private void BtnPlusLageretFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtLageretFranskbrød.Text = addAntal(txtLageretFranskbrød.Text);
+            txtAntalLageretFranskbrød.Text = addAntal(txtAntalLageretFranskbrød.Text);
         }
 
         private void BtnMinusLageretFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtLageretFranskbrød.Text = subAntal(txtLageretFranskbrød.Text);
+            txtAntalLageretFranskbrød.Text = subAntal(txtAntalLageretFranskbrød.Text);
         }
         #endregion
 
@@ -870,6 +872,131 @@ namespace MUAH.View
         {
             enabledDisabled(chkHåndmadderUspecificeret, btnPlusHåndmadderUspecificeretRugbrød, btnMinusHåndmadderUspecificeretRugbrød, txtAntalHåndmadderUspecificeretRugbrød);
             enabledDisabled(chkHåndmadderUspecificeret, btnPlusHåndmadderUspecificeretFranskbrød, btnMinusHåndmadderUspecificeretFranskbrød, txtAntalHåndmadderUspecificeretFranskbrød);
+        }
+        private void ChkHåndmadderSpecificeret_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkHåndmadderSpecificeret, btnPlusHåndmadderSpecificeretRugbrød, btnMinusHåndmadderSpecificeretRugbrød, txtAntalHåndmadderSpecificeretRugbrød);
+            enabledDisabled(chkHåndmadderSpecificeret, btnPlusHåndmadderSpecificeretFranskbrød, btnMinusHåndmadderSpecificeretFranskbrød, txtAntalHåndmadderSpecificeretFranskbrød);
+        }
+
+        private void ChkHøjtbelagtUspecificeret_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkHøjtbelagtUspecificeret, btnPlusHøjtbelagtRugbrød, btnMinusHøjtbelagtRugbrød, txtAntalHøjbelagtRugbrød);
+            enabledDisabled(chkHøjtbelagtUspecificeret, btnPlusHøjtbelagtFranskbrød, btnMinusHøjtbelagtFranskbrød, txtAntalHøjtbelagtFranskbrød);
+        }
+
+        private void ChkÆgTomat_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkÆgTomat, btnPlusÆgTomatRugbrød, btnMinusÆgTomatRugbrød, txtAntalÆgTomatRugbrød);
+            enabledDisabled(chkÆgTomat, btnPlusÆgTomatFranskbrød, btnMinusÆgTomatFranskbrød, txtAntalÆgTomatFranskbrød);
+        }
+
+        private void ChkÆgRejer_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkÆgRejer, btnPlusÆgRejerRugbrød, btnMinusÆgRejerRugbrød, txtAntalÆgRejerRugbrød);
+            enabledDisabled(chkÆgRejer, btnPlusÆgRejerFranskbrød, btnMinusÆgRejerFranskbrød, txtAntalÆgRejerFranskbrød);
+        }
+
+        private void ChkRullepølse_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkRullepølse, btnPlusRullepølseRugbrød, btnMinusRullepølseRugbrød, txtAntalRullepølseRugbrød);
+            enabledDisabled(chkRullepølse, btnPlusRullepølseFranskbrød, btnMinusRullepølseFranskbrød, txtAntalRullepølseFranskbrød);
+        }
+
+        private void ChkFrikadelle_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkFrikadelle, btnPlusFrikadelleRugbrød, btnMinusFrikadlleRugbrød, txtAntalFrikadelleRugbrød);
+            enabledDisabled(chkFrikadelle, btnPlusFrikadelleFranskbrød, btnMinusFrikadelleFranskbrød, txtAntalFrikadelleFranskbrød);
+        }
+
+        private void ChkFlæskesteg_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkFlæskesteg, btnPlusFlæskestegRugbrød, btnMinusFlæskestegRugbrød, txtAntalFlæskestegRgbrød);
+            enabledDisabled(chkFlæskesteg, btnPlusFlæskestegFranskbrød, btnMinusFlæskestegFranskbrød, txtAntalFlæskestegFranskbrød);
+        }
+
+        private void ChkLeverpostej_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkLeverpostej, btnPlusLeverpostejRugbrød, btnMinusLeverpostejRugbrød, txtAntalLeverposteRugbrød);
+            enabledDisabled(chkLeverpostej, btnPlusLeverpostejFranskbrød, btnMinusLeverpostejFranskbrød, txtAntalLeverpostejFranskbrød);
+        }
+
+        private void ChkDyrelægens_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkDyrelægens, btnPlusDyrlægensRugbrød, btnMinusDyrlægensRugbrød, txtAntalDyrlægensRugbrød);
+            enabledDisabled(chkDyrelægens, btnPlusDyrlægensFranskbrød, btnMinusDyrlægensFranskbrød, txtAntalDyrlægensFranskbrød);
+        }
+
+        private void ChkRoastbeef_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkRoastbeef, btnPlusRoastbeefRugbrød, btnMinusRoastbeefRugbrød, txtAntalRoastbeefRugbrød);
+            enabledDisabled(chkRoastbeef, btnPlusRoastbeefFranskbrød, btnMinusRoastbeefFranskbrød, txtAntalRoastbeefFranskbrød);
+        }
+
+        private void ChkFiskefilet_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkFiskefilet, btnPlusFiskefiletRugbrød, btnMinusFiskefiletRugbrød, txtAntalFiskefiletRugbrød);
+            enabledDisabled(chkFiskefilet, btnPlusFiskefiletFranskbrød, btnMinusFiskefiletFranskbrød, txtAntalFiskefiletFranskbrød);
+        }
+
+        private void ChkStjernekaster_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkStjernekaster, btnPlusStjernekasterRugbrød, btnMinusStjernekasterRugbrød, txtAntalStjernekasterRugbrød);
+            enabledDisabled(chkStjernekaster, btnPlusStjernekasterFranskbrød, btnMinusStjernekasterFranskbrød, txtAntalStjernekasterFranskbrød);
+        }
+
+        private void ChkStjerneskud_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkStjerneskud, btnPlusStjerneskudRugbrød, btnMinusStjerneskudRugbrød, txtAntalStjerneskudRugbrød);
+            enabledDisabled(chkStjerneskud, btnPlusStjerneskudFranskbrød, btnMinusStjerneskudFranskbrød, txtAntalStjerneSkudFranskbrød);
+        }
+
+        private void ChkSkinke_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkSkinke, btnPlusSkinkeRugbrød, btnMinusSkinkeRugbrød, txtAntalSkinkeRugbrød);
+            enabledDisabled(chkSkinke, btnPlusSkinkeFranskbrød, btnMinusSkinkeFranskbrød, txtAntalSkinkeFranskbrød);
+        }
+
+        private void ChkOksebryst_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkOksebryst, btnPlusOksebrystRugbrød, btnMinusOksebrystRugbrød, txtAntalOksebrystRugbrød);
+            enabledDisabled(chkOksebryst, btnPlusOksebrystFranskbrød, btnMinusOksebrystFranskbrød, txtAntalOksebrystFranskbrød);
+        }
+
+        private void ChkKalkun_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkKalkun, btnPlusKalkunRugbrød, btnMinusKalkunRugbrød, txtAntalKalkunRugbrød);
+            enabledDisabled(chkKalkun, btnPlusKalkunFranskbrød, btnMinusKalkunFranskbrød, txtAntalKalkunFranskbrød);
+        }
+
+        private void ChkTatar_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkTatar, btnPlusTatarRugbrød, btnMinusTatarRugbrød, txtAntalTatarRugbrød);
+            enabledDisabled(chkTatar, btnPlusTatarFranskbrød, btnMinusTatarFranskbrød, txtAntalTatarFranskbrød);
+        }
+
+        private void ChkMørbradbøf_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkMørbradbøf, btnPlusMørbradRugbrød, btnMinusMørbradRugbrød, txtAntalMørbradRugbrød);
+            enabledDisabled(chkMørbradbøf, btnPlusMørbradFranskbrød, btnMinusMørbradFranskbrød, txtAntalMørbradFranskbrød);
+        }
+
+        private void ChkBrie_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkBrie, btnPlusBrieRugbrød, btnMinusBrieRugbrød, txtAntalBrieRugbrød);
+            enabledDisabled(chkBrie, btnPlusBrieFranskbrød, btnMinusBrieFranskbrød, txtAntalMinusBrieFranskbrød);
+        }
+
+        private void ChkMellemlageret_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkMellemlageret, btnPlusMellemlageretRugbrød, btnMinusMellemlageretRugbrød, txtAntalMellemlageretRugbrød);
+            enabledDisabled(chkMellemlageret, btnPlusMellemlageretFranskbrød, btnMinusMellemlageretFranskbrød, txtAntalMellemlageretFranskbrød);
+        }
+
+        private void ChkLageret_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkLageret, btnPlusLageretRugbrød, btnMinusLageretRugbrød, txtAntalLageretRugbrød);
+            enabledDisabled(chkLageret, btnPlusLageretFranskbrød, btnMinusLageretFranskbrød, txtAntalLageretFranskbrød);
         }
         #endregion
 
@@ -1372,9 +1499,9 @@ namespace MUAH.View
         {
             txtAntalÆblekage.Text = addAntal(txtAntalÆblekage.Text);
             OrderToList(true, dessertÆblekage, txtDessertÆblekage.Text, Convert.ToDouble(txtDessertÆblekagePris.Text),Convert.ToInt32(txtAntalÆblekage.Text));
-
+            
         }
-
+        
         private void BtnMinusÆblekage_Click(object sender, RoutedEventArgs e)
         {
             txtAntalÆblekage.Text = subAntal(txtAntalÆblekage.Text);
@@ -1758,8 +1885,9 @@ namespace MUAH.View
             enabledDisabled(chkSeranoSandwich, btnPlusSeranoSandwich, btnMinusSeranoSandwich, txtAntalSeranoSandwich);
         }
 
+
         #endregion
 
-        
+       
     }
 }

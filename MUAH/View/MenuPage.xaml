@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Loading="Grid_Loading">
+    <Grid Loading="Grid_Loading" Margin="0">
         <Button x:Name="btnKurv" Content="" HorizontalAlignment="Left" Margin="1395,50,0,0" VerticalAlignment="Top" Height="57" Width="55">
             <Button.Background>
                 <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/basket.png"/>
@@ -35,7 +35,7 @@
             <RelativePanel.Background>
                 <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/food frame.jpg"/>
             </RelativePanel.Background>
-            <RelativePanel x:Name="pnlSmørrebrød" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Margin="30,30,-695,-658" Background="#FFF7F7F7" d:IsHidden="True">
+            <RelativePanel x:Name="pnlSmørrebrød" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Margin="30,30,-695,-658" Background="#FFF7F7F7">
                 <TextBlock x:Name="txtHåndmadderUspecificeret" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Håndmadder uspecificeret" VerticalAlignment="Top" Height="32" Width="250" Margin="55,17,-163,-17"/>
                 <TextBlock x:Name="txtHåndmadderSpecificeret" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Håndmadder specificeret" VerticalAlignment="Top" Height="32" Width="250" Margin="55,49,-163,-49"/>
                 <TextBlock x:Name="txtHøjtbelagt" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Højtbelagt uspecificeret" VerticalAlignment="Top" Height="32" Width="250" Margin="55,81,-163,-81"/>
@@ -58,30 +58,30 @@
                 <TextBlock x:Name="txtBrie" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="250" Margin="55,625,-163,-625" Text="Brie ost m. peberfrugt og druer"/>
                 <TextBlock x:Name="txtMellemlageret" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="250" Margin="55,657,-163,-657" Text="Mellemlageret ost m. peberfrugt"/>
                 <TextBlock x:Name="txtLageret" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="250" Margin="55,689,-163,-689" Text="Lageret ost m. sky og løg"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,369,-338,-376" Height="27" Width="65" Text="Kr. 25,00"/>
+                <TextBlock x:Name="txtFiskefiletPris" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,369,-338,-376" Height="27" Width="65" Text="25.00"/>
 
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,401,-338,-408" Height="27" Width="65" Text="Kr. 35,00"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Kr. 55,00" VerticalAlignment="Top" Margin="335,433,-338,-440" Height="27" Width="65"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Kr. 28,00" VerticalAlignment="Top" Margin="335,465,-338,-472" Height="27" Width="65"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Kr. 28,00" VerticalAlignment="Top" Margin="335,497,-338,-504" Height="27" Width="65"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Kr. 28,00" VerticalAlignment="Top" Margin="335,529,-338,-536" Height="27" Width="65"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Kr. 45,00" VerticalAlignment="Top" Margin="335,561,-338,-568" Height="27" Width="65"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Kr. 45,00" VerticalAlignment="Top" Margin="335,593,-338,-600" Height="27" Width="65"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Kr. 25,00" VerticalAlignment="Top" Margin="335,625,-338,-632" Height="27" Width="65"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Kr. 25,00" VerticalAlignment="Top" Margin="335,657,-338,-664" Height="27" Width="65"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Kr. 25,00" VerticalAlignment="Top" Margin="335,689,-338,-696" Height="27" Width="65"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,273,-338,-280" Height="27" Width="65" Text="Kr. 25,00"/>
+                <TextBlock x:Name="txtStjernekasterPris" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,401,-338,-408" Height="27" Width="65" Text="35.00"/>
+                <TextBlock x:Name="txtStjerneskudPris" HorizontalAlignment="Left" TextWrapping="Wrap" Text="55.00" VerticalAlignment="Top" Margin="335,433,-338,-440" Height="27" Width="65"/>
+                <TextBlock x:Name="txtSkinkePris" HorizontalAlignment="Left" TextWrapping="Wrap" Text="28.00" VerticalAlignment="Top" Margin="335,465,-338,-472" Height="27" Width="65"/>
+                <TextBlock x:Name="txtOksebrystPris" HorizontalAlignment="Left" TextWrapping="Wrap" Text="28.00" VerticalAlignment="Top" Margin="335,497,-338,-504" Height="27" Width="65"/>
+                <TextBlock x:Name="txtKalkunPris" HorizontalAlignment="Left" TextWrapping="Wrap" Text="28.00" VerticalAlignment="Top" Margin="335,529,-338,-536" Height="27" Width="65"/>
+                <TextBlock x:Name="txtTatarKapersPris" HorizontalAlignment="Left" TextWrapping="Wrap" Text="45.00" VerticalAlignment="Top" Margin="335,561,-338,-568" Height="27" Width="65"/>
+                <TextBlock x:Name="txtMørbradbøfPris" HorizontalAlignment="Left" TextWrapping="Wrap" Text="45.00" VerticalAlignment="Top" Margin="335,593,-338,-600" Height="27" Width="65"/>
+                <TextBlock x:Name="txtBriePris" HorizontalAlignment="Left" TextWrapping="Wrap" Text="25.00" VerticalAlignment="Top" Margin="335,625,-338,-632" Height="27" Width="65"/>
+                <TextBlock x:Name="txtMellemlageretPris" HorizontalAlignment="Left" TextWrapping="Wrap" Text="25.00" VerticalAlignment="Top" Margin="335,657,-338,-664" Height="27" Width="65"/>
+                <TextBlock x:Name="txtLageretPris" HorizontalAlignment="Left" TextWrapping="Wrap" Text="25.00" VerticalAlignment="Top" Margin="335,689,-338,-696" Height="27" Width="65"/>
+                <TextBlock x:Name="txtLeverpostejPris" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,273,-338,-280" Height="27" Width="65" Text="25.00"/>
 
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,305,-338,-312" Height="27" Width="65" Text="Kr. 28,00"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,337,-338,-344" Height="27" Width="65" Text="Kr. 28,00"/>
-                <TextBlock x:Name="txtHøjtbelagtUspecificeretPris" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,81,-338,-88" Height="27" Width="65" Text="Kr. 25,00"/>
-                <TextBlock x:Name="txtÆgTomatPris" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,113,-338,-120" Height="27" Width="65" Text="Kr. 18,00"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,145,-338,-152" Height="27" Width="65" Text="Kr. 25,00"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,177,-338,-184" Height="27" Width="65" Text="Kr. 25,00"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,209,-338,-216" Height="27" Width="65" Text="Kr. 25,00"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,241,-338,-248" Height="27" Width="65" Text="Kr. 25,00"/>
-                <TextBlock x:Name="txtHåndmadderUspecificeretPris" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,17,-338,-24" Height="27" Width="65" Text="Kr. 12,00"/>
-                <TextBlock x:Name="txtHåndmadderSpecificeretPris" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,49,-338,-56" Height="27" Width="65" Text="Kr. 15,00"/>
+                <TextBlock x:Name="txtDyrelægensPris" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,305,-338,-312" Height="27" Width="65" Text="28.00"/>
+                <TextBlock x:Name="txtRoastbeefPris" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,337,-338,-344" Height="27" Width="65" Text="28.00"/>
+                <TextBlock x:Name="txtHøjtbelagtUspecificeretPris" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,81,-338,-88" Height="27" Width="65" Text="25.00"/>
+                <TextBlock x:Name="txtÆgTomatPris" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,113,-338,-120" Height="27" Width="65" Text="18.00"/>
+                <TextBlock x:Name="txtÆgRejerPris" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,145,-338,-152" Height="27" Width="65" Text="25.00"/>
+                <TextBlock x:Name="txtRullePølsePris" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,177,-338,-184" Height="27" Width="65" Text="25.00"/>
+                <TextBlock x:Name="txtFrikadellePris" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,209,-338,-216" Height="27" Width="65" Text="25.00"/>
+                <TextBlock x:Name="txtFlæskestegPris" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,241,-338,-248" Height="27" Width="65" Text="25.00"/>
+                <TextBlock x:Name="txtHåndmadderUspecificeretPris" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,17,-338,-24" Height="27" Width="65" Text="12.00"/>
+                <TextBlock x:Name="txtHåndmadderSpecificeretPris" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="335,49,-338,-56" Height="27" Width="65" Text="15.00"/>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Franskbrød" VerticalAlignment="Top" Margin="651,0,-651,0"/>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Rugbrød" VerticalAlignment="Top" Margin="525,0,-525,0"/>
                 <TextBlock x:Name="txtAntalHåndmadderUspecificeretRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,17,-518,-17"/>
@@ -99,7 +99,7 @@
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="btnPlusHåndmadderSpecificeretRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,49,-525,-49" Click="BtnPlusHåndmadderSpecificeretRugbrød_Click">
+                <Button x:Name="btnPlusHåndmadderSpecificeretRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,49,-525,-49" Click="BtnPlusHåndmadderSpecificeretRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -117,8 +117,8 @@
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtHøjbelagtRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,78,-518,-78"/>
-                <Button x:Name="btnPlusHøjtbelagtRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,81,-525,-81" Click="BtnPlusHøjtbelagtRugbrød_Click">
+                <TextBlock x:Name="txtAntalHøjbelagtRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,78,-518,-78"/>
+                <Button x:Name="btnPlusHøjtbelagtRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,81,-525,-81" Click="BtnPlusHøjtbelagtRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -126,107 +126,90 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusHøjtbelagtRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,81,-568,-81" Click="BtnMinusHøjtbelagtRugbrød_Click">
+                <Button x:Name="btnMinusHøjtbelagtRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,81,-568,-81" Click="BtnMinusHøjtbelagtRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtÆgTomatRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,110,-518,-110"/>
-                <Button x:Name="btnPlusÆgTomatRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,113,-525,-113" Click="BtnPlusÆgTomatRugbrød_Click">
+                <TextBlock x:Name="txtAntalÆgTomatRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,110,-518,-110"/>
+                <Button x:Name="btnPlusÆgTomatRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,113,-525,-113" Click="BtnPlusÆgTomatRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="btnMinusÆgTomatRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,113,-568,-113" Click="BtnMinusÆgTomatRugbrød_Click">
+                <Button x:Name="btnMinusÆgTomatRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,113,-568,-113" Click="BtnMinusÆgTomatRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtÆgRejerRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,142,-518,-142"/>
-                <Button x:Name="btnPlusÆgRejerRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,145,-525,-145" Click="BtnPlusÆgRejerRugbrød_Click">
+                <TextBlock x:Name="txtAntalÆgRejerRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,142,-518,-142"/>
+                <Button x:Name="btnPlusÆgRejerRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,145,-525,-145" Click="BtnPlusÆgRejerRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="btnMinusÆgRejerRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,145,-568,-145" Click="BtnMinusÆgRejerRugbrød_Click">
+                <Button x:Name="btnMinusÆgRejerRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,145,-568,-145" Click="BtnMinusÆgRejerRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtRullepølseRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,174,-518,-174"/>
-                <Button x:Name="btnPlusRullepølseRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,177,-525,-177" Click="BtnPlusRullepølseRugbrød_Click">
+                <TextBlock x:Name="txtAntalRullepølseRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,174,-518,-174"/>
+                <Button x:Name="btnPlusRullepølseRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,177,-525,-177" Click="BtnPlusRullepølseRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="btnMinusRullepølseRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,177,-568,-177" Click="BtnMinusRullepølseRugbrød_Click">
+                <Button x:Name="btnMinusRullepølseRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,177,-568,-177" Click="BtnMinusRullepølseRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtFrikadelleRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,206,-518,-206"/>
-                <Button x:Name="btnPlusFrikadelleRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,209,-525,-209" Click="BtnPlusFrikadelleRugbrød_Click">
+                <TextBlock x:Name="txtAntalFrikadelleRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,206,-518,-206"/>
+                <Button x:Name="btnPlusFrikadelleRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,209,-525,-209" Click="BtnPlusFrikadelleRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="btnMinusFrikadlleRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,209,-568,-209" Click="BtnMinusFrikadlleRugbrød_Click">
+                <Button x:Name="btnMinusFrikadlleRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,209,-568,-209" Click="BtnMinusFrikadlleRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtFlæskestegRgbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,238,-518,-238"/>
-                <Button x:Name="btnPlusFlæskestegRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,241,-525,-241" Click="BtnPlusFlæskestegRugbrød_Click">
+                <TextBlock x:Name="txtAntalFlæskestegRgbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,238,-518,-238"/>
+                <Button x:Name="btnPlusFlæskestegRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,241,-525,-241" Click="BtnPlusFlæskestegRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="btnMinusFlæskestegRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,241,-568,-241" Click="BtnMinusFlæskestegRugbrød_Click">
+                <Button x:Name="btnMinusFlæskestegRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,241,-568,-241" Click="BtnMinusFlæskestegRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtLeverposteRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,270,-518,-270"/>
-                <Button x:Name="btnPlusLeverpostejRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,273,-525,-273" Click="BtnPlusLeverpostejRugbrød_Click">
+                <TextBlock x:Name="txtAntalLeverposteRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,270,-518,-270"/>
+                <Button x:Name="btnPlusLeverpostejRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,273,-525,-273" Click="BtnPlusLeverpostejRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="btnMinusLeverpostejRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,273,-568,-273" Click="BtnMinusLeverpostejRugbrød_Click">
+                <Button x:Name="btnMinusLeverpostejRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,273,-568,-273" Click="BtnMinusLeverpostejRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtDyrlægensRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,302,-518,-302"/>
-                <Button x:Name="btnPlusDyrlægensRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,305,-525,-305" Click="BtnPlusDyrlægensRugbrød_Click">
+                <TextBlock x:Name="txtAntalDyrlægensRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,302,-518,-302"/>
+                <Button x:Name="btnPlusDyrlægensRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,305,-525,-305" Click="BtnPlusDyrlægensRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="btnMinusDyrlægensRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,305,-568,-305" Click="BtnMinusDyrlægensRugbrød_Click">
+                <Button x:Name="btnMinusDyrlægensRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,305,-568,-305" Click="BtnMinusDyrlægensRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtRoastbeefRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,334,-518,-334"/>
-                <Button x:Name="btnPlusRoastbeefRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,337,-525,-337" Click="BtnPlusRoastbeefRugbrød_Click">
-                    <Button.Background>
-                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
-                    </Button.Background>
-                    <Button.FocusVisualPrimaryBrush>
-                        <ImageBrush Stretch="Fill"/>
-                    </Button.FocusVisualPrimaryBrush>
-                </Button>
-                <Button x:Name="btnMinusRoastbeefRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,337,-568,-337" Click="BtnMinusRoastbeefRugbrød_Click">
-                    <Button.Background>
-                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
-                    </Button.Background>
-                    <Button.FocusVisualPrimaryBrush>
-                        <ImageBrush Stretch="Fill"/>
-                    </Button.FocusVisualPrimaryBrush>
-                </Button>
-                <TextBlock x:Name="txtFiskefiletRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,366,-518,-366"/>
-                <Button x:Name="btnPlusFiskefiletRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,369,-525,-369" Click="BtnPlusFiskefiletRugbrød_Click">
+                <TextBlock x:Name="txtAntalRoastbeefRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,334,-518,-334"/>
+                <Button x:Name="btnPlusRoastbeefRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,337,-525,-337" Click="BtnPlusRoastbeefRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -234,21 +217,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusFiskefiletRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,369,-568,-369" Click="BtnMinusFiskefiletRugbrød_Click">
-                    <Button.Background>
-                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
-                    </Button.Background>
-                </Button>
-                <TextBlock x:Name="txtHåndmadderSpecificeretFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,46,-650,-46"/>
-                <Button x:Name="btnPlusHåndmadderSpecificeretFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,49,-657,-49" Click="BtnPlusHåndmadderSpecificeretFranskbrød_Click">
-                    <Button.Background>
-                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
-                    </Button.Background>
-                    <Button.FocusVisualPrimaryBrush>
-                        <ImageBrush Stretch="Fill"/>
-                    </Button.FocusVisualPrimaryBrush>
-                </Button>
-                <Button x:Name="btnMinusHåndmadderSpecificeretFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,49,-700,-49" Click="BtnMinusHåndmadderSpecificeretFranskbrød_Click">
+                <Button x:Name="btnMinusRoastbeefRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,337,-568,-337" Click="BtnMinusRoastbeefRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
@@ -256,8 +225,8 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <TextBlock x:Name="txtStjernekasterRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,398,-518,-398"/>
-                <Button x:Name="btnPlusStjernekasterRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,401,-525,-401" Click="BtnPlusStjernekasterRugbrød_Click">
+                <TextBlock x:Name="txtAntalFiskefiletRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,366,-518,-366"/>
+                <Button x:Name="btnPlusFiskefiletRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,369,-525,-369" Click="BtnPlusFiskefiletRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -265,13 +234,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusStjernekasterRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,401,-568,-401" Click="BtnMinusStjernekasterRugbrød_Click">
+                <Button x:Name="btnMinusFiskefiletRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,369,-568,-369" Click="BtnMinusFiskefiletRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtStjerneskudRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,430,-518,-430"/>
-                <Button x:Name="btnPlusStjerneskudRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,433,-525,-433" Click="BtnPlusStjerneskudRugbrød_Click">
+                <TextBlock x:Name="txtAntalHåndmadderSpecificeretFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,46,-650,-46"/>
+                <Button x:Name="btnPlusHåndmadderSpecificeretFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,49,-657,-49" Click="BtnPlusHåndmadderSpecificeretFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -279,13 +248,30 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusStjerneskudRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,433,-568,-433" Click="BtnMinusStjerneskudRugbrød_Click">
+                <Button x:Name="btnMinusHåndmadderSpecificeretFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,49,-700,-49" Click="BtnMinusHåndmadderSpecificeretFranskbrød_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
+                    </Button.Background>
+                    <Button.FocusVisualPrimaryBrush>
+                        <ImageBrush Stretch="Fill"/>
+                    </Button.FocusVisualPrimaryBrush>
+                </Button>
+                <TextBlock x:Name="txtAntalStjernekasterRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,398,-518,-398"/>
+                <Button x:Name="btnPlusStjernekasterRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,401,-525,-401" Click="BtnPlusStjernekasterRugbrød_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
+                    </Button.Background>
+                    <Button.FocusVisualPrimaryBrush>
+                        <ImageBrush Stretch="Fill"/>
+                    </Button.FocusVisualPrimaryBrush>
+                </Button>
+                <Button x:Name="btnMinusStjernekasterRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,401,-568,-401" Click="BtnMinusStjernekasterRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtSkinkeRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,462,-518,-462"/>
-                <Button x:Name="btnPlusSkinkeRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,465,-525,-465" Click="BtnPlusSkinkeRugbrød_Click">
+                <TextBlock x:Name="txtAntalStjerneskudRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,430,-518,-430"/>
+                <Button x:Name="btnPlusStjerneskudRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,433,-525,-433" Click="BtnPlusStjerneskudRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -293,13 +279,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusSkinkeRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,465,-568,-465" Click="BtnMinusSkinkeRugbrød_Click">
+                <Button x:Name="btnMinusStjerneskudRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,433,-568,-433" Click="BtnMinusStjerneskudRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtOksebrystRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,494,-518,-494"/>
-                <Button x:Name="btnPlusOksebrystRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,497,-525,-497" Click="BtnPlusOksebrystRugbrød_Click">
+                <TextBlock x:Name="txtAntalSkinkeRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,462,-518,-462"/>
+                <Button x:Name="btnPlusSkinkeRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,465,-525,-465" Click="BtnPlusSkinkeRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -307,13 +293,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusOksebrystRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,497,-568,-497" Click="BtnMinusOksebrystRugbrød_Click">
+                <Button x:Name="btnMinusSkinkeRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,465,-568,-465" Click="BtnMinusSkinkeRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtKalkunRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,526,-518,-526"/>
-                <Button x:Name="btnPlusKalkunRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,529,-525,-529" Click="BtnPlusKalkunRugbrød_Click">
+                <TextBlock x:Name="txtAntalOksebrystRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,494,-518,-494"/>
+                <Button x:Name="btnPlusOksebrystRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,497,-525,-497" Click="BtnPlusOksebrystRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -321,13 +307,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusKalkunRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,529,-568,-529" Click="BtnMinusKalkunRugbrød_Click">
+                <Button x:Name="btnMinusOksebrystRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,497,-568,-497" Click="BtnMinusOksebrystRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtTatarRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,558,-518,-558"/>
-                <Button x:Name="btnPlusTatarRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,561,-525,-561" Click="BtnPlusTatarRugbrød_Click">
+                <TextBlock x:Name="txtAntalKalkunRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,526,-518,-526"/>
+                <Button x:Name="btnPlusKalkunRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,529,-525,-529" Click="BtnPlusKalkunRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -335,13 +321,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusTatarRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,561,-568,-561" Click="BtnMinusTatarRugbrød_Click">
+                <Button x:Name="btnMinusKalkunRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,529,-568,-529" Click="BtnMinusKalkunRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtMørbradRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,590,-518,-590"/>
-                <Button x:Name="btnPlusMørbradRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,593,-525,-593" Click="BtnPlusMørbradRugbrød_Click">
+                <TextBlock x:Name="txtAntalTatarRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,558,-518,-558"/>
+                <Button x:Name="btnPlusTatarRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,561,-525,-561" Click="BtnPlusTatarRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -349,13 +335,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusMørbradRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,593,-568,-593" Click="BtnMinusMørbradRugbrød_Click">
+                <Button x:Name="btnMinusTatarRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,561,-568,-561" Click="BtnMinusTatarRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtBrieRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,622,-518,-622"/>
-                <Button x:Name="btnPlusBrieRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,625,-525,-625" Click="BtnPlusBrieRugbrød_Click">
+                <TextBlock x:Name="txtAntalMørbradRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,590,-518,-590"/>
+                <Button x:Name="btnPlusMørbradRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,593,-525,-593" Click="BtnPlusMørbradRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -363,13 +349,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusBrieRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,625,-568,-625" Click="BtnMinusBrieRugbrød_Click">
+                <Button x:Name="btnMinusMørbradRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,593,-568,-593" Click="BtnMinusMørbradRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtMellemlageretRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,654,-518,-654"/>
-                <Button x:Name="btnPlusMellemlageretRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,657,-525,-657" Click="BtnPlusMellemlageretRugbrød_Click">
+                <TextBlock x:Name="txtAntalBrieRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,622,-518,-622"/>
+                <Button x:Name="btnPlusBrieRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,625,-525,-625" Click="BtnPlusBrieRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -377,13 +363,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusMellemlageretRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,657,-568,-657" Click="BtnMinusMellemlageretRugbrød_Click">
+                <Button x:Name="btnMinusBrieRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,625,-568,-625" Click="BtnMinusBrieRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtLageretRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,686,-518,-686"/>
-                <Button x:Name="btnPlusLageretRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,689,-525,-689" Click="BtnPlusLageretRugbrød_Click">
+                <TextBlock x:Name="txtAntalMellemlageretRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,654,-518,-654"/>
+                <Button x:Name="btnPlusMellemlageretRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,657,-525,-657" Click="BtnPlusMellemlageretRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -391,13 +377,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusLageretRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,689,-568,-689" Click="BtnMinusLageretRugbrød_Click">
+                <Button x:Name="btnMinusMellemlageretRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,657,-568,-657" Click="BtnMinusMellemlageretRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtHøjtbelagtFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,76,-650,-76"/>
-                <Button x:Name="btnPlusHøjtbelagtFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,81,-657,-81" Click="BtnPlusHøjtbelagtFranskbrød_Click">
+                <TextBlock x:Name="txtAntalLageretRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,686,-518,-686"/>
+                <Button x:Name="btnPlusLageretRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="525,689,-525,-689" Click="BtnPlusLageretRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -405,13 +391,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusHøjtbelagtFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,81,-700,-81" Click="BtnMinusHøjtbelagtFranskbrød_Click">
+                <Button x:Name="btnMinusLageretRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,689,-568,-689" Click="BtnMinusLageretRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtÆgTomatFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,108,-650,-108"/>
-                <Button x:Name="btnPlusÆgTomatFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,113,-657,-113" Click="BtnPlusÆgTomatFranskbrød_Click">
+                <TextBlock x:Name="txtAntalHøjtbelagtFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,76,-650,-76"/>
+                <Button x:Name="btnPlusHøjtbelagtFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,81,-657,-81" Click="BtnPlusHøjtbelagtFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -419,13 +405,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusÆgTomatFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,113,-700,-113" Click="BtnMinusÆgTomatFranskbrød_Click">
+                <Button x:Name="btnMinusHøjtbelagtFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,81,-700,-81" Click="BtnMinusHøjtbelagtFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtÆgRejerFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,140,-650,-140"/>
-                <Button x:Name="btnPlusÆgRejerFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,145,-657,-145" Click="BtnPlusÆgRejerFranskbrød_Click">
+                <TextBlock x:Name="txtAntalÆgTomatFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,108,-650,-108"/>
+                <Button x:Name="btnPlusÆgTomatFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,113,-657,-113" Click="BtnPlusÆgTomatFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -433,13 +419,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusÆgRejerFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,145,-700,-145" Click="BtnMinusÆgRejerFranskbrød_Click">
+                <Button x:Name="btnMinusÆgTomatFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,113,-700,-113" Click="BtnMinusÆgTomatFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtRullepølseFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,172,-650,-172"/>
-                <Button x:Name="btnPlusRullepølseFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,177,-657,-177" Click="BtnPlusRullepølseFranskbrød_Click">
+                <TextBlock x:Name="txtAntalÆgRejerFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,140,-650,-140"/>
+                <Button x:Name="btnPlusÆgRejerFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,145,-657,-145" Click="BtnPlusÆgRejerFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -447,7 +433,21 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusRullepølseFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,177,-700,-177" Click="BtnMinusRullepølseFranskbrød_Click">
+                <Button x:Name="btnMinusÆgRejerFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,145,-700,-145" Click="BtnMinusÆgRejerFranskbrød_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
+                    </Button.Background>
+                </Button>
+                <TextBlock x:Name="txtAntalRullepølseFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,172,-650,-172"/>
+                <Button x:Name="btnPlusRullepølseFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,177,-657,-177" Click="BtnPlusRullepølseFranskbrød_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
+                    </Button.Background>
+                    <Button.FocusVisualPrimaryBrush>
+                        <ImageBrush Stretch="Fill"/>
+                    </Button.FocusVisualPrimaryBrush>
+                </Button>
+                <Button x:Name="btnMinusRullepølseFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,177,-700,-177" Click="BtnMinusRullepølseFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
@@ -458,8 +458,8 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <TextBlock x:Name="txtLageretFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,684,-650,-684"/>
-                <Button x:Name="btnPlusLageretFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,689,-657,-689" Click="BtnPlusLageretFranskbrød_Click">
+                <TextBlock x:Name="txtAntalLageretFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,684,-650,-684"/>
+                <Button x:Name="btnPlusLageretFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,689,-657,-689" Click="BtnPlusLageretFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -467,13 +467,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusLageretFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,689,-700,-689" Click="BtnMinusLageretFranskbrød_Click">
+                <Button x:Name="btnMinusLageretFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,689,-700,-689" Click="BtnMinusLageretFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtMellemlageretFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,652,-650,-652"/>
-                <Button x:Name="btnPlusMellemlageretFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,657,-657,-657" Click="BtnPlusMellemlageretFranskbrød_Click">
+                <TextBlock x:Name="txtAntalMellemlageretFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,652,-650,-652"/>
+                <Button x:Name="btnPlusMellemlageretFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,657,-657,-657" Click="BtnPlusMellemlageretFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -481,13 +481,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusMellemlageretFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,657,-700,-657" Click="BtnMinusMellemlageretFranskbrød_Click">
+                <Button x:Name="btnMinusMellemlageretFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,657,-700,-657" Click="BtnMinusMellemlageretFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtMinusBrieFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,620,-650,-620"/>
-                <Button x:Name="btnPlusBrieFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,625,-657,-625" Click="BtnPlusBrieFranskbrød_Click">
+                <TextBlock x:Name="txtAntalMinusBrieFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,620,-650,-620"/>
+                <Button x:Name="btnPlusBrieFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,625,-657,-625" Click="BtnPlusBrieFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -495,13 +495,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusBrieFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,625,-700,-625" Click="BtnMinusBrieFranskbrød_Click">
+                <Button x:Name="btnMinusBrieFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,625,-700,-625" Click="BtnMinusBrieFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtMørbradFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,588,-650,-588"/>
-                <Button x:Name="btnPlusMørbradFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,593,-657,-593" Click="BtnPlusMørbradFranskbrød_Click">
+                <TextBlock x:Name="txtAntalMørbradFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,588,-650,-588"/>
+                <Button x:Name="btnPlusMørbradFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,593,-657,-593" Click="BtnPlusMørbradFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -509,13 +509,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusMørbradFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,593,-700,-593" Click="BtnMinusMørbradFranskbrød_Click">
+                <Button x:Name="btnMinusMørbradFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,593,-700,-593" Click="BtnMinusMørbradFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtTatarFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,556,-650,-556"/>
-                <Button x:Name="btnPlusTatarFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,561,-657,-561" Click="BtnPlusTatarFranskbrød_Click">
+                <TextBlock x:Name="txtAntalTatarFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,556,-650,-556"/>
+                <Button x:Name="btnPlusTatarFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,561,-657,-561" Click="BtnPlusTatarFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -523,13 +523,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusTatarFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,561,-700,-561" Click="BtnMinusTatarFranskbrød_Click">
+                <Button x:Name="btnMinusTatarFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,561,-700,-561" Click="BtnMinusTatarFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtKalkunFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,524,-650,-524"/>
-                <Button x:Name="btnPlusKalkunFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,529,-657,-529" Click="BtnPlusKalkunFranskbrød_Click">
+                <TextBlock x:Name="txtAntalKalkunFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,524,-650,-524"/>
+                <Button x:Name="btnPlusKalkunFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,529,-657,-529" Click="BtnPlusKalkunFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -537,13 +537,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusKalkunFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,529,-700,-529" Click="BtnMinusKalkunFranskbrød_Click">
+                <Button x:Name="btnMinusKalkunFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,529,-700,-529" Click="BtnMinusKalkunFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtOksebrystFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,492,-650,-492"/>
-                <Button x:Name="btnPlusOksebrystFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,497,-657,-497" Click="BtnPlusOksebrystFranskbrød_Click">
+                <TextBlock x:Name="txtAntalOksebrystFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,492,-650,-492"/>
+                <Button x:Name="btnPlusOksebrystFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,497,-657,-497" Click="BtnPlusOksebrystFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -551,13 +551,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusOksebrystFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,497,-700,-497" Click="BtnMinusOksebrystFranskbrød_Click">
+                <Button x:Name="btnMinusOksebrystFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,497,-700,-497" Click="BtnMinusOksebrystFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtSkinkeFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,460,-650,-460"/>
-                <Button x:Name="btnPlusSkinkeFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,465,-657,-465" Click="BtnPlusSkinkeFranskbrød_Click">
+                <TextBlock x:Name="txtAntalSkinkeFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,460,-650,-460"/>
+                <Button x:Name="btnPlusSkinkeFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,465,-657,-465" Click="BtnPlusSkinkeFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -565,13 +565,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusSkinkeFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,465,-700,-465" Click="BtnMinusSkinkeFranskbrød_Click">
+                <Button x:Name="btnMinusSkinkeFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,465,-700,-465" Click="BtnMinusSkinkeFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtStjerneSkudFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,428,-650,-428"/>
-                <Button x:Name="btnPlusStjerneskudFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,433,-657,-433" Click="BtnPlusStjerneskudFranskbrød_Click">
+                <TextBlock x:Name="txtAntalStjerneSkudFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,428,-650,-428"/>
+                <Button x:Name="btnPlusStjerneskudFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,433,-657,-433" Click="BtnPlusStjerneskudFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -579,13 +579,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusStjerneskudFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,433,-700,-433" Click="BtnMinusStjerneskudFranskbrød_Click">
+                <Button x:Name="btnMinusStjerneskudFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,433,-700,-433" Click="BtnMinusStjerneskudFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtStjernekasterFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,396,-650,-396"/>
-                <Button x:Name="btnPlusStjernekasterFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,401,-657,-401" Click="BtnPlusStjernekasterFranskbrød_Click">
+                <TextBlock x:Name="txtAntalStjernekasterFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,396,-650,-396"/>
+                <Button x:Name="btnPlusStjernekasterFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,401,-657,-401" Click="BtnPlusStjernekasterFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -593,13 +593,13 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusStjernekasterFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,401,-700,-401" Click="BtnMinusStjernekasterFranskbrød_Click">
+                <Button x:Name="btnMinusStjernekasterFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,401,-700,-401" Click="BtnMinusStjernekasterFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtFrikadelleFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,204,-650,-204"/>
-                <Button x:Name="btnPlusFiskefiletFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,369,-657,-369" Click="BtnPlusFiskefiletFranskbrød_Click">
+                <TextBlock x:Name="txtAntalFrikadelleFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,204,-650,-204"/>
+                <Button x:Name="btnPlusFiskefiletFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,369,-657,-369" Click="BtnPlusFiskefiletFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -607,7 +607,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusFiskefiletFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,369,-700,-369" Click="BtnMinusFiskefiletFranskbrød_Click">
+                <Button x:Name="btnMinusFiskefiletFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,369,-700,-369" Click="BtnMinusFiskefiletFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
@@ -618,7 +618,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnPlusRoastbeefFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,337,-657,-337" Click="BtnPlusRoastbeefFranskbrød_Click">
+                <Button x:Name="btnPlusRoastbeefFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,337,-657,-337" Click="BtnPlusRoastbeefFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -626,7 +626,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusRoastbeefFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,337,-700,-337" Click="BtnMinusRoastbeefFranskbrød_Click">
+                <Button x:Name="btnMinusRoastbeefFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,337,-700,-337" Click="BtnMinusRoastbeefFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
@@ -637,7 +637,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnPlusDyrlægensFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,305,-657,-305" Click="BtnPlusDyrlægensFranskbrød_Click">
+                <Button x:Name="btnPlusDyrlægensFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,305,-657,-305" Click="BtnPlusDyrlægensFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -645,7 +645,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusDyrlægensFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,305,-700,-305" Click="BtnMinusDyrlægensFranskbrød_Click">
+                <Button x:Name="btnMinusDyrlægensFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,305,-700,-305" Click="BtnMinusDyrlægensFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
@@ -656,7 +656,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnPlusLeverpostejFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,273,-657,-273" Click="BtnPlusLeverpostejFranskbrød_Click">
+                <Button x:Name="btnPlusLeverpostejFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,273,-657,-273" Click="BtnPlusLeverpostejFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -664,7 +664,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusLeverpostejFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,273,-700,-273" Click="BtnMinusLeverpostejFranskbrød_Click">
+                <Button x:Name="btnMinusLeverpostejFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,273,-700,-273" Click="BtnMinusLeverpostejFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
@@ -675,7 +675,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnPlusFrikadelleFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,209,-657,-209" Click="BtnPlusFrikadelleFranskbrød_Click">
+                <Button x:Name="btnPlusFrikadelleFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,209,-657,-209" Click="BtnPlusFrikadelleFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -683,7 +683,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusFrikadelleFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,209,-700,-209" Click="BtnMinusFrikadelleFranskbrød_Click">
+                <Button x:Name="btnMinusFrikadelleFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,209,-700,-209" Click="BtnMinusFrikadelleFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
@@ -694,7 +694,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnPlusFlæskestegFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,241,-657,-241" Click="BtnPlusFlæskestegFranskbrød_Click">
+                <Button x:Name="btnPlusFlæskestegFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="657,241,-657,-241" Click="BtnPlusFlæskestegFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -702,7 +702,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusFlæskestegFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,241,-700,-241" Click="BtnMinusFlæskestegFranskbrød_Click">
+                <Button x:Name="btnMinusFlæskestegFranskbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="700,241,-700,-241" Click="BtnMinusFlæskestegFranskbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
@@ -713,39 +713,39 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <TextBlock x:Name="txtFiskefiletFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,364,-650,-364"/>
-                <TextBlock x:Name="txtFlæskestegFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,236,-650,-236"/>
-                <TextBlock x:Name="txtLeverpostejFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,268,-635,-268"/>
-                <TextBlock x:Name="txtDyrlægensFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,300,-650,-300"/>
-                <TextBlock x:Name="txtRoastbeefFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,332,-650,-332"/>
-                <TextBlock x:Name="txtHåndmadderSpecificeretRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,45,-518,-45"/>
-                <Button x:Name="btnMinusHåndmadderSpecificeretRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,48,-568,-48" Click="BtnMinusHåndmadderSpecificeretRugbrød_Click">
+                <TextBlock x:Name="txtAntalFiskefiletFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,364,-650,-364"/>
+                <TextBlock x:Name="txtAntalFlæskestegFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,236,-650,-236"/>
+                <TextBlock x:Name="txtAntalLeverpostejFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,268,-635,-268"/>
+                <TextBlock x:Name="txtAntalDyrlægensFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,300,-650,-300"/>
+                <TextBlock x:Name="txtAntalRoastbeefFranskbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="680,332,-650,-332"/>
+                <TextBlock x:Name="txtAntalHåndmadderSpecificeretRugbrød" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="548,45,-518,-45"/>
+                <Button x:Name="btnMinusHåndmadderSpecificeretRugbrød" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="568,48,-568,-48" Click="BtnMinusHåndmadderSpecificeretRugbrød_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
                 <CheckBox x:Name="chkHåndmadderUspecificeret" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,12,0,0" Click="ChkHåndmadderUspecificeret_Click"/>
-                <CheckBox x:Name="chkHåndmadderSpecificeret" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,44,0,-32"/>
-                <CheckBox x:Name="chkHøjtbelagtUspecificeret" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,76,0,-64"/>
-                <CheckBox x:Name="chkÆgTomat" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,108,0,-96"/>
-                <CheckBox x:Name="chkÆgTomat_Copy" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,140,0,-128"/>
-                <CheckBox x:Name="chkÆgTomat_Copy1" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,172,0,-160"/>
-                <CheckBox x:Name="chkÆgTomat_Copy2" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,204,0,-192"/>
-                <CheckBox x:Name="chkÆgTomat_Copy3" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,236,0,-224"/>
-                <CheckBox x:Name="chkÆgTomat_Copy4" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,268,0,-256"/>
-                <CheckBox x:Name="chkÆgTomat_Copy5" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,300,0,-288"/>
-                <CheckBox x:Name="chkÆgTomat_Copy6" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,332,0,-320"/>
-                <CheckBox x:Name="chkÆgTomat_Copy7" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,364,0,-352"/>
-                <CheckBox x:Name="chkÆgTomat_Copy8" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,396,0,-384"/>
-                <CheckBox x:Name="chkÆgTomat_Copy9" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,428,0,-416"/>
-                <CheckBox x:Name="chkÆgTomat_Copy10" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,460,0,-448"/>
-                <CheckBox x:Name="chkÆgTomat_Copy11" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,492,0,-480"/>
-                <CheckBox x:Name="chkÆgTomat_Copy12" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,524,0,-512"/>
-                <CheckBox x:Name="chkÆgTomat_Copy13" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,556,0,-544"/>
-                <CheckBox x:Name="chkÆgTomat_Copy14" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,588,0,-576"/>
-                <CheckBox x:Name="chkÆgTomat_Copy15" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,620,0,-608"/>
-                <CheckBox x:Name="chkÆgTomat_Copy16" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,652,0,-640"/>
-                <CheckBox x:Name="chkÆgTomat_Copy17" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,684,0,-672"/>
+                <CheckBox x:Name="chkHåndmadderSpecificeret" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,44,0,-32" Click="ChkHåndmadderSpecificeret_Click"/>
+                <CheckBox x:Name="chkHøjtbelagtUspecificeret" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,76,0,-64" Click="ChkHøjtbelagtUspecificeret_Click"/>
+                <CheckBox x:Name="chkÆgTomat" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,108,0,-96" Click="ChkÆgTomat_Click"/>
+                <CheckBox x:Name="chkÆgRejer" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,140,0,-128" Click="ChkÆgRejer_Click"/>
+                <CheckBox x:Name="chkRullepølse" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,172,0,-160" Click="ChkRullepølse_Click"/>
+                <CheckBox x:Name="chkFrikadelle" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,204,0,-192" Click="ChkFrikadelle_Click"/>
+                <CheckBox x:Name="chkFlæskesteg" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,236,0,-224" Click="ChkFlæskesteg_Click"/>
+                <CheckBox x:Name="chkLeverpostej" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,268,0,-256" Click="ChkLeverpostej_Click"/>
+                <CheckBox x:Name="chkDyrelægens" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,300,0,-288" Click="ChkDyrelægens_Click"/>
+                <CheckBox x:Name="chkRoastbeef" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,332,0,-320" Click="ChkRoastbeef_Click"/>
+                <CheckBox x:Name="chkFiskefilet" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,364,0,-352" Click="ChkFiskefilet_Click"/>
+                <CheckBox x:Name="chkStjernekaster" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,396,0,-384" Click="ChkStjernekaster_Click"/>
+                <CheckBox x:Name="chkStjerneskud" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,428,0,-416" Click="ChkStjerneskud_Click"/>
+                <CheckBox x:Name="chkSkinke" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,460,0,-448" Click="ChkSkinke_Click"/>
+                <CheckBox x:Name="chkOksebryst" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,492,0,-480" Click="ChkOksebryst_Click"/>
+                <CheckBox x:Name="chkKalkun" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,524,0,-512" Click="ChkKalkun_Click"/>
+                <CheckBox x:Name="chkTatar" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,556,0,-544" Click="ChkTatar_Click"/>
+                <CheckBox x:Name="chkMørbradbøf" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,588,0,-576" Click="ChkMørbradbøf_Click"/>
+                <CheckBox x:Name="chkBrie" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,620,0,-608" Click="ChkBrie_Click"/>
+                <CheckBox x:Name="chkMellemlageret" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,652,0,-640" Click="ChkMellemlageret_Click"/>
+                <CheckBox x:Name="chkLageret" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,684,0,-672" Click="ChkLageret_Click"/>
             </RelativePanel>
             <RelativePanel x:Name="pnlBuffet" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Margin="30,30,-30,-30" Background="#FFF7F7F7" d:IsHidden="True">
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="SAMMENSÆT DIN EGEN BUFFET" VerticalAlignment="Top" Height="48" Width="385" Margin="230,10,-380,0" FontWeight="Bold" FontSize="24"/>
@@ -1281,7 +1281,7 @@
             <RelativePanel x:Name="pnlTapas" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30" d:IsHidden="True">
                 <Button x:Name="btnTilføjTilKurvTapas" Content="Tilføj til kurv" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Margin="580,716,-685,-716"/>
             </RelativePanel>
-            <RelativePanel x:Name="pnlSandwich" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30">
+            <RelativePanel x:Name="pnlSandwich" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30" d:IsHidden="True">
                 <Button x:Name="btnTilføjTilKurvSandwich" Content="Tilføj til kurv" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Margin="580,716,-685,-716"/>
                 <TextBlock x:Name="txtKyllingSandwich" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Margin="55,57,-553,-70" FontSize="16" FontWeight="Bold">
                     <Run Text="- Salatmayonnaise, salat, kylling, karrydressing, agurk, tomat og bacon"/>

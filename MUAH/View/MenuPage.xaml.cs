@@ -1275,7 +1275,8 @@ namespace MUAH.View
 
         private void BtnMinusÆblekage_Click(object sender, RoutedEventArgs e)
         {
-            
+            txtAntalÆblekage.Text = subAntal(txtAntalÆblekage.Text);
+            OrderToList(false, dessertÆblekage, txtDessertÆblekage.Text, Convert.ToDouble(txtDessertÆblekagePris.Text),Convert.ToInt32(txtAntalÆblekage.Text));
         }
 
         private void BtnPlusChokolademousse_Click(object sender, RoutedEventArgs e)
@@ -1332,73 +1333,78 @@ namespace MUAH.View
 
         private void BtnPlusHindbærmousse_Click(object sender, RoutedEventArgs e)
         {
-            txtAntalFriskFrugt.Text = addAntal(txtAntalFriskFrugt.Text);
-            OrderToList(true, dessertFriskFrugt, txtDessertFriskFrugt.Text, Convert.ToDouble(txtDessertFriskFrugtPris.Text),Convert.ToInt32(txtAntalFriskFrugt.Text));
+            txtAntalHindbærmousse.Text = addAntal(txtAntalHindbærmousse.Text);
+            OrderToList(true, dessertHindbærmousse, txtDessertHindbærmousse.Text, Convert.ToDouble(txtDessertHindbærmoussePris.Text),Convert.ToInt32(txtAntalHindbærmousse.Text));
         }
 
         private void BtnMinusHindbærmousse_Click(object sender, RoutedEventArgs e)
         {
             txtAntalHindbærmousse.Text = subAntal(txtAntalHindbærmousse.Text);
+            OrderToList(false, dessertHindbærmousse, txtDessertHindbærmousse.Text, Convert.ToDouble(txtDessertHindbærmoussePris.Text),Convert.ToInt32(txtAntalHindbærmousse.Text));
         }
 
         private void BtnPlusChokoladekage_Click(object sender, RoutedEventArgs e)
         {
-
+            txtAntalChokoladekage.Text = addAntal(txtAntalChokoladekage.Text);
+            OrderToList(true, dessertChokoladekage, txtDessertChokoladekage.Text, Convert.ToDouble(txtDessertChokoladekagePris.Text),Convert.ToInt32(txtAntalChokoladekage.Text));
         }
 
         private void BtnMinusChokoladekage_Click(object sender, RoutedEventArgs e)
         {
-
+            txtAntalChokoladekage.Text = subAntal(txtAntalChokoladekage.Text);
+            OrderToList(false, dessertChokoladekage, txtDessertChokoladekage.Text, Convert.ToDouble(txtDessertChokoladekagePris.Text),Convert.ToInt32(txtAntalChokoladekage.Text));
         }
 
         private void BtnPlusBlåbærCheesecake_Click(object sender, RoutedEventArgs e)
         {
-
+            txtAntalBlåbærCheesecake.Text = addAntal(txtAntalBlåbærCheesecake.Text);
+            OrderToList(true, dessertBlåbærCheesecake, txtDessertBlåbærCheesecake.Text, Convert.ToDouble(txtDessertBlåbærCheesecakePris.Text),Convert.ToInt32(txtAntalBlåbærCheesecake.Text));
         }
 
         private void BtnMinusBlåbærCheesecake_Click(object sender, RoutedEventArgs e)
         {
-
+            txtAntalBlåbærCheesecake.Text = subAntal(txtAntalBlåbærCheesecake.Text);
+            OrderToList(false, dessertBlåbærCheesecake, txtDessertBlåbærCheesecake.Text, Convert.ToDouble(txtDessertBlåbærCheesecakePris.Text),Convert.ToInt32(txtAntalBlåbærCheesecake.Text));
         }
 
         private void ChkDessertÆblekage_Click(object sender, RoutedEventArgs e)
         {
-
+            enabledDisabled(chkDessertÆblekage, btnPlusÆblekage, btnMinusÆblekage, txtAntalÆblekage);
         }
 
         private void ChkDessertChokolademousse_Click(object sender, RoutedEventArgs e)
         {
-
+            enabledDisabled(chkDessertChokolademousse, btnPlusChokolademousse, btnMinusChokolademousse, txtAntalChokolademousse);
         }
 
         private void ChkDessertPassionsmousse_Click(object sender, RoutedEventArgs e)
         {
-
+            enabledDisabled(chkDessertPassionsmousse, btnPlusPassionsmousse, btnMinusPassionsmousse, txtAntalPassionsmousse);
         }
 
         private void ChkDessertSkovbærstærte_Click(object sender, RoutedEventArgs e)
         {
-
+            enabledDisabled(chkDessertSkovbærstærte, btnPlusSkovbærtærte, btnMinusSkovbærtærte, txtAntalSkovbærtærte);
         }
 
         private void ChkDessertFriskFrugt_Click(object sender, RoutedEventArgs e)
         {
-
+            enabledDisabled(chkDessertFriskFrugt, btnPlusFriskFrugt, btnMinusFriskFrugt, txtAntalFriskFrugt);
         }
 
         private void ChkDessertHindbærmousse_Click(object sender, RoutedEventArgs e)
         {
-
+            enabledDisabled(chkDessertHindbærmousse, btnPlusHindbærmousse, btnMinusHindbærmousse, txtAntalHindbærmousse);
         }
 
         private void ChkDessertChokoladekage_Click(object sender, RoutedEventArgs e)
         {
-
+            enabledDisabled(chkDessertChokoladekage, btnPlusChokoladekage, btnMinusChokoladekage, txtAntalChokoladekage);
         }
 
         private void ChkDessertBlåbærCheesecake_Click(object sender, RoutedEventArgs e)
         {
-
+            enabledDisabled(chkDessertBlåbærCheesecake, btnPlusBlåbærCheesecake, btnMinusBlåbærCheesecake, txtAntalBlåbærCheesecake);
         }
     }
 }

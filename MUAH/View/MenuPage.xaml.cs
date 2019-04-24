@@ -1270,7 +1270,7 @@ namespace MUAH.View
         private void BtnPlusÆblekage_Click(object sender, RoutedEventArgs e)
         {
             txtAntalÆblekage.Text = addAntal(txtAntalÆblekage.Text);
-
+            OrderToList(true, dessertÆblekage, txtDessertÆblekage.Text, Convert.ToDouble(txtDessertÆblekagePris.Text),Convert.ToInt32(txtAntalÆblekage.Text));
 
         }
 
@@ -1340,7 +1340,7 @@ namespace MUAH.View
 
         private void BtnMinusHindbærmousse_Click(object sender, RoutedEventArgs e)
         {
-
+            txtAntalHindbærmousse.Text = subAntal(txtAntalHindbærmousse.Text);
         }
 
         private void BtnPlusChokoladekage_Click(object sender, RoutedEventArgs e)

@@ -1401,64 +1401,77 @@ namespace MUAH.View
 
         #endregion
 
-        private void BtnPlusBroccolisalat_Click(object sender, RoutedEventArgs e)
+        #region SaladToList
+
+       private void BtnPlusBroccolisalat_Click(object sender, RoutedEventArgs e)
         {
-            
+            txtAntalBroccolisalat.Text = addAntal(txtAntalBroccolisalat.Text);
+            OrderToList(true, salatBroccolisalat, txtBroccolisalatNavn.Text, Convert.ToDouble(txtBroccolisalatPris.Text), Convert.ToInt32(txtAntalBroccolisalat.Text));
         }
 
         private void BtnMinusBroccolisalat_Click(object sender, RoutedEventArgs e)
         {
-
+            txtAntalBroccolisalat.Text = subAntal(txtAntalBroccolisalat.Text);
+            OrderToList(false, salatBroccolisalat, txtBroccolisalatNavn.Text, Convert.ToDouble(txtBroccolisalatPris.Text), Convert.ToInt32(txtAntalBroccolisalat.Text));
         }
 
         private void BtnPlusGrønsalat_Click(object sender, RoutedEventArgs e)
         {
-
+            txtAntalGrønsalat.Text = addAntal(txtAntalGrønsalat.Text);
+            OrderToList(true, salatGrønsalat, txtGrønsalatNavn.Text, Convert.ToDouble(txtGrønsalatPris.Text), Convert.ToInt32(txtAntalGrønsalat.Text));
         }
 
         private void BtnMinusGrønsalat_Click(object sender, RoutedEventArgs e)
         {
-
+            txtAntalGrønsalat.Text = subAntal(txtAntalGrønsalat.Text);
+            OrderToList(false, salatGrønsalat, txtGrønsalatNavn.Text, Convert.ToDouble(txtGrønsalatPris.Text), Convert.ToInt32(txtAntalGrønsalat.Text));
         }
 
         private void BtnPlusTomatsalat_Click(object sender, RoutedEventArgs e)
         {
-
+            txtAntalTomatsalat.Text = addAntal(txtAntalTomatsalat.Text);
+            OrderToList(true, salatTomatsalat, txtTomatsalatNavn.Text, Convert.ToDouble(txtTomatsalatPris.Text), Convert.ToInt32(txtAntalTomatsalat.Text));
         }
 
         private void BtnMinusTomatsalat_Click(object sender, RoutedEventArgs e)
         {
-
+            txtAntalTomatsalat.Text = subAntal(txtAntalTomatsalat.Text);
+            OrderToList(false, salatTomatsalat, txtTomatsalatNavn.Text, Convert.ToDouble(txtTomatsalatPris.Text), Convert.ToInt32(txtAntalTomatsalat.Text));
         }
 
         private void BtnPlusPastasalat_Click(object sender, RoutedEventArgs e)
         {
-
+            txtAntalPastasalat.Text = addAntal(txtAntalPastasalat.Text);
+            OrderToList(true, salatPastasalat, txtPastasalatNavn.Text, Convert.ToDouble(txtPastasalatPris.Text), Convert.ToInt32(txtAntalPastasalat.Text));
         }
 
         private void BtnMinusPastasalat_Click(object sender, RoutedEventArgs e)
         {
-
+            txtAntalPastasalat.Text = subAntal(txtAntalPastasalat.Text);
+            OrderToList(false, salatPastasalat, txtPastasalatNavn.Text, Convert.ToDouble(txtPastasalatPris.Text), Convert.ToInt32(txtAntalPastasalat.Text));
         }
 
         private void ChkBroccolisalat_Click(object sender, RoutedEventArgs e)
         {
-
+            enabledDisabled(chkBroccolisalat, btnPlusBroccolisalat, btnMinusBroccolisalat, txtAntalBroccolisalat);
         }
 
         private void ChkGrønssalat_Click(object sender, RoutedEventArgs e)
         {
-
+            enabledDisabled(chkGrønssalat, btnPlusGrønsalat, btnMinusGrønsalat, txtAntalGrønsalat);
         }
 
         private void ChkTomatsalat_Click(object sender, RoutedEventArgs e)
         {
-
+            enabledDisabled(chkTomatsalat, btnPlusTomatsalat, btnMinusTomatsalat, txtAntalTomatsalat);
         }
 
         private void ChkPastasalat_Click(object sender, RoutedEventArgs e)
         {
-
+            enabledDisabled(chkPastasalat, btnPlusPastasalat, btnMinusPastasalat, txtAntalPastasalat);
         }
+
+
+        #endregion
     }
 }

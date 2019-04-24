@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="MUAH.SpecificStore"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MUAH"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Loading="Grid_Loading" RenderTransformOrigin="0.527,0.425">
+        <TextBlock HorizontalAlignment="Left" Margin="90,120,0,0" TextWrapping="Wrap" Text="Velkommen til " VerticalAlignment="Top" Height="80" Width="250" FontWeight="Bold" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="345,120,0,0" TextWrapping="Wrap" Text="SuperBrugsen Havdrup" VerticalAlignment="Top" Height="80" Width="630" FontWeight="Bold" FontSize="36"/>
+        <Button x:Name="btnÅbningstider" Content="Åbningstider" HorizontalAlignment="Left" Height="70" Margin="90,257,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnÅbningstider_Click"/>
+        <Button x:Name="btnAfdelinger" Content="Afdelinger" HorizontalAlignment="Left" Height="70" Margin="90,332,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnAfdelinger_Click"/>
+        <Button x:Name="btnMUAH" Content="Mad ud af huset" HorizontalAlignment="Left" Height="70" Margin="90,407,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnMUAH_Click"/>
+        <Button x:Name="btnTilbud" Content="Tilbud" HorizontalAlignment="Left" Height="70" Margin="90,482,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold"/>
+        <Button x:Name="btnKundeservice" Content="Kundeservice" HorizontalAlignment="Left" Height="70" Margin="90,557,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnKundeservice_Click"/>
+        <RelativePanel x:Name="pnlBackground" HorizontalAlignment="Left" Height="370" Margin="510,257,0,0" VerticalAlignment="Top" Width="575" Background="#FFC12626" FocusVisualPrimaryBrush="#FFB01F1F">
+            <RelativePanel x:Name="pnlÅbningstider" HorizontalAlignment="Left" Height="290" VerticalAlignment="Top" Width="495" Background="#FFFAFAFA" Margin="40,38,-40,-38" RenderTransformOrigin="0.04,0.069" d:IsHidden="True">
+                <TextBlock x:Name="txtMandag" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" Text="Mandag 08.00-20.00" VerticalAlignment="Top" Width="155" Margin="170,30,-263,-36" FontWeight="Bold"/>
+                <TextBlock x:Name="txtTirsdag" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Margin="170,56,-263,-62" FontWeight="Bold">
+                    <Run Text="Tirsdag"/>
+                    <Run Text=" 08.00-20.00"/>
+                </TextBlock>
+                <TextBlock x:Name="txtOnsdag" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Margin="170,82,-263,-86" FontWeight="Bold">
+                    <Run Text="Onsdag"/>
+                    <Run Text=" 08.00-20.00"/>
+                </TextBlock>
+                <TextBlock x:Name="txtTorsdag" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Margin="170,106,-263,-110" FontWeight="Bold">
+                    <Run Text="Torsdag"/>
+                    <Run Text=" 08.00-20.00"/>
+                </TextBlock>
+                <TextBlock x:Name="txtFredag" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Margin="170,130,-263,-134" FontWeight="Bold">
+                    <Run Text="Fredag"/>
+                    <Run Text=" 08.00-20.00"/>
+                </TextBlock>
+                <TextBlock x:Name="txtLørdag" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Margin="170,154,-263,-158" FontWeight="Bold">
+                    <Run Text="Lørdag"/>
+                    <Run Text=" 08.00-20.00"/>
+                </TextBlock>
+                <TextBlock x:Name="txtSøndag" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Margin="170,178,-263,-182" FontWeight="Bold">
+                    <Run Text="Søndag"/>
+                    <Run Text=" 08.00-20.00"/>
+                </TextBlock>
+                <TextBlock x:Name="txtHelligdage" HorizontalAlignment="Left" Height="28" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Margin="170,202,-263,-210" FontWeight="Bold" Text="Helligdage lukket"/>
+            </RelativePanel>
+            <RelativePanel x:Name="pnlAfdelinger" HorizontalAlignment="Left" Height="290" VerticalAlignment="Top" Width="495" Background="#FFFAFAFA" Margin="40,38,-40,-38" d:IsHidden="True">
+                <Button x:Name="btnDelikatesse" Content="Delikatesse" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="115" Margin="114,115,-114,-115"/>
+                <Button x:Name="btnNonFood" Content="Non food" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="115" Margin="114,157,-114,-157"/>
+                <Button x:Name="btnSlagter" Content="Slagter" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="115" Margin="114,73,-114,-73"/>
+                <Button x:Name="btnGrønthandler" Content="Grønthandler" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="115" Margin="249,73,-249,-73"/>
+                <Button x:Name="btnVinhandler" Content="Vinhandler" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="115" Margin="249,115,-249,-115"/>
+                <Button x:Name="btnMejeri" Content="Mejeri" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="115" Margin="249,157,-249,-157"/>
+            </RelativePanel>
+            <RelativePanel x:Name="pnlKundeservice" HorizontalAlignment="Left" Height="290" VerticalAlignment="Top" Width="495" Background="#FFFAFAFA" Margin="40,38,-40,-38"/>
+            <RelativePanel HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="0" FocusVisualPrimaryBrush="#FFB42020"/>
+        </RelativePanel>
+        <Image HorizontalAlignment="Left" Height="95" Margin="90,20,0,0" VerticalAlignment="Top" Width="300" Source="ms-appx:///Assets/coop.png"/>
+
+    </Grid>
+</Page>

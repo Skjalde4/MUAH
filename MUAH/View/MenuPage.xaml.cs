@@ -71,7 +71,6 @@ namespace MUAH.View
 
         #endregion
 
-
         #region Checkbox metoder i buffet
 
         private void CheckMeet()
@@ -1276,8 +1275,7 @@ namespace MUAH.View
 
         private void BtnMinusÆblekage_Click(object sender, RoutedEventArgs e)
         {
-            txtAntalÆblekage.Text = subAntal(txtAntalÆblekage.Text);
-            OrderToList(false, dessertÆblekage, txtDessertÆblekage.Text, Convert.ToDouble(txtDessertÆblekagePris.Text),Convert.ToInt32(txtAntalÆblekage.Text));
+            
         }
 
         private void BtnPlusChokolademousse_Click(object sender, RoutedEventArgs e)

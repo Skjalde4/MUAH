@@ -1515,14 +1515,14 @@
                 <TextBlock x:Name="txtPastasalatNavn" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="461,331,-634,-341" FontSize="24" FontWeight="Bold" Text="Pastasalat"/>
             </RelativePanel>
             <RelativePanel x:Name="pnlDessert" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Margin="30,30,-30,-30" Background="#FFF7F7F7">
-                <TextBlock HorizontalAlignment="Left" Height="83" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="40,63,-203,-125" FontSize="16" FontWeight="Bold">
+                <TextBlock HorizontalAlignment="Left" Height="83" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="56,63,-203,-125" FontSize="16" FontWeight="Bold">
                     <Run Text="Gammeldags æblekage m. rasp, ribsgele og flødeskum"/>
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
                     <Run Text="Pris pr. kuvert "/>
                 </TextBlock>
-                <TextBlock HorizontalAlignment="Left" Height="155" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="40,243,-203,-378" FontSize="16" FontWeight="Bold">
+                <TextBlock HorizontalAlignment="Left" Height="155" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="56,243,-203,-378" FontSize="16" FontWeight="Bold">
                     <Run Text="Chokolademousse pyntet m. frisk frugt og flødeskum "/>
                     <LineBreak/>
                     <Run/>
@@ -1536,7 +1536,7 @@
                     <LineBreak/>
                     <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
-                <TextBlock Height="155" TextWrapping="Wrap" VerticalAlignment="Top" Margin="434,243,-309,-378" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" Width="217">
+                <TextBlock Height="155" TextWrapping="Wrap" VerticalAlignment="Top" Margin="477,243,-309,-378" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" Width="217">
                     <Run Text="Hindbærmousse pyntet m. frisk frugt og flødeskum"/>
                     <LineBreak/>
                     <Run/>
@@ -1550,23 +1550,15 @@
                     <Run FontSize="24" Text="45.00"/>
                 </TextBlock>
                 <TextBlock HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="609,115,-647,-167" FontWeight="Bold">
-                    <Run FontSize="16" Text="kr. "/>
-                    <Run FontSize="24" Text="45,00"/>
+                    <Run FontSize="24" Text="45.00"/>
                 </TextBlock>
                 <TextBlock HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="609,295,-647,-333" FontWeight="Bold">
                     <Run FontSize="24" Text="45.00"/>
                 </TextBlock>
-                <TextBlock HorizontalAlignment="Left" Height="155" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="40,243,-203,-378" FontSize="16" FontWeight="Bold">
-                    <Run Text="Chokolademousse pyntet m. frisk frugt og flødeskum "/>
-                    <LineBreak/>
-                    <Run/>
-                    <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
-                </TextBlock>
                 <TextBlock HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="213,295,-251,-333" FontWeight="Bold">
                     <Run FontSize="24" Text="45.00"/>
                 </TextBlock>
-                <TextBlock HorizontalAlignment="Left" Height="155" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="40,406,-203,-566" FontSize="16" FontWeight="Bold">
+                <TextBlock HorizontalAlignment="Left" Height="155" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="56,406,-203,-566" FontSize="16" FontWeight="Bold">
                     <Run Text="Passionsmousse pyntet m. frisk frugt og flødeskum"/>
                     <LineBreak/>
                     <Run/>
@@ -1576,7 +1568,7 @@
                 <TextBlock HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="213,458,-251,-521" FontWeight="Bold">
                     <Run FontSize="24" Text="45.00"/>
                 </TextBlock>
-                <TextBlock HorizontalAlignment="Left" Height="155" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="436,406,-599,-566" FontSize="16" FontWeight="Bold">
+                <TextBlock HorizontalAlignment="Left" Height="155" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="477,406,-599,-566" FontSize="16" FontWeight="Bold">
                     <Run Text="Chokoladekage m. frisk frugt og råcreme"/>
                     <LineBreak/>
                     <Run/>
@@ -1586,7 +1578,7 @@
                 <TextBlock HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="609,458,-647,-521" FontWeight="Bold">
                     <Run FontSize="24" Text="40.00"/>
                 </TextBlock>
-                <TextBlock HorizontalAlignment="Left" Height="155" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="40,561,-203,-716" FontSize="16" FontWeight="Bold">
+                <TextBlock HorizontalAlignment="Left" Height="155" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="56,561,-203,-716" FontSize="16" FontWeight="Bold">
                     <Run Text="Skovbærstærte m. råcreme"/>
                     <LineBreak/>
                     <Run/>
@@ -1596,7 +1588,7 @@
                 <TextBlock HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="213,613,-251,-671" FontWeight="Bold">
                     <Run FontSize="24" Text="35.00"/>
                 </TextBlock>
-                <TextBlock HorizontalAlignment="Left" Height="155" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="436,561,-599,-716" FontSize="16" FontWeight="Bold">
+                <TextBlock HorizontalAlignment="Left" Height="155" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="477,561,-599,-716" FontSize="16" FontWeight="Bold">
                     <Run Text="Blåbær cheesecake m. frisk frugt"/>
                     <LineBreak/>
                     <Run/>

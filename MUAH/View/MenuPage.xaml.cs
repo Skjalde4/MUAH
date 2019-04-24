@@ -105,34 +105,58 @@ namespace MUAH.View
         private const int smørrebrødMellemlageretR = 48;
         private const int smørrebrødLageretR = 49;
         
-
         #endregion
+
+        
 
         #region Smørrebrød franskbrød product id
 
-        private const int smørrebrødHåndmadderUspecificeretF = 28;
-        private const int smørrebrødHåndmadderSpecificeretF = 29;
-        private const int smørrebrødHøjtbelagtUspecificeretF = 30;
-        private const int smørrebrødÆgTomatF = 31;
-        private const int smørrebrødÆgRejerF = 32;
-        private const int smørrebrødRullepølseF = 33;
-        private const int smørrebrødFrikadelleF = 34;
-        private const int smørrebrødFlæskestegF = 35;
-        private const int smørrebrødLeverpostejF = 36;
-        private const int smørrebrødDyrlægensF = 37;
-        private const int smørrebrødRoastbeefF = 38;
-        private const int smørrebrødFiskefiletF = 39;
-        private const int smørrebrødStjernekasterF = 40;
-        private const int smørrebrødStjerneskudF = 41;
-        private const int smørrebrødSkinkeF = 42;
-        private const int smørrebrødOksebrystF = 43;
-        private const int smørrebrødKalkunF = 44;
-        private const int smørrebrødTatarF = 45;
-        private const int smørrebrødMørbradbøfF = 46;
-        private const int smørrebrødBrieF = 47;
-        private const int smørrebrødMellemlageretF = 48;
-        private const int smørrebrødLageretF = 49;
+        private const int smørrebrødHåndmadderUspecificeretF = 50;
+        private const int smørrebrødHåndmadderSpecificeretF = 51;
+        private const int smørrebrødHøjtbelagtUspecificeretF = 51;
+        private const int smørrebrødÆgTomatF = 53;
+        private const int smørrebrødÆgRejerF = 54;
+        private const int smørrebrødRullepølseF = 55;
+        private const int smørrebrødFrikadelleF = 56;
+        private const int smørrebrødFlæskestegF = 57;
+        private const int smørrebrødLeverpostejF = 58;
+        private const int smørrebrødDyrlægensF = 59;
+        private const int smørrebrødRoastbeefF = 60;
+        private const int smørrebrødFiskefiletF = 61;
+        private const int smørrebrødStjernekasterF = 62;
+        private const int smørrebrødStjerneskudF = 63;
+        private const int smørrebrødSkinkeF = 64;
+        private const int smørrebrødOksebrystF = 65;
+        private const int smørrebrødKalkunF = 66;
+        private const int smørrebrødTatarF = 67;
+        private const int smørrebrødMørbradbøfF = 68;
+        private const int smørrebrødBrieF = 69;
+        private const int smørrebrødMellemlageretF = 70;
+        private const int smørrebrødLageretF = 71;
 
+        #endregion
+
+        #region Koldtbord product id
+
+        private const int koldtbord = 72;
+        private const int koldtbordPlatte = 73;
+        private const int koldtbordLuksusPlatte = 74;
+
+        #endregion
+
+        #region Sandwich product id
+        
+        private const int sandwichKylling = 75;
+        private const int sandwichÆgBacon = 76;
+        private const int sandwichRoastbeef = 77;
+        private const int sandwichSteg = 78;
+        private const int sandwichFrikadelle = 79;
+        private const int sandwichSkinkeOst = 80;
+        private const int sandwichRøgetLaks = 81;
+        private const int sandwichÆgRejer = 82;
+        private const int sandwichTunsalat = 83;
+        private const int sandwichSerano = 84;
+        
         #endregion
 
         #region Checkbox metoder i buffet
@@ -849,36 +873,57 @@ namespace MUAH.View
         }
         #endregion
 
-        #region Plus/Minus koldtbord
+        #region Koldtbord to List
 
         private void BtnPlusPlatte_Click(object sender, RoutedEventArgs e)
         {
-            txtPlatte.Text = addAntal(txtPlatte.Text);
+            txtAntalPlatte.Text = addAntal(txtAntalPlatte.Text);
+            OrderToList(true, koldtbordPlatte, txtPlatteInfo.Text, Convert.ToDouble(txtPlattePris.Text), Convert.ToInt32(txtAntalPlatte.Text) );
         }
 
         private void BtnMinusPlatte_Click(object sender, RoutedEventArgs e)
         {
-            txtPlatte.Text = subAntal(txtPlatte.Text);
+            txtAntalPlatte.Text = subAntal(txtAntalPlatte.Text);
+            OrderToList(false, koldtbordPlatte, txtPlatteInfo.Text, Convert.ToDouble(txtPlattePris.Text), Convert.ToInt32(txtAntalPlatte.Text) );
         }
 
         private void BtnPlusKoldtbord_Click(object sender, RoutedEventArgs e)
         {
-            txtKoldtbord1.Text = addAntal(txtKoldtbord1.Text);
+            txtAntalKoldtbord.Text = addAntal(txtAntalKoldtbord.Text);
+            OrderToList(true, koldtbord, txtKoldtbordInfo.Text, Convert.ToDouble(txtKoldtbordPris.Text), Convert.ToInt32(txtAntalKoldtbord.Text) );
         }
 
         private void BtnMinusKoldtbord_Click(object sender, RoutedEventArgs e)
         {
-            txtKoldtbord1.Text = subAntal(txtKoldtbord1.Text);
+            txtAntalKoldtbord.Text = subAntal(txtAntalKoldtbord.Text);
+            OrderToList(false, koldtbord, txtKoldtbordInfo.Text, Convert.ToDouble(txtKoldtbordPris.Text), Convert.ToInt32(txtAntalKoldtbord.Text) );
         }
 
         private void BtnPlusLuksusplatte_Click(object sender, RoutedEventArgs e)
         {
-            txtLuksusplatte.Text = addAntal(txtLuksusplatte.Text);
+            txtAntalLuksusplatte.Text = addAntal(txtAntalLuksusplatte.Text);
+            OrderToList(true, koldtbordLuksusPlatte, txtLuksusPlatteInfo.Text, Convert.ToDouble(txtLuksusPlattePris.Text), Convert.ToInt32(txtAntalLuksusplatte.Text) );
         }
 
         private void BtnMinusLuksusplatte_Click(object sender, RoutedEventArgs e)
         {
-            txtLuksusplatte.Text = subAntal(txtLuksusplatte.Text);
+            txtAntalLuksusplatte.Text = subAntal(txtAntalLuksusplatte.Text);
+            OrderToList(true, koldtbordLuksusPlatte, txtLuksusPlatteInfo.Text, Convert.ToDouble(txtLuksusPlattePris.Text), Convert.ToInt32(txtAntalLuksusplatte.Text) );
+        }
+
+        private void ChkKoldtbord_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkKoldtbord, btnPlusKoldtbord, btnMinusKoldtbord, txtAntalKoldtbord);
+        }
+
+        private void ChkPlatte_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkPlatte, btnPlusPlatte, btnMinusPlatte, txtAntalPlatte);
+        }
+
+        private void ChkLuksusplatte_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkLuksusplatte, btnPlusLuksusplatte, btnMinusLuksusplatte, txtAntalLuksusplatte);
         }
         #endregion
 
@@ -1536,6 +1581,182 @@ namespace MUAH.View
             enabledDisabled(chkPastasalat, btnPlusPastasalat, btnMinusPastasalat, txtAntalPastasalat);
         }
 
+
+
+
+        #endregion
+
+        #region SandwichToList
+
+        private void BtnPlusKyllingSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalKyllingSandwich.Text = addAntal(txtAntalKyllingSandwich.Text);
+            OrderToList(true, sandwichKylling, txtKyllingSandwichNavn.Text, Convert.ToDouble(txtKyllingSandwichPris.Text), Convert.ToInt32(txtAntalKyllingSandwich.Text));
+        }
+
+        private void BtnMinusKyllingSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalKyllingSandwich.Text = subAntal(txtAntalKyllingSandwich.Text);
+            OrderToList(false, sandwichKylling, txtKyllingSandwichNavn.Text, Convert.ToDouble(txtKyllingSandwichPris.Text), Convert.ToInt32(txtAntalKyllingSandwich.Text));
+        }
+
+        private void BtnPlusÆgBacon_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalÆgBacon.Text = addAntal(txtAntalÆgBacon.Text);
+            OrderToList(true, sandwichÆgBacon, txtÆgBaconSandwichNavn.Text, Convert.ToDouble(txtÆgBaconSandwichPris.Text), Convert.ToInt32(txtAntalÆgBacon.Text));
+        }
+
+        private void BtnMinusÆgBacon_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalÆgBacon.Text = subAntal(txtAntalÆgBacon.Text);
+            OrderToList(false, sandwichÆgBacon, txtÆgBaconSandwichNavn.Text, Convert.ToDouble(txtÆgBaconSandwichPris.Text), Convert.ToInt32(txtAntalÆgBacon.Text));
+        }
+
+        private void BtnPlusRoastbeefSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalRoastbeefSandwich.Text = addAntal(txtAntalRoastbeefSandwich.Text);
+            OrderToList(true, sandwichRoastbeef, txtRoastbeefSandwichNavn.Text, Convert.ToDouble(txtRoastbeefSandwichPris.Text), Convert.ToInt32(txtAntalRoastbeefSandwich.Text));
+        }
+
+        private void BtnMinusRoastbeefSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalRoastbeefSandwich.Text = subAntal(txtAntalRoastbeefSandwich.Text);
+            OrderToList(false, sandwichRoastbeef, txtRoastbeefSandwichNavn.Text, Convert.ToDouble(txtRoastbeefSandwichPris.Text), Convert.ToInt32(txtAntalRoastbeefSandwich.Text));
+        }
+
+        private void BtnPlusStegSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalStegSandwich.Text = addAntal(txtAntalStegSandwich.Text);
+            OrderToList(true, sandwichSteg, txtStegSandwichNavn.Text, Convert.ToDouble(txtstegSandwichPris.Text), Convert.ToInt32(txtAntalStegSandwich.Text));
+        }
+
+        private void BtnMinusStegSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalStegSandwich.Text = subAntal(txtAntalStegSandwich.Text);
+            OrderToList(false, sandwichSteg, txtStegSandwichNavn.Text, Convert.ToDouble(txtstegSandwichPris.Text), Convert.ToInt32(txtAntalStegSandwich.Text));
+        }
+
+        private void BtnPlusFrikadelleSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalFrikadelleSandwich.Text = addAntal(txtAntalFrikadelleSandwich.Text);
+            OrderToList(true, sandwichFrikadelle, txtFrikadeleSandwichNavn.Text, Convert.ToDouble(txtFrikadelleSandwichPris.Text), Convert.ToInt32(txtAntalFrikadelleSandwich.Text));
+        }
+
+        private void BtnMinusFrikadelleSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalFrikadelleSandwich.Text = subAntal(txtAntalFrikadelleSandwich.Text);
+            OrderToList(false, sandwichFrikadelle, txtFrikadeleSandwichNavn.Text, Convert.ToDouble(txtFrikadelleSandwichPris.Text), Convert.ToInt32(txtAntalFrikadelleSandwich.Text));
+        }
+
+        private void BtnPlusSkinkeOst_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalSkinkeOst.Text = addAntal(txtAntalSkinkeOst.Text);
+            OrderToList(true, sandwichSkinkeOst, txtSkinkeOstSandwichNavn.Text, Convert.ToDouble(txtSkinkeOstSandwichPris.Text), Convert.ToInt32(txtAntalSkinkeOst.Text));
+        }
+
+        private void BtnMinusSkinkeOst_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalSkinkeOst.Text = subAntal(txtAntalSkinkeOst.Text);
+            OrderToList(false, sandwichSkinkeOst, txtSkinkeOstSandwichNavn.Text, Convert.ToDouble(txtSkinkeOstSandwichPris.Text), Convert.ToInt32(txtAntalSkinkeOst.Text));
+        }
+
+        private void BtnPlusRøgetLaksSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalRøgetLaksSandwich.Text = addAntal(txtAntalRøgetLaksSandwich.Text);
+            OrderToList(true, sandwichRøgetLaks, txtRøgetLaksNavn.Text, Convert.ToDouble(txtRøgetLaksSandwichPris.Text), Convert.ToInt32(txtAntalRøgetLaksSandwich.Text));
+        }
+
+        private void BtnMinusRøgetLaksSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalRøgetLaksSandwich.Text = subAntal(txtAntalRøgetLaksSandwich.Text);
+            OrderToList(false, sandwichRøgetLaks, txtRøgetLaksNavn.Text, Convert.ToDouble(txtRøgetLaksSandwichPris.Text), Convert.ToInt32(txtAntalRøgetLaksSandwich.Text));
+        }
+
+        private void BtnPlusÆgRejerSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalÆgRejerSandwich.Text = addAntal(txtAntalÆgRejerSandwich.Text);
+            OrderToList(true, sandwichÆgRejer, txtÆgRejerSandwichNavn.Text, Convert.ToDouble(txtÆgRejerSandwichPris.Text), Convert.ToInt32(txtAntalÆgRejerSandwich.Text));
+        }
+
+        private void BtnMinusÆgRejerSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalÆgRejerSandwich.Text = subAntal(txtAntalÆgRejerSandwich.Text);
+            OrderToList(false, sandwichÆgRejer, txtÆgRejerSandwichNavn.Text, Convert.ToDouble(txtÆgRejerSandwichPris.Text), Convert.ToInt32(txtAntalÆgRejerSandwich.Text));
+        }
+
+        private void BtnPlusTunsalat_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalTunsalat.Text = addAntal(txtAntalTunsalat.Text);
+            OrderToList(true, sandwichTunsalat, txtTunsalatSandwichNavn.Text, Convert.ToDouble(txtTunsalatSandwichPris.Text), Convert.ToInt32(txtAntalTunsalat.Text));
+        }
+
+        private void BtnMinusTunsalat_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalTunsalat.Text = subAntal(txtAntalTunsalat.Text);
+            OrderToList(false, sandwichTunsalat, txtTunsalatSandwichNavn.Text, Convert.ToDouble(txtTunsalatSandwichPris.Text), Convert.ToInt32(txtAntalTunsalat.Text));
+        }
+
+        private void BtnPlusSeranoSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalSeranoSandwich.Text = addAntal(txtAntalSeranoSandwich.Text);
+            OrderToList(true, sandwichSerano, txtSeranoSandwichNavn.Text, Convert.ToDouble(txtSeranoSandwichPris.Text), Convert.ToInt32(txtAntalSeranoSandwich.Text));
+        }
+
+        private void BtnMinusSeranoSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalSeranoSandwich.Text = subAntal(txtAntalSeranoSandwich.Text);
+            OrderToList(false, sandwichSerano, txtSeranoSandwichNavn.Text, Convert.ToDouble(txtSeranoSandwichPris.Text), Convert.ToInt32(txtAntalSeranoSandwich.Text));
+        }
+
+        private void ChkKyllingSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkKyllingSandwich, btnPlusKyllingSandwich, btnMinusKyllingSandwich, txtAntalKyllingSandwich);
+        }
+
+        private void ChkÆgBaconSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkÆgBaconSandwich, btnPlusÆgBacon, btnMinusÆgBacon, txtAntalÆgBacon);
+        }
+
+        private void ChkRoastbeefSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkRoastbeefSandwich, btnPlusRoastbeefSandwich, btnMinusRoastbeefSandwich, txtAntalRoastbeefSandwich);
+        }
+
+        private void ChkStegSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkStegSandwich, btnPlusStegSandwich, btnMinusStegSandwich, txtAntalStegSandwich);
+        }
+
+        private void ChkFrikadelleSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkFrikadelleSandwich, btnPlusFrikadelleSandwich, btnMinusFrikadelleSandwich, txtAntalFrikadelleSandwich);
+        }
+
+        private void ChkSkinkeOstSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkSkinkeOstSandwich, btnPlusSkinkeOst, btnMinusSkinkeOst, txtAntalSkinkeOst);
+        }
+
+        private void ChkRøgetLaks_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkRøgetLaks, btnPlusRøgetLaksSandwich, btnMinusRøgetLaksSandwich, txtAntalRøgetLaksSandwich);
+        }
+
+        private void ChkÆgRejerSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkÆgRejerSandwich, btnPlusÆgRejerSandwich, btnMinusÆgRejerSandwich, txtAntalÆgRejerSandwich);
+        }
+
+        private void ChkTunsalatSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkTunsalatSandwich, btnPlusTunsalat, btnMinusTunsalat, txtAntalTunsalat);
+        }
+
+        private void ChkSeranoSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            enabledDisabled(chkSeranoSandwich, btnPlusSeranoSandwich, btnMinusSeranoSandwich, txtAntalSeranoSandwich);
+        }
 
         #endregion
 

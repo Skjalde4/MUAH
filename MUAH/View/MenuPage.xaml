@@ -18,9 +18,9 @@
         <Button x:Name="btnDessert" Content="Dessert" HorizontalAlignment="Left" Height="70" Margin="90,330,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnDessert_Click"/>
         <Button x:Name="btnSalater" Content="Salater" HorizontalAlignment="Left" Height="70" Margin="90,405,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnSalater_Click"/>
         <Button x:Name="btnBrunch" Content="Brunch" HorizontalAlignment="Left" Height="70" Margin="90,780,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnBrunch_Click"/>
-        <Button x:Name="btnTapas" Content="Tapas" HorizontalAlignment="Left" Height="70" Margin="90,555,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnTapas_Click"/>
+        <Button x:Name="btnTapas" Content="Tapas" HorizontalAlignment="Left" Height="70" Margin="90,705,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnTapas_Click"/>
         <Button x:Name="btnSandwich" Content="Sandwich" HorizontalAlignment="Left" Height="70" Margin="90,630,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnSandwich_Click"/>
-        <Button x:Name="btnKoldtbord" Content="Koldtbord" HorizontalAlignment="Left" Height="70" Margin="90,705,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnKoldtbord_Click"/>
+        <Button x:Name="btnKoldtbord" Content="Koldtbord" HorizontalAlignment="Left" Height="70" Margin="90,555,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnKoldtbord_Click"/>
         <Button x:Name="btnSmørrebrød" Content="Smørrebrød" HorizontalAlignment="Left" Height="70" Margin="90,480,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnSmørrebrød_Click"/>
         <Button x:Name="btnSpecials" Content="Specials" HorizontalAlignment="Left" Height="70" Margin="90,855,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnSpecials_Click"/>
         <Button x:Name="btnForret" Content="Forret" HorizontalAlignment="Left" Height="70" Margin="90,180,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnForret_Click"/>
@@ -35,7 +35,7 @@
             <RelativePanel.Background>
                 <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/food frame.jpg"/>
             </RelativePanel.Background>
-            <RelativePanel x:Name="pnlSmørrebrød" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Margin="30,30,-695,-658" Background="#FFF7F7F7">
+            <RelativePanel x:Name="pnlSmørrebrød" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Margin="30,30,-695,-658" Background="#FFF7F7F7" d:IsHidden="True">
                 <TextBlock x:Name="txtHåndmadderUspecificeret" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Håndmadder uspecificeret" VerticalAlignment="Top" Height="32" Width="250" Margin="55,17,-163,-17"/>
                 <TextBlock x:Name="txtHåndmadderSpecificeret" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Håndmadder specificeret" VerticalAlignment="Top" Height="32" Width="250" Margin="55,49,-163,-49"/>
                 <TextBlock x:Name="txtHøjtbelagt" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Højtbelagt uspecificeret" VerticalAlignment="Top" Height="32" Width="250" Margin="55,81,-163,-81"/>
@@ -1281,7 +1281,7 @@
             <RelativePanel x:Name="pnlTapas" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30" d:IsHidden="True">
                 <Button x:Name="btnTilføjTilKurvTapas" Content="Tilføj til kurv" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Margin="580,716,-685,-716"/>
             </RelativePanel>
-            <RelativePanel x:Name="pnlSandwich" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30" d:IsHidden="True">
+            <RelativePanel x:Name="pnlSandwich" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30">
                 <Button x:Name="btnTilføjTilKurvSandwich" Content="Tilføj til kurv" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Margin="580,716,-685,-716"/>
                 <TextBlock x:Name="txtKyllingSandwich" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Margin="55,57,-553,-70" FontSize="16" FontWeight="Bold">
                     <Run Text="- Salatmayonnaise, salat, kylling, karrydressing, agurk, tomat og bacon"/>
@@ -1289,7 +1289,7 @@
                 <TextBlock x:Name="txtKyllingSandwichPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="615,23,-653,-61" FontWeight="Bold">
                     <Run FontSize="24" Text="45.00"/>
                 </TextBlock>
-                <CheckBox x:Name="chkKyllingSandwich" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,20,-31,-13"/>
+                <CheckBox x:Name="chkKyllingSandwich" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,20,-31,-13" Click="ChkKyllingSandwich_Click"/>
                 <TextBlock x:Name="txtKyllingSandwichNavn" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="56,18,-229,-28" FontSize="24" FontWeight="Bold" Text="Kylling/bacon"/>
                 <TextBlock x:Name="txtÆgBaconSandwich" HorizontalAlignment="Left" Height="33" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Margin="55,125,-553,-138" FontSize="16" FontWeight="Bold">
                     <Run Text="- Salatmayonnaise, salat, æg, karrydressing, agurk, tomat og bacon"/>
@@ -1297,7 +1297,7 @@
                 <TextBlock x:Name="txtÆgBaconSandwichPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="615,91,-653,-129" FontWeight="Bold">
                     <Run FontSize="24" Text="45.00"/>
                 </TextBlock>
-                <CheckBox x:Name="chkÆgBaconSandwich" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,86,-31,-79"/>
+                <CheckBox x:Name="chkÆgBaconSandwich" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,86,-31,-79" Click="ChkÆgBaconSandwich_Click"/>
                 <TextBlock x:Name="txtÆgBaconSandwichNavn" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="56,86,-229,-96" FontSize="24" FontWeight="Bold" Text="Æg/bacon"/>
                 <TextBlock x:Name="txtRoastbeefSandwich" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Margin="55,193,-553,-219" FontSize="16" FontWeight="Bold">
                     <Run Text="- Salatmayonnaise, salat, roastbeef, ristedeløg, agurkesalat, remoulade og peberrod"/>
@@ -1305,7 +1305,7 @@
                 <TextBlock x:Name="txtRoastbeefSandwichPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="615,159,-653,-197" FontWeight="Bold">
                     <Run FontSize="24" Text="45.00"/>
                 </TextBlock>
-                <CheckBox x:Name="chkRoastbeefSandwich" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,154,-31,-147"/>
+                <CheckBox x:Name="chkRoastbeefSandwich" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,154,-31,-147" Click="ChkRoastbeefSandwich_Click"/>
                 <TextBlock x:Name="txtRoastbeefSandwichNavn" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="56,154,-229,-164" FontSize="24" FontWeight="Bold" Text="Roastbeef"/>
                 <TextBlock x:Name="txtStegSandwich" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Margin="55,281,-553,-307" FontSize="16" FontWeight="Bold">
                     <Run Text="- Salatmayonnaise, salat, steg, agurkesalat og rødkål"/>
@@ -1313,7 +1313,7 @@
                 <TextBlock x:Name="txtstegSandwichPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="615,247,-653,-285" FontWeight="Bold">
                     <Run FontSize="24" Text="45.00"/>
                 </TextBlock>
-                <CheckBox x:Name="chkStegSandwich" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,242,-31,-235"/>
+                <CheckBox x:Name="chkStegSandwich" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,242,-31,-235" Click="ChkStegSandwich_Click"/>
                 <TextBlock x:Name="txtStegSandwichNavn" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="56,242,-229,-252" FontSize="24" FontWeight="Bold" Text="Ribbensteg/kamsteg"/>
                 <TextBlock x:Name="txtFrikadelleSandwich" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Margin="55,351,-553,-377" FontSize="16" FontWeight="Bold">
                     <Run Text="- Salatmayonnaise, salat, frikadelle, agurkesalat og rødkål"/>
@@ -1321,7 +1321,7 @@
                 <TextBlock x:Name="txtFrikadelleSandwichPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="615,317,-653,-355" FontWeight="Bold">
                     <Run FontSize="24" Text="45.00"/>
                 </TextBlock>
-                <CheckBox x:Name="chkFrikadelleSandwich" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,312,-31,-305"/>
+                <CheckBox x:Name="chkFrikadelleSandwich" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,312,-31,-305" Click="ChkFrikadelleSandwich_Click"/>
                 <TextBlock x:Name="txtFrikadeleSandwichNavn" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="56,312,-229,-322" FontSize="24" FontWeight="Bold" Text="Frikadelle"/>
                 <TextBlock x:Name="txtSkinkeOstSandwich" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Margin="55,419,-553,-445" FontSize="16" FontWeight="Bold">
                     <Run Text="- Salatmayonnaise, salat, skinke, ost, agurk og tomat"/>
@@ -1329,7 +1329,7 @@
                 <TextBlock x:Name="txtSkinkeOstSandwichPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="615,385,-653,-423" FontWeight="Bold">
                     <Run FontSize="24" Text="45.00"/>
                 </TextBlock>
-                <CheckBox x:Name="chkSkinkeOstSandwich" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,380,-31,-373"/>
+                <CheckBox x:Name="chkSkinkeOstSandwich" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,380,-31,-373" Click="ChkSkinkeOstSandwich_Click"/>
                 <TextBlock x:Name="txtSkinkeOstSandwichNavn" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="56,380,-229,-390" FontSize="24" FontWeight="Bold" Text="Skinke/ost"/>
                 <TextBlock x:Name="txtRøgetLaksSandwich" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Margin="55,489,-553,-515" FontSize="16" FontWeight="Bold">
                     <Run Text="- Salatmayonnaise, salat, røget laks, agurk, tomat og peberrod"/>
@@ -1337,7 +1337,7 @@
                 <TextBlock x:Name="txtRøgetLaksSandwichPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="615,455,-653,-493" FontWeight="Bold">
                     <Run FontSize="24" Text="50.00"/>
                 </TextBlock>
-                <CheckBox x:Name="chkRøgetLaks" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,450,-31,-443"/>
+                <CheckBox x:Name="chkRøgetLaks" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,450,-31,-443" Click="ChkRøgetLaks_Click"/>
                 <TextBlock x:Name="txtRøgetLaksNavn" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="56,450,-229,-460" FontSize="24" FontWeight="Bold" Text="Røget laks"/>
                 <TextBlock x:Name="txtÆgRejerSandwich" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Margin="55,557,-553,-583" FontSize="16" FontWeight="Bold">
                     <Run Text="- Salatmayonnaise, salat, æg, rejer, agurk og tomat"/>
@@ -1345,29 +1345,139 @@
                 <TextBlock x:Name="txtÆgRejerSandwichPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="615,523,-653,-561" FontWeight="Bold">
                     <Run FontSize="24" Text="50.00"/>
                 </TextBlock>
-                <CheckBox x:Name="chkÆgRejerSandwich" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,518,-31,-511"/>
+                <CheckBox x:Name="chkÆgRejerSandwich" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,518,-31,-511" Click="ChkÆgRejerSandwich_Click"/>
                 <TextBlock x:Name="txtÆgRejerSandwichNavn" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="56,518,-229,-528" FontSize="24" FontWeight="Bold" Text="Æg/rejer"/>
-                <TextBlock x:Name="txtMayosalatSandwich" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Margin="55,623,-553,-649" FontSize="16" FontWeight="Bold">
+                <TextBlock x:Name="txtTunsalatSandwich" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Margin="55,623,-553,-649" FontSize="16" FontWeight="Bold">
                     <Run Text="- Salatmayonnaise, salat, tun/reje salat, tomat og agurk"/>
                 </TextBlock>
-                <TextBlock x:Name="txtMayosalatSandwichPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="615,589,-653,-627" FontWeight="Bold">
+                <TextBlock x:Name="txtTunsalatSandwichPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="615,589,-653,-627" FontWeight="Bold">
                     <Run FontSize="24" Text="50.00"/>
                 </TextBlock>
-                <CheckBox x:Name="chkMayosalatSandwich" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,584,-31,-577"/>
-                <TextBlock x:Name="txtMayosalatSandwichNavn" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="56,584,-229,-594" FontSize="24" FontWeight="Bold" Text="Tunsalat/rejesalat"/>
+                <CheckBox x:Name="chkTunsalatSandwich" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,584,-31,-577" Click="ChkTunsalatSandwich_Click"/>
+                <TextBlock x:Name="txtTunsalatSandwichNavn" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="56,584,-229,-594" FontSize="24" FontWeight="Bold" Text="Tunsalat/rejesalat"/>
                 <TextBlock x:Name="txtSeranoSandwich" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Margin="55,693,-553,-719" FontSize="16" FontWeight="Bold">
                     <Run Text="- Salatmayonnaise, salat, seranoskinke, pesto, rødløg, tomat og mozarella"/>
                 </TextBlock>
                 <TextBlock x:Name="txtSeranoSandwichPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="615,659,-653,-697" FontWeight="Bold">
                     <Run FontSize="24" Text="50.00"/>
                 </TextBlock>
-                <CheckBox x:Name="chkSeranoSandwich" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,654,-31,-647"/>
+                <CheckBox x:Name="chkSeranoSandwich" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,654,-31,-647" Click="ChkSeranoSandwich_Click"/>
                 <TextBlock x:Name="txtSeranoSandwichNavn" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="254" Margin="56,654,-248,-664" FontSize="24" FontWeight="Bold" Text="Seranoskinke m pesto"/>
+                <TextBlock x:Name="txtAntalKyllingSandwich" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="713,34,-683,-34"/>
+                <Button x:Name="btnPlusKyllingSandwich" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="692,35,-692,-35" Click="BtnPlusKyllingSandwich_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnMinusKyllingSandwich" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="735,37,-735,-37" Click="BtnMinusKyllingSandwich_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
+                    </Button.Background>
+                </Button>
+                <TextBlock x:Name="txtAntalÆgBacon" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="713,98,-683,-98"/>
+                <Button x:Name="btnPlusÆgBacon" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="692,99,-692,-99" Click="BtnPlusÆgBacon_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnMinusÆgBacon" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="735,101,-735,-101" Click="BtnMinusÆgBacon_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
+                    </Button.Background>
+                </Button>
+                <TextBlock x:Name="txtAntalRoastbeefSandwich" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="713,168,-683,-168"/>
+                <Button x:Name="btnPlusRoastbeefSandwich" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="692,169,-692,-169" Click="BtnPlusRoastbeefSandwich_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnMinusRoastbeefSandwich" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="735,171,-735,-171" Click="BtnMinusRoastbeefSandwich_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
+                    </Button.Background>
+                </Button>
+                <TextBlock x:Name="txtAntalStegSandwich" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="713,256,-683,-256"/>
+                <Button x:Name="btnPlusStegSandwich" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="692,257,-692,-257" Click="BtnPlusStegSandwich_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnMinusStegSandwich" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="735,259,-735,-259" Click="BtnMinusStegSandwich_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
+                    </Button.Background>
+                </Button>
+                <TextBlock x:Name="txtAntalFrikadelleSandwich" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="713,326,-683,-326"/>
+                <Button x:Name="btnPlusFrikadelleSandwich" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="692,327,-692,-327" Click="BtnPlusFrikadelleSandwich_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnMinusFrikadelleSandwich" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="735,329,-735,-329" Click="BtnMinusFrikadelleSandwich_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
+                    </Button.Background>
+                </Button>
+                <TextBlock x:Name="txtAntalSkinkeOst" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="713,394,-683,-394"/>
+                <Button x:Name="btnPlusSkinkeOst" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="692,395,-692,-395" Click="BtnPlusSkinkeOst_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnMinusSkinkeOst" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="735,397,-735,-397" Click="BtnMinusSkinkeOst_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
+                    </Button.Background>
+                </Button>
+                <TextBlock x:Name="txtAntalRøgetLaksSandwich" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="713,464,-683,-464"/>
+                <Button x:Name="btnPlusRøgetLaksSandwich" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="692,465,-692,-465" Click="BtnPlusRøgetLaksSandwich_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnMinusRøgetLaksSandwich" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="735,467,-735,-467" Click="BtnMinusRøgetLaksSandwich_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
+                    </Button.Background>
+                </Button>
+                <TextBlock x:Name="txtAntalÆgRejerSandwich" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="713,532,-683,-532"/>
+                <Button x:Name="btnPlusÆgRejerSandwich" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="692,533,-692,-533" Click="BtnPlusÆgRejerSandwich_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnMinusÆgRejerSandwich" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="735,535,-735,-535" Click="BtnMinusÆgRejerSandwich_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
+                    </Button.Background>
+                </Button>
+                <TextBlock x:Name="txtAntalTunsalat" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="713,598,-683,-598"/>
+                <Button x:Name="btnPlusTunsalat" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="692,599,-692,-599" Click="BtnPlusTunsalat_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnMinusTunsalat" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="735,601,-735,-601" Click="BtnMinusTunsalat_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
+                    </Button.Background>
+                </Button>
+                <TextBlock x:Name="txtAntalSeranoSandwich" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="713,668,-683,-668"/>
+                <Button x:Name="btnPlusSeranoSandwich" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="692,669,-692,-669" Click="BtnPlusSeranoSandwich_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnMinusSeranoSandwich" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="735,671,-735,-671" Click="BtnMinusSeranoSandwich_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
+                    </Button.Background>
+                </Button>
             </RelativePanel>
             <RelativePanel x:Name="pnlKoldtbord" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="32,30,-32,-30" d:IsHidden="True">
                 <TextBlock HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="PLATTE:" VerticalAlignment="Top" Width="235" Margin="477,93,-650,-103" FontSize="24" FontWeight="Bold"/>
                 <TextBlock HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="LUKSUS PLATTE" VerticalAlignment="Top" Width="235" Margin="55,467,-228,-478" FontSize="24" FontWeight="Bold"/>
-                <TextBlock HorizontalAlignment="Left" Height="180" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" Margin="461,127,-647,-302" FontSize="16" FontWeight="Bold">
+                <TextBlock x:Name="txtPlatteInfo" HorizontalAlignment="Left" Height="180" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" Margin="461,127,-647,-302" FontSize="16" FontWeight="Bold">
                     <Run Text="Marineret sild"/>
                     <LineBreak/>
                     <Run Text="Fiskefilet m. remoulade"/>
@@ -1384,10 +1494,10 @@
                     <LineBreak/>
                     <Run FontWeight="Normal" Text="(Mimimum 4 kuverter)"/>
                 </TextBlock>
-                <TextBlock HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="659,233,-697,-269" FontWeight="Bold">
+                <TextBlock x:Name="txtPlattePris" HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="659,233,-697,-269" FontWeight="Bold">
                     <Run FontSize="24" Text="105.00"/>
                 </TextBlock>
-                <TextBlock HorizontalAlignment="Left" Height="207" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" Margin="55,508,-241,-710" FontSize="16" FontWeight="Bold">
+                <TextBlock x:Name="txtLuksusPlatteInfo" HorizontalAlignment="Left" Height="207" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" Margin="55,508,-241,-710" FontSize="16" FontWeight="Bold">
                     <Run Text="Marineret sild"/>
                     <LineBreak/>
                     <Run Text="Fiskefilet m. remoulade"/>
@@ -1406,41 +1516,41 @@
                     <LineBreak/>
                     <Run FontWeight="Normal" Text="(Mimimum 6 kuverter)"/>
                 </TextBlock>
-                <TextBlock HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="253,644,-291,-702" FontWeight="Bold">
+                <TextBlock x:Name="txtLuksusPlattePris" HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="253,644,-291,-702" FontWeight="Bold">
                     <Run FontSize="24" Text="135.00"/>
                 </TextBlock>
-                <CheckBox x:Name="chkPlatte" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="438,93,-438,-86"/>
-                <CheckBox x:Name="chkLuksusplatte" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="30,466,-30,-459"/>
-                <TextBlock x:Name="txtPlatte" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="698,280,-668,-280"/>
-                <Button x:Name="btnPlusPlatte" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="675,281,-675,-281" Click="BtnPlusPlatte_Click">
+                <CheckBox x:Name="chkPlatte" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="438,93,-438,-86" Click="ChkPlatte_Click"/>
+                <CheckBox x:Name="chkLuksusplatte" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="30,466,-30,-459" Click="ChkLuksusplatte_Click"/>
+                <TextBlock x:Name="txtAntalPlatte" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="698,280,-668,-280"/>
+                <Button x:Name="btnPlusPlatte" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="675,281,-675,-281" Click="BtnPlusPlatte_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="btnMinusPlatte" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="718,283,-718,-283" Click="BtnMinusPlatte_Click">
+                <Button x:Name="btnMinusPlatte" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="718,283,-718,-283" Click="BtnMinusPlatte_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <TextBlock x:Name="txtLuksusplatte" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="310,688,-280,-688"/>
-                <Button x:Name="btnPlusLuksusplatte" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="287,691,-287,-691" Click="BtnPlusLuksusplatte_Click">
+                <TextBlock x:Name="txtAntalLuksusplatte" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="310,688,-280,-688"/>
+                <Button x:Name="btnPlusLuksusplatte" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="287,691,-287,-691" Click="BtnPlusLuksusplatte_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="btnMinusLuksusplatte" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="330,693,-330,-693" Click="BtnMinusLuksusplatte_Click">
+                <Button x:Name="btnMinusLuksusplatte" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="330,693,-330,-693" Click="BtnMinusLuksusplatte_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
-                <CheckBox x:Name="chkKoldtbord" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,96,-31,-89"/>
-                <TextBlock x:Name="txtKoldtbord1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="296,382,-266,-374"/>
-                <Button x:Name="btnPlusKoldtbord" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="271,382,-271,-377" Click="BtnPlusKoldtbord_Click">
+                <CheckBox x:Name="chkKoldtbord" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,96,-31,-89" Click="ChkKoldtbord_Click"/>
+                <TextBlock x:Name="txtAntalKoldtbord" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="296,382,-266,-374"/>
+                <Button x:Name="btnPlusKoldtbord" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="271,382,-271,-377" Click="BtnPlusKoldtbord_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
                 </Button>
-                <Button x:Name="btnMinusKoldtbord" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="314,382,-314,-377" Click="BtnMinusKoldtbord_Click">
+                <Button x:Name="btnMinusKoldtbord" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="314,382,-314,-377" Click="BtnMinusKoldtbord_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>

@@ -1602,16 +1602,16 @@
                     <Run Text="For alle forretter, hovedretter og desserter gælder minimum 10 kuverter"/>
                 </TextBlock>
                 <Button x:Name="btnTilføjTilKurvDessert" Content="Tilføj til kurv" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Margin="580,716,-685,-716"/>
-                <CheckBox x:Name="chkDessertFriskFrugt" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="451,58,-438,-86" Click="ChkHovedretGlaseretSkinke_Click"/>
-                <CheckBox x:Name="chkDessertHindbærmousse" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="451,238,-438,-266" Click="ChkHovedretGlaseretSkinke_Click"/>
-                <CheckBox x:Name="chkDessertChokoladekage" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="451,401,-438,-429" Click="ChkHovedretGlaseretSkinke_Click"/>
-                <CheckBox x:Name="chkDessertBlåbærCheesecake" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="451,556,-438,-584" Click="ChkHovedretGlaseretSkinke_Click"/>
-                <CheckBox x:Name="chkDessertÆblekage" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,58,-25,-51" Click="ChkHovedretKalveculotte_Click"/>
-                <CheckBox x:Name="chkDessertChokolademousse" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,238,-25,-231" Click="ChkHovedretKalveculotte_Click"/>
-                <CheckBox x:Name="chkDessertPassionsmousse" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,401,-25,-394" Click="ChkHovedretKalveculotte_Click"/>
-                <CheckBox x:Name="chkDessertSkovbærstærte" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,556,-25,-549" Click="ChkHovedretKalveculotte_Click"/>
+                <CheckBox x:Name="chkDessertFriskFrugt" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="451,58,-438,-86" Click="ChkDessertFriskFrugt_Click"/>
+                <CheckBox x:Name="chkDessertHindbærmousse" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="451,238,-438,-266" Click="ChkDessertHindbærmousse_Click"/>
+                <CheckBox x:Name="chkDessertChokoladekage" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="451,401,-438,-429" Click="ChkDessertChokoladekage_Click"/>
+                <CheckBox x:Name="chkDessertBlåbærCheesecake" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="451,556,-438,-584" Click="ChkDessertBlåbærCheesecake_Click"/>
+                <CheckBox x:Name="chkDessertÆblekage" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,58,-25,-51" Click="ChkDessertÆblekage_Click"/>
+                <CheckBox x:Name="chkDessertChokolademousse" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,238,-25,-231" Click="ChkDessertChokolademousse_Click"/>
+                <CheckBox x:Name="chkDessertPassionsmousse" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,401,-25,-394" Click="ChkDessertPassionsmousse_Click"/>
+                <CheckBox x:Name="chkDessertSkovbærstærte" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,556,-25,-549" Click="ChkDessertSkovbærstærte_Click"/>
                 <TextBlock x:Name="txtAntalÆblekage" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="266,155,-236,-155"/>
-                <Button x:Name="btnPlusÆblekage" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="243,158,-243,-158" Click="BtnPlusHvidvinslaks_Click" IsEnabled="False">
+                <Button x:Name="btnPlusÆblekage" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="243,158,-243,-158" Click="BtnPlusÆblekage_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -1619,7 +1619,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusÆblekage" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="286,158,-286,-158" Click="BtnMinusHvidvinslaks_Click" IsEnabled="False">
+                <Button x:Name="btnMinusÆblekage" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="286,158,-286,-158" Click="BtnMinusÆblekage_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
@@ -1628,7 +1628,7 @@
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
                 <TextBlock x:Name="txtAntalChokolademousse" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="261,335,-231,-335"/>
-                <Button x:Name="btnPlusChokolademousse" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="238,338,-238,-338" Click="BtnPlusHvidvinslaks_Click" IsEnabled="False">
+                <Button x:Name="btnPlusChokolademousse" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="238,338,-238,-338" Click="BtnPlusChokolademousse_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -1636,7 +1636,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusChokolademousse" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="281,338,-281,-338" Click="BtnMinusHvidvinslaks_Click" IsEnabled="False">
+                <Button x:Name="btnMinusChokolademousse" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="281,338,-281,-338" Click="BtnMinusChokolademousse_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
@@ -1645,7 +1645,7 @@
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
                 <TextBlock x:Name="txtAntalPassionsmousse" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="261,498,-231,-498"/>
-                <Button x:Name="btnPlusPassionsmousse" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="238,501,-238,-501" Click="BtnPlusHvidvinslaks_Click" IsEnabled="False">
+                <Button x:Name="btnPlusPassionsmousse" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="238,501,-238,-501" Click="BtnPlusPassionsmousse_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -1653,7 +1653,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusPassionsmousse" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="281,501,-281,-501" Click="BtnMinusHvidvinslaks_Click" IsEnabled="False">
+                <Button x:Name="btnMinusPassionsmousse" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="281,501,-281,-501" Click="BtnMinusPassionsmousse_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
@@ -1662,7 +1662,7 @@
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
                 <TextBlock x:Name="txtAntalSkovbærtærte" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="261,653,-231,-653"/>
-                <Button x:Name="btnPlusSkovbærtærte" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="238,656,-238,-656" Click="BtnPlusHvidvinslaks_Click" IsEnabled="False">
+                <Button x:Name="btnPlusSkovbærtærte" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="238,656,-238,-656" Click="BtnPlusSkovbærtærte_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -1670,7 +1670,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusSkovbærtærte" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="281,656,-281,-656" Click="BtnMinusHvidvinslaks_Click" IsEnabled="False">
+                <Button x:Name="btnMinusSkovbærtærte" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="281,656,-281,-656" Click="BtnMinusSkovbærtærte_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
@@ -1679,7 +1679,7 @@
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
                 <TextBlock x:Name="txtAntalFriskFrugt" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="682,157,-652,-157"/>
-                <Button x:Name="btnPlusFriskFrugt" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="659,160,-659,-160" Click="BtnPlusTunmousse_Click" IsEnabled="False">
+                <Button x:Name="btnPlusFriskFrugt" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="659,160,-659,-160" Click="BtnPlusFriskFrugt_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -1687,7 +1687,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusFriskFrugt" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="702,160,-702,-160" Click="BtnMinusTunmousse_Click" IsEnabled="False">
+                <Button x:Name="btnMinusFriskFrugt" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="702,160,-702,-160" Click="BtnMinusFriskFrugt_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
@@ -1696,7 +1696,7 @@
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
                 <TextBlock x:Name="txtAntalHindbærmousse" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="682,332,-652,-332"/>
-                <Button x:Name="btnPlusHindbærmousse" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="659,335,-659,-335" Click="BtnPlusTunmousse_Click" IsEnabled="False">
+                <Button x:Name="btnPlusHindbærmousse" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="659,335,-659,-335" Click="BtnPlusHindbærmousse_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -1704,7 +1704,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusHindbærmousse" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="702,335,-702,-335" Click="BtnMinusTunmousse_Click" IsEnabled="False">
+                <Button x:Name="btnMinusHindbærmousse" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="702,335,-702,-335" Click="BtnMinusHindbærmousse_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
@@ -1713,7 +1713,7 @@
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
                 <TextBlock x:Name="txtAntalChokoladekage" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="682,495,-652,-495"/>
-                <Button x:Name="btnPlusChokoladekage" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="659,498,-659,-498" Click="BtnPlusTunmousse_Click" IsEnabled="False">
+                <Button x:Name="btnPlusChokoladekage" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="659,498,-659,-498" Click="BtnPlusChokoladekage_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -1721,7 +1721,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusChokoladekage" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="702,498,-702,-498" Click="BtnMinusTunmousse_Click" IsEnabled="False">
+                <Button x:Name="btnMinusChokoladekage" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="702,498,-702,-498" Click="BtnMinusChokoladekage_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
@@ -1730,7 +1730,7 @@
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
                 <TextBlock x:Name="txtAntalBlåbærCheesecake" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="682,653,-652,-653"/>
-                <Button x:Name="btnPlusBlåbærCheesecake" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="659,656,-659,-656" Click="BtnPlusTunmousse_Click" IsEnabled="False">
+                <Button x:Name="btnPlusBlåbærCheesecake" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="659,656,-659,-656" IsEnabled="False" Click="BtnPlusBlåbærCheesecake_Click">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
                     </Button.Background>
@@ -1738,7 +1738,7 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <Button x:Name="btnMinusBlåbærCheesecake" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="702,656,-702,-656" Click="BtnMinusTunmousse_Click" IsEnabled="False">
+                <Button x:Name="btnMinusBlåbærCheesecake" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="702,656,-702,-656" Click="BtnMinusBlåbærCheesecake_Click" IsEnabled="False">
                     <Button.Background>
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>

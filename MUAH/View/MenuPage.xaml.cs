@@ -58,6 +58,19 @@ namespace MUAH.View
 
         #endregion
 
+        #region Dessert product id
+
+        private const int dessertÆblekage = 16;
+        private const int dessertChokolademousse = 17;
+        private const int dessertPassionsmousse = 18;
+        private const int dessertSkovbærtærte = 19;
+        private const int dessertFriskFrugt = 20;
+        private const int dessertHindbærmousse = 21;
+        private const int dessertChokoladekage = 22;
+        private const int dessertBlåbærCheesecake = 23;
+
+        #endregion
+
 
         #region Checkbox metoder i buffet
 
@@ -1252,5 +1265,126 @@ namespace MUAH.View
         }
 
         #endregion
+
+        
+        private void BtnPlusÆblekage_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void BtnMinusÆblekage_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void BtnPlusChokolademousse_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnMinusChokolademousse_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnPlusPassionsmousse_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnMinusPassionsmousse_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnPlusSkovbærtærte_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnMinusSkovbærtærte_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnPlusFriskFrugt_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnMinusFriskFrugt_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnPlusHindbærmousse_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnMinusHindbærmousse_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnPlusChokoladekage_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnMinusChokoladekage_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnPlusBlåbærCheesecake_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnMinusBlåbærCheesecake_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ChkDessertÆblekage_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ChkDessertChokolademousse_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ChkDessertPassionsmousse_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ChkDessertSkovbærstærte_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ChkDessertFriskFrugt_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ChkDessertHindbærmousse_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ChkDessertChokoladekage_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ChkDessertBlåbærCheesecake_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

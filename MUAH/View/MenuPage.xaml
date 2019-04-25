@@ -17,8 +17,8 @@
         <Button x:Name="btnHovedret" Content="Hovedret" HorizontalAlignment="Left" Height="70" Margin="90,255,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnHovedret_Click"/>
         <Button x:Name="btnDessert" Content="Dessert" HorizontalAlignment="Left" Height="70" Margin="90,330,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnDessert_Click"/>
         <Button x:Name="btnSalater" Content="Salater" HorizontalAlignment="Left" Height="70" Margin="90,405,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnSalater_Click"/>
-        <Button x:Name="btnBrunch" Content="Brunch" HorizontalAlignment="Left" Height="70" Margin="90,780,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnBrunch_Click"/>
-        <Button x:Name="btnTapas" Content="Tapas" HorizontalAlignment="Left" Height="70" Margin="90,705,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnTapas_Click"/>
+        <Button x:Name="btnBrunch" Content="Brunch" HorizontalAlignment="Left" Height="70" Margin="90,705,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnBrunch_Click"/>
+        <Button x:Name="btnTapas" Content="Tapas" HorizontalAlignment="Left" Height="70" Margin="90,780,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnTapas_Click"/>
         <Button x:Name="btnSandwich" Content="Sandwich" HorizontalAlignment="Left" Height="70" Margin="90,630,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnSandwich_Click"/>
         <Button x:Name="btnKoldtbord" Content="Koldtbord" HorizontalAlignment="Left" Height="70" Margin="90,555,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnKoldtbord_Click"/>
         <Button x:Name="btnSmørrebrød" Content="Smørrebrød" HorizontalAlignment="Left" Height="70" Margin="90,480,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnSmørrebrød_Click"/>
@@ -1282,7 +1282,7 @@
                 <CheckBox x:Name="chkBrunch10Slags" Content="10 slags" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="341,61,-335,-54" FontWeight="Bold" Click="ChkBrunch10Slags_Click"/>
                 <CheckBox x:Name="chkBrunch14Slags" Content="14 slags" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="550,61,-544,-54" Click="ChkBrunch14Slags_Click" FontWeight="Bold"/>
                 <TextBlock x:Name="txtBrunchRøræg" Height="32" TextWrapping="Wrap" Text="Røræg m. frisk purløg" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200" Margin="55,182,-193,-182"/>
-                <CheckBox x:Name="chkBrunchRøræg" Content="" HorizontalAlignment="Stretch" Height="11" VerticalAlignment="Top" Margin="30,177,155,-150" IsEnabled="False"/>
+                <CheckBox x:Name="chkBrunchRøræg" Content="" HorizontalAlignment="Stretch" Height="11" VerticalAlignment="Top" Margin="30,177,155,-150" Click="ChkBrunchRøræg_Click" IsEnabled="False"/>
                 <TextBlock x:Name="txtBrunchPølser" Height="32" TextWrapping="Wrap" Text="Brunch pølser" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200" Margin="55,214,-193,-214"/>
                 <CheckBox x:Name="chkBrunchPølser" Content="" HorizontalAlignment="Stretch" Height="11" VerticalAlignment="Top" Margin="30,209,155,-182" IsEnabled="False"/>
                 <TextBlock x:Name="txtBrunchPandekage" Height="32" TextWrapping="Wrap" Text="Pandekage m. sirup" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200" Margin="55,246,-193,-246"/>
@@ -1360,10 +1360,10 @@
                     <Run Text=" til 4 personer"/>
                 </TextBlock>
                 <TextBlock x:Name="txtPølsebordNavn" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="477,88,-423,-108" FontSize="24" FontWeight="Bold" Text="Pølsebord"/>
-                <CheckBox x:Name="chkTapas" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,88,-25,-51" Click="ChkHvidvinslaks_Click_1"/>
-                <CheckBox x:Name="chkTapasPølsebord" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="451,88,-451,-86" Click="ChkTunmousse_Click"/>
+                <CheckBox x:Name="chkTapas" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,88,-25,-51" Click="ChkTapas_Click"/>
+                <CheckBox x:Name="chkTapasPølsebord" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="451,88,-451,-86" Click="ChkTapasPølsebord_Click"/>
                 <TextBlock x:Name="txtOstebordNavn" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="477,356,-423,-376" FontSize="24" FontWeight="Bold" Text="Ostebord"/>
-                <CheckBox x:Name="chkTapasOstebord" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="451,356,-451,-354" Click="ChkTunmousse_Click"/>
+                <CheckBox x:Name="chkTapasOstebord" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="451,356,-451,-354" Click="ChkTapasOstebord_Click"/>
                 <TextBlock x:Name="txtTapas" HorizontalAlignment="Left" Height="285" TextWrapping="Wrap" VerticalAlignment="Top" Width="261" Margin="31,133,-228,-398" FontWeight="Bold">
                     <Run Text="- Snack salami "/>
                     <LineBreak/>
@@ -1421,22 +1421,18 @@
                     <LineBreak/>
                     <Run Text=""/>
                     <LineBreak/>
-                    <Run Text="Pris p"/>
-                    <Run Text="r"/>
-                    <Run Text=". kuvert"/>
+                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Alle anretninger er eksl. brød og smør" VerticalAlignment="Top" Width="335" Margin="230,28,-503,-28" FontWeight="Bold"/>
                 <TextBlock x:Name="txtTapasPris" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="225.00" VerticalAlignment="Top" Width="65" Margin="227,393,-230,-393" FontWeight="Bold"/>
-                <TextBlock x:Name="txtTapasPris_Copy" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" Margin="647,248,-650,-248" FontWeight="Bold">
-                    <Run Text="120"/>
-                    <Run Text=".00"/>
+                <TextBlock x:Name="txtTapasPølsebordPris" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" Margin="647,248,-650,-248" FontWeight="Bold">
+                    <Run Text="120.00"/>
                 </TextBlock>
-                <TextBlock x:Name="txtTapasPris_Copy1" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="75.00" VerticalAlignment="Top" Width="65" Margin="647,498,-650,-498" FontWeight="Bold"/>
+                <TextBlock x:Name="txtTapasOstebordPris" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="75.00" VerticalAlignment="Top" Width="65" Margin="647,498,-650,-498" FontWeight="Bold"/>
                 <CheckBox x:Name="chkTapasBrødSmør" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="580,679,-580,-677" Click="ChkTunmousse_Click"/>
                 <TextBlock x:Name="txtHvidvinslaks_Copy" Height="32" TextWrapping="Wrap" Text="Brød og smør pr. pers " VerticalAlignment="Top" HorizontalAlignment="Left" Width="155" Margin="606,684,-699,-684"/>
                 <TextBlock x:Name="txtTapasBrødSmørPris" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" Margin="755,684,-733,-684">
-                    <Run Text="15"/>
-                    <Run Text=".00"/>
+                    <Run Text="15.00"/>
                 </TextBlock>
                 <Image HorizontalAlignment="Left" Height="266" VerticalAlignment="Top" Width="280" Margin="80,450,-260,-616" Source="ms-appx:///Assets/tapas1.jpg"/>
                 <TextBlock x:Name="txtAntalTapas" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="255,418,-210,-418"/>

@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Controls;
 //using Windows.UI.Xaml.Navigation;
 using MUAH.Model;
 
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace MUAH.View
@@ -26,9 +27,11 @@ namespace MUAH.View
     public sealed partial class MenuPage : Page
     {
 
-        List<CustomerSession> session = new List<CustomerSession>();
+       public  static List<CustomerSession> session = new List<CustomerSession>();
         private int LocalSessionId = 0;
         private static Guid CustomerGuid = Guid.NewGuid();
+
+        public static int BasketNo = 0;
 
 
         private int productId;
@@ -432,6 +435,8 @@ namespace MUAH.View
             imgKoldtbord.Visibility = Visibility.Visible;
             imgSmørrebrød.Visibility = Visibility.Visible;
             imgTapas.Visibility = Visibility.Visible;
+
+            txtBasketNoOfItems.Text = BasketNo.ToString();
         }
 
         #endregion
@@ -481,6 +486,7 @@ namespace MUAH.View
             }
         }
 
+       
         private void BtnSmørrebrød_Click(object sender, RoutedEventArgs e)
         {
             HidePanels(pnlSmørrebrød);
@@ -2254,6 +2260,7 @@ namespace MUAH.View
         private void BtnTilføjTilKurvBrunch_Click(object sender, RoutedEventArgs e)
         {
             txtBasketNoOfItems.Text = session.Count.ToString();
+            BasketNo = session.Count;
         }
 
         private void BtnTilføjTilKurvBuffet_Click(object sender, RoutedEventArgs e)

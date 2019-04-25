@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MUAH.Model
 {
-    class CustomerSession
+    public class CustomerSession
     {
         public Guid SessionId { get; set; }
         public int ProductId { get; set; }
@@ -24,9 +24,9 @@ namespace MUAH.Model
         //    NoOfProduct = noOfProduct;
         //}
 
-        //public override string ToString()
-        //{
-        //    return $"{nameof(SessionId)}: {SessionId}, {nameof(ProductName)}: {ProductName}, {nameof(ProductPrice)}: {ProductPrice}, {nameof(ProductDescription)}: {ProductDescription}, {nameof(ProductCategory)}: {ProductCategory}, {nameof(NoOfProduct)}: {NoOfProduct}";
-        //}
+        public override string ToString()
+        {
+            return $"{nameof(SessionId)}: {SessionId}, {nameof(ProductId)}: {ProductId}, {nameof(ProductName)}: {ProductName}, {nameof(ProductPrice)}: {ProductPrice}, {nameof(NoOfProduct)}: {NoOfProduct}";
+        }
     }
 }

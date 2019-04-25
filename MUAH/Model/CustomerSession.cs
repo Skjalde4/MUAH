@@ -12,8 +12,6 @@ namespace MUAH.Model
         public int ProductId { get; set; }
         public string ProductName { get; set; }
         public double ProductPrice { get; set; }
-        //public string ProductDescription { get; set; }
-        //public string ProductCategory { get; set; }
         public int NoOfProduct { get; set; }
 
         //public CustomerSession(string sessionId, string productName, double productPrice, string productDescription, string productCategory, int noOfProduct)

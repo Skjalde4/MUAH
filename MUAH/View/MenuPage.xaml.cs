@@ -172,6 +172,12 @@ namespace MUAH.View
 
         #endregion
 
+        #region Buffet product id
+
+        private const int buffet = 91;
+
+        #endregion
+
         #region Checkbox metoder i buffet
 
         private void CheckMeat()
@@ -253,7 +259,6 @@ namespace MUAH.View
             {
                 chkSelectedCheckbox.IsChecked = false;
             }
-
         }
 
         #endregion
@@ -1323,12 +1328,13 @@ namespace MUAH.View
         private void BtnPlus_Click(object sender, RoutedEventArgs e)
         {
             txtAntalKuverter.Text = addAntal(txtAntalKuverter.Text);
-
+            OrderToList(true, buffet, txtBuffetNavn.Text, Convert.ToDouble(txtBuffetPris.Text), Convert.ToInt32(txtAntalKuverter.Text));
         }
 
         private void BtnMinus_Click(object sender, RoutedEventArgs e)
         {
             txtAntalKuverter.Text = subAntal(txtAntalKuverter.Text);
+            OrderToList(false, buffet, txtBuffetNavn.Text, Convert.ToDouble(txtBuffetPris.Text), Convert.ToInt32(txtAntalKuverter.Text));
         }
 
         #endregion
@@ -2017,10 +2023,178 @@ namespace MUAH.View
 
         private void BtnPlusBrunch_Click(object sender, RoutedEventArgs e)
         {
+            txtAntalBrunch.Text = addAntal(txtAntalBrunch.Text);
+            if (chkBrunch7Slags.IsChecked == true)
+            {
+                OrderToList(true, Brunch7slags, txtBrunch7SlagsNavn.Text, Convert.ToDouble(txt7SlagsPris.Text), Convert.ToInt32(txtAntalBrunch.Text));   
+            }
+            else if (chkBrunch10Slags.IsChecked == true)
+            {
+              OrderToList(true, Brunch10slags, txtBrunch10SlagsNavn.Text, Convert.ToDouble(txt10SlagsPris.Text), Convert.ToInt32(txtAntalBrunch.Text));   
+            }
+
+            else if (chkBrunch14Slags.IsChecked == true)
+            {
+                OrderToList(true, Brunch14slags, txtBrunch14SlagsNavn.Text, Convert.ToDouble(txt14SlagsPris.Text), Convert.ToInt32(txtAntalBrunch.Text));
+            }
 
         }
 
+        private void BtnMinusBrunch_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalBrunch.Text = subAntal(txtAntalBrunch.Text);
+            if (chkBrunch7Slags.IsChecked == true)
+            {
+                OrderToList(false, Brunch7slags, txtBrunch7SlagsNavn.Text, Convert.ToDouble(txt7SlagsPris.Text), Convert.ToInt32(txtAntalBrunch.Text));
+            }
+            else if (chkBrunch10Slags.IsChecked == true)
+            {
+                OrderToList(false, Brunch10slags, txtBrunch10SlagsNavn.Text, Convert.ToDouble(txt10SlagsPris.Text), Convert.ToInt32(txtAntalBrunch.Text));
+            }
 
+            else if (chkBrunch14Slags.IsChecked == true)
+            {
+                OrderToList(false, Brunch14slags, txtBrunch14SlagsNavn.Text, Convert.ToDouble(txt14SlagsPris.Text), Convert.ToInt32(txtAntalBrunch.Text));
+            }
+        }
+
+        private void ChkBrunchRøræg_Click(object sender, RoutedEventArgs e)
+        {
+            if (chkBrunch7Slags.IsChecked == true)
+                CheckSlagsBrunch(7, chkBrunchRøræg);
+            else
+                CheckSlagsBrunch(10, chkBrunchRøræg);
+        }
+
+        private void ChkBrunchPølser_Click(object sender, RoutedEventArgs e)
+        {
+            if (chkBrunch7Slags.IsChecked == true)
+                CheckSlagsBrunch(7, chkBrunchPølser);
+            else
+                CheckSlagsBrunch(10, chkBrunchPølser);
+        }
+
+        private void ChkBrunchPandekage_Click(object sender, RoutedEventArgs e)
+        {
+            if (chkBrunch7Slags.IsChecked == true)
+                CheckSlagsBrunch(7, chkBrunchPandekage);
+            else
+                CheckSlagsBrunch(10, chkBrunchPandekage);
+        }
+
+        private void ChkBrunchLeverpostej_Click(object sender, RoutedEventArgs e)
+        {
+            if (chkBrunch7Slags.IsChecked == true)
+                CheckSlagsBrunch(7, chkBrunchLeverpostej);
+            else
+                CheckSlagsBrunch(10, chkBrunchLeverpostej);
+        }
+
+        private void ChkBrunchOmelet_Click(object sender, RoutedEventArgs e)
+        {
+            if (chkBrunch7Slags.IsChecked == true)
+                CheckSlagsBrunch(7, chkBrunchOmelet);
+            else
+                CheckSlagsBrunch(10, chkBrunchOmelet);
+        }
+
+        private void ChkBrunchLaks_Click(object sender, RoutedEventArgs e)
+        {
+            if (chkBrunch7Slags.IsChecked == true)
+                CheckSlagsBrunch(7, chkBrunchLaks);
+            else
+                CheckSlagsBrunch(10, chkBrunchLaks);
+        }
+
+        private void ChkBrunchPorretærte_Click(object sender, RoutedEventArgs e)
+        {
+            if (chkBrunch7Slags.IsChecked == true)
+                CheckSlagsBrunch(7, chkBrunchPorretærte);
+            else
+                CheckSlagsBrunch(10, chkBrunchPorretærte);
+        }
+
+        private void ChkBrunchGræskYoghurt_Click(object sender, RoutedEventArgs e)
+        {
+            if (chkBrunch7Slags.IsChecked == true)
+                CheckSlagsBrunch(7, chkBrunchGræskYoghurt);
+            else
+                CheckSlagsBrunch(10, chkBrunchGræskYoghurt);
+        }
+
+        private void ChkBrunchCroissant_Click(object sender, RoutedEventArgs e)
+        {
+            if (chkBrunch7Slags.IsChecked == true)
+                CheckSlagsBrunch(7, chkBrunchCroissant);
+            else
+                CheckSlagsBrunch(10, chkBrunchCroissant);
+        }
+
+        private void ChkBrunchFrikadeller_Click(object sender, RoutedEventArgs e)
+        {
+            if (chkBrunch7Slags.IsChecked == true)
+                CheckSlagsBrunch(7, chkBrunchFrikadeller);
+            else
+                CheckSlagsBrunch(10, chkBrunchFrikadeller);
+        }
+
+        private void ChkBrunchHonningmelon_Click(object sender, RoutedEventArgs e)
+        {
+            if (chkBrunch7Slags.IsChecked == true)
+                CheckSlagsBrunch(7, chkBrunchHonningmelon);
+            else
+                CheckSlagsBrunch(10, chkBrunchHonningmelon);
+        }
+
+        private void ChkBrunchBrie_Click(object sender, RoutedEventArgs e)
+        {
+            if (chkBrunch7Slags.IsChecked == true)
+                CheckSlagsBrunch(7, chkBrunchBrie);
+            else
+                CheckSlagsBrunch(10, chkBrunchBrie);
+        }
+
+        private void ChkBrunchMellemlageret_Click(object sender, RoutedEventArgs e)
+        {
+            if (chkBrunch7Slags.IsChecked == true)
+                CheckSlagsBrunch(7, chkBrunchMellemlageret);
+            else
+                CheckSlagsBrunch(10, chkBrunchMellemlageret);
+        }
+
+        private void ChkBrunchLageret_Click(object sender, RoutedEventArgs e)
+        {
+            if (chkBrunch7Slags.IsChecked == true)
+                CheckSlagsBrunch(7, chkBrunchLageret);
+            else
+                CheckSlagsBrunch(10, chkBrunchLageret);
+        }
+
+        private void ChkBrunch7Slags_Unchecked(object sender, RoutedEventArgs e)
+        {
+            List<CheckBox> brunchCheckboxes = new List<CheckBox>()
+            { chkBrunchRøræg, chkBrunchPølser, chkBrunchLeverpostej, chkBrunchPandekage, chkBrunchOmelet, chkBrunchPorretærte, chkBrunchLaks,
+                chkBrunchGræskYoghurt, chkBrunchCroissant, chkBrunchFrikadeller, chkBrunchHonningmelon, chkBrunchBrie, chkBrunchMellemlageret,
+                chkBrunchLageret};
+
+            foreach (var items in brunchCheckboxes)
+            {
+                items.IsChecked = false;
+            }
+        }
+
+        private void ChkBrunch10Slags_Unchecked(object sender, RoutedEventArgs e)
+        {
+            List<CheckBox> brunchCheckboxes = new List<CheckBox>()
+            { chkBrunchRøræg, chkBrunchPølser, chkBrunchLeverpostej, chkBrunchPandekage, chkBrunchOmelet, chkBrunchPorretærte, chkBrunchLaks,
+                chkBrunchGræskYoghurt, chkBrunchCroissant, chkBrunchFrikadeller, chkBrunchHonningmelon, chkBrunchBrie, chkBrunchMellemlageret,
+                chkBrunchLageret};
+
+            foreach (var items in brunchCheckboxes)
+            {
+                items.IsChecked = false;
+            }
+        }
 
         #region TapasToList
 
@@ -2041,7 +2215,7 @@ namespace MUAH.View
             txtAntalTapasPølsebord.Text = addAntal(txtAntalTapasPølsebord.Text);
             OrderToList(true, TapasPølsebord, txtPølsebordNavn.Text, Convert.ToDouble(txtTapasPølsebordPris.Text), Convert.ToInt32(txtAntalTapasPølsebord.Text));
         }
-    
+
         private void BtnMinusTapasPølsebord_Click(object sender, RoutedEventArgs e)
         {
             txtAntalTapasPølsebord.Text = subAntal(txtAntalTapasPølsebord.Text);
@@ -2077,12 +2251,19 @@ namespace MUAH.View
 
         #endregion
 
-        private void ChkBrunchRøræg_Click(object sender, RoutedEventArgs e)
+        private void BtnTilføjTilKurvBrunch_Click(object sender, RoutedEventArgs e)
         {
-            if (chkBrunch7Slags.IsChecked == true)
-                CheckSlagsBrunch(7, chkBrunchRøræg);
-            else
-                CheckSlagsBrunch(10, chkBrunchRøræg);
+            txtBasketNoOfItems.Text = session.Count.ToString();
+        }
+
+        private void BtnTilføjTilKurvBuffet_Click(object sender, RoutedEventArgs e)
+        {
+            txtBasketNoOfItems.Text = session.Count.ToString();
+        }
+
+        private void BtnKurv_Click(object sender, RoutedEventArgs e)
+        {
+            ((Frame) Window.Current.Content).Navigate(typeof(ViewBasket));
         }
     }
 }

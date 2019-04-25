@@ -10,6 +10,11 @@
 
     <Grid>
         <ListView x:Name="lstBasket" HorizontalAlignment="Left" Height="740" Margin="150,130,0,0" VerticalAlignment="Top" Width="685"/>
+        <Button x:Name="btnRetur" Content="" HorizontalAlignment="Left" Margin="1345,870,0,0" VerticalAlignment="Top" Height="57" Width="55" Click="BtnRetur_Click">
+            <Button.Background>
+                <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/retur.png"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Page>

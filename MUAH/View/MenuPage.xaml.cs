@@ -1994,5 +1994,42 @@ namespace MUAH.View
         {
 
         }
+
+        #region TapasToList
+
+
+        private void BtnPlusTapas_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalTapas.Text = addAntal(txtAntalTapas.Text);
+        }
+
+        private void BtnMinusTapas_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalTapas.Text = subAntal(txtAntalTapas.Text);
+        }
+
+        private void BtnPlusTapasPølsebord_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalTapasPølsebord.Text = addAntal(txtAntalTapasPølsebord.Text);
+        }
+
+        private void BtnMinusTapasPølsebord_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalTapasPølsebord.Text = subAntal(txtAntalTapasPølsebord.Text);
+        }
+
+        private void BtnPlusTapasOstebord_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalTapasOstebord.Text = addAntal(txtAntalTapasOstebord.Text);
+        }
+
+        private void BtnMinusTapasOstebord_Click(object sender, RoutedEventArgs e)
+        {
+            txtAntalTapasPølsebord.Text = subAntal(txtAntalTapasPølsebord.Text);
+        }
+
+
+
+        #endregion
     }
 }

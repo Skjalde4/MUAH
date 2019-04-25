@@ -1355,6 +1355,132 @@
             </RelativePanel>
             <RelativePanel x:Name="pnlTapas" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30" d:IsHidden="True">
                 <Button x:Name="btnTilføjTilKurvTapas" Content="Tilføj til kurv" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Margin="580,716,-685,-716"/>
+                <TextBlock x:Name="txtTapasNavn" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="55,88,-228,-108" FontSize="24" FontWeight="Bold">
+                    <Run Text="Tapas"/>
+                    <Run Text=" til 4 personer"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPølsebordNavn" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="477,88,-423,-108" FontSize="24" FontWeight="Bold" Text="Pølsebord"/>
+                <CheckBox x:Name="chkTapas" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="31,88,-25,-51" Click="ChkHvidvinslaks_Click_1"/>
+                <CheckBox x:Name="chkTapasPølsebord" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="451,88,-451,-86" Click="ChkTunmousse_Click"/>
+                <TextBlock x:Name="txtOstebordNavn" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="477,356,-423,-376" FontSize="24" FontWeight="Bold" Text="Ostebord"/>
+                <CheckBox x:Name="chkTapasOstebord" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="451,356,-451,-354" Click="ChkTunmousse_Click"/>
+                <TextBlock x:Name="txtTapas" HorizontalAlignment="Left" Height="285" TextWrapping="Wrap" VerticalAlignment="Top" Width="261" Margin="31,133,-228,-398" FontWeight="Bold">
+                    <Run Text="- Snack salami "/>
+                    <LineBreak/>
+                    <Run Text="- Kyllingespyd"/>
+                    <LineBreak/>
+                    <Run Text="- Pate m. cornichoner og bacon"/>
+                    <LineBreak/>
+                    <Run Text="- Brie og emmentaler m. frugt"/>
+                    <LineBreak/>
+                    <Run Text="- Abrikoser i baconsvøb"/>
+                    <LineBreak/>
+                    <Run Text="- Honningmelon m. parmaskinke"/>
+                    <LineBreak/>
+                    <Run Text="- Chorizopølse "/>
+                    <LineBreak/>
+                    <Run Text="- Pesto og aioli"/>
+                    <LineBreak/>
+                    <Run Text="- Oliven m. mandler"/>
+                    <LineBreak/>
+                    <Run Text="- Marineret champignon, peberfrugt ell. artiskok"/>
+                    <LineBreak/>
+                    <Run/>
+                    <LineBreak/>
+                    <Run/>
+                    <LineBreak/>
+                    <Run Text="Pris pr. 4  pers kr. "/>
+                </TextBlock>
+                <TextBlock x:Name="txtTapasPølsebord" HorizontalAlignment="Left" Height="170" TextWrapping="Wrap" VerticalAlignment="Top" Width="261" Margin="451,128,-650,-278" FontWeight="Bold">
+                    <Run Text="- 5 slags pølser m. diverse tilbehør"/>
+                    <LineBreak/>
+                    <Run Text="- "/>
+                    <Run Text="Hjemmelavet hvidløgsost"/>
+                    <LineBreak/>
+                    <Run Text="- Brie m. frisk frugt"/>
+                    <LineBreak/>
+                    <Run Text="- Pate m. cornichoner"/>
+                    <LineBreak/>
+                    <Run Text="- Oliven m. mandler"/>
+                    <LineBreak/>
+                    <Run/>
+                    <LineBreak/>
+                    <Run Text="Pris pr. kuvert kr. "/>
+                    <LineBreak/>
+                    <Run FontWeight="Normal" Text="(minimum 8 kuverter)"/>
+                </TextBlock>
+                <TextBlock x:Name="txtTapasOstebord" HorizontalAlignment="Left" Height="144" TextWrapping="Wrap" VerticalAlignment="Top" Width="261" Margin="451,401,-650,-525" FontWeight="Bold">
+                    <Run Text="- "/>
+                    <Run Text="Brie m. årstidens frugter"/>
+                    <LineBreak/>
+                    <Run Text="- Banablue m. druer"/>
+                    <LineBreak/>
+                    <Run Text="- Skæreost m. peberfrugt"/>
+                    <LineBreak/>
+                    <Run Text="- Smøreost"/>
+                    <LineBreak/>
+                    <Run Text=""/>
+                    <LineBreak/>
+                    <Run Text="Pris p"/>
+                    <Run Text="r"/>
+                    <Run Text=". kuvert"/>
+                </TextBlock>
+                <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Alle anretninger er eksl. brød og smør" VerticalAlignment="Top" Width="335" Margin="230,28,-503,-28" FontWeight="Bold"/>
+                <TextBlock x:Name="txtTapasPris" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="225.00" VerticalAlignment="Top" Width="65" Margin="227,393,-230,-393" FontWeight="Bold"/>
+                <TextBlock x:Name="txtTapasPris_Copy" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" Margin="647,248,-650,-248" FontWeight="Bold">
+                    <Run Text="120"/>
+                    <Run Text=".00"/>
+                </TextBlock>
+                <TextBlock x:Name="txtTapasPris_Copy1" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="75.00" VerticalAlignment="Top" Width="65" Margin="647,498,-650,-498" FontWeight="Bold"/>
+                <CheckBox x:Name="chkTapasBrødSmør" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="580,679,-580,-677" Click="ChkTunmousse_Click"/>
+                <TextBlock x:Name="txtHvidvinslaks_Copy" Height="32" TextWrapping="Wrap" Text="Brød og smør pr. pers " VerticalAlignment="Top" HorizontalAlignment="Left" Width="155" Margin="606,684,-699,-684"/>
+                <TextBlock x:Name="txtTapasBrødSmørPris" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" Margin="755,684,-733,-684">
+                    <Run Text="15"/>
+                    <Run Text=".00"/>
+                </TextBlock>
+                <Image HorizontalAlignment="Left" Height="266" VerticalAlignment="Top" Width="280" Margin="80,450,-260,-616" Source="ms-appx:///Assets/tapas1.jpg"/>
+                <TextBlock x:Name="txtAntalTapas" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="255,418,-210,-418"/>
+                <Button x:Name="btnPlusTapas" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="232,423,-232,-423" Click="BtnPlusTapas_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
+                    </Button.Background>
+                    <Button.FocusVisualPrimaryBrush>
+                        <ImageBrush Stretch="Fill"/>
+                    </Button.FocusVisualPrimaryBrush>
+                </Button>
+                <Button x:Name="btnMinusTapas" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="275,423,-275,-423" Click="BtnMinusTapas_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
+                    </Button.Background>
+                </Button>
+                <TextBlock x:Name="txtAntalTapasPølsebord" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="677,278,-632,-278"/>
+                <Button x:Name="btnPlusTapasPølsebord" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="654,283,-654,-283" Click="BtnPlusTapasPølsebord_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
+                    </Button.Background>
+                    <Button.FocusVisualPrimaryBrush>
+                        <ImageBrush Stretch="Fill"/>
+                    </Button.FocusVisualPrimaryBrush>
+                </Button>
+                <Button x:Name="btnMinusTapasPølsebord" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="697,283,-697,-283" Click="BtnMinusTapasPølsebord_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
+                    </Button.Background>
+                </Button>
+                <TextBlock x:Name="txtAntalTapasOstebord" HorizontalAlignment="Center" TextWrapping="Wrap" Text="0" Width="20" Margin="677,525,-632,-525"/>
+                <Button x:Name="btnPlusTapasOstebord" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="654,530,-654,-530" Click="BtnPlusTapasOstebord_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/plus.png"/>
+                    </Button.Background>
+                    <Button.FocusVisualPrimaryBrush>
+                        <ImageBrush Stretch="Fill"/>
+                    </Button.FocusVisualPrimaryBrush>
+                </Button>
+                <Button x:Name="btnMinusTapasOstebord" Content="" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Width="15" Margin="697,530,-697,-530" Click="BtnMinusTapasOstebord_Click" IsEnabled="False">
+                    <Button.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
+                    </Button.Background>
+                </Button>
             </RelativePanel>
             <RelativePanel x:Name="pnlSandwich" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30" d:IsHidden="True">
                 <Button x:Name="btnTilføjTilKurvSandwich" Content="Tilføj til kurv" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Margin="580,716,-685,-716"/>

@@ -14,18 +14,18 @@
                 <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/basket.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnHovedret" Content="Hovedret" HorizontalAlignment="Left" Height="70" Margin="90,255,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnHovedret_Click"/>
-        <Button x:Name="btnDessert" Content="Dessert" HorizontalAlignment="Left" Height="70" Margin="90,330,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnDessert_Click"/>
-        <Button x:Name="btnSalater" Content="Salater" HorizontalAlignment="Left" Height="70" Margin="90,405,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnSalater_Click"/>
-        <Button x:Name="btnBrunch" Content="Brunch" HorizontalAlignment="Left" Height="70" Margin="90,705,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnBrunch_Click"/>
-        <Button x:Name="btnTapas" Content="Tapas" HorizontalAlignment="Left" Height="70" Margin="90,780,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnTapas_Click"/>
-        <Button x:Name="btnSandwich" Content="Sandwich" HorizontalAlignment="Left" Height="70" Margin="90,630,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnSandwich_Click"/>
-        <Button x:Name="btnKoldtbord" Content="Koldtbord" HorizontalAlignment="Left" Height="70" Margin="90,555,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnKoldtbord_Click"/>
-        <Button x:Name="btnSmørrebrød" Content="Smørrebrød" HorizontalAlignment="Left" Height="70" Margin="90,480,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnSmørrebrød_Click"/>
-        <Button x:Name="btnSpecials" Content="Specials" HorizontalAlignment="Left" Height="70" Margin="90,855,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnSpecials_Click"/>
-        <Button x:Name="btnForret" Content="Forret" HorizontalAlignment="Left" Height="70" Margin="90,180,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnForret_Click"/>
-        <Button x:Name="btnBuffet" Content="Buffet" HorizontalAlignment="Left" Height="70" Margin="90,107,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnBuffet_Click_1"/>
-        <Button x:Name="btnLogin" Content="" HorizontalAlignment="Left" Margin="1335,50,0,0" VerticalAlignment="Top" Height="57" Width="55">
+        <Button x:Name="btnHovedret" Content="Hovedret" HorizontalAlignment="Left" Height="70" Margin="90,255,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnHovedret_Click" Background="#FFBD0B1C"/>
+        <Button x:Name="btnDessert" Content="Dessert" HorizontalAlignment="Left" Height="70" Margin="90,330,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnDessert_Click" Background="#FFBD0B1C"/>
+        <Button x:Name="btnSalater" Content="Salater" HorizontalAlignment="Left" Height="70" Margin="90,405,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnSalater_Click" Background="#FFBD0B1C"/>
+        <Button x:Name="btnBrunch" Content="Brunch" HorizontalAlignment="Left" Height="70" Margin="90,705,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnBrunch_Click" Background="#FFBD0B1C"/>
+        <Button x:Name="btnTapas" Content="Tapas" HorizontalAlignment="Left" Height="70" Margin="90,780,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnTapas_Click" Background="#FFBD0B1C"/>
+        <Button x:Name="btnSandwich" Content="Sandwich" HorizontalAlignment="Left" Height="70" Margin="90,630,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnSandwich_Click" Background="#FFBD0B1C"/>
+        <Button x:Name="btnKoldtbord" Content="Koldtbord" HorizontalAlignment="Left" Height="70" Margin="90,555,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnKoldtbord_Click" Background="#FFBD0B1C"/>
+        <Button x:Name="btnSmørrebrød" Content="Smørrebrød" HorizontalAlignment="Left" Height="70" Margin="90,480,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnSmørrebrød_Click" Background="#FFBD0B1C"/>
+        <Button x:Name="btnSpecials" Content="Specials" HorizontalAlignment="Left" Height="70" Margin="90,855,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnSpecials_Click" Background="#FFBD0B1C"/>
+        <Button x:Name="btnForret" Content="Forret" HorizontalAlignment="Left" Height="70" Margin="90,180,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnForret_Click" Background="#FFBD0B1C"/>
+        <Button x:Name="btnBuffet" Content="Buffet" HorizontalAlignment="Left" Height="70" Margin="90,107,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnBuffet_Click_1" Background="#FFBD0B1C"/>
+        <Button x:Name="btnLogin" Content="" HorizontalAlignment="Left" Margin="1335,50,0,0" VerticalAlignment="Top" Height="57" Width="55" Click="BtnLogin_Click">
             <Button.Background>
                 <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/login.png"/>
             </Button.Background>
@@ -1278,7 +1278,7 @@
                 </Button>
             </RelativePanel>
             <RelativePanel x:Name="pnlBrunch" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30">
-                <Button x:Name="btnTilføjTilKurvBrunch" Content="Tilføj til kurv" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Margin="580,716,-685,-716" Click="BtnTilføjTilKurvBrunch_Click"/>
+                <Button x:Name="btnTilføjTilKurvBrunch" Content="Tilføj til kurv" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Margin="580,716,-685,-716" Click="BtnTilføjTilKurvBrunch_Click" Background="#FFBD0B1C" Foreground="White"/>
                 <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Vælg mellem 7, 10 eller 14 forskellige ting" VerticalAlignment="Top" Width="335" Margin="230,28,-503,-28" FontWeight="Bold"/>
                 <CheckBox x:Name="chkBrunch7Slags" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="130,61,-124,-54" Click="ChkBrunch7Slags_Click" FontWeight="Bold" Unchecked="ChkBrunch7Slags_Unchecked"/>
                 <CheckBox x:Name="chkBrunch10Slags" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="341,61,-335,-54" FontWeight="Bold" Click="ChkBrunch10Slags_Click" Unchecked="ChkBrunch10Slags_Unchecked"/>

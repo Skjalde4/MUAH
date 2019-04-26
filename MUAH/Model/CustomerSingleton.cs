@@ -25,9 +25,23 @@ namespace MUAH.Model
             Customers = new ObservableCollection<Customer>();
         }
 
-        //public async void GetCustomersAsync()
-        //{
-        //    //var customers = await PersistencyServiceCustomer.
-        //}
+        //Get loader de customers der allerede er oprettet i databasen.
+        public async void GetCustomers()
+        {
+            var customers = await PersistencyServiceCustomer.GetCustomerAsync();
+            if (Customers != null)
+                foreach (var cu in customers)
+                {
+                    Customers.Add(cu);
+                }
+        }
+
+        //Post tilføjer nye kunder til databasen
+        public void PostCustomer(string phoneNo, string password, string name, int id)
+        {
+            Customer customers = new Customer(phoneNo, password, name, id);
+            Customers.Add(customers);
+            PersistencyServiceCustomer.PostCustomerAsync(customers);
+        }
     }
 }

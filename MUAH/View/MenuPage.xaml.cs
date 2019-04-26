@@ -2062,7 +2062,6 @@ namespace MUAH.View
             {
                 OrderToList(true, Brunch14slags, txtBrunch14SlagsNavn.Text, Convert.ToDouble(txt14SlagsPris.Text), Convert.ToInt32(txtAntalBrunch.Text));
             }
-
         }
 
         private void BtnMinusBrunch_Click(object sender, RoutedEventArgs e)
@@ -2322,5 +2321,9 @@ namespace MUAH.View
         }
         #endregion
 
+        private void BtnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            ((Frame)Window.Current.Content).Navigate(typeof(LoginCustomer));
+        }
     }
 }

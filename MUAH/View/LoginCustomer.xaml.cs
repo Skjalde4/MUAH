@@ -26,5 +26,26 @@ namespace MUAH.View
         {
             this.InitializeComponent();
         }
+
+        private void Grid_Loading(FrameworkElement sender, object args)
+        {
+            pnlCreate.Visibility = Visibility.Collapsed;
+        }
+
+        private void BtnOpretBrugerLogin_Click(object sender, RoutedEventArgs e)
+        {
+            pnlLogin.Visibility = Visibility.Collapsed;
+            pnlCreate.Visibility = Visibility.Visible;
+        }
+
+        private void BtnAnnullerOpretBruger_Click(object sender, RoutedEventArgs e)
+        {
+            ((Frame)Window.Current.Content).Navigate(typeof(MenuPage));
+        }
+
+        private void BtnAnnuller_Click(object sender, RoutedEventArgs e)
+        {
+            ((Frame)Window.Current.Content).Navigate(typeof(MenuPage));
+        }
     }
 }

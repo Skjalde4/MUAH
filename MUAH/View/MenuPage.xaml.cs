@@ -327,6 +327,8 @@ namespace MUAH.View
             if (numberChecked > noOfCheckboxes)
             {
                 chkSelectedCheckbox.IsChecked = false;
+                btnPlusBrunch.IsEnabled = true;
+                btnMinusBrunch.IsEnabled = true;
             }
         }
 
@@ -2003,11 +2005,15 @@ namespace MUAH.View
         private void ChkBrunch7Slags_Click(object sender, RoutedEventArgs e)
         {
             enabelDisabelBrunch(validateBrunchCheckbox(chkBrunch7Slags));
+            btnPlusBrunch.IsEnabled = false;
+            btnMinusBrunch.IsEnabled = false;
         }
 
         private void ChkBrunch10Slags_Click(object sender, RoutedEventArgs e)
         {
             enabelDisabelBrunch(validateBrunchCheckbox(chkBrunch10Slags));
+            btnPlusBrunch.IsEnabled = false;
+            btnMinusBrunch.IsEnabled = false;
         }
 
         private void ChkBrunch14Slags_Click(object sender, RoutedEventArgs e)
@@ -2018,10 +2024,25 @@ namespace MUAH.View
                 chkBrunchLageret};
 
             enabelDisabelBrunch(validateBrunchCheckbox(chkBrunch14Slags));
+
+            enabelDisabelBrunch(false);
             foreach (var items in brunchCheckboxes)
             {
                 items.IsChecked = chkBrunch14Slags.IsChecked;
             }
+
+            if (chkBrunch14Slags.IsChecked == true)
+            {
+                btnPlusBrunch.IsEnabled = true;
+                btnMinusBrunch.IsEnabled = true;
+            }
+
+            else
+            {
+                btnPlusBrunch.IsEnabled = false;
+                btnMinusBrunch.IsEnabled = false;
+            }
+            
         }
 
         private void BtnPlusBrunch_Click(object sender, RoutedEventArgs e)

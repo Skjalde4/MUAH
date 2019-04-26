@@ -28,7 +28,7 @@ namespace MUAH.View
     {
 
        public  static List<CustomerSession> session = new List<CustomerSession>();
-        private int LocalSessionId = 0;
+        //private int LocalSessionId = 0;
         private static Guid CustomerGuid = Guid.NewGuid();
 
         public static int BasketNo = 0;
@@ -256,9 +256,10 @@ namespace MUAH.View
         private void OrderToList(bool myOperator, int ProductId, string ProductName, double ProductPrice, int NoOfProduct)
         {
             bool productExist = false;
+            int NoOfSessions = session.Count;
 
             //check om brugerne har tilføjet en vare
-            if (session.Count > 0)
+            if (NoOfSessions > 0)
             {
                 // finde den vare som findes i forvejen og hvis den er skal denne vare så + eller -
                 foreach (var product in session)
@@ -278,13 +279,13 @@ namespace MUAH.View
             if (!productExist)
             {
                 session.Add(new CustomerSession());
-                session[LocalSessionId].SessionId = CustomerGuid;
-                session[LocalSessionId].ProductId = ProductId;
-                session[LocalSessionId].ProductName = ProductName;
-                session[LocalSessionId].ProductPrice = ProductPrice;
-                session[LocalSessionId].NoOfProduct = NoOfProduct;
+                session[NoOfSessions].SessionId = CustomerGuid;
+                session[NoOfSessions].ProductId = ProductId;
+                session[NoOfSessions].ProductName = ProductName;
+                session[NoOfSessions].ProductPrice = ProductPrice;
+                session[NoOfSessions].NoOfProduct = NoOfProduct;
 
-                LocalSessionId++;
+                NoOfSessions++;
             }
         }
 
@@ -2001,7 +2002,8 @@ namespace MUAH.View
 
         #endregion
 
-        //Disse gør det samme, det er bare to forskellige måder. 
+        #region Enabled/Disabled checkboxes brunch
+
         private void ChkBrunch7Slags_Click(object sender, RoutedEventArgs e)
         {
             enabelDisabelBrunch(validateBrunchCheckbox(chkBrunch7Slags));
@@ -2045,6 +2047,10 @@ namespace MUAH.View
             
         }
 
+        #endregion
+
+        #region BrunchToList
+
         private void BtnPlusBrunch_Click(object sender, RoutedEventArgs e)
         {
             txtAntalBrunch.Text = addAntal(txtAntalBrunch.Text);
@@ -2081,6 +2087,10 @@ namespace MUAH.View
                 OrderToList(false, Brunch14slags, txtBrunch14SlagsNavn.Text, Convert.ToDouble(txt14SlagsPris.Text), Convert.ToInt32(txtAntalBrunch.Text));
             }
         }
+
+        #endregion
+
+        #region Which brunch checkboxes is checked? 
 
         private void ChkBrunchRøræg_Click(object sender, RoutedEventArgs e)
         {
@@ -2247,6 +2257,8 @@ namespace MUAH.View
                 items.IsChecked = false;
             }
         }
+        #endregion
+
 
         #region TapasToList
 
@@ -2304,15 +2316,64 @@ namespace MUAH.View
         #endregion
 
         #region Kurv
+        private void BtnTilføjTilKurvBuffet_Click(object sender, RoutedEventArgs e)
+        {
+            txtBasketNoOfItems.Text = session.Count.ToString();
+            BasketNo = session.Count;
+        }
+
+        private void BtnTilføjTilKurvForret_Click(object sender, RoutedEventArgs e)
+        {
+            txtBasketNoOfItems.Text = session.Count.ToString();
+            BasketNo = session.Count;
+        }
+
+        private void BtnTilføjTilKurvHovedret_Click(object sender, RoutedEventArgs e)
+        {
+            txtBasketNoOfItems.Text = session.Count.ToString();
+            BasketNo = session.Count;
+        }
+
+        private void BtnTilføjTilKurvDessert_Click(object sender, RoutedEventArgs e)
+        {
+            txtBasketNoOfItems.Text = session.Count.ToString();
+            BasketNo = session.Count;
+        }
+
+        private void BtnTilføjTilKurvSalat_Click(object sender, RoutedEventArgs e)
+        {
+            txtBasketNoOfItems.Text = session.Count.ToString();
+            BasketNo = session.Count;
+        }
+
+        private void BtnTilføjTilKurvSmørrebrød_Click(object sender, RoutedEventArgs e)
+        {
+            txtBasketNoOfItems.Text = session.Count.ToString();
+            BasketNo = session.Count;
+        }
+
+        private void BtnTilføjTilKurvKoldtbord_Click(object sender, RoutedEventArgs e)
+        {
+            txtBasketNoOfItems.Text = session.Count.ToString();
+            BasketNo = session.Count;
+        }
+
+        private void BtnTilføjTilKurvSandwich_Click(object sender, RoutedEventArgs e)
+        {
+            txtBasketNoOfItems.Text = session.Count.ToString();
+            BasketNo = session.Count;
+        }
+
         private void BtnTilføjTilKurvBrunch_Click(object sender, RoutedEventArgs e)
         {
             txtBasketNoOfItems.Text = session.Count.ToString();
             BasketNo = session.Count;
         }
 
-        private void BtnTilføjTilKurvBuffet_Click(object sender, RoutedEventArgs e)
+        private void BtnTilføjTilKurvTapas_Click(object sender, RoutedEventArgs e)
         {
             txtBasketNoOfItems.Text = session.Count.ToString();
+            BasketNo = session.Count;
         }
 
         private void BtnKurv_Click(object sender, RoutedEventArgs e)
@@ -2325,5 +2386,7 @@ namespace MUAH.View
         {
             ((Frame)Window.Current.Content).Navigate(typeof(LoginCustomer));
         }
+
+        
     }
 }

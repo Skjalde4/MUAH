@@ -41,5 +41,10 @@ namespace MUAH.View
                 lstBasket.Items.Add(items);
             }
         }
+
+        private void BtnKurvGåTilBestilling_Click(object sender, RoutedEventArgs e)
+        {
+            ((Frame)Window.Current.Content).Navigate(typeof(LoginCustomer));
+        }
     }
 }

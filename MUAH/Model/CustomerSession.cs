@@ -14,16 +14,6 @@ namespace MUAH.Model
         public double ProductPrice { get; set; }
         public int NoOfProduct { get; set; }
 
-        //public CustomerSession(string sessionId, string productName, double productPrice, string productDescription, string productCategory, int noOfProduct)
-        //{
-        //    SessionId = sessionId;
-        //    ProductName = productName;
-        //    ProductPrice = productPrice;
-        //    ProductDescription = productDescription;
-        //    ProductCategory = productCategory;
-        //    NoOfProduct = noOfProduct;
-        //}
-
         public override string ToString()
         {
             return $"{nameof(SessionId)}: {SessionId}, {nameof(ProductId)}: {ProductId}, {nameof(ProductName)}: {ProductName}, {nameof(ProductPrice)}: {ProductPrice}, {nameof(NoOfProduct)}: {NoOfProduct}";

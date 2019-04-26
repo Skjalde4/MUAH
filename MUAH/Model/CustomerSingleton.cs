@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml;
 using MUAH.PersistencyService;
 
 namespace MUAH.Model
@@ -23,6 +24,7 @@ namespace MUAH.Model
         private CustomerSingleton()
         {
             Customers = new ObservableCollection<Customer>();
+            GetCustomers();
         }
 
         //Get loader de customers der allerede er oprettet i databasen.
@@ -42,6 +44,15 @@ namespace MUAH.Model
             Customer customers = new Customer(phoneNo, password, name, id);
             Customers.Add(customers);
             PersistencyServiceCustomer.PostCustomerAsync(customers);
+        }
+
+        //Put gør at man kan ændre i en kunde fx hvis kunden har fået nyt nummer
+        public void PutCustomer(Customer oldCustomer, string phoneNo, string password, string name, int id)
+        {
+            Customer customers = new Customer(phoneNo, password, name, id);
+            Customers.Remove(oldCustomer);
+            Customers.Add(customers);
+            PersistencyServiceCustomer.PutCustomerAsync(customers);
         }
     }
 }

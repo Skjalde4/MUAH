@@ -33,7 +33,6 @@ namespace MUAH.View
 
         public static int BasketNo = 0;
 
-
         private int productId;
 
         #region Forret product id
@@ -246,25 +245,7 @@ namespace MUAH.View
 
         #endregion
 
-        #region checkbox metoder i brunch
-
-        private void CheckSlagsBrunch(int noOfCheckboxes, CheckBox chkSelectedCheckbox)
-        {
-            //int numberChecked = 0;
-            List<CheckBox> brunchCheckboxes = new List<CheckBox>()
-            { chkBrunchRøræg, chkBrunchPølser, chkBrunchLeverpostej, chkBrunchPandekage, chkBrunchOmelet, chkBrunchPorretærte, chkBrunchLaks,
-                chkBrunchGræskYoghurt, chkBrunchCroissant, chkBrunchFrikadeller, chkBrunchHonningmelon, chkBrunchBrie, chkBrunchMellemlageret,
-                chkBrunchLageret};
-
-            int numberChecked = brunchCheckboxes.Where(x => x.IsChecked == true).ToList().Count();
-
-            if (numberChecked > noOfCheckboxes)
-            {
-                chkSelectedCheckbox.IsChecked = false;
-            }
-        }
-
-        #endregion
+        
 
         public MenuPage()
         {
@@ -332,6 +313,23 @@ namespace MUAH.View
             return antal.ToString();
         }
 
+        #region checkbox metoder i brunch
+
+        private void CheckSlagsBrunch(int noOfCheckboxes, CheckBox chkSelectedCheckbox)
+        {
+            List<CheckBox> brunchCheckboxes = new List<CheckBox>()
+            { chkBrunchRøræg, chkBrunchPølser, chkBrunchLeverpostej, chkBrunchPandekage, chkBrunchOmelet, chkBrunchPorretærte, chkBrunchLaks,
+                chkBrunchGræskYoghurt, chkBrunchCroissant, chkBrunchFrikadeller, chkBrunchHonningmelon, chkBrunchBrie, chkBrunchMellemlageret,
+                chkBrunchLageret};
+
+            int numberChecked = brunchCheckboxes.Where(x => x.IsChecked == true).ToList().Count();
+
+            if (numberChecked > noOfCheckboxes)
+            {
+                chkSelectedCheckbox.IsChecked = false;
+            }
+        }
+
         private void enabledDisabled(CheckBox chkFood, Button btnAdd, Button btnSub, TextBlock txtBlock)
         {
             if (chkFood.IsChecked == true)
@@ -358,7 +356,6 @@ namespace MUAH.View
             {
                 items.IsEnabled = isEnabeled;
             }
-
             btnPlusBrunch.IsEnabled = isEnabeled;
             btnMinusBrunch.IsEnabled = isEnabeled;
         }
@@ -421,6 +418,8 @@ namespace MUAH.View
 
            return result;
         }
+
+        #endregion
 
         #region Grid loading
 
@@ -2009,7 +2008,6 @@ namespace MUAH.View
         private void ChkBrunch10Slags_Click(object sender, RoutedEventArgs e)
         {
             enabelDisabelBrunch(validateBrunchCheckbox(chkBrunch10Slags));
-
         }
 
         private void ChkBrunch14Slags_Click(object sender, RoutedEventArgs e)
@@ -2020,7 +2018,6 @@ namespace MUAH.View
                 chkBrunchLageret};
 
             enabelDisabelBrunch(validateBrunchCheckbox(chkBrunch14Slags));
-            enabelDisabelBrunch(false);
             foreach (var items in brunchCheckboxes)
             {
                 items.IsChecked = chkBrunch14Slags.IsChecked;
@@ -2030,13 +2027,14 @@ namespace MUAH.View
         private void BtnPlusBrunch_Click(object sender, RoutedEventArgs e)
         {
             txtAntalBrunch.Text = addAntal(txtAntalBrunch.Text);
+
             if (chkBrunch7Slags.IsChecked == true)
             {
-                OrderToList(true, Brunch7slags, txtBrunch7SlagsNavn.Text, Convert.ToDouble(txt7SlagsPris.Text), Convert.ToInt32(txtAntalBrunch.Text));   
+                OrderToList(true, Brunch7slags, txtBrunch7SlagsNavn.Text, Convert.ToDouble(txt7SlagsPris.Text), Convert.ToInt32(txtAntalBrunch.Text));
             }
             else if (chkBrunch10Slags.IsChecked == true)
             {
-              OrderToList(true, Brunch10slags, txtBrunch10SlagsNavn.Text, Convert.ToDouble(txt10SlagsPris.Text), Convert.ToInt32(txtAntalBrunch.Text));   
+                OrderToList(true, Brunch10slags, txtBrunch10SlagsNavn.Text, Convert.ToDouble(txt10SlagsPris.Text), Convert.ToInt32(txtAntalBrunch.Text));
             }
 
             else if (chkBrunch14Slags.IsChecked == true)
@@ -2068,112 +2066,140 @@ namespace MUAH.View
         {
             if (chkBrunch7Slags.IsChecked == true)
                 CheckSlagsBrunch(7, chkBrunchRøræg);
-            else
+            else if (chkBrunch10Slags.IsChecked == true)
                 CheckSlagsBrunch(10, chkBrunchRøræg);
+            else if (chkBrunch14Slags.IsChecked == true)
+                CheckSlagsBrunch(14, chkBrunchRøræg);
         }
 
         private void ChkBrunchPølser_Click(object sender, RoutedEventArgs e)
         {
             if (chkBrunch7Slags.IsChecked == true)
                 CheckSlagsBrunch(7, chkBrunchPølser);
-            else
+            else if (chkBrunch10Slags.IsChecked == true)
                 CheckSlagsBrunch(10, chkBrunchPølser);
+            else if (chkBrunch14Slags.IsChecked == true)
+                CheckSlagsBrunch(14, chkBrunchPølser);
         }
 
         private void ChkBrunchPandekage_Click(object sender, RoutedEventArgs e)
         {
             if (chkBrunch7Slags.IsChecked == true)
                 CheckSlagsBrunch(7, chkBrunchPandekage);
-            else
+            else if (chkBrunch10Slags.IsChecked == true)
                 CheckSlagsBrunch(10, chkBrunchPandekage);
+            else if (chkBrunch14Slags.IsChecked == true)
+                CheckSlagsBrunch(14, chkBrunchPandekage);
         }
 
         private void ChkBrunchLeverpostej_Click(object sender, RoutedEventArgs e)
         {
             if (chkBrunch7Slags.IsChecked == true)
                 CheckSlagsBrunch(7, chkBrunchLeverpostej);
-            else
+            else if (chkBrunch10Slags.IsChecked == true)
                 CheckSlagsBrunch(10, chkBrunchLeverpostej);
+            else if (chkBrunch14Slags.IsChecked == true)
+                CheckSlagsBrunch(14, chkBrunchLeverpostej);
         }
 
         private void ChkBrunchOmelet_Click(object sender, RoutedEventArgs e)
         {
             if (chkBrunch7Slags.IsChecked == true)
                 CheckSlagsBrunch(7, chkBrunchOmelet);
-            else
+            else if (chkBrunch10Slags.IsChecked == true)
                 CheckSlagsBrunch(10, chkBrunchOmelet);
+            else if (chkBrunch14Slags.IsChecked == true)
+                CheckSlagsBrunch(14, chkBrunchOmelet);
         }
 
         private void ChkBrunchLaks_Click(object sender, RoutedEventArgs e)
         {
             if (chkBrunch7Slags.IsChecked == true)
                 CheckSlagsBrunch(7, chkBrunchLaks);
-            else
+            else if (chkBrunch10Slags.IsChecked == true)
                 CheckSlagsBrunch(10, chkBrunchLaks);
+            else if (chkBrunch14Slags.IsChecked == true)
+                CheckSlagsBrunch(14, chkBrunchLaks);
         }
 
         private void ChkBrunchPorretærte_Click(object sender, RoutedEventArgs e)
         {
             if (chkBrunch7Slags.IsChecked == true)
                 CheckSlagsBrunch(7, chkBrunchPorretærte);
-            else
+            else if (chkBrunch10Slags.IsChecked == true)
                 CheckSlagsBrunch(10, chkBrunchPorretærte);
+            else if (chkBrunch14Slags.IsChecked == true)
+                CheckSlagsBrunch(14, chkBrunchPorretærte);
         }
 
         private void ChkBrunchGræskYoghurt_Click(object sender, RoutedEventArgs e)
         {
             if (chkBrunch7Slags.IsChecked == true)
                 CheckSlagsBrunch(7, chkBrunchGræskYoghurt);
-            else
+            else if (chkBrunch10Slags.IsChecked == true)
                 CheckSlagsBrunch(10, chkBrunchGræskYoghurt);
+            else if (chkBrunch14Slags.IsChecked == true)
+                CheckSlagsBrunch(14, chkBrunchGræskYoghurt);
         }
 
         private void ChkBrunchCroissant_Click(object sender, RoutedEventArgs e)
         {
             if (chkBrunch7Slags.IsChecked == true)
                 CheckSlagsBrunch(7, chkBrunchCroissant);
-            else
+            else if (chkBrunch10Slags.IsChecked == true)
                 CheckSlagsBrunch(10, chkBrunchCroissant);
+            else if (chkBrunch14Slags.IsChecked == true)
+                CheckSlagsBrunch(14, chkBrunchCroissant);
         }
 
         private void ChkBrunchFrikadeller_Click(object sender, RoutedEventArgs e)
         {
             if (chkBrunch7Slags.IsChecked == true)
                 CheckSlagsBrunch(7, chkBrunchFrikadeller);
-            else
+            else if (chkBrunch10Slags.IsChecked == true)
                 CheckSlagsBrunch(10, chkBrunchFrikadeller);
+            else if (chkBrunch14Slags.IsChecked == true)
+                CheckSlagsBrunch(14, chkBrunchFrikadeller);
         }
 
         private void ChkBrunchHonningmelon_Click(object sender, RoutedEventArgs e)
         {
             if (chkBrunch7Slags.IsChecked == true)
                 CheckSlagsBrunch(7, chkBrunchHonningmelon);
-            else
+            else if (chkBrunch10Slags.IsChecked == true)
                 CheckSlagsBrunch(10, chkBrunchHonningmelon);
+            else if (chkBrunch14Slags.IsChecked == true)
+                CheckSlagsBrunch(14, chkBrunchHonningmelon);
         }
 
         private void ChkBrunchBrie_Click(object sender, RoutedEventArgs e)
         {
             if (chkBrunch7Slags.IsChecked == true)
                 CheckSlagsBrunch(7, chkBrunchBrie);
-            else
+            else if (chkBrunch10Slags.IsChecked == true)
                 CheckSlagsBrunch(10, chkBrunchBrie);
+            else if (chkBrunch14Slags.IsChecked == true)
+                CheckSlagsBrunch(14, chkBrunchBrie);
         }
 
         private void ChkBrunchMellemlageret_Click(object sender, RoutedEventArgs e)
         {
             if (chkBrunch7Slags.IsChecked == true)
                 CheckSlagsBrunch(7, chkBrunchMellemlageret);
-            else
+            else if (chkBrunch10Slags.IsChecked == true)
                 CheckSlagsBrunch(10, chkBrunchMellemlageret);
+            else if (chkBrunch14Slags.IsChecked == true)
+                CheckSlagsBrunch(14, chkBrunchMellemlageret);
         }
 
         private void ChkBrunchLageret_Click(object sender, RoutedEventArgs e)
         {
             if (chkBrunch7Slags.IsChecked == true)
                 CheckSlagsBrunch(7, chkBrunchLageret);
-            else
+            else if (chkBrunch10Slags.IsChecked == true)
                 CheckSlagsBrunch(10, chkBrunchLageret);
+            else if (chkBrunch14Slags.IsChecked == true)
+                CheckSlagsBrunch(14, chkBrunchLageret);
         }
 
         private void ChkBrunch7Slags_Unchecked(object sender, RoutedEventArgs e)
@@ -2257,6 +2283,7 @@ namespace MUAH.View
 
         #endregion
 
+        #region Kurv
         private void BtnTilføjTilKurvBrunch_Click(object sender, RoutedEventArgs e)
         {
             txtBasketNoOfItems.Text = session.Count.ToString();
@@ -2272,5 +2299,7 @@ namespace MUAH.View
         {
             ((Frame) Window.Current.Content).Navigate(typeof(ViewBasket));
         }
+        #endregion
+
     }
 }

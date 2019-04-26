@@ -747,7 +747,7 @@
                 <CheckBox x:Name="chkMellemlageret" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,652,0,-640" Click="ChkMellemlageret_Click"/>
                 <CheckBox x:Name="chkLageret" Content="" HorizontalAlignment="Left" Height="3" VerticalAlignment="Top" Width="125" Margin="31,684,0,-672" Click="ChkLageret_Click"/>
             </RelativePanel>
-            <RelativePanel x:Name="pnlBuffet" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Margin="30,30,-30,-30" Background="#FFF7F7F7">
+            <RelativePanel x:Name="pnlBuffet" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Margin="30,30,-30,-30" Background="#FFF7F7F7" d:IsHidden="True">
                 <TextBlock x:Name="txtBuffetNavn" HorizontalAlignment="Left" TextWrapping="Wrap" Text="SAMMENSÆT DIN EGEN BUFFET" VerticalAlignment="Top" Height="48" Width="385" Margin="230,10,-380,0" FontWeight="Bold" FontSize="24"/>
                 <TextBlock HorizontalAlignment="Left" Height="41" TextWrapping="Wrap" Text="Vælg mellem 2 slags kød, 1 slags kartofler, 2 slags salat og 1 slags sauce" VerticalAlignment="Top" Width="280" Margin="275,42,-493,-63" FontWeight="Bold"/>
                 <TextBlock x:Name="txtKartoffelNavn" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="55,488,-228,-508" FontSize="24" FontWeight="Bold">
@@ -1277,7 +1277,7 @@
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
             </RelativePanel>
-            <RelativePanel x:Name="pnlBrunch" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30" d:IsHidden="True">
+            <RelativePanel x:Name="pnlBrunch" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30">
                 <Button x:Name="btnTilføjTilKurvBrunch" Content="Tilføj til kurv" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Margin="580,716,-685,-716" Click="BtnTilføjTilKurvBrunch_Click"/>
                 <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Vælg mellem 7, 10 eller 14 forskellige ting" VerticalAlignment="Top" Width="335" Margin="230,28,-503,-28" FontWeight="Bold"/>
                 <CheckBox x:Name="chkBrunch7Slags" Content="" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="120" Margin="130,61,-124,-54" Click="ChkBrunch7Slags_Click" FontWeight="Bold" Unchecked="ChkBrunch7Slags_Unchecked"/>

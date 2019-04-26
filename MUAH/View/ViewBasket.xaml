@@ -9,12 +9,17 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Loading="Grid_Loading">
-        <ListView x:Name="lstBasket" HorizontalAlignment="Left" Height="740" Margin="150,130,0,0" VerticalAlignment="Top" Width="685"/>
         <Button x:Name="btnRetur" Content="" HorizontalAlignment="Left" Margin="1345,870,0,0" VerticalAlignment="Top" Height="57" Width="55" Click="BtnRetur_Click">
             <Button.Background>
                 <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/retur.png"/>
             </Button.Background>
         </Button>
+        <RelativePanel x:Name="pnlBackground" HorizontalAlignment="Left" Height="820" Margin="50,75,0,0" VerticalAlignment="Top" Width="860">
+            <RelativePanel.Background>
+                <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/food frame.jpg"/>
+            </RelativePanel.Background>
+            <ListView x:Name="lstBasket" HorizontalAlignment="Left" Height="740" VerticalAlignment="Top" Width="685" Margin="90,33,-90,-33" Background="#FFFAFAFA"/>
+        </RelativePanel>
 
     </Grid>
 </Page>

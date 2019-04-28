@@ -707,7 +707,7 @@ namespace MUAH.View
 
         private void BtnPlusStjerneskudRugbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtAntalStjerneskudRugbrød.Text = subAntal(txtAntalStjerneskudRugbrød.Text);
+            txtAntalStjerneskudRugbrød.Text = addAntal(txtAntalStjerneskudRugbrød.Text);
             OrderToList(true, smørrebrødStjerneskudR, txtStjerneskud.Text, Convert.ToDouble(txtStjerneskudPris.Text), Convert.ToInt32(txtAntalStjerneskudRugbrød.Text));
         }
 
@@ -720,81 +720,97 @@ namespace MUAH.View
         private void BtnPlusSkinkeRugbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalSkinkeRugbrød.Text = addAntal(txtAntalSkinkeRugbrød.Text);
+            OrderToList(true, smørrebrødSkinkeR, txtSkinke.Text, Convert.ToDouble(txtSkinkePris.Text), Convert.ToInt32(txtAntalSkinkeRugbrød.Text));
         }
 
         private void BtnMinusSkinkeRugbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalSkinkeRugbrød.Text = subAntal(txtAntalSkinkeRugbrød.Text);
+            OrderToList(false, smørrebrødSkinkeR, txtSkinke.Text, Convert.ToDouble(txtSkinkePris.Text), Convert.ToInt32(txtAntalSkinkeRugbrød.Text));
         }
 
         private void BtnPlusOksebrystRugbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalOksebrystRugbrød.Text = addAntal(txtAntalOksebrystRugbrød.Text);
+            OrderToList(true, smørrebrødOksebrystR, txtOksebryst.Text, Convert.ToDouble(txtOksebrystPris.Text), Convert.ToInt32(txtAntalOksebrystRugbrød.Text));
         }
 
         private void BtnMinusOksebrystRugbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalOksebrystRugbrød.Text = subAntal(txtAntalOksebrystRugbrød.Text);
+            OrderToList(false, smørrebrødOksebrystR, txtOksebryst.Text, Convert.ToDouble(txtOksebrystPris.Text), Convert.ToInt32(txtAntalOksebrystRugbrød.Text));
         }
 
         private void BtnPlusKalkunRugbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalKalkunRugbrød.Text = addAntal(txtAntalKalkunRugbrød.Text);
+            OrderToList(true, smørrebrødKalkunR, txtKalkun.Text, Convert.ToDouble(txtKalkunPris.Text), Convert.ToInt32(txtAntalKalkunRugbrød.Text));
         }
 
         private void BtnMinusKalkunRugbrød_Click(object sender, RoutedEventArgs e)
         {
-             txtAntalKalkunRugbrød.Text = subAntal(txtAntalKalkunRugbrød.Text);
+            txtAntalKalkunRugbrød.Text = subAntal(txtAntalKalkunRugbrød.Text);
+            OrderToList(false, smørrebrødKalkunR, txtKalkun.Text, Convert.ToDouble(txtKalkunPris.Text), Convert.ToInt32(txtAntalKalkunRugbrød.Text));
         }
 
         private void BtnPlusTatarRugbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalTatarRugbrød.Text = addAntal(txtAntalTatarRugbrød.Text);
+            OrderToList(true, smørrebrødTatarR, txtTatar.Text, Convert.ToDouble(txtTatarKapersPris.Text), Convert.ToInt32(txtAntalTatarRugbrød.Text));
         }
 
         private void BtnMinusTatarRugbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalTatarRugbrød.Text = subAntal(txtAntalTatarRugbrød.Text);
+            OrderToList(false, smørrebrødTatarR, txtTatar.Text, Convert.ToDouble(txtTatarKapersPris.Text), Convert.ToInt32(txtAntalTatarRugbrød.Text));
         }
 
         private void BtnPlusMørbradRugbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalMørbradRugbrød.Text = addAntal(txtAntalMørbradRugbrød.Text);
+            OrderToList(true, smørrebrødMørbradbøfR, txtMørbrad.Text, Convert.ToDouble(txtMørbradbøfPris.Text), Convert.ToInt32(txtAntalMørbradRugbrød.Text));
         }
 
         private void BtnMinusMørbradRugbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalMørbradRugbrød.Text = subAntal(txtAntalMørbradRugbrød.Text);
+            OrderToList(false, smørrebrødMørbradbøfR, txtMørbrad.Text, Convert.ToDouble(txtMørbradbøfPris.Text), Convert.ToInt32(txtAntalMørbradRugbrød.Text));
         }
 
         private void BtnPlusBrieRugbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalBrieRugbrød.Text = addAntal(txtAntalBrieRugbrød.Text);
+            OrderToList(true, smørrebrødBrieR, txtBrie.Text, Convert.ToDouble(txtBriePris.Text), Convert.ToInt32(txtAntalBrieRugbrød.Text));
         }
 
         private void BtnMinusBrieRugbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalBrieRugbrød.Text = subAntal(txtAntalBrieRugbrød.Text);
+            OrderToList(false, smørrebrødBrieR, txtBrie.Text, Convert.ToDouble(txtBriePris.Text), Convert.ToInt32(txtAntalBrieRugbrød.Text));
         }
 
         private void BtnPlusMellemlageretRugbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalMellemlageretRugbrød.Text = addAntal(txtAntalMellemlageretRugbrød.Text);
+            OrderToList(true, smørrebrødMellemlageretR, txtMellemlageret.Text, Convert.ToDouble(txtMellemlageretPris.Text), Convert.ToInt32(txtAntalMellemlageretRugbrød.Text));
         }
 
         private void BtnMinusMellemlageretRugbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalMellemlageretRugbrød.Text = subAntal(txtAntalMellemlageretRugbrød.Text);
+            OrderToList(false, smørrebrødMellemlageretR, txtMellemlageret.Text, Convert.ToDouble(txtMellemlageretPris.Text), Convert.ToInt32(txtAntalMellemlageretRugbrød.Text));
         }
 
         private void BtnPlusLageretRugbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalLageretRugbrød.Text = addAntal(txtAntalLageretRugbrød.Text);
+            OrderToList(true, smørrebrødLageretR, txtLageret.Text, Convert.ToDouble(txtLageretPris.Text), Convert.ToInt32(txtAntalLageretRugbrød.Text));
         }
 
         private void BtnMinusLageretRugbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalLageretRugbrød.Text = subAntal(txtAntalLageretRugbrød.Text);
+            OrderToList(false, smørrebrødLageretR, txtLageret.Text, Convert.ToDouble(txtLageretPris.Text), Convert.ToInt32(txtAntalLageretRugbrød.Text));
         }
 
         #endregion

@@ -937,7 +937,7 @@
                 <TextBlock x:Name="txtFlæskesteg" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="250" Margin="55,241,-163,-241" Text="Flæskesteg m. rødkål"/>
                 <TextBlock x:Name="txtLeverpostej" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="250" Margin="55,273,-163,-273" Text="Leverpostej m. bacon"/>
                 <TextBlock x:Name="txtDyrlægens" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="250" Margin="55,305,-163,-305" Text="Dyrlægens natmad"/>
-                <TextBlock x:Name="ttRoastbeef" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="250" Margin="55,337,-163,-337" Text="Roastbeef m. remoulade og peberrod"/>
+                <TextBlock x:Name="txtRoastbeef" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="250" Margin="55,337,-163,-337" Text="Roastbeef m. remoulade og peberrod"/>
                 <TextBlock x:Name="txtFiskefilet" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Fiskefilet m. remoulade" VerticalAlignment="Top" Height="32" Width="250" Margin="55,369,-163,-369"/>
                 <TextBlock x:Name="txtStjernekaster" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Fiskefilet m. mayonnaise og rejer" VerticalAlignment="Top" Height="32" Width="250" Margin="55,401,-163,-401"/>
                 <TextBlock x:Name="txtStjerneskud" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="250" Margin="55,433,-163,-433" Text="Stjerneskud m. dampet rødspætte"/>

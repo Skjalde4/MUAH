@@ -672,13 +672,13 @@ namespace MUAH.View
         private void BtnPlusRoastbeefRugbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalRoastbeefRugbrød.Text = addAntal(txtAntalRoastbeefRugbrød.Text);
-            OrderToList(true, smørrebrødRoastbeefR, txtRo.Text, Convert.ToDouble(txtRoastbeefPris.Text), Convert.ToInt32(txtAntalRoastbeefRugbrød.Text));
+            OrderToList(true, smørrebrødRoastbeefR, txtRoastbeef.Text, Convert.ToDouble(txtRoastbeefPris.Text), Convert.ToInt32(txtAntalRoastbeefRugbrød.Text));
         }
 
         private void BtnMinusRoastbeefRugbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalRoastbeefRugbrød.Text = subAntal(txtAntalRoastbeefRugbrød.Text);
-            OrderToList(false, smørrebrødRoastbeefR, txtRo.Text, Convert.ToDouble(txtRoastbeefPris.Text), Convert.ToInt32(txtAntalRoastbeefRugbrød.Text));
+            OrderToList(false, smørrebrødRoastbeefR, txtRoastbeef.Text, Convert.ToDouble(txtRoastbeefPris.Text), Convert.ToInt32(txtAntalRoastbeefRugbrød.Text));
         }
 
         private void BtnPlusFiskefiletRugbrød_Click(object sender, RoutedEventArgs e)

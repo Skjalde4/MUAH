@@ -39,7 +39,6 @@ namespace MUAH.View
         {
             foreach (var items in MenuPage.session)
             {
-                lstBasket.ItemsSource.ToString();
                 lstBasket.Items.Add(items);
             }
         }

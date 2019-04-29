@@ -16,11 +16,7 @@ namespace MUAH.Model
 
         //public override string ToString()
         //{
-        //    return $"{nameof(SessionId)}: {SessionId}, {nameof(ProductId)}: {ProductId}, {nameof(ProductName)}: {ProductName}, {nameof(ProductPrice)}: {ProductPrice}, {nameof(NoOfProduct)}: {NoOfProduct}";
+        //    return $"{nameof(ProductName)}: {ProductName}, {nameof(ProductPrice)}: {ProductPrice}, {nameof(NoOfProduct)}: {NoOfProduct}";
         //}
-        public override string ToString()
-        {
-            return $"{nameof(ProductName)}: {ProductName}, {nameof(ProductPrice)}: {ProductPrice}, {nameof(NoOfProduct)}: {NoOfProduct}";
-        }
     }
 }

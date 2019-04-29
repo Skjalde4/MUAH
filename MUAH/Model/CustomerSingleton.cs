@@ -54,5 +54,7 @@ namespace MUAH.Model
             Customers.Add(customers);
             PersistencyServiceCustomer.PutCustomerAsync(customers);
         }
+
+       
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MUAH.ViewModel;
+using MUAH.Model;
 
 namespace MUAH.Handler
 {
@@ -18,7 +19,7 @@ namespace MUAH.Handler
 
         public void CreateCustomer()
         {
-           // CustomerViewModel.CustomerSingleton.PostCustomer(CustomerViewModel.id);
+            CustomerViewModel.CustomerSingleton.PostCustomer(CustomerViewModel.phoneNo, CustomerViewModel.password, CustomerViewModel.name, CustomerViewModel.id);
         }
 
         //public void EditCustomer()

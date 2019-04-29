@@ -20,7 +20,7 @@ namespace MUAH.ViewModel
         private ObservableCollection<Customer> _customers;
         public CustomerSingleton CustomerSingleton { get; set; }
 
-        private RelayCommand _createCustomerCommand;
+        private ICommand _createCustomerCommand;
         public Handler.CustomerHandler CustomerHandler { get; set; }
         
 
@@ -38,11 +38,16 @@ namespace MUAH.ViewModel
             set => _customerSessions = value;
         }
 
+        public string phoneNo { get; set; }
+        public string password { get; set; }
+        public string name { get; set; }
+        public int id { get; set; }
+
 
         public ICommand CreateCustomerCommand
         {
             get { return _createCustomerCommand ?? (_createCustomerCommand = new RelayCommand(CustomerHandler.CreateCustomer));}
-            //set { _createCustomerCommand = value; }
+            set { _createCustomerCommand = value; }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

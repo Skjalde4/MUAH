@@ -35,7 +35,7 @@
             <RelativePanel.Background>
                 <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/food frame.jpg"/>
             </RelativePanel.Background>
-            <RelativePanel x:Name="pnlBuffet" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Margin="30,30,-30,-30" Background="#FFF7F7F7">
+            <RelativePanel x:Name="pnlBuffet" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Margin="30,30,-30,-30" Background="#FFF7F7F7" d:IsHidden="True">
                 <TextBlock x:Name="txtBuffetNavn" HorizontalAlignment="Left" TextWrapping="Wrap" Text="SAMMENSÆT DIN EGEN BUFFET" VerticalAlignment="Top" Height="48" Width="385" Margin="230,10,-380,0" FontWeight="Bold" FontSize="24"/>
                 <TextBlock HorizontalAlignment="Left" Height="41" TextWrapping="Wrap" Text="Vælg mellem 2 slags kød, 1 slags kartofler, 2 slags salat og 1 slags sauce" VerticalAlignment="Top" Width="280" Margin="275,42,-493,-63" FontWeight="Bold"/>
                 <TextBlock x:Name="txtKartoffelNavn" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Margin="55,488,-228,-508" FontSize="24" FontWeight="Bold">
@@ -133,7 +133,7 @@
                     </TextBlock>
                 </RelativePanel>
             </RelativePanel>
-            <RelativePanel x:Name="pnlForret" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30" d:IsHidden="True">
+            <RelativePanel x:Name="pnlForret" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30">
                 <TextBlock x:Name="txtForretVarmrøgetLaks" HorizontalAlignment="Left" Height="95" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="56,243,-203,-318" FontSize="16" FontWeight="Bold">
                     <Run Text="Varmrøget laks m. krydderurte dressing og pynt"/>
                     <LineBreak/>
@@ -144,13 +144,7 @@
                 <TextBlock x:Name="txtForretVarmrøgetLaksPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="229,295,-251,-333" FontWeight="Bold">
                     <Run FontSize="24" Text="70.00"/>
                 </TextBlock>
-                <TextBlock x:Name="txtForretHvidvinsLaks" HorizontalAlignment="Left" Height="95" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="56,63,-203,-138" FontSize="16" FontWeight="Bold">
-                    <Run Text="Hvidvinsdampet laks m. rejer og dild dressing"/>
-                    <LineBreak/>
-                    <Run/>
-                    <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
-                </TextBlock>
+                <TextBlock x:Name="txtForretHvidvinsLaks" HorizontalAlignment="Left" Height="52" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="56,63,-203,-95" FontSize="16" FontWeight="Bold" Text="Hvidvinsdampet laks m. rejer og dild dressing"/>
                 <TextBlock x:Name="txtForretHvidvinsLaksPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="229,115,-251,-153" FontWeight="Bold" FontSize="24">
                     <Run Text="75.00"/>
                 </TextBlock>
@@ -334,6 +328,9 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
+                <TextBlock HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Margin="56,120,-134,-143">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
             </RelativePanel>
             <RelativePanel x:Name="pnlHovedret" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30" d:IsHidden="True">
                 <TextBlock x:Name="txtHovedretFlæskesteg" HorizontalAlignment="Left" Height="155" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="56,406,-203,-541" FontSize="16" FontWeight="Bold">
@@ -926,7 +923,7 @@
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
             </RelativePanel>
-            <RelativePanel x:Name="pnlSmørrebrød" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Margin="30,30,-695,-658" Background="#FFF7F7F7">
+            <RelativePanel x:Name="pnlSmørrebrød" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Margin="30,30,-695,-658" Background="#FFF7F7F7" d:IsHidden="True">
                 <TextBlock x:Name="txtHåndmadderUspecificeret" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Håndmadder uspecificeret" VerticalAlignment="Top" Height="32" Width="250" Margin="55,17,-163,-17"/>
                 <TextBlock x:Name="txtHåndmadderSpecificeret" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Håndmadder specificeret" VerticalAlignment="Top" Height="32" Width="250" Margin="55,49,-163,-49"/>
                 <TextBlock x:Name="txtHøjtbelagt" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Højtbelagt uspecificeret" VerticalAlignment="Top" Height="32" Width="250" Margin="55,81,-163,-81"/>

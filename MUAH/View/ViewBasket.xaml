@@ -8,6 +8,9 @@
     x:Class="MUAH.View.ViewBasket"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.DataContext>
+        <ViewModel:CustomerViewModel/>
+    </Page.DataContext>
 
     <Grid Loading="Grid_Loading">
         <Button x:Name="btnRetur" Content="" HorizontalAlignment="Left" Margin="1415,37,0,0" VerticalAlignment="Top" Height="57" Width="55" Click="BtnRetur_Click">
@@ -19,7 +22,18 @@
             <RelativePanel.Background>
                 <ImageBrush ImageSource="ms-appx:///Assets/food frame.jpg" Stretch="UniformToFill"/>
             </RelativePanel.Background>
-            <ListView x:Name="lstBasket" HorizontalAlignment="Left" Height="697" VerticalAlignment="Top" Width="1025" Margin="95,24,-435,-4" Background="#FFFAFAFA"/>
+
+            <ListView x:Name="lstBasket" HorizontalAlignment="Left" Height="697" VerticalAlignment="Top" Width="1025" Margin="95,24,-435,-4" Background="#FFFAFAFA" ItemsSource="{Binding MySessions}">
+             <ListView.ItemTemplate>
+                 <DataTemplate>
+                     <StackPanel x:Name="pnlBasket" Orientation="Horizontal" Height="600" Width="1000">
+                         <TextBlock x:Name="txtProductName" TextWrapping="Wrap" Text="{Binding ProductName}" Height="30" Width="40"/>
+                    </StackPanel>
+
+                     
+                 </DataTemplate>
+             </ListView.ItemTemplate>  
+            </ListView>
         </RelativePanel>
         <TextBlock HorizontalAlignment="Center" Margin="600,28,500,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="400" Foreground="#FFC71515" FocusVisualPrimaryBrush="#FFBD0B1C" FontSize="48">
             <Run FontWeight="Bold" Text="Indkøbskurv"/>

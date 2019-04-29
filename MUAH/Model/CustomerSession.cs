@@ -18,13 +18,9 @@ namespace MUAH.Model
         //{
         //    return $"{nameof(SessionId)}: {SessionId}, {nameof(ProductId)}: {ProductId}, {nameof(ProductName)}: {ProductName}, {nameof(ProductPrice)}: {ProductPrice}, {nameof(NoOfProduct)}: {NoOfProduct}";
         //}
-        //public override string ToString()
-        //{
-        //    return $"{nameof(ProductName)}: {ProductName}, {nameof(ProductPrice)}: {ProductPrice}, {nameof(NoOfProduct)}: {NoOfProduct}";
-        //}
         public override string ToString()
         {
-            return $"{nameof(ProductName)}: {ProductName}, {nameof(ProductPrice)}: {ProductPrice}";
+            return $"{nameof(ProductName)}: {ProductName}, {nameof(ProductPrice)}: {ProductPrice}, {nameof(NoOfProduct)}: {NoOfProduct}";
         }
     }
 }

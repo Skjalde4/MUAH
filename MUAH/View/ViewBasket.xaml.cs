@@ -29,7 +29,6 @@ namespace MUAH.View
             this.InitializeComponent();
         }
 
-        
         private void BtnRetur_Click(object sender, RoutedEventArgs e)
         {
             ((Frame)Window.Current.Content).Navigate(typeof(MenuPage));
@@ -41,6 +40,8 @@ namespace MUAH.View
             {
                 lstBasket.Items.Add(items);
             }
+
+            
         }
 
         private void BtnKurvGåTilBestilling_Click(object sender, RoutedEventArgs e)

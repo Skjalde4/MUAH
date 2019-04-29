@@ -32,6 +32,12 @@ namespace MUAH.ViewModel
             CustomerHandler = new Handler.CustomerHandler(this);
         }
 
+        public ObservableCollection<CustomerSession> MySessions
+        {
+            get => _customerSessions;
+            set => _customerSessions = value;
+        }
+
 
         public ICommand CreateCustomerCommand
         {

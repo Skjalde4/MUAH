@@ -59,6 +59,12 @@ namespace MUAH.Model
             PersistencyServiceCustomer.PutCustomerAsync(customers);
         }
 
+        public void DeleteCustomer(Customer customerToBeDeleted)
+        {
+            Customers.Remove(customerToBeDeleted);
+            PersistencyServiceCustomer.DeleteCustomerAsync(customerToBeDeleted);
+        }
+
        
     }
 }

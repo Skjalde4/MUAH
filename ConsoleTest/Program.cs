@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-using WebServer;
+using MUAHWebServer;
 
 namespace ConsoleTest
 {
@@ -24,19 +24,33 @@ namespace ConsoleTest
                 client.DefaultRequestHeaders.Clear();
                 try
                 {
+                    //Dette er post metoden
+                    //Customer customer1 = new Customer() { Id = 1, Name = "Helena Skjaldgaard", Password = "skjalde4", PhoneNo = "23493388" };
+                    //var post = client.PostAsJsonAsync("Api/Customers", customer1).Result;
+                    //Console.WriteLine(post.StatusCode);
+
+                    //Dette er delete metoden            
+                   // var delete = client.DeleteAsync("api/Customers/3").Result;
+
+                    //Dette er put metoden
+                    Customer customer1 = new Customer(){Id = 1, Name = "Michel Arbirk", Password = "fyfan123", PhoneNo = "71909747"};
+                    var put = client.PutAsJsonAsync("api/Customers/1", customer1).Result;                    
+
+                    //Dette er get metoden
                     var response = client.GetAsync("api/Customers").Result;
-                    if (response.IsSuccessStatusCode)
-                    {
-                        var customers = response.Content.ReadAsAsync<IEnumerable<Customer>().Result;
-                    }
-                    //Customer customer1 = new Customer() {Id = 1, Name = "Helena Skjaldgaard", Password = "skjalde4", PhoneNo = "23493388"};
-                    // var post = client.PostAsJsonAsync("Api/Customers", customer1).Result;
+                    Console.WriteLine(response);
+                    //if (response.IsSuccessStatusCode)
+                    //{
+                    //    var customers = response.Content.ReadAsAsync<IEnumerable<Customer>>().Result;
+                    //}
                 }
                 catch (Exception e)
                 {
                     Console.WriteLine(e);
                 }
             }
+
+            
         }
     }
 }

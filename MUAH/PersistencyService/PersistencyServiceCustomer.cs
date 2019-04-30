@@ -117,5 +117,27 @@ namespace MUAH.PersistencyService
             }
         }
 
+        public static async void DeleteCustomerAsync(Customer customers)
+        {
+            const string ServerUrl = "HTTP://localhost:58058";
+            HttpClientHandler handler = new HttpClientHandler();
+            handler.UseDefaultCredentials = true;
+
+            using (var client = new HttpClient(handler))
+            {
+                client.BaseAddress = new Uri(ServerUrl);
+                client.DefaultRequestHeaders.Clear();
+
+                try
+                {
+                    var delete = await client.DeleteAsync("api/customers/" + customers.Id);
+                }
+                catch (Exception e)
+                {
+                    new MessageDialog(e.Message).ShowAsync();
+                }
+            }
+        }
+
     }
 }

@@ -8,7 +8,11 @@ namespace MUAH.Model
 {
     class Customer
     {
-        //Things being checked during login
+        /// <summary>
+        /// PhoneNo og password er de properties kunden skal bruge for at logge ind, hvorimod en ny kunde skal bruge alle 4 properties.
+        /// Alle properties skal konverteres til en streng, hvorfor vi bruger ToString metoden.
+        /// </summary>
+
         public string PhoneNo { get; set; }
         public string Password { get; set; }
 

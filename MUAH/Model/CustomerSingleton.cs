@@ -11,6 +11,10 @@ namespace MUAH.Model
 {
     class CustomerSingleton
     {
+        /// <summary>
+        /// En singleton laver en instans af sig selv, så de collections man bruger er ens på alle pages. 
+        /// </summary>
+        
         private static CustomerSingleton _instance = null;
 
         public static CustomerSingleton Instance

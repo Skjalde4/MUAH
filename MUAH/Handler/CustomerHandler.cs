@@ -10,6 +10,10 @@ namespace MUAH.Handler
 {
     class CustomerHandler
     {
+        /// <summary>
+        /// Specifikt er en handler en mellemmand mellem singleton og viewmodel.
+        /// Derfor skal handleren have en viewmodel property, samt hvorfor vi i metoden CreateCustomer anvender singletonen. 
+        /// </summary>
         public CustomerViewModel CustomerViewModel { get; set; }
 
         public CustomerHandler(CustomerViewModel customerViewModel)

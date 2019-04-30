@@ -47,5 +47,6 @@ namespace MUAH.View
         {
             ((Frame)Window.Current.Content).Navigate(typeof(MenuPage));
         }
+
     }
 }

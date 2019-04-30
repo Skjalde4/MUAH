@@ -16,13 +16,23 @@ namespace MUAH.PersistencyService
     class PersistencyServiceCustomer
     {
         private static string customerFileName = "Customers.json";
-
+        
+        /// <summary>
+        /// JSON står for JavaScript Object Notation - JSON bliver brugt når data bliver sendt fra en server til en hjemmeside.
+        /// JSON er nemt for maskiner og systemer at genere om til læseligt materiale for mennesker.
+        /// Denne metode bruges til at gemme en collection af customers til databasen. 
+        /// </summary>
+        /// <param name="customers"></param>
         public static async void SaveCustomersAsJsonAsync(ObservableCollection<Customer> customers)
         {
             string customersJsonString = JsonConvert.SerializeObject(customers);
             SerializeCustomersFileAsync(customersJsonString, customerFileName);
         }
-
+        /// <summary>
+        /// Her gemmer den en lokal fil, hvis der er en eksisterende bliver denne erstattet.
+        /// </summary>
+        /// <param name="customersString"></param>
+        /// <param name="fileName"></param>
         public static async void SerializeCustomersFileAsync(string customersString, string fileName)
         {
             StorageFile localFile =
@@ -30,7 +40,11 @@ namespace MUAH.PersistencyService
                     CreationCollisionOption.ReplaceExisting);
             await FileIO.WriteTextAsync(localFile, customersString);
         }
-
+        /// <summary>
+        /// Her henter den en lokal fil, og returnere filen. OBS IKKE 100% SIKRE PÅ DETTE.
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns>Hvis den ikke kan finde filen returnere den null ellers returneres filen</returns>
         public static async Task<string> DeSerializeEventsFileAsync(String fileName)
         {
             try
@@ -44,7 +58,11 @@ namespace MUAH.PersistencyService
                 return null;
             }
         }
-
+        /// <summary>
+        /// serverUrl er konstant når man har sat den
+        /// metoden henter listen af kunder fra databasen via http. 
+        /// </summary>
+        /// <returns> returnere de kunder der allerede er oprettet i databasen</returns>
         public static async Task<List<Customer>> GetCustomerAsync()
         {
             const string ServerUrl = "HTTP://localhost:58058";

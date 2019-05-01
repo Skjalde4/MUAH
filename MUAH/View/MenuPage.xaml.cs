@@ -440,10 +440,17 @@ namespace MUAH.View
 
             txtBasketNoOfItems.Text = BasketNo.ToString();
             btnLogout.Visibility = Visibility.Collapsed;
-            //if ()
-            //{
 
-            //}
+            if (txtCustomerName.Text == "")
+            {
+                btnLogin.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                btnLogout.Visibility = Visibility.Visible;
+                btnLogin.Visibility = Visibility.Collapsed;
+            }
+            
         }
 
         #endregion
@@ -2434,6 +2441,9 @@ namespace MUAH.View
             ((Frame)Window.Current.Content).Navigate(typeof(LoginCustomer));
         }
 
-        
+        private void BtnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

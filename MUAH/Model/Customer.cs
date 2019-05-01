@@ -17,20 +17,20 @@ namespace MUAH.Model
         public string Password { get; set; }
 
         //Things used to create an account
-        public string CustomerName { get; set; }
+        public string Name { get; set; }
         public int Id { get; set; }
 
-        public Customer(string phoneNo, string password, string customerName, int id)
+        public Customer(string phoneNo, string password, string name, int id)
         {
             PhoneNo = phoneNo;
             Password = password;
-            CustomerName = customerName;
+            Name = name;
             Id = id;
         }
 
         public override string ToString()
         {
-            return $"{nameof(PhoneNo)}: {PhoneNo}, {nameof(Password)}: {Password}, {nameof(CustomerName)}: {CustomerName}, {nameof(Id)}: {Id}";
+            return $"{nameof(PhoneNo)}: {PhoneNo}, {nameof(Password)}: {Password}, {nameof(Name)}: {Name}, {nameof(Id)}: {Id}";
         }
     }
 }

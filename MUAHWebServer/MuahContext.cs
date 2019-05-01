@@ -10,7 +10,7 @@ namespace MUAHWebServer
         public MuahContext()
             : base("name=MuahContext")
         {
-            base.Configuration.ProxyCreationEnabled = false;
+            Configuration.ProxyCreationEnabled = false;
         }
 
         public virtual DbSet<Admin> Admin { get; set; }

@@ -38,45 +38,7 @@ namespace MUAH.Model
             GetCustomers();
         }
 
-        public void Loop()
-        {
-           // TimeSpan period = TimeSpan.FromSeconds(0.1);
-
-            //ThreadPoolTimer PeriodicTimer = ThreadPoolTimer.CreatePeriodicTimer(async (source) =>
-            //{
-            //    await Dispatcher.RunAsync(CoreDispatcherPriority.High,
-            //        () =>
-            //        {
-            //            if (CustomerViewModel.CustomerSingleton.CurrentCustomer == null)
-            //            {
-            //                //Management.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            //                //Management_Seperator.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-
-            //                //Admin.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            //                //Account.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            //                //Login.Visibility = Windows.UI.Xaml.Visibility.Visible;
-            //                //Logout.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            //            }
-            //            else
-            //            {
-            //                //Management.Visibility = Windows.UI.Xaml.Visibility.Visible;
-            //                //Management_Seperator.Visibility = Windows.UI.Xaml.Visibility.Visible;
-
-            //                //Account.Visibility = Windows.UI.Xaml.Visibility.Visible;
-            //                //Login.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            //                //Logout.Visibility = Windows.UI.Xaml.Visibility.Visible;
-
-            //                //if (UserViewModel.Singleton.CurrentUser.fk_role_id == 2)
-            //                //    Admin.Visibility = Windows.UI.Xaml.Visibility.Visible;
-            //                //else
-            //                //    Admin.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            //            }
-            //        });
-
-            //}, period);
-        }
-
-
+        
         //Get loader de customers der allerede er oprettet i databasen.
         public async void GetCustomers()
         {

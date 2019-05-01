@@ -26,7 +26,7 @@ namespace MUAH.ViewModel
         public CustomerSingleton CustomerSingleton { get; set; }
 
         private ICommand _createCustomerCommand;
-        public Handler.CustomerHandler CustomerHandler { get; set; }
+        public CustomerHandler CustomerHandler { get; set; }
         
 
         public CustomerViewModel()
@@ -34,7 +34,7 @@ namespace MUAH.ViewModel
             _customerSessions = new ObservableCollection<CustomerSession>();
             _customers = new ObservableCollection<Customer>();
             CustomerSingleton = CustomerSingleton.Instance;
-            CustomerHandler = new Handler.CustomerHandler(this);
+            CustomerHandler = new CustomerHandler(this);
         }
 
         public ObservableCollection<CustomerSession> MySessions
@@ -83,14 +83,25 @@ namespace MUAH.ViewModel
             {
                 if (customer.PhoneNo == phoneNo && customer.Password == password)
                 {
-                    customer.CustomerName = Name;
-                    Name = customer.CustomerName;
+                    Name = customer.Name;
                     ((Frame) Window.Current.Content).Navigate(typeof(MenuPage));
                 }
             }
 
             Text = "Brugeren blev ikke fundet";
             
+        }
+
+        public void CheckForExsistingCustomer()
+        {
+            foreach (var customer in CustomerSingleton.Customers)
+            {
+                if (customer.PhoneNo == phoneNo)
+                {
+                    Text = "Brugeren findes allerede";
+                }
+                
+            }
         }
 
         public ICommand CreateCustomerCommand

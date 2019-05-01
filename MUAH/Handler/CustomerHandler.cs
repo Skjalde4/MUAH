@@ -23,7 +23,7 @@ namespace MUAH.Handler
 
         public void CreateCustomer()
         {
-            CustomerViewModel.CustomerSingleton.PostCustomer(CustomerViewModel.phoneNo, CustomerViewModel.password, CustomerViewModel.name, CustomerViewModel.id);
+            CustomerViewModel.CustomerSingleton.PostCustomer(CustomerViewModel.phoneNo, CustomerViewModel.password, CustomerViewModel.Name, CustomerViewModel.id);
         }
 
         //public void EditCustomer()

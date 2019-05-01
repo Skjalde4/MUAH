@@ -25,7 +25,7 @@ namespace ConsoleTest
                 try
                 {
                     //Dette er post metoden
-                    Customer customer2 = new Customer() { Name = "Helena Graff", Password = "helena1234", PhoneNo = "28580211" };
+                    Customer customer2 = new Customer() { Name = "Alexander Rasmussen", Password = "alexergrim", PhoneNo = "27317110" };
                     var post = client.PostAsJsonAsync("Api/Customers", customer2).Result;
                     Console.WriteLine(post.StatusCode);
 

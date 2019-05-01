@@ -20,6 +20,7 @@ namespace MUAH.ViewModel
     class CustomerViewModel : INotifyPropertyChanged
     {
         private string _text;
+        private string _name;
         private ObservableCollection<CustomerSession> _customerSessions;
         private ObservableCollection<Customer> _customers;
         public CustomerSingleton CustomerSingleton { get; set; }
@@ -44,7 +45,17 @@ namespace MUAH.ViewModel
 
         public string phoneNo { get; set; }
         public string password { get; set; }
-        public string name { get; set; }
+
+        public string Name
+        {
+            get => _name;
+            set
+            {
+                _name = value;
+                OnPropertyChanged("Name");
+            }
+        }
+
         public int id { get; set; }
 
 
@@ -64,17 +75,22 @@ namespace MUAH.ViewModel
             }
         }
 
+        
+
         public void CheckCustomer()
         {
             foreach (var customer in CustomerSingleton.Customers)
             {
                 if (customer.PhoneNo == phoneNo && customer.Password == password)
                 {
+                    customer.CustomerName = Name;
+                    Name = customer.CustomerName;
                     ((Frame) Window.Current.Content).Navigate(typeof(MenuPage));
                 }
             }
 
             Text = "Brugeren blev ikke fundet";
+            
         }
 
         public ICommand CreateCustomerCommand

@@ -2443,7 +2443,12 @@ namespace MUAH.View
 
         private void BtnLogout_Click(object sender, RoutedEventArgs e)
         {
-            
+            btnLogin.Visibility = Visibility.Visible;
+            btnLogout.Visibility = Visibility.Collapsed;
+            txtCustomerName.Text = "";
+            session.Clear();
+            BasketNo = session.Count;
+            ((Frame)Window.Current.Content).Navigate(typeof(MenuPage));
         }
     }
 }

@@ -439,6 +439,11 @@ namespace MUAH.View
             imgTapas.Visibility = Visibility.Visible;
 
             txtBasketNoOfItems.Text = BasketNo.ToString();
+            btnLogout.Visibility = Visibility.Collapsed;
+            //if ()
+            //{
+
+            //}
         }
 
         #endregion

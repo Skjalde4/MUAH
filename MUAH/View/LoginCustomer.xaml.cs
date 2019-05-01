@@ -48,5 +48,9 @@ namespace MUAH.View
             ((Frame)Window.Current.Content).Navigate(typeof(MenuPage));
         }
 
+        private void BtnOpretBruger_Click(object sender, RoutedEventArgs e)
+        {
+            ((Frame) Window.Current.Content).Navigate(typeof(MenuPage));
+        }
     }
 }

@@ -32,7 +32,7 @@
         <Button x:Name="btnBuffet" Content="Buffet" HorizontalAlignment="Left" Height="70" Margin="90,107,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnBuffet_Click_1" Background="#FFBD0B1C" Foreground="White"/>
         <Button x:Name="btnLogin" Content="" HorizontalAlignment="Left" Margin="1335,50,0,0" VerticalAlignment="Top" Height="57" Width="55" Click="BtnLogin_Click">
             <Button.Background>
-                <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/login.png"/>
+                <ImageBrush ImageSource="ms-appx:///Assets/Locked.JPG" Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
         <Image HorizontalAlignment="Left" Height="87" Margin="90,20,0,0" VerticalAlignment="Top" Width="300" Source="ms-appx:///Assets/coop.png"/>
@@ -2174,7 +2174,7 @@
             <Run FontWeight="Bold" Text="- Mad ud af huset"/>
         </TextBlock>
         <TextBlock x:Name="txtBasketNoOfItems" HorizontalAlignment="Left" Margin="1450,50,-20,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="23" Width="70" FontWeight="Bold" FocusVisualPrimaryBrush="#FFBD0B1C" Foreground="#FFBD0B1C"/>
-        <TextBlock x:Name="txtCustomerName" Margin="1075,73,0,0" TextWrapping="Wrap" Text="{Binding name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="21" HorizontalAlignment="Left" Width="255" TextAlignment="Right" FontWeight="Bold" FontSize="16"/>
+        <TextBlock x:Name="txtCustomerName" Margin="1075,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" HorizontalAlignment="Left" Width="255" TextAlignment="Right" FontWeight="Bold" FontSize="16" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
     </Grid>
 </Page>

@@ -832,41 +832,49 @@ namespace MUAH.View
         private void BtnPlusHåndmadderUspecificeretFranskbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalHåndmadderUspecificeretFranskbrød.Text = addAntal(txtAntalHåndmadderUspecificeretFranskbrød.Text);
+            OrderToList(true, smørrebrødHåndmadderUspecificeretF, txtHåndmadderUspecificeret.Text, Convert.ToDouble(txtHåndmadderUspecificeretPris.Text), Convert.ToInt32(txtAntalHåndmadderUspecificeretFranskbrød.Text));
         }
 
         private void BtnMinusHåndmadderUspecificeretFranskbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalHåndmadderUspecificeretFranskbrød.Text = subAntal(txtAntalHåndmadderUspecificeretFranskbrød.Text);
+            OrderToList(false, smørrebrødHåndmadderUspecificeretF, txtHåndmadderUspecificeret.Text, Convert.ToDouble(txtHåndmadderUspecificeretPris.Text), Convert.ToInt32(txtAntalHåndmadderUspecificeretFranskbrød.Text));
         }
 
         private void BtnPlusHåndmadderSpecificeretFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtAntalHåndmadderSpecificeretFranskbrød.Text = addAntal(txtAntalHåndmadderSpecificeretFranskbrød.Text);
+            txtAntalHåndmadderSpecificeretFranskbrød.Text = addAntal(txtAntalHåndmadderSpecificeretRugbrød.Text);
+            OrderToList(true, smørrebrødHåndmadderSpecificeretF, txtHåndmadderSpecificeret.Text, Convert.ToDouble(txtHåndmadderSpecificeretPris.Text), Convert.ToInt32(txtAntalHåndmadderSpecificeretFranskbrød.Text));
         }
 
         private void BtnMinusHåndmadderSpecificeretFranskbrød_Click(object sender, RoutedEventArgs e)
         {
-            txtAntalHåndmadderSpecificeretFranskbrød.Text = subAntal(txtAntalHåndmadderSpecificeretFranskbrød.Text);
+            txtAntalHåndmadderSpecificeretFranskbrød.Text = subAntal(txtAntalHåndmadderSpecificeretRugbrød.Text);
+            OrderToList(false, smørrebrødHåndmadderSpecificeretF, txtHåndmadderSpecificeret.Text, Convert.ToDouble(txtHåndmadderSpecificeretPris.Text), Convert.ToInt32(txtAntalHåndmadderSpecificeretFranskbrød.Text));
         }
 
         private void BtnPlusHøjtbelagtFranskbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalHøjtbelagtFranskbrød.Text = addAntal(txtAntalHøjtbelagtFranskbrød.Text);
+            OrderToList(true, smørrebrødHøjtbelagtUspecificeretF, txtHåndmadderSpecificeret.Text, Convert.ToDouble(txtHøjtbelagtUspecificeretPris.Text), Convert.ToInt32(txtAntalHøjtbelagtFranskbrød.Text));
         }
 
         private void BtnMinusHøjtbelagtFranskbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalHøjtbelagtFranskbrød.Text = subAntal(txtAntalHøjtbelagtFranskbrød.Text);
+            OrderToList(false, smørrebrødHøjtbelagtUspecificeretF, txtHåndmadderSpecificeret.Text, Convert.ToDouble(txtHøjtbelagtUspecificeretPris.Text), Convert.ToInt32(txtAntalHøjtbelagtFranskbrød.Text));
         }
 
         private void BtnPlusÆgTomatFranskbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalÆgTomatFranskbrød.Text = addAntal(txtAntalÆgTomatFranskbrød.Text);
+            OrderToList(true, smørrebrødÆgTomatF, txtÆgTomat.Text, Convert.ToDouble(txtÆgTomatPris.Text), Convert.ToInt32(txtAntalÆgTomatFranskbrød.Text));
         }
 
         private void BtnMinusÆgTomatFranskbrød_Click(object sender, RoutedEventArgs e)
         {
             txtAntalÆgTomatFranskbrød.Text = subAntal(txtAntalÆgTomatFranskbrød.Text);
+            OrderToList(false, smørrebrødÆgTomatF, txtÆgTomat.Text, Convert.ToDouble(txtÆgTomatPris.Text), Convert.ToInt32(txtAntalÆgTomatFranskbrød.Text));
         }
 
         private void BtnPlusÆgRejerFranskbrød_Click(object sender, RoutedEventArgs e)

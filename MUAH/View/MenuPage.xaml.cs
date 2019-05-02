@@ -3,6 +3,7 @@ using System.Collections.Generic;
 //using System.Globalization;
 //using System.IO;
 using System.Linq;
+using Windows.UI.Popups;
 //using System.Runtime.InteropServices.WindowsRuntime;
 //using Windows.Foundation;
 //using Windows.Foundation.Collections;
@@ -2449,14 +2450,36 @@ namespace MUAH.View
             ((Frame)Window.Current.Content).Navigate(typeof(LoginCustomer));
         }
 
-        private void BtnLogout_Click(object sender, RoutedEventArgs e)
-        {
-            btnLogin.Visibility = Visibility.Visible;
-            btnLogout.Visibility = Visibility.Collapsed;
-            txtCustomerName.Text = "";
-            session.Clear();
-            BasketNo = session.Count;
-            ((Frame)Window.Current.Content).Navigate(typeof(MenuPage));
+        private async void BtnLogout_Click(object sender, RoutedEventArgs e)
+        {  
+                ContentDialog deleteFileDialog = new ContentDialog
+                {
+                    Title = "Log ud",
+                    Content = "Er du sikker på at du vil logge ud?",
+                    PrimaryButtonText = "Ja",
+                    CloseButtonText = "Nej"
+                };
+
+                ContentDialogResult result = await deleteFileDialog.ShowAsync();
+
+                // Log ud hvis brugeren trykker på primaryButton.
+                // Ellers gør intet.
+                if (result == ContentDialogResult.Primary)
+                {
+                    btnLogin.Visibility = Visibility.Visible;
+                    btnLogout.Visibility = Visibility.Collapsed;
+                    txtCustomerName.Text = "";
+                    session.Clear();
+                    BasketNo = session.Count;
+                    ((Frame)Window.Current.Content).Navigate(typeof(MenuPage));
+                }
+                else
+                {
+                    // Brugeren trykkede på CloseButton, ESC eller lignende.
+                    // Gør intet.
+                }
+
+            
         }
     }
 }

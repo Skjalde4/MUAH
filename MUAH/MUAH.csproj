@@ -137,6 +137,9 @@
     <Compile Include="View\MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\PayPage.xaml.cs">
+      <DependentUpon>PayPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\SpecificStore.xaml.cs">
       <DependentUpon>SpecificStore.xaml</DependentUpon>
     </Compile>
@@ -193,6 +196,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\MenuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PayPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

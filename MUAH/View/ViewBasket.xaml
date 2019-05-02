@@ -8,6 +8,9 @@
     x:Class="MUAH.View.ViewBasket"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.DataContext>
+        <ViewModel:CustomerViewModel/>
+    </Page.DataContext>
 
     <Grid Loading="Grid_Loading">
         <Button x:Name="btnRetur" Content="" HorizontalAlignment="Left" Margin="1415,37,0,0" VerticalAlignment="Top" Height="57" Width="55" Click="BtnRetur_Click">
@@ -26,6 +29,7 @@
             <Run FontWeight="Bold" Text="Indkøbskurv"/>
         </TextBlock>
         <Button x:Name="btnKurvGåTilBestilling" Content="Gå til betaling" HorizontalAlignment="Left" Margin="1177,865,0,0" VerticalAlignment="Top" Height="55" Width="175" Background="#FFBD0B1C" FontSize="20" FontWeight="Bold" Foreground="White" Click="BtnKurvGåTilBestilling_Click"/>
+        <TextBlock x:Name="txtCustomerName" Margin="1097,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" HorizontalAlignment="Left" Width="255" TextAlignment="Right" FontWeight="Bold" FontSize="16" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
     </Grid>
 </Page>

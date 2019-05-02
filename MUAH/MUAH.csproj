@@ -124,6 +124,7 @@
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\CustomerSession.cs" />
     <Compile Include="Model\CustomerSingleton.cs" />
+    <Compile Include="Model\Helper.cs" />
     <Compile Include="PersistencyService\PersistencyServiceCustomer.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModel\CustomerViewModel.cs" />

@@ -92,6 +92,11 @@ namespace MUAH.PersistencyService
             }
         }
 
+
+        /// <summary>
+        /// Tilføjer en customer til databasen via web api ved brug af HTTP. 
+        /// </summary>
+        /// <param name="customers">customer objektet der skal tilføjes</param>
         public static async void PostCustomerAsync(Customer customers)
         {
             const string ServerUrl = "HTTP://localhost:58058";
@@ -113,6 +118,11 @@ namespace MUAH.PersistencyService
             }
         }
 
+        /// <summary>
+        /// Ændrer et customer objekt i databasen via web api ved brug af HTTP.
+        /// Det nye customer objekt erstatter det gamle, med de nye ændringer. 
+        /// </summary>
+        /// <param name="customers">det nye customer objekt</param>
         public static async void PutCustomerAsync(Customer customers)
         {
             const string ServerUrl = "HTTP://localhost:58058";
@@ -135,6 +145,10 @@ namespace MUAH.PersistencyService
             }
         }
 
+        /// <summary>
+        /// Sletter et customer objekt fra databasen via web api ved brug af HTTP. 
+        /// </summary>
+        /// <param name="customers">customer objekt der skal slettes</param>
         public static async void DeleteCustomerAsync(Customer customers)
         {
             const string ServerUrl = "HTTP://localhost:58058";

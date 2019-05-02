@@ -2447,6 +2447,7 @@ namespace MUAH.View
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
+            Helper.callFrom = "MenuPage";
             ((Frame)Window.Current.Content).Navigate(typeof(LoginCustomer));
         }
 
@@ -2471,6 +2472,7 @@ namespace MUAH.View
                     txtCustomerName.Text = "";
                     session.Clear();
                     BasketNo = session.Count;
+                    Helper.isLoggedIn = false;
                     ((Frame)Window.Current.Content).Navigate(typeof(MenuPage));
                 }
                 else

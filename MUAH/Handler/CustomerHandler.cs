@@ -16,11 +16,18 @@ namespace MUAH.Handler
         /// </summary>
         public CustomerViewModel CustomerViewModel { get; set; }
 
+        /// <summary>
+        /// Skaber et nyt CustomerHandler objekt, som initialiseres med en reference til viewmodellen.
+        /// </summary>
+        /// <param name="customerViewModel">reference til viewmodellen</param>
         public CustomerHandler(CustomerViewModel customerViewModel)
         {
             CustomerViewModel = customerViewModel;
         }
 
+        /// <summary>
+        /// Kalder postcustomer metoden gennem customersingletonen i viewmodellen. 
+        /// </summary>
         public void CreateCustomer()
         {
             CustomerViewModel.CustomerSingleton.PostCustomer(CustomerViewModel.phoneNo, CustomerViewModel.password, CustomerViewModel.Name, CustomerViewModel.id);

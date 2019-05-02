@@ -38,16 +38,21 @@ namespace MUAH.View
         {
             foreach (var items in MenuPage.session)
             {
-                
-                lstBasket.Items.Add("Valgt produkt: " + items.ProductName + " Antal: " + items.NoOfProduct.ToString());
-            }
-
-            
+               lstBasket.Items.Add("Valgt produkt: " + items.ProductName + " Antal: " + items.NoOfProduct.ToString());
+            }  
         }
 
         private void BtnKurvGåTilBestilling_Click(object sender, RoutedEventArgs e)
         {
-            ((Frame)Window.Current.Content).Navigate(typeof(LoginCustomer));
+            if (Helper.isLoggedIn) 
+            {
+                ((Frame)Window.Current.Content).Navigate(typeof(PayPage));
+            }
+            else
+            {
+                ((Frame)Window.Current.Content).Navigate(typeof(LoginCustomer));
+            }
+           
         }
     }
 }

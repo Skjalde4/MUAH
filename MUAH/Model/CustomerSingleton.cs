@@ -38,8 +38,9 @@ namespace MUAH.Model
             GetCustomers();
         }
 
-        
-        //Get loader de customers der allerede er oprettet i databasen.
+        /// <summary>
+        /// Metoden loader de customers der allerede er oprettet i databasen. 
+        /// </summary>
         public async void GetCustomers()
         {
             var customers = await PersistencyServiceCustomer.GetCustomerAsync();

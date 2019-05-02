@@ -30,11 +30,11 @@ namespace ConsoleTest
                     //Console.WriteLine(post.StatusCode);
 
                     //Dette er delete metoden            
-                    //var delete = client.DeleteAsync("api/Customers/13").Result;
+                    var delete = client.DeleteAsync("api/Customers/18").Result;
 
                     //Dette er put metoden
-                    Customer customer1 = new Customer() { Id = 1, Name = "Michel Møs Arbirk", Password = "mosemanden", PhoneNo = "71909747" };
-                    var put = client.PutAsJsonAsync("api/Customers/1", customer1).Result;
+                    //Customer customer1 = new Customer() { Id = 1, Name = "Michel Møs Arbirk", Password = "mosemanden", PhoneNo = "71909747" };
+                    //var put = client.PutAsJsonAsync("api/Customers/1", customer1).Result;
 
                     //Dette er get metoden
                     var response = client.GetAsync("api/Customers").Result;

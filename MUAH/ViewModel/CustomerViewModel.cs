@@ -7,6 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Windows.Networking.Vpn;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using MUAH.Annotations;
@@ -46,17 +47,6 @@ namespace MUAH.ViewModel
 
         public string phoneNo { get; set; }
         public string password { get; set; }
-
-        //public static string Name
-        //{
-        //    get => _name;
-        //    set
-        //    {
-        //        _name = value;
-        //        OnPropertyChanged("Name");
-        //    }
-        //}
-
         public int id { get; set; }
 
 
@@ -84,30 +74,53 @@ namespace MUAH.ViewModel
             {
                 if (customer.PhoneNo == phoneNo && customer.Password == password)
                 {
+                    Helper.isLoggedIn = true;
+
                     Name = customer.Name;
-                    ((Frame) Window.Current.Content).Navigate(typeof(MenuPage));
+                    if (Helper.callFrom == "MenuPage")
+                    {
+                        ((Frame)Window.Current.Content).Navigate(typeof(MenuPage));
+                    }
+                    else
+                    {
+                        ((Frame)Window.Current.Content).Navigate(typeof(PayPage));
+                    }
+                   
                 }
             }
 
-            Text = "Brugeren blev ikke fundet";
+            if (!Helper.isLoggedIn)
+            {
+                Text = "Brugeren blev ikke fundet";
+                Helper.isLoggedIn = false;
+            }
             
+
         }
 
-        public void CheckForExsistingCustomer()
+        public void CheckExistingCustomer()
         {
             foreach (var customer in CustomerSingleton.Customers)
             {
                 if (customer.PhoneNo == phoneNo)
                 {
+                    Helper.customerExist = true;
                     Text = "Brugeren findes allerede";
                 }
-                
+                else
+                {
+                    Helper.customerExist = false;
+                }
             }
         }
 
         public ICommand CreateCustomerCommand
         {
-            get { return _createCustomerCommand ?? (_createCustomerCommand = new RelayCommand(CustomerHandler.CreateCustomer));}
+            get
+            {
+                return _createCustomerCommand ??
+                       (_createCustomerCommand = new RelayCommand(CustomerHandler.CreateCustomer));
+            }
             set { _createCustomerCommand = value; }
         }
 

@@ -20,6 +20,13 @@ namespace MUAH.Model
         public string Name { get; set; }
         public int Id { get; set; }
 
+        /// <summary>
+        /// Constructor - Skaber et nyt kunde objekt. 
+        /// <param name=”phoneNo”> kundens telefonnummer </param>
+        /// <param name=”password”> kundens selvvalgte adgangskode </param>
+        /// <param name=”customerName”> kundens navn </param>
+        /// <param name=”id”> et id der bliver tildelt kunderne </param>
+        /// </summary>
         public Customer(string phoneNo, string password, string name, int id)
         {
             PhoneNo = phoneNo;
@@ -27,7 +34,10 @@ namespace MUAH.Model
             Name = name;
             Id = id;
         }
-
+        /// <summary>
+        /// Returnerer en string der repræsenterer objektet. 
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return $"{nameof(PhoneNo)}: {PhoneNo}, {nameof(Password)}: {Password}, {nameof(Name)}: {Name}, {nameof(Id)}: {Id}";

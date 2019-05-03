@@ -30,12 +30,17 @@ namespace MUAH.Handler
         /// </summary>
         public void CreateCustomer()
         {
-            CustomerViewModel.CustomerSingleton.PostCustomer(CustomerViewModel.phoneNo, CustomerViewModel.password, CustomerViewModel.Name, CustomerViewModel.id);
+            if (!CustomerViewModel.CustomerSingleton.CheckExistingCustomer(CustomerViewModel.phoneNo))
+            {
+                CustomerViewModel.CustomerSingleton.PostCustomer(CustomerViewModel.phoneNo, CustomerViewModel.password, CustomerViewModel.Name, CustomerViewModel.id);
+            }
+            else
+            {
+                CustomerViewModel.Name = "";
+                CustomerViewModel.Text = "Brugeren findes allerede";
+            }
         }
 
-        //public void EditCustomer()
-        //{
-            
-        //}
+        
     }
 }

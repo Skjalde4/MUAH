@@ -14,7 +14,5 @@ namespace MUAH.Model
         public static string callFrom;
 
         public static bool isLoggedIn;
-
-        public static bool customerExist;
     }
 }

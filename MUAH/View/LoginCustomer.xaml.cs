@@ -77,18 +77,15 @@ namespace MUAH.View
         /// <param name="e"></param>
         private void BtnOpretBruger_Click(object sender, RoutedEventArgs e)
         {
-            if (Helper.callFrom == "MenuPage" && Helper.customerExist == false) 
+            if (Helper.callFrom == "MenuPage") 
             {
                 ((Frame)Window.Current.Content).Navigate(typeof(MenuPage));
             }
-            else if(Helper.callFrom == "ViewBasket" && Helper.customerExist == false)
+            else if(Helper.callFrom == "ViewBasket")
             {
                 ((Frame)Window.Current.Content).Navigate(typeof(PayPage));
             }
-            else
-            {
-                Helper.customerExist = true;
-            }
+            
         }
     }
 }

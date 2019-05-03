@@ -28,7 +28,10 @@ namespace MUAH.ViewModel
         public CustomerSingleton CustomerSingleton { get; set; }
 
         private ICommand _createCustomerCommand;
+        private ICommand _selectCustomerCommand;
         public CustomerHandler CustomerHandler { get; set; }
+        public Customer SelectedCustomer { get; set; }
+
         
 
         public CustomerViewModel()
@@ -98,21 +101,21 @@ namespace MUAH.ViewModel
 
         }
 
-        public void CheckExistingCustomer()
-        {
-            foreach (var customer in CustomerSingleton.Customers)
-            {
-                if (customer.PhoneNo == phoneNo)
-                {
-                    Helper.customerExist = true;
-                    Text = "Brugeren findes allerede";
-                }
-                else
-                {
-                    Helper.customerExist = false;
-                }
-            }
-        }
+        //public void CheckExistingCustomer()
+        //{
+        //    foreach (var customer in CustomerSingleton.Customers)
+        //    {
+        //        if (customer.PhoneNo == phoneNo)
+        //        {
+        //            Helper.customerExist = true;
+        //            Text = "Brugeren findes allerede";
+        //        }
+        //        else
+        //        {
+        //            Helper.customerExist = false;
+        //        }
+        //    }
+        //}
 
         public ICommand CreateCustomerCommand
         {

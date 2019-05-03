@@ -38,6 +38,22 @@ namespace MUAH.Model
             GetCustomers();
         }
 
+        public bool CheckExistingCustomer(string phoneNo)
+        {
+            bool result = false; 
+            foreach (var customer in Customers)
+            {
+                if (customer.PhoneNo == phoneNo)
+                {
+                    result = true;
+                   // Helper.customerExist = false;
+                    break;
+                }
+            }
+
+            return result;
+        }
+
         /// <summary>
         /// Metoden loader de customers der allerede er oprettet i databasen. 
         /// </summary>

@@ -23,7 +23,16 @@
                 <ImageBrush ImageSource="ms-appx:///Assets/food frame.jpg" Stretch="UniformToFill"/>
             </RelativePanel.Background>
 
-            <ListView x:Name="lstBasket" HorizontalAlignment="Left" Height="697" VerticalAlignment="Top" Width="1025" Margin="95,24,-435,-4" Background="#FFFAFAFA"/>
+            <ListView x:Name="lstBasket" HorizontalAlignment="Left" Height="585" VerticalAlignment="Top" Width="1025" Margin="95,92,-435,0" Background="White"/>
+            <RelativePanel x:Name="pnlVarebeskrivelse" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="1025" Margin="95,37,-120,-37" Background="White">
+                <TextBlock x:Name="txtValgtProdukt" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="Valgt produkt" VerticalAlignment="Top" Width="243" Margin="22,2,-203,-22" FontSize="24" FontWeight="Bold"/>
+                <TextBlock x:Name="txtPrisPrStk" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="Pris pr. stk" VerticalAlignment="Top" Width="243" Margin="270,4,-451,-24" FontSize="24" FontWeight="Bold"/>
+                <TextBlock x:Name="txtValgtAntal" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Antal" VerticalAlignment="Top" Width="243" FontSize="24" FontWeight="Bold" Margin="518,4,-518,-4"/>
+                <TextBlock x:Name="txtSamletPris" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="Samlet pris" VerticalAlignment="Top" Width="243" FontSize="24" FontWeight="Bold" Margin="761,4,-761,-4"/>
+            </RelativePanel>
+            <RelativePanel x:Name="pnlVarebeskrivelse_Copy" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="1025" Background="White" Margin="95,682,-95,-682">
+                <TextBlock x:Name="txtTotalPris" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="Total pris: " VerticalAlignment="Top" Width="317" Margin="698,10,-953,-30" FontSize="24" FontWeight="Bold"/>
+            </RelativePanel>
         </RelativePanel>
         <TextBlock HorizontalAlignment="Center" Margin="600,28,500,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="400" Foreground="#FFC71515" FocusVisualPrimaryBrush="#FFBD0B1C" FontSize="48">
             <Run FontWeight="Bold" Text="Indkøbskurv"/>

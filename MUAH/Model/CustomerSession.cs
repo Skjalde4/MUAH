@@ -19,6 +19,7 @@ namespace MUAH.Model
         public string ProductName { get; set; }
         public double ProductPrice { get; set; }
         public int NoOfProduct { get; set; }
+        public double TotalPrice { get; set; }
 
         
     }

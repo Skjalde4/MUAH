@@ -138,13 +138,12 @@
                     </TextBlock>
                 </RelativePanel>
             </RelativePanel>
-            <RelativePanel x:Name="pnlForret" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30">
+            <RelativePanel x:Name="pnlForret" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30" d:IsHidden="True">
                 <TextBlock x:Name="txtForretVarmrøgetLaks" HorizontalAlignment="Left" Height="95" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="56,243,-203,-318" FontSize="16" FontWeight="Bold">
                     <Run Text="Varmrøget laks m. krydderurte dressing og pynt"/>
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock x:Name="txtForretVarmrøgetLaksPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="229,295,-251,-333" FontWeight="Bold">
                     <Run FontSize="24" Text="70.00"/>
@@ -158,7 +157,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock x:Name="txtForretTunmoussePris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="650,115,-638,-153" FontWeight="Bold">
                     <Run FontSize="24" Text="45.00"/>
@@ -168,7 +166,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock x:Name="txtForretSeranoskinkePris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="650,295,-638,-333" FontWeight="Bold">
                     <Run FontSize="24" Text="46.00"/>
@@ -178,7 +175,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock x:Name="txtForretCapaccionPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="229,458,-251,-496" FontWeight="Bold">
                     <Run FontSize="24" Text="60.00"/>
@@ -188,7 +184,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock x:Name="txtForretLaksemoussePris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="650,458,-638,-496" FontWeight="Bold">
                     <Run FontSize="24" Text="45.00"/>
@@ -201,7 +196,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock x:Name="txtForretLakserouladePris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="229,613,-251,-651" FontWeight="Bold">
                     <Run FontSize="24" Text="50.00"/>
@@ -333,7 +327,25 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <TextBlock HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Margin="56,120,-134,-143">
+                <TextBlock x:Name="txtPrisLaksRejer" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Margin="56,120,-134,-143">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisLaksKrydder" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Margin="56,302,-134,-325">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisCarpaccio" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Margin="56,466,-134,-489">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisLakseroulade" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Margin="56,620,-134,-643">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisTunmousse" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Margin="477,120,-555,-143">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisSerano" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Margin="477,300,-555,-323">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisVarmrøgetLakseroulade" HorizontalAlignment="Left" Height="43" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Margin="477,462,-555,-485">
                     <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
                 </TextBlock>
             </RelativePanel>
@@ -343,7 +355,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock x:Name="txtHovedretFlæskestegPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="229,458,-251,-496" FontWeight="Bold">
                     <Run FontSize="24" Text="115.00"/>
@@ -353,7 +364,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock x:Name="txtHovedretKalvestegPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="650,474,-643,-512" FontWeight="Bold">
                     <Run FontSize="24" Text="125.00"/>
@@ -363,7 +373,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock x:Name="txtHovedretKalveculottePris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="229,115,-251,-178" FontWeight="Bold">
                     <Run FontSize="24" Text="140.00"/>
@@ -373,7 +382,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock x:Name="txtHovedretGlaseretSkinkePris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="650,115,-643,-178" FontWeight="Bold">
                     <Run FontSize="24" Text="80.00"/>
@@ -383,7 +391,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock x:Name="txtHovedretOksefiletPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="229,295,-251,-328" FontWeight="Bold">
                     <Run FontSize="24" Text="135.00"/>
@@ -393,7 +400,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock x:Name="txtHovedretLaksesteakPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="650,295,-643,-328" FontWeight="Bold">
                     <Run FontSize="24" Text="115.00"/>
@@ -403,7 +409,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock x:Name="txtHovedretKyllingefiletPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="229,613,-251,-633" FontWeight="Bold">
                     <Run FontSize="24" Text="130.00"/>
@@ -413,7 +418,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock x:Name="txtHovedretLammekøllePris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="650,613,-643,-633" FontWeight="Bold">
                     <Run FontSize="24" Text="150.00"/>
@@ -566,6 +570,30 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
+                <TextBlock x:Name="txtPrisKalveCoulotte" HorizontalAlignment="Left" Height="26" Margin="56,153,-124,-159" TextWrapping="Wrap" VerticalAlignment="Top" Width="130">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisOksefilet" HorizontalAlignment="Left" Height="26" Margin="56,333,-124,-339" TextWrapping="Wrap" VerticalAlignment="Top" Width="130">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisFlæskesteg" HorizontalAlignment="Left" Height="26" Margin="56,493,-124,-499" TextWrapping="Wrap" VerticalAlignment="Top" Width="130">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisKyllingefilet" HorizontalAlignment="Left" Height="26" Margin="56,649,-124,-655" TextWrapping="Wrap" VerticalAlignment="Top" Width="130">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisGlaseretskinke" HorizontalAlignment="Left" Height="26" Margin="477,153,-545,-159" TextWrapping="Wrap" VerticalAlignment="Top" Width="130">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisLaksesteak" HorizontalAlignment="Left" Height="26" Margin="477,329,-545,-335" TextWrapping="Wrap" VerticalAlignment="Top" Width="130">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisKalvesteg" HorizontalAlignment="Left" Height="26" Margin="477,511,-545,-517" TextWrapping="Wrap" VerticalAlignment="Top" Width="130">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisLammekølle" HorizontalAlignment="Left" Height="26" Margin="477,649,-545,-655" TextWrapping="Wrap" VerticalAlignment="Top" Width="130">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
             </RelativePanel>
             <RelativePanel x:Name="pnlDessert" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Margin="30,30,-30,-30" Background="#FFF7F7F7" d:IsHidden="True">
                 <TextBlock x:Name="txtDessertÆblekage" HorizontalAlignment="Left" Height="83" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="56,63,-203,-125" FontSize="16" FontWeight="Bold">
@@ -573,28 +601,24 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert "/>
                 </TextBlock>
                 <TextBlock x:Name="txtDessertChokolademousse" HorizontalAlignment="Left" Height="155" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="56,243,-203,-378" FontSize="16" FontWeight="Bold">
                     <Run Text="Chokolademousse pyntet m. frisk frugt og flødeskum "/>
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock x:Name="txtDessertFriskFrugt" HorizontalAlignment="Left" Height="83" TextWrapping="Wrap" VerticalAlignment="Top" Width="217" Margin="477,63,-589,-125" FontWeight="Bold" FontSize="16">
                     <Run Text="Frisk frugt m. råcreme og chokoladespåner"/>
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock x:Name="txtDessertHindbærmousse" Height="155" TextWrapping="Wrap" VerticalAlignment="Top" Margin="477,243,-309,-378" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" Width="217">
                     <Run Text="Hindbærmousse pyntet m. frisk frugt og flødeskum"/>
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock x:Name="txtDessertÆblekagePris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="213,115,-251,-167" FontWeight="Bold">
                     <Run FontSize="24" Text="40.00"/>
@@ -611,9 +635,6 @@
                 <TextBlock x:Name="txtDessertPassionsmousse" HorizontalAlignment="Left" Height="155" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="56,406,-203,-566" FontSize="16" FontWeight="Bold">
                     <Run Text="Passionsmousse pyntet m. frisk frugt og flødeskum"/>
                     <LineBreak/>
-                    <Run/>
-                    <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock x:Name="txtDessertPassionsmoussePris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="213,458,-251,-521" FontWeight="Bold">
                     <Run FontSize="24" Text="45.00"/>
@@ -623,7 +644,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock x:Name="txtDessertChokoladekagePris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="609,458,-647,-521" FontWeight="Bold">
                     <Run FontSize="24" Text="40.00"/>
@@ -633,7 +653,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock x:Name="txtDessertSkovbærtærtePris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="213,613,-251,-671" FontWeight="Bold">
                     <Run FontSize="24" Text="35.00"/>
@@ -643,7 +662,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock x:Name="txtDessertBlåbærCheesecakePris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="609,613,-647,-671" FontWeight="Bold">
                     <Run FontSize="24" Text="45.00"/>
@@ -796,6 +814,30 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
+                <TextBlock x:Name="txtPrisÆblekage" HorizontalAlignment="Left" Height="34" Margin="56,151,-124,-165" TextWrapping="Wrap" VerticalAlignment="Top" Width="130">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisChokolademousse" HorizontalAlignment="Left" Height="34" Margin="56,329,-124,-343" TextWrapping="Wrap" VerticalAlignment="Top" Width="130">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisPassionsmousse" HorizontalAlignment="Left" Height="34" Margin="56,495,-124,-509" TextWrapping="Wrap" VerticalAlignment="Top" Width="130">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisSkovbærtærte" HorizontalAlignment="Left" Height="34" Margin="56,647,-124,-661" TextWrapping="Wrap" VerticalAlignment="Top" Width="130">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisFriskRåCreme" HorizontalAlignment="Left" Height="34" Margin="477,152,-545,-166" TextWrapping="Wrap" VerticalAlignment="Top" Width="130">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisHindbærmousse" HorizontalAlignment="Left" Height="34" Margin="477,326,-545,-340" TextWrapping="Wrap" VerticalAlignment="Top" Width="130">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisChokoladekageFrugt" HorizontalAlignment="Left" Height="34" Margin="477,488,-545,-502" TextWrapping="Wrap" VerticalAlignment="Top" Width="130">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisBlåbær" HorizontalAlignment="Left" Height="34" Margin="477,646,-545,-660" TextWrapping="Wrap" VerticalAlignment="Top" Width="130">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                </TextBlock>
             </RelativePanel>
             <RelativePanel x:Name="pnlSalater" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30" d:IsHidden="True">
                 <TextBlock x:Name="txtBroccolisalatInfo" HorizontalAlignment="Left" Height="113" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="56,127,-218,-220" FontSize="16" FontWeight="Bold">
@@ -803,9 +845,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
-                    <LineBreak/>
-                    <Run FontWeight="Normal" Text="(Mimimum 4 kuverter)"/>
                 </TextBlock>
                 <TextBlock x:Name="txtBroccolisalatPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="230,207,-268,-245" FontWeight="Bold">
                     <Run FontSize="24" Text="35.00"/>
@@ -822,9 +861,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
-                    <LineBreak/>
-                    <Run FontWeight="Normal" Text="(Mimimum 4 kuverter)"/>
                 </TextBlock>
                 <TextBlock x:Name="txtTomatsalatPris" HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="659,214,-697,-250" FontWeight="Bold">
                     <Run FontSize="24" Text="30.00"/>
@@ -835,9 +871,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
-                    <LineBreak/>
-                    <Run FontWeight="Normal" Text="(Mimimum 4 kuverter)"/>
                 </TextBlock>
                 <TextBlock x:Name="txtGrønsalatPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="229,429,-267,-467" FontWeight="Bold">
                     <Run FontSize="24" Text="35.00"/>
@@ -850,9 +883,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
-                    <LineBreak/>
-                    <Run FontWeight="Normal" Text="(Mimimum 4 kuverter)"/>
                 </TextBlock>
                 <TextBlock x:Name="txtPastasalatPris" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="659,429,-697,-467" FontWeight="Bold">
                     <Run FontSize="24" Text="30.00"/>
@@ -927,6 +957,26 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
+                <TextBlock x:Name="txtPrisBrocolisalat" HorizontalAlignment="Left" Height="59" Margin="56,219,-203,-258" TextWrapping="Wrap" VerticalAlignment="Top" Width="209">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                    <LineBreak FontWeight="Bold" FontSize="16"/>
+                    <Run FontWeight="Normal" FontSize="16" Text="(Mimimum 4 kuverter)"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisGrønsalat" HorizontalAlignment="Left" Height="59" Margin="56,439,-203,-478" TextWrapping="Wrap" VerticalAlignment="Top" Width="209">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                    <LineBreak FontWeight="Bold" FontSize="16"/>
+                    <Run FontWeight="Normal" FontSize="16" Text="(Mimimum 4 kuverter)"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisTomatsalat" HorizontalAlignment="Left" Height="59" Margin="477,229,-624,-268" TextWrapping="Wrap" VerticalAlignment="Top" Width="209">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                    <LineBreak FontWeight="Bold" FontSize="16"/>
+                    <Run FontWeight="Normal" FontSize="16" Text="(Mimimum 4 kuverter)"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisPastasalat" HorizontalAlignment="Left" Height="59" Margin="477,441,-624,-480" TextWrapping="Wrap" VerticalAlignment="Top" Width="209">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                    <LineBreak FontWeight="Bold" FontSize="16"/>
+                    <Run FontWeight="Normal" FontSize="16" Text="(Mimimum 4 kuverter)"/>
+                </TextBlock>
             </RelativePanel>
             <RelativePanel x:Name="pnlSmørrebrød" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Margin="30,30,-695,-658" Background="#FFF7F7F7" d:IsHidden="True">
                 <TextBlock x:Name="txtHåndmadderUspecificeret" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Håndmadder uspecificeret" VerticalAlignment="Top" Height="32" Width="250" Margin="55,17,-163,-17"/>
@@ -1657,9 +1707,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
-                    <LineBreak/>
-                    <Run FontWeight="Normal" Text="(Mimimum 4 kuverter)"/>
                 </TextBlock>
                 <TextBlock x:Name="txtPlattePris" HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="659,233,-697,-269" FontWeight="Bold">
                     <Run FontSize="24" Text="105.00"/>
@@ -1679,9 +1726,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
-                    <LineBreak/>
-                    <Run FontWeight="Normal" Text="(Mimimum 6 kuverter)"/>
                 </TextBlock>
                 <TextBlock x:Name="txtLuksusPlattePris" HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="253,644,-291,-702" FontWeight="Bold">
                     <Run FontSize="24" Text="135.00"/>
@@ -1743,14 +1787,26 @@
                     <Run Text="Brieost m. druer"/>
                     <LineBreak/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
-                    <LineBreak/>
-                    <Run FontWeight="Normal" Text="(Mimimum 8 kuverter)"/>
                 </TextBlock>
                 <TextBlock x:Name="txtKoldtbordPris" HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Margin="247,337,-285,-373" FontWeight="Bold">
                     <Run FontSize="24" Text="175.00"/>
                 </TextBlock>
                 <Button x:Name="btnTilføjTilKurvKoldtbord" Content="Tilføj til kurv" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Margin="580,716,-685,-716" Foreground="White" Click="BtnTilføjTilKurvKoldtbord_Click" Background="#FFBD0B1C"/>
+                <TextBlock x:Name="txtPrisKoldtBord" HorizontalAlignment="Left" Height="81" Margin="56,355,-221,-416" TextWrapping="Wrap" VerticalAlignment="Top" Width="227">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                    <LineBreak FontWeight="Bold" FontSize="16"/>
+                    <Run FontWeight="Normal" FontSize="16" Text="(Mimimum 8 kuverter)"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisLuksusPlatte" HorizontalAlignment="Left" Height="81" Margin="56,659,-221,-720" TextWrapping="Wrap" VerticalAlignment="Top" Width="227">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                    <LineBreak FontWeight="Bold" FontSize="16"/>
+                    <Run FontWeight="Normal" FontSize="16" Text="(Mimimum 8 kuverter)"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisPlatte" HorizontalAlignment="Left" Height="81" Margin="461,249,-626,-310" TextWrapping="Wrap" VerticalAlignment="Top" Width="227">
+                    <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
+                    <LineBreak FontWeight="Bold" FontSize="16"/>
+                    <Run FontWeight="Normal" FontSize="16" Text="(Mimimum 8 kuverter)"/>
+                </TextBlock>
             </RelativePanel>
             <RelativePanel x:Name="pnlSandwich" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30" d:IsHidden="True">
                 <Button x:Name="btnTilføjTilKurvSandwich" Content="Tilføj til kurv" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="170" Margin="580,716,-685,-716" Foreground="White" Background="#FFBD0B1C" Click="BtnTilføjTilKurvSandwich_Click"/>
@@ -2068,7 +2124,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. 4  pers kr. "/>
                 </TextBlock>
                 <TextBlock x:Name="txtTapasPølsebord" HorizontalAlignment="Left" Height="170" TextWrapping="Wrap" VerticalAlignment="Top" Width="261" Margin="451,128,-650,-278" FontWeight="Bold">
                     <Run Text="- 5 slags pølser m. diverse tilbehør"/>
@@ -2084,9 +2139,6 @@
                     <LineBreak/>
                     <Run/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert kr. "/>
-                    <LineBreak/>
-                    <Run FontWeight="Normal" Text="(minimum 8 kuverter)"/>
                 </TextBlock>
                 <TextBlock x:Name="txtTapasOstebord" HorizontalAlignment="Left" Height="144" TextWrapping="Wrap" VerticalAlignment="Top" Width="261" Margin="451,401,-650,-525" FontWeight="Bold">
                     <Run Text="- "/>
@@ -2100,7 +2152,6 @@
                     <LineBreak/>
                     <Run Text=""/>
                     <LineBreak/>
-                    <Run Text="Pris pr. kuvert"/>
                 </TextBlock>
                 <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Alle anretninger er eksl. brød og smør" VerticalAlignment="Top" Width="335" Margin="230,28,-503,-28" FontWeight="Bold"/>
                 <TextBlock x:Name="txtTapasPris" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="225.00" VerticalAlignment="Top" Width="65" Margin="227,393,-230,-393" FontWeight="Bold"/>
@@ -2156,6 +2207,17 @@
                         <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/minus.jpg"/>
                     </Button.Background>
                 </Button>
+                <TextBlock x:Name="txtPrisTapas" HorizontalAlignment="Left" Height="55" Margin="55,393,-165,-428" TextWrapping="Wrap" VerticalAlignment="Top" Width="172">
+                    <Run FontWeight="Bold" Text="Pris pr. 4  pers kr"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisPølseBord" HorizontalAlignment="Left" Height="61" Margin="451,252,-534,-293" TextWrapping="Wrap" VerticalAlignment="Top" Width="145">
+                    <Run FontWeight="Bold" Text="Pris pr. kuvert kr. "/>
+                    <LineBreak FontWeight="Bold"/>
+                    <Run FontWeight="Normal" Text="(minimum 8 kuverter)"/>
+                </TextBlock>
+                <TextBlock x:Name="txtPrisOsteBord" HorizontalAlignment="Left" Height="47" Margin="452,509,-509,-536" TextWrapping="Wrap" VerticalAlignment="Top" Width="119">
+                    <Run FontWeight="Bold" Text="Pris pr. kuvert"/>
+                </TextBlock>
             </RelativePanel>
             <RelativePanel x:Name="pnlSpecials" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30" d:IsHidden="True"/>
         </RelativePanel>

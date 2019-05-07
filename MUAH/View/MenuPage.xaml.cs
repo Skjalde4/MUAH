@@ -28,7 +28,7 @@ namespace MUAH.View
     public sealed partial class MenuPage : Page
     {
 
-       public  static List<CustomerSession> session = new List<CustomerSession>();
+       public static List<CustomerSession> session = new List<CustomerSession>();
         //private int LocalSessionId = 0;
         private static Guid CustomerGuid = Guid.NewGuid();
 

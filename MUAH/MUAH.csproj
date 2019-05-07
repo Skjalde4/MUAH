@@ -127,6 +127,7 @@
     <Compile Include="Model\Helper.cs" />
     <Compile Include="PersistencyService\PersistencyServiceCustomer.cs" />
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="ViewModel\BasketViewModel.cs" />
     <Compile Include="ViewModel\CustomerViewModel.cs" />
     <Compile Include="View\LoginCustomer.xaml.cs">
       <DependentUpon>LoginCustomer.xaml</DependentUpon>

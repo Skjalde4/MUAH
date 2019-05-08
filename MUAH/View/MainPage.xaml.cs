@@ -28,6 +28,8 @@ namespace MUAH
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private string searchResult;
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -64,6 +66,8 @@ namespace MUAH
             bool isFound = false;
             int counter = 1;
 
+            searchResult = txtSearch.Text;
+
             StoresViewModel SVM = new StoresViewModel();
             SVM.AddStore();
             
@@ -89,6 +93,15 @@ namespace MUAH
                 await MapSample.TrySetSceneAsync(MapScene.CreateFromLocationAndRadius(center, 300*counter));
             }
             
+        }
+
+        private void MapSample_MapElementClick(MapControl sender, MapElementClickEventArgs args)
+        {
+            if (searchResult == "4622")
+            {
+                ((Frame)Window.Current.Content).Navigate(typeof(SpecificStore));
+            }
+          
         }
     }
 }

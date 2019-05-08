@@ -26,15 +26,9 @@
             <ListView x:Name="lstBasket" HorizontalAlignment="Left" Height="585" VerticalAlignment="Top" Width="1025" Margin="95,92,-435,0" Background="White" ItemsSource="{Binding Session}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock x:Name="TxtProductName" Text="{Binding ProductName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                                <!--<TextBlock></TextBlock>-->
-                            </StackPanel>
+                        
                     </DataTemplate>
                 </ListView.ItemTemplate>
-                                        <RelativePanel Height="575" VerticalAlignment="Top" Width="243" Margin="10,2,-203,-22"/>
-
-                
             </ListView>
             <RelativePanel x:Name="pnlVarebeskrivelse" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="1025" Margin="95,37,-120,-37" Background="White">
                 <TextBlock x:Name="txtValgtProdukt" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Valgt produkt" VerticalAlignment="Top" Width="243" Margin="22,2,-203,-22" FontSize="24" FontWeight="Bold"/>

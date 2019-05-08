@@ -38,8 +38,8 @@ namespace MUAH.View
         {
             foreach (var items in MenuPage.session)
             {
-               lstBasket.Items.Add("Valgt produkt: " + items.ProductName + " Antal: " + items.NoOfProduct.ToString() + " Pris pr. stk: " + items.ProductPrice.ToString());
-            }   
+                lstBasket.Items.Add(items);
+            }
         }
 
         private void BtnKurvGåTilBestilling_Click(object sender, RoutedEventArgs e)

@@ -26,6 +26,13 @@ namespace MUAH.ViewModel
             set => _sessions = value;
         }
 
+        public Guid SessionId { get; set; }
+        public int ProductId { get; set; }
+        public string ProductName { get; set; }
+        public double ProductPrice { get; set; }
+        public int NoOfProduct { get; set; }
+        public double TotalPrice { get; set; }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]

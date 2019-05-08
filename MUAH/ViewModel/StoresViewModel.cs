@@ -46,7 +46,23 @@ namespace MUAH.ViewModel
 
             Stores myStore7 = new Stores("Nørretoften 1, 4320 Lejre", 4320, "Dagli'Brugsen Osted", 55.56566747, 11.96246285);
             _store.Add(myStore7);
+
+            Stores myStore8 = new Stores("Møllevej 10, 2690 Karlslunde", 2690, "SuperBrugsen Karlslunde", 55.57162848, 12.22652695);
+            _store.Add(myStore8);
+
+            Stores myStore9 = new Stores("Tune Center 4, 4030 Tune", 4030, "SuperBrugsen Tune", 55.59548914, 12.17580843);
+            _store.Add(myStore9);
+
+            Stores myStore10 = new Stores("Ølsemaglevej 19, 4600 Køge", 4600, "SuperBrugsen Ølsemagle", 55.4926586, 12.18714125);
+            _store.Add(myStore10);
+
+            Stores myStore11 = new Stores("Vestergade 25A, 4600 Køge", 4600, "Kvickly Køge", 55.45738179, 12.17806799);
+            _store.Add(myStore11);
+
+            Stores myStore12 = new Stores("Ringstedvej 210, 4600 Køge", 4600, "Dagli'Brugsen Lellinge", 55.46686181, 12.1111462);
+            _store.Add(myStore12);
             
+
 
 
         }

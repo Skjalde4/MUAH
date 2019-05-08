@@ -45,19 +45,22 @@ namespace MUAH
             });
 
             await MapSample.TrySetSceneAsync(MapScene.CreateFromLocationAndRadius(center, 200000));
+            LoadStores();
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        private void LoadStores()
         {
-            //Geopoint center = new Geopoint(new BasicGeoposition() { Latitude = 55.5443047, Longitude = 12.11542422 });
-            ////create POI
-            //MapIcon myPOI = new MapIcon { Location = center, NormalizedAnchorPoint = new Point(0.5, 1.0), Title = "Superbrugsen Havdrup", ZIndex = 0 };
-            //// add to map and center it
-            //MapSample.MapElements.Add(myPOI);
-            //MapSample.Center = center;
-            //MapSample.ZoomLevel = 10;
+            Geopoint center = new Geopoint(new BasicGeoposition());
+            
+            StoresViewModel SVM = new StoresViewModel();
+            SVM.AddStore();
 
-            //await MapSample.TrySetSceneAsync(MapScene.CreateFromLocationAndRadius(center, 300));
+            foreach (var store in StoresViewModel.MyStore)
+            {
+                center = new Geopoint(new BasicGeoposition() { Latitude = store.Latitude, Longitude = store.Longitude });
+                MapIcon myPOI = new MapIcon { Location = center, NormalizedAnchorPoint = new Point(0.5, 1.0), Title = store.StoreName, ZIndex = 0 };
+                MapSample.MapElements.Add(myPOI);
+            }
         }
 
         private async void BtnSearch_Click(object sender, RoutedEventArgs e)
@@ -76,10 +79,6 @@ namespace MUAH
                 if (txtSearch.Text == store.Zipcode.ToString())
                 {
                     center = new Geopoint(new BasicGeoposition() { Latitude = store.Latitude, Longitude = store.Longitude });
-                    //create POI
-                    MapIcon myPOI = new MapIcon { Location = center, NormalizedAnchorPoint = new Point(0.5, 1.0), Title = store.StoreName, ZIndex = 0 };
-                    // add to map and center it
-                    MapSample.MapElements.Add(myPOI);
                     MapSample.Center = center;
                     MapSample.ZoomLevel = 10;
 
@@ -101,7 +100,14 @@ namespace MUAH
             {
                 ((Frame)Window.Current.Content).Navigate(typeof(SpecificStore));
             }
-          
+        }
+
+        private void TxtSearch_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            //if (e.KeyStatus == e.Key)
+            //{
+                
+            //}
         }
     }
 }

@@ -61,6 +61,45 @@ namespace MUAH.ViewModel
 
             Stores myStore12 = new Stores("Ringstedvej 210, 4600 Køge", 4600, "Dagli'Brugsen Lellinge", 55.46686181, 12.1111462);
             _store.Add(myStore12);
+
+            Stores myStore13 = new Stores("Vestre Ringgade 4, 6000 Kolding", 6000, "SuperBrugsen Tøndervej", 55.48777774, 9.46574263);
+            _store.Add(myStore13);
+
+            Stores myStore14 = new Stores("Vestre Ringgade 2, 6000 Kolding", 6000, "Fakta Kolding", 55.48738572, 9.46566141);
+            _store.Add(myStore14);
+
+            Stores myStore15 = new Stores("Sct. Laurentii Vej 28, 9990 Skagen", 9990, "SuperBrugsen Skagen", 57.72294432, 10.59087843);
+            _store.Add(myStore15);
+
+            Stores myStore16 = new Stores("Skibhusvej 70A, 5000 Odense", 5000, "Kvickly Odense", 55.40714541, 10.39221857);
+            _store.Add(myStore16);
+
+            Stores myStore17 = new Stores("Møllevænget 1, 5592 Ejby", 5592, "Kvickly Odense", 55.43049654, 9.92962578);
+            _store.Add(myStore17);
+
+            Stores myStore18 = new Stores("Sundgårdsvej 1, 8700 Horsens", 5592, "SuperBrugsen Stensballe", 55.87255984, 9.90277252);
+            _store.Add(myStore18);
+
+            Stores myStore19 = new Stores("Vestsjællandscentret 8, 4200 Slagelse", 4200, "Kvickly Slagelse", 55.40674152, 11.35474617);
+            _store.Add(myStore19);
+
+            Stores myStore20 = new Stores("Jægergårdsgade 16, 8000 Aarhus", 8000, "SuperBrugsen Jægergårdsgade", 56.14794524, 10.19805587);
+            _store.Add(myStore20);
+
+            Stores myStore21 = new Stores("Merkurvej 1C, Suite 63, 7400 Herning", 7400, "SuperBrugsen Herning", 56.13534154, 8.99949573);
+            _store.Add(myStore21);
+
+            Stores myStore22 = new Stores("Ristingevej 27, 5932 Humble", 5932, "SuperBrugsen Humble", 54.82568322, 10.69430643);
+            _store.Add(myStore22);
+
+            Stores myStore23 = new Stores("Nybrovej 21, 3760 Gudhjem", 3760, "Dagli'Brugsen Østerlars", 55.16491249, 14.96585628);
+            _store.Add(myStore23);
+
+            Stores myStore24 = new Stores("Møllebakkevej 1, 8305 Samsø", 8305, "SuperBrugsen Samsø", 55.83129437, 10.59347329);
+            _store.Add(myStore24);
+
+            Stores myStore25 = new Stores("Vestergade 15, 7700 Thisted", 7700, "SuperBrugsen Thisted", 56.95467575, 8.68754744);
+            _store.Add(myStore25);
             
 
 

@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Devices.Geolocation;
+using Windows.System;
 using Windows.UI;
 using Windows.UI.Xaml.Controls.Maps;
 using GMapsUWP.GeoCoding;
@@ -67,12 +68,14 @@ namespace MUAH
         {
             Geopoint center = new Geopoint(new BasicGeoposition());
             bool isFound = false;
-            int counter = 1;
+            int counter = 0;
+            double latitudeSum = 0;
+            double longitudeSum = 0;
 
             searchResult = txtSearch.Text;
 
             StoresViewModel SVM = new StoresViewModel();
-            SVM.AddStore();
+            //SVM.AddStore();
             
             foreach (var store in StoresViewModel.MyStore)
             {
@@ -83,13 +86,19 @@ namespace MUAH
                     MapSample.ZoomLevel = 10;
 
                     counter++;
+                    latitudeSum += store.Latitude;
+                    longitudeSum += store.Longitude;
                     isFound = true;
                 }
             }
 
             if (isFound)
             {
-                await MapSample.TrySetSceneAsync(MapScene.CreateFromLocationAndRadius(center, 300*counter));
+                latitudeSum = ((latitudeSum / counter));
+                longitudeSum = ((longitudeSum / counter)); ;
+                center = new Geopoint(new BasicGeoposition() {Latitude = latitudeSum, Longitude = longitudeSum});
+
+                await MapSample.TrySetSceneAsync(MapScene.CreateFromLocationAndRadius(center, 900*counter));
             }
             
         }
@@ -104,10 +113,24 @@ namespace MUAH
 
         private void TxtSearch_KeyDown(object sender, KeyRoutedEventArgs e)
         {
-            //if (e.KeyStatus == e.Key)
-            //{
-                
-            //}
+            if ((e.Key == VirtualKey.Number0 ||
+                e.Key == VirtualKey.Number1 ||
+                e.Key == VirtualKey.Number2 ||
+                e.Key == VirtualKey.Number3 ||
+                e.Key == VirtualKey.Number4 ||
+                e.Key == VirtualKey.Number5 ||
+                e.Key == VirtualKey.Number6 ||
+                e.Key == VirtualKey.Number7 ||
+                e.Key == VirtualKey.Number8 ||
+                e.Key == VirtualKey.Number9) && 
+                txtSearch.Text.Length <= 3)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }

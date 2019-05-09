@@ -14,7 +14,7 @@
         <ViewModel:StoresViewModel/>
     </Page.DataContext>
 
-    <Grid x:Name="grid">
+    <Grid x:Name="grid" Loading="Grid_Loading">
         <TextBlock HorizontalAlignment="Left" Margin="90,20,0,0" TextWrapping="Wrap" Text="Velkommen til" VerticalAlignment="Top" Height="85" Width="565" FontSize="48" FontWeight="Bold"/>
         <Maps:MapControl x:Name="MapSample" MapServiceToken="hwhMOfqV8dmDOwhi3vHB~gOGKEp77ZABeUn-TIb-Prw~AvJjLIu1oXBYa_LxrtMVCpD0G0AQUv0vQMGzgj_QSfEYEZRdyKI4k3nESQ6NToJD" Margin="160,325,0,0" VerticalAlignment="Top" Height="590" Loaded="MapSample_Loaded" HorizontalAlignment="Left" Width="1180" MapElementClick="MapSample_MapElementClick"/>
         <Button x:Name="btnSearch" Content="Søg" HorizontalAlignment="Left" Margin="530,249,0,0" VerticalAlignment="Top" Click="BtnSearch_Click" Height="56" Width="75" Background="#FFBD0B1D" Foreground="White" FontWeight="Bold" FontSize="20" IsEnabled="False"/>

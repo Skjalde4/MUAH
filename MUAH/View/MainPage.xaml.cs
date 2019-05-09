@@ -20,6 +20,8 @@ using Windows.UI.Xaml.Controls.Maps;
 using GMapsUWP.GeoCoding;
 using MUAH.Model;
 using MUAH.ViewModel;
+using System.Net.Http;
+using Windows.Networking.Connectivity;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -143,6 +145,44 @@ namespace MUAH
             {
                 btnSearch.IsEnabled = false;
             }
+        }
+
+        
+        public static bool HasInternetAccess { get; private set; }
+
+        private void NetworkInformationOnNetworkStatusChanged(object sender)
+        {
+            CheckInternetAccess();
+        }
+
+        private void CheckInternetAccess()
+        {
+            var connectionProfile = NetworkInformation.GetInternetConnectionProfile();
+            HasInternetAccess = (connectionProfile != null &&
+                                 connectionProfile.GetNetworkConnectivityLevel() ==
+                                 NetworkConnectivityLevel.InternetAccess);
+        }
+
+
+        private async void Grid_Loading(FrameworkElement sender, object args)
+        {
+            NetworkInformation.NetworkStatusChanged += NetworkInformationOnNetworkStatusChanged;
+            CheckInternetAccess();
+
+            if (!HasInternetAccess)
+            {
+                ContentDialog messageDialog = new ContentDialog
+                {
+                    Title = "Error 404",
+                    Content = "Programmet skal have adgang til internettet for at virke korrekt",
+                    CloseButtonText = "Ok"
+                };
+
+               await messageDialog.ShowAsync();
+
+               Application.Current.Exit();
+            }
+            
         }
     }
 }

@@ -15,8 +15,11 @@ namespace MUAH.ViewModel
     {
         private List<CustomerSession> _sessions;
 
+        public CustomerSessionSingleton CsSingleton { get; set; }
+
         public BasketViewModel()
         {
+            CsSingleton = CustomerSessionSingleton.Instance;
             _sessions = new List<CustomerSession>();
         }
 

@@ -172,6 +172,7 @@
     <Content Include="Assets\frokost.jpg" />
     <Content Include="Assets\frokost2.jpg" />
     <Content Include="Assets\koldtbord.jpg" />
+    <Content Include="Assets\kontrolcifre.JPG" />
     <Content Include="Assets\Locked.JPG" />
     <Content Include="Assets\login.png" />
     <Content Include="Assets\mastercard.png" />

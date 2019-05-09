@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -75,7 +76,6 @@ namespace MUAH
             searchResult = txtSearch.Text;
 
             StoresViewModel SVM = new StoresViewModel();
-            //SVM.AddStore();
             
             foreach (var store in StoresViewModel.MyStore)
             {

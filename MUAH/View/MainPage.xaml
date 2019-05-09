@@ -17,7 +17,7 @@
     <Grid x:Name="grid">
         <TextBlock HorizontalAlignment="Left" Margin="90,20,0,0" TextWrapping="Wrap" Text="Velkommen til" VerticalAlignment="Top" Height="85" Width="565" FontSize="48" FontWeight="Bold"/>
         <Maps:MapControl x:Name="MapSample" MapServiceToken="hwhMOfqV8dmDOwhi3vHB~gOGKEp77ZABeUn-TIb-Prw~AvJjLIu1oXBYa_LxrtMVCpD0G0AQUv0vQMGzgj_QSfEYEZRdyKI4k3nESQ6NToJD" Margin="160,325,0,0" VerticalAlignment="Top" Height="590" Loaded="MapSample_Loaded" HorizontalAlignment="Left" Width="1180" MapElementClick="MapSample_MapElementClick"/>
-        <Button x:Name="btnSearch" Content="Søg" HorizontalAlignment="Left" Margin="530,249,0,0" VerticalAlignment="Top" Click="BtnSearch_Click" Height="56" Width="75" Background="#FFBD0B1D" Foreground="White" FontWeight="Bold" FontSize="20"/>
+        <Button x:Name="btnSearch" Content="Søg" HorizontalAlignment="Left" Margin="530,249,0,0" VerticalAlignment="Top" Click="BtnSearch_Click" Height="56" Width="75" Background="#FFBD0B1D" Foreground="White" FontWeight="Bold" FontSize="20" IsEnabled="False"/>
         <TextBox x:Name="txtSearch" PlaceholderText="Indtast dit postnummer her" HorizontalAlignment="Left" Margin="160,249,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="56" Width="345" KeyDown="TxtSearch_KeyDown"/>
         <Image HorizontalAlignment="Left" Height="95" Margin="435,20,0,0" VerticalAlignment="Top" Width="300" Source="ms-appx:///Assets/coop.png" FocusVisualPrimaryBrush="#FFBD0B1D"/>
     </Grid>

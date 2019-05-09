@@ -38,12 +38,6 @@ namespace MUAH
             MapSample.Loaded += MapSample_Loaded;
         }
 
-        /// <summary>
-        /// Her bliver kortet loaded, og så har vi angivet koordinaterne på DK, så det er DK man ser, når siden loader.
-        /// Nede i await sættes radius og zoom. 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private async void MapSample_Loaded(object sender, RoutedEventArgs e)
         {
             var center = new Geopoint(new BasicGeoposition()
@@ -56,16 +50,12 @@ namespace MUAH
             LoadStores();
         }
 
-        /// <summary>
-        /// Her loades de forretninger, som vi har oprettet på kortet. Derudover laves der en metode, som beregner radius
-        /// af antallet af forretninger der er i det indtastede postnummer, samt pinpoints.
-        /// </summary>
         private void LoadStores()
         {
             Geopoint center = new Geopoint(new BasicGeoposition());
             
             StoresViewModel SVM = new StoresViewModel();
-            //SVM.AddStore();
+            SVM.AddStore();
 
             foreach (var store in StoresViewModel.MyStore)
             {
@@ -75,13 +65,6 @@ namespace MUAH
             }
         }
 
-        /// <summary>
-        /// Når vi klikker på søgeknappen, søger den på det indstastede postnummer. Når postnummeret er fundet, zoomer kortet
-        /// ind på butikken eller butikkerne. Derudover har vi lavet zoom, som udregner centrum af antallet af butikker i et givent
-        /// postnummer. 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private async void BtnSearch_Click(object sender, RoutedEventArgs e)
         {
             Geopoint center = new Geopoint(new BasicGeoposition());
@@ -93,6 +76,7 @@ namespace MUAH
             searchResult = txtSearch.Text;
 
             StoresViewModel SVM = new StoresViewModel();
+            //SVM.AddStore();
             
             foreach (var store in StoresViewModel.MyStore)
             {
@@ -119,14 +103,7 @@ namespace MUAH
             }
             
         }
-        
-        /// <summary>
-        /// Man kan kun klikke på kortet, hvis man har indstastet et postnummer og er blevet zoomet ind på byen. Dog har vi kun
-        /// oprettet en side over superbrugsen havdrup, hvorfor man kun kan klikke på kortet, hvis man har valgt 4622 og befinder sig i
-        /// havdrup.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="args"></param>
+
         private void MapSample_MapElementClick(MapControl sender, MapElementClickEventArgs args)
         {
             if (searchResult == "4622")
@@ -135,14 +112,6 @@ namespace MUAH
             }
         }
 
-        /// <summary>
-        /// Dette event tjekker for hvilke taster der er trykket ned. I dette tilfælde kan man kun indtaste tal og ikke bogstaver.
-        /// Som det ses i nedenstående kan den kun tage virtuelKey fra nr. 0-9.
-        /// Derudover skal der indtastes 4 tal, før det er muligt at søge. Dog har vi i koden skrevet at længden skal være større eller
-        /// lig med 3, da den først tæller når koden er kørt igennem, hvorfor det ender med at blive 4. 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void TxtSearch_KeyDown(object sender, KeyRoutedEventArgs e)
         {
             if ((e.Key == VirtualKey.Number0 ||
@@ -162,24 +131,6 @@ namespace MUAH
             else
             {
                 e.Handled = true;
-            }
-        }
-
-        /// <summary>
-        /// Når programmet opstarter, vil søgeknappen være disabled. Dette event gør, at når teksten i søgefeltet ændres, anvendes denne.
-        /// Hvis teksten indeholder 4 tegn, vil knappen blive enabled, og hvis den indeholder >4 vil den blive disabled igen. 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void TxtSearch_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (txtSearch.Text.Length == 4)
-            {
-                btnSearch.IsEnabled = true; 
-            }
-            else
-            {
-                btnSearch.IsEnabled = false;
             }
         }
     }

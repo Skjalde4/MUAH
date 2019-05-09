@@ -76,7 +76,6 @@ namespace MUAH
             searchResult = txtSearch.Text;
 
             StoresViewModel SVM = new StoresViewModel();
-            //SVM.AddStore();
             
             foreach (var store in StoresViewModel.MyStore)
             {

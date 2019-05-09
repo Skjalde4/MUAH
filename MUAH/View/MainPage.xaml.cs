@@ -133,17 +133,5 @@ namespace MUAH
                 e.Handled = true;
             }
         }
-
-        private void TxtSearch_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (txtSearch.Text.Length == 4)
-            {
-                btnSearch.IsEnabled = true;
-            }
-            else
-            {
-                btnSearch.IsEnabled = false;
-            }
-        }
     }
 }

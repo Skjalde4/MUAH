@@ -9,6 +9,21 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <TextBlock Margin="450,141,450,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" FontSize="48" FontWeight="Bold" TextAlignment="Center">
+            <Run Text="Indtast kortoplsyninger"/>
+        </TextBlock>
+        <Image HorizontalAlignment="Left" Height="87" Margin="90,20,0,0" VerticalAlignment="Top" Width="300" Source="ms-appx:///Assets/coop.png"/>
+        <TextBlock x:Name="txtValuta" HorizontalAlignment="Left" Margin="893,216,0,0" TextWrapping="Wrap" Text="Valuta: DKK" VerticalAlignment="Top" Height="34" Width="122" FontSize="20" FocusVisualPrimaryBrush="Gray" Foreground="Gray" FontWeight="Bold"/>
+        <TextBlock x:Name="txtOrdreNoText" HorizontalAlignment="Left" Margin="568,216,0,0" TextWrapping="Wrap" Text="Ordre nr." VerticalAlignment="Top" Height="34" Width="87" FontSize="20" FocusVisualPrimaryBrush="Gray" Foreground="Gray" FontWeight="Bold"/>
+        <TextBlock x:Name="txtOrdreNo" HorizontalAlignment="Left" Margin="660,216,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="34" Width="75"/>
+        <StackPanel x:Name="pnlKort" Height="75" Margin="340,255,340,0" VerticalAlignment="Top" Orientation="Horizontal">
+            <Image x:Name="imgVisa" Height="75" Width="75" Source="ms-appx:///Assets/visa.png"/>
+            <Image x:Name="imgMastercard" Height="75" Width="75" Source="ms-appx:///Assets/mastercard.png" Margin="10,0,0,0"/>
+            <Image x:Name="imgCoopBank" Height="75" Width="75" Source="ms-appx:///Assets/dankort.png" Margin="10,0,0,0"/>
+            <Image Height="75" Width="75" Source="ms-appx:///Assets/visaElectron.jpg" Margin="10,0,0,0"/>
+            <Image Height="75" Width="75" Source="ms-appx:///Assets/coopBank.png" Margin="10,0,0,0"/>
+            <TextBlock x:Name="txtDkk" HorizontalAlignment="Left" TextWrapping="Wrap" Text="DKK" Margin="200,0,0,0" Width="75" FontWeight="Bold" FontSize="24" Height="40" VerticalAlignment="Bottom"/>
+            <TextBlock x:Name="txtTotalPris" TextWrapping="Wrap" Text="100.00" Width="120" Margin="0,35,0,0" FontWeight="Bold" FontSize="24"/>
+        </StackPanel>
     </Grid>
 </Page>

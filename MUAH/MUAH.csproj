@@ -163,13 +163,18 @@
     <Content Include="Assets\brunch2.jpg" />
     <Content Include="Assets\brunch3.jpg" />
     <Content Include="Assets\buffet.jpg" />
+    <Content Include="Assets\checkmark.jpg" />
     <Content Include="Assets\coop.png" />
+    <Content Include="Assets\coopBank.png" />
+    <Content Include="Assets\crossmark.jpg" />
+    <Content Include="Assets\dankort.png" />
     <Content Include="Assets\food frame.jpg" />
     <Content Include="Assets\frokost.jpg" />
     <Content Include="Assets\frokost2.jpg" />
     <Content Include="Assets\koldtbord.jpg" />
     <Content Include="Assets\Locked.JPG" />
     <Content Include="Assets\login.png" />
+    <Content Include="Assets\mastercard.png" />
     <Content Include="Assets\minus.jpg" />
     <Content Include="Assets\plus.png" />
     <Content Include="Assets\retur.png" />
@@ -177,6 +182,8 @@
     <Content Include="Assets\tapas.jpg" />
     <Content Include="Assets\tapas1.jpg" />
     <Content Include="Assets\Unlocked.JPG" />
+    <Content Include="Assets\visa.png" />
+    <Content Include="Assets\visaElectron.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

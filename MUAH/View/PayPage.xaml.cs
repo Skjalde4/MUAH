@@ -131,6 +131,7 @@ namespace MUAH.View
             {
                 imgCheckKortnummer.Visibility = Visibility.Visible;
                 imgCrossKortnummer.Visibility = Visibility.Collapsed;
+                btnGennemførBetaling.IsEnabled = isPayInformationFilled();
             }
             else
             {
@@ -145,6 +146,7 @@ namespace MUAH.View
             {
                 imgCheckUdløbsdatoMåned.Visibility = Visibility.Visible;
                 imgCrossUdløbsdatoMåned.Visibility = Visibility.Collapsed;
+                btnGennemførBetaling.IsEnabled = isPayInformationFilled();
             }
             else
             {
@@ -159,6 +161,7 @@ namespace MUAH.View
             {
                 imgCheckUdløbsdatoÅr.Visibility = Visibility.Visible;
                 imgCrossUdløbsdatoÅr.Visibility = Visibility.Collapsed;
+                btnGennemførBetaling.IsEnabled = isPayInformationFilled();
             }
             else
             {
@@ -173,11 +176,41 @@ namespace MUAH.View
             {
                 imgCheckKontrolcifre.Visibility = Visibility.Visible;
                 imgCrossKontrolcifre.Visibility = Visibility.Collapsed;
+                btnGennemførBetaling.IsEnabled = isPayInformationFilled();
             }
             else
             {
                 imgCheckKontrolcifre.Visibility = Visibility.Collapsed;
                 imgCrossKontrolcifre.Visibility = Visibility.Visible;
+            }
+        }
+
+        private bool isPayInformationFilled()
+        {
+            if (txbKortnummer.Text.Length == 16 && txbMåned.Text.Length == 2 && txbÅr.Text.Length == 2
+                && txbKontrolcifre.Text.Length == 3)
+                return true;
+            else
+                return false;
+        }
+
+        //private void EnabelPayButton()
+        //{
+        //    if (txbKortnummer.Text.Length == 16 && txbMåned.Text.Length == 2 && txbÅr.Text.Length == 2
+        //        && txbKontrolcifre.Text.Length == 3 )
+        //    {
+        //        btnGennemførBetaling.IsEnabled = true;
+        //    }
+        //}
+
+        
+
+        private void BtnGennemførBetaling_Click(object sender, RoutedEventArgs e)
+        {
+            if (txbKortnummer.Text.Length == 16 && txbMåned.Text.Length == 2 && txbÅr.Text.Length == 2
+                && txbKontrolcifre.Text.Length == 3)
+            {
+                ((Frame) Window.Current.Content).Navigate(typeof(ViewOrder));
             }
         }
     }

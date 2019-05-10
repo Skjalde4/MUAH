@@ -10,7 +10,7 @@
 
     <Grid BorderBrush="White" Loading="Grid_Loading">
         <TextBlock Margin="450,141,450,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" FontSize="48" FontWeight="Bold" TextAlignment="Center">
-            <Run Text="Indtast kortoplsyninger"/>
+            <Run Text="Indtast kortoplysninger"/>
         </TextBlock>
         <Image HorizontalAlignment="Left" Height="87" Margin="90,20,0,0" VerticalAlignment="Top" Width="300" Source="ms-appx:///Assets/coop.png"/>
         <TextBlock x:Name="txtValuta" HorizontalAlignment="Left" Margin="893,216,0,0" TextWrapping="Wrap" Text="Valuta: DKK" VerticalAlignment="Top" Height="34" Width="122" FontSize="20" FocusVisualPrimaryBrush="Gray" Foreground="Gray" FontWeight="Bold"/>
@@ -41,7 +41,7 @@
         <Image x:Name="imgCheckKontrolcifre" HorizontalAlignment="Left" Height="25" Margin="1151,614,0,0" VerticalAlignment="Top" Width="25" Source="ms-appx:///Assets/checkmark.jpg"/>
         <Image x:Name="imgCheckUdløbsdatoÅr" HorizontalAlignment="Left" Height="25" Margin="712,616,0,0" VerticalAlignment="Top" Width="25" Source="ms-appx:///Assets/checkmark.jpg"/>
         <Image x:Name="imgCheckUdløbsdatoMåned" HorizontalAlignment="Left" Height="25" Margin="484,616,0,0" VerticalAlignment="Top" Width="25" Source="ms-appx:///Assets/checkmark.jpg"/>
-        <Button Content="Gennemfør betaling" HorizontalAlignment="Stretch" Margin="586,773,586,0" VerticalAlignment="Top" Height="72" FontWeight="Bold" FontSize="24" Foreground="White" Background="#FFBD0B1C"/>
+        <Button x:Name="btnGennemførBetaling" Content="Gennemfør betaling" HorizontalAlignment="Stretch" Margin="586,773,586,0" VerticalAlignment="Top" Height="72" FontWeight="Bold" FontSize="24" Foreground="White" Background="#FFBD0B1C" IsEnabled="False" Click="BtnGennemførBetaling_Click"/>
         <Image HorizontalAlignment="Left" Height="41" Margin="1086,634,0,0" VerticalAlignment="Top" Width="60" Source="ms-appx:///Assets/kontrolcifre.JPG" Opacity="0.5"/>
     </Grid>
 </Page>

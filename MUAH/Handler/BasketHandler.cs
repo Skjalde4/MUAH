@@ -9,6 +9,7 @@ namespace MUAH.Handler
 {
     class BasketHandler
     {
+        //TODO
         public BasketViewModel ProductViewModel { get; set; }
 
         public BasketHandler(BasketViewModel pvm)
@@ -16,9 +17,9 @@ namespace MUAH.Handler
             ProductViewModel = pvm;
         }
 
-        public void AddProduct()
+        public void AddProducts()
         {
-            ProductViewModel.CsSingleton.AddProductToBasket();
+            ProductViewModel.CsSingleton.AddProductsToBasket();
         }
 
         //public void DeleteProduct()

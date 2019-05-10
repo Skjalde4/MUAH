@@ -44,6 +44,7 @@
         <TextBlock HorizontalAlignment="Center" Margin="626,28,474,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="400" Foreground="#FFC71515" FocusVisualPrimaryBrush="#FFBD0B1C" FontSize="48" Text="Varekurv" FontWeight="Bold"/>
         <Button x:Name="btnKurvGåTilBestilling" Content="Gå til betaling" HorizontalAlignment="Left" Margin="1177,865,0,0" VerticalAlignment="Top" Height="55" Width="175" Background="#FFBD0B1C" FontSize="20" FontWeight="Bold" Foreground="White" Click="BtnKurvGåTilBestilling_Click"/>
         <TextBlock x:Name="txtCustomerName" Margin="1097,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" HorizontalAlignment="Left" Width="255" TextAlignment="Right" FontWeight="Bold" FontSize="16" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <Button x:Name="btnOpdater" Content="Opdater" HorizontalAlignment="Left" Height="50" Margin="1357,193,0,0" VerticalAlignment="Top" Width="73" Command="{Binding AddProductsCommand, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
     </Grid>
 </Page>

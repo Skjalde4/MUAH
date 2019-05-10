@@ -54,10 +54,7 @@ namespace MUAH.View
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void BtnAnnullerOpretBruger_Click(object sender, RoutedEventArgs e)
-        {
-            ((Frame)Window.Current.Content).Navigate(typeof(MenuPage));
-        }
+        
         /// <summary>
         /// Når man trykker på knappen annuller, i login panellet, bliver man sendt tilbage til manupage
         /// </summary>
@@ -87,6 +84,11 @@ namespace MUAH.View
             }
 
             
+        }
+
+        private void BtnAnnullerOpretBruger_Click(object sender, RoutedEventArgs e)
+        {
+            ((Frame)Window.Current.Content).Navigate(typeof(MenuPage));
         }
     }
 }

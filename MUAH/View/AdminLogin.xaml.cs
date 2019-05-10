@@ -29,6 +29,7 @@ namespace MUAH.View
 
         private void Grid_Loading(FrameworkElement sender, object args)
         {
+
             pnlCreate.Visibility = Visibility.Collapsed;
         }
 
@@ -41,6 +42,11 @@ namespace MUAH.View
         private void BtnAnnullerAdmin_Click(object sender, RoutedEventArgs e)
         {
             ((Frame) Window.Current.Content).Navigate(typeof(MainPage));
+        }
+
+        private void BtnAnnullerOpretAdmin_Click(object sender, RoutedEventArgs e)
+        {
+            ((Frame)Window.Current.Content).Navigate(typeof(MainPage));
         }
     }
 }

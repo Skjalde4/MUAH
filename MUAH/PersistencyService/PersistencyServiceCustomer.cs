@@ -47,7 +47,7 @@ namespace MUAH.PersistencyService
         /// </summary>
         /// <param name="fileName"></param>
         /// <returns>Hvis den ikke kan finde filen returnere den null ellers returneres filen</returns>
-        public static async Task<string> DeSerializeEventsFileAsync(String fileName)
+        public static async Task<string> DeSerializeCustomersFileAsync(String fileName)
         {
             try
             {

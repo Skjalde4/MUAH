@@ -25,15 +25,15 @@
                 <TextBlock x:Name="txtAdgangskodeLogin" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Adgangskode:" VerticalAlignment="Top" Height="45" Width="210" Margin="45,315,-45,-305" FontWeight="Bold" FontSize="20"/>
                 <TextBox x:Name="txtboxNumberLogin" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding phoneNo, Mode=TwoWay}" VerticalAlignment="Top" Height="50" Width="256" FontSize="20" Margin="45,195,-101,-195" PlaceholderText="+45"/>
                 <PasswordBox x:Name="passwordLogin" HorizontalAlignment="Left" Width="256" Margin="45,360,-101,-360" Height="50" Password="{Binding password, Mode=TwoWay}"/>
-                <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="130" Margin="23,523,-103,-543">
+                <Button x:Name="btnLogin" Content="Login" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="130" Margin="23,523,-103,-543" Background="#FFBD0B1D" FontWeight="Bold" Foreground="White">
                     <Interactivity:Interaction.Behaviors>
                         <Core:EventTriggerBehavior EventName="Click">
                             <Core:CallMethodAction MethodName="CheckCustomer" TargetObject="{Binding Mode=TwoWay}"/>
                         </Core:EventTriggerBehavior>
                     </Interactivity:Interaction.Behaviors>
                 </Button>
-                <Button x:Name="btnAnnuller" Content="Annuller" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="130" Margin="298,523,-378,-543" Click="BtnAnnuller_Click"/>
-                <Button x:Name="btnOpretBrugerLogin" Content="Opret bruger" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="130" Margin="160,523,-240,-478" Click="BtnOpretBrugerLogin_Click"/>
+                <Button x:Name="btnAnnuller" Content="Annuller" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="130" Margin="298,523,-378,-543" Click="BtnAnnuller_Click" Background="#FFBD0B1D" FontWeight="Bold" Foreground="White"/>
+                <Button x:Name="btnOpretBrugerLogin" Content="Opret bruger" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="130" Margin="160,523,-240,-478" Click="BtnOpretBrugerLogin_Click" Background="#FFBD0B1D" FontWeight="Bold" Foreground="White"/>
                 <TextBlock x:Name="txtCustomerNotFound" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Text}" VerticalAlignment="Top" Height="35" Width="255" Margin="45,446,-45,-446"/>
             </RelativePanel>
             <RelativePanel x:Name="pnlCreate" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="443" Background="White" Margin="222,54,-565,-712">
@@ -45,9 +45,9 @@
                 <TextBlock x:Name="txtAdgangskodeOpretBruger" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Adgangskode:" VerticalAlignment="Top" Height="45" Width="210" Margin="45,315,-45,-305" FontWeight="Bold" FontSize="20"/>
                 <PasswordBox x:Name="passwordOpretBruger" HorizontalAlignment="Left" Width="256" Margin="45,360,-101,-360" Height="50" Password="{Binding password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBlock x:Name="txtNavnOpretBruger" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Navn:" VerticalAlignment="Top" Height="45" Width="210" Margin="45,475,-45,-465" FontWeight="Bold" FontSize="20"/>
-                <TextBox x:Name="txtboxNavnOpretBruger" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="50" Width="256" FontSize="20" Margin="45,520,-101,-520" PlaceholderText=""/>
-                <Button x:Name="btnOpretBruger" Content="Opret bruger" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="145" Margin="45,683,-125,-638" Command="{Binding CreateCustomerCommand}" Click="BtnOpretBruger_Click"/>
-                <Button x:Name="btnAnnullerOpretBruger" Content="Annuller" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="145" Margin="266,683,-346,-543" Click="BtnAnnullerOpretBruger_Click"/>
+                <TextBox x:Name="txtboxNavnOpretBruger" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="256" FontSize="20" Margin="45,520,-101,-520" PlaceholderText="" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <Button x:Name="btnOpretBruger" Content="Opret bruger" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="145" Margin="45,683,-125,-638" Command="{Binding CreateCustomerCommand}" Click="BtnOpretBruger_Click" Background="#FFBD0B1D" Foreground="White" FontWeight="Bold"/>
+                <Button x:Name="btnAnnullerOpretBruger" Content="Annuller" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="145" Margin="266,683,-346,-543" Click="BtnAnnullerOpretBruger_Click" Background="#FFBD0B1D" Foreground="White" FontWeight="Bold"/>
                 <TextBlock x:Name="txtCustomerAlreadyExist" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="{Binding Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="256" Margin="45,601,-239,-621"/>
             </RelativePanel>
         </RelativePanel>

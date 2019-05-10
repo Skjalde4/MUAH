@@ -132,6 +132,8 @@ namespace MUAH
             else
             {
                 e.Handled = true;
+                if (txtSearch.Text.Length == 4 && e.Key == VirtualKey.Enter)
+                    BtnSearch_Click(null, null);
             }
         }
 
@@ -147,34 +149,26 @@ namespace MUAH
             }
         }
 
-        
-        public static bool HasInternetAccess { get; private set; }
-
-        private void NetworkInformationOnNetworkStatusChanged(object sender)
+        private bool checkInternetAccess()
         {
-            CheckInternetAccess();
-        }
+            bool hasInternetAccess = false;
 
-        private void CheckInternetAccess()
-        {
             var connectionProfile = NetworkInformation.GetInternetConnectionProfile();
-            HasInternetAccess = (connectionProfile != null &&
-                                 connectionProfile.GetNetworkConnectivityLevel() ==
-                                 NetworkConnectivityLevel.InternetAccess);
-        }
+            hasInternetAccess = (connectionProfile != null &&
+                                         connectionProfile.GetNetworkConnectivityLevel() ==
+                                         NetworkConnectivityLevel.InternetAccess);
 
+            return hasInternetAccess;
+        }
 
         private async void Grid_Loading(FrameworkElement sender, object args)
-        {
-            NetworkInformation.NetworkStatusChanged += NetworkInformationOnNetworkStatusChanged;
-            CheckInternetAccess();
-
-            if (!HasInternetAccess)
+        {  
+            if (!checkInternetAccess())
             {
                 ContentDialog messageDialog = new ContentDialog
                 {
                     Title = "Error 404",
-                    Content = "Programmet skal have adgang til internettet for at virke korrekt",
+                    Content = "Programmet skal have adgang til internettet for at virke",
                     CloseButtonText = "Ok"
                 };
 

@@ -28,6 +28,7 @@ namespace MUAH.PersistencyService
             string customersJsonString = JsonConvert.SerializeObject(customers);
             SerializeCustomersFileAsync(customersJsonString, customerFileName);
         }
+
         /// <summary>
         /// Her gemmer den en lokal fil, hvis der er en eksisterende bliver denne erstattet.
         /// </summary>
@@ -40,6 +41,7 @@ namespace MUAH.PersistencyService
                     CreationCollisionOption.ReplaceExisting);
             await FileIO.WriteTextAsync(localFile, customersString);
         }
+
         /// <summary>
         /// Her henter den en lokal fil, og returnere filen. OBS IKKE 100% SIKRE PÅ DETTE.
         /// </summary>
@@ -58,6 +60,7 @@ namespace MUAH.PersistencyService
                 return null;
             }
         }
+
         /// <summary>
         /// serverUrl er konstant når man har sat den
         /// metoden henter listen af kunder fra databasen via http. 
@@ -65,13 +68,12 @@ namespace MUAH.PersistencyService
         /// <returns> returnere de kunder der allerede er oprettet i databasen</returns>
         public static async Task<List<Customer>> GetCustomerAsync()
         {
-            const string ServerUrl = "HTTP://localhost:58058";
             HttpClientHandler handler = new HttpClientHandler();
             handler.UseDefaultCredentials = true;
 
             using (var client = new HttpClient(handler))
             {
-                client.BaseAddress = new Uri(ServerUrl);
+                client.BaseAddress = new Uri(Helper.ServerUrl);
                 client.DefaultRequestHeaders.Clear();
 
                 try
@@ -92,20 +94,18 @@ namespace MUAH.PersistencyService
             }
         }
 
-
         /// <summary>
         /// Tilføjer en customer til databasen via web api ved brug af HTTP. 
         /// </summary>
         /// <param name="customers">customer objektet der skal tilføjes</param>
         public static async void PostCustomerAsync(Customer customers)
         {
-            const string ServerUrl = "HTTP://localhost:58058";
             HttpClientHandler handler = new HttpClientHandler();
             handler.UseDefaultCredentials = true;
 
             using (var client = new HttpClient(handler))
             {
-                client.BaseAddress = new Uri(ServerUrl);
+                client.BaseAddress = new Uri(Helper.ServerUrl);
                 client.DefaultRequestHeaders.Clear();
                 try
                 {
@@ -125,13 +125,12 @@ namespace MUAH.PersistencyService
         /// <param name="customers">det nye customer objekt</param>
         public static async void PutCustomerAsync(Customer customers)
         {
-            const string ServerUrl = "HTTP://localhost:58058";
             HttpClientHandler handler = new HttpClientHandler();
             handler.UseDefaultCredentials = true;
 
             using (var client = new HttpClient(handler))
             {
-                client.BaseAddress = new Uri(ServerUrl);
+                client.BaseAddress = new Uri(Helper.ServerUrl);
                 client.DefaultRequestHeaders.Clear();
 
                 try
@@ -151,13 +150,12 @@ namespace MUAH.PersistencyService
         /// <param name="customers">customer objekt der skal slettes</param>
         public static async void DeleteCustomerAsync(Customer customers)
         {
-            const string ServerUrl = "HTTP://localhost:58058";
             HttpClientHandler handler = new HttpClientHandler();
             handler.UseDefaultCredentials = true;
 
             using (var client = new HttpClient(handler))
             {
-                client.BaseAddress = new Uri(ServerUrl);
+                client.BaseAddress = new Uri(Helper.ServerUrl);
                 client.DefaultRequestHeaders.Clear();
 
                 try

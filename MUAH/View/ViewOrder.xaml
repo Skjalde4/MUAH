@@ -14,8 +14,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="450,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="84" Width="600" FontWeight="Bold" Foreground="Gray" TextAlignment="Center">
             <Run Text="Vi glæder os til at betjene dig, og håber du bliver tilfreds med din ordre. "/>
             <LineBreak/>
-            <Run Text="Du vil få en bekræftelsesmail på din ordre, så snart din valgte butik har bekræftet "/>
-            <Run Text="din ordre."/>
+            <Run Text="Du vil få en bekræftelses SMS på din ordre, så snart din valgte butik har bekræftet din ordre."/>
         </TextBlock>
 
     </Grid>

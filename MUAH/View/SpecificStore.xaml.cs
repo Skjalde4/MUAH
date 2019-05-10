@@ -58,7 +58,6 @@ namespace MUAH
             {
                 items.Visibility = Visibility.Collapsed;
             }
-
         }
 
         private void BtnÅbningstider_Click(object sender, RoutedEventArgs e)
@@ -75,8 +74,5 @@ namespace MUAH
         {
             HidePanels(pnlKundeservice);
         }
-
-        
-        
     }
 }

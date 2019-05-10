@@ -135,6 +135,9 @@
     <Compile Include="ViewModel\BasketViewModel.cs" />
     <Compile Include="ViewModel\CustomerViewModel.cs" />
     <Compile Include="ViewModel\StoresViewModel.cs" />
+    <Compile Include="View\AdminLogin.xaml.cs">
+      <DependentUpon>AdminLogin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginCustomer.xaml.cs">
       <DependentUpon>LoginCustomer.xaml</DependentUpon>
     </Compile>
@@ -165,6 +168,7 @@
     <None Include="MUAH_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\admin.png" />
     <Content Include="Assets\basket.png" />
     <Content Include="Assets\brunch 1.jpg" />
     <Content Include="Assets\brunch2.jpg" />
@@ -206,6 +210,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="View\AdminLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\LoginCustomer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using MUAH.Model;
 using Visibility = Windows.UI.Xaml.Visibility;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -71,7 +72,7 @@ namespace MUAH.View
                  e.Key == VirtualKey.Number7 ||
                  e.Key == VirtualKey.Number8 ||
                  e.Key == VirtualKey.Number9) &&
-                txbMåned.Text.Length <= 1)
+                txbMåned.Text.Length <= 1 && Helper.isMaxMonth(txbMåned.Text, e.Key))
             {
                 e.Handled = false;
             }
@@ -93,7 +94,7 @@ namespace MUAH.View
                  e.Key == VirtualKey.Number7 ||
                  e.Key == VirtualKey.Number8 ||
                  e.Key == VirtualKey.Number9) &&
-                txbÅr.Text.Length <= 1)
+                txbÅr.Text.Length <= 1 && Helper.isMinimumYear(txbÅr.Text, e.Key))
             {
                 e.Handled = false;
             }

@@ -38,6 +38,9 @@ namespace MUAH.View
             pnlCreate.Visibility = Visibility.Visible;
         }
 
-        
+        private void BtnAnnullerAdmin_Click(object sender, RoutedEventArgs e)
+        {
+            ((Frame) Window.Current.Content).Navigate(typeof(MainPage));
+        }
     }
 }

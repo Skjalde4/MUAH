@@ -28,7 +28,7 @@
                         </Core:EventTriggerBehavior>
                     </Interactivity:Interaction.Behaviors>
                 </Button>
-                <Button x:Name="btnAnnullerAdmin" Content="Annuller" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="130" Margin="298,683,-378,-651"/>
+                <Button x:Name="btnAnnullerAdmin" Content="Annuller" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="130" Margin="298,683,-378,-651" Click="BtnAnnullerAdmin_Click"/>
                 <Button x:Name="btnOpretAdminLogin" Content="Opret bruger" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="130" Margin="160,683,-240,-586" Click="BtnOpretAdminLogin_Click"/>
                 <TextBlock x:Name="txtCustomerNotFound" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Text}" VerticalAlignment="Top" Height="35" Width="255" Margin="46,601,-46,-591"/>
                 <TextBlock x:Name="txtCVRNoAdminLogin" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="210" Margin="45,475,-45,-465" FontWeight="Bold" FontSize="20">

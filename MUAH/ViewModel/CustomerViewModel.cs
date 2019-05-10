@@ -101,22 +101,6 @@ namespace MUAH.ViewModel
 
         }
 
-        //public void CheckExistingCustomer()
-        //{
-        //    foreach (var customer in CustomerSingleton.Customers)
-        //    {
-        //        if (customer.PhoneNo == phoneNo)
-        //        {
-        //            Helper.customerExist = true;
-        //            Text = "Brugeren findes allerede";
-        //        }
-        //        else
-        //        {
-        //            Helper.customerExist = false;
-        //        }
-        //    }
-        //}
-
         public ICommand CreateCustomerCommand
         {
             get

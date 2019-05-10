@@ -33,7 +33,6 @@ namespace MUAH.ViewModel
         public Customer SelectedCustomer { get; set; }
 
         
-
         public CustomerViewModel()
         {
             _customerSessions = new ObservableCollection<CustomerSession>();
@@ -68,7 +67,6 @@ namespace MUAH.ViewModel
                 OnPropertyChanged("Text");
             }
         }
-
         
 
         public void CheckCustomer()
@@ -88,7 +86,6 @@ namespace MUAH.ViewModel
                     {
                         ((Frame)Window.Current.Content).Navigate(typeof(PayPage));
                     }
-                   
                 }
             }
 
@@ -97,8 +94,6 @@ namespace MUAH.ViewModel
                 Text = "Brugeren blev ikke fundet";
                 Helper.isLoggedIn = false;
             }
-            
-
         }
 
         public ICommand CreateCustomerCommand

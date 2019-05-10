@@ -27,7 +27,7 @@ namespace MUAH.PersistencyService
         public static async void SaveAdminsAsJsonAsync(ObservableCollection<Admin> admins)
         {
             string adminsJsonString = JsonConvert.SerializeObject(admins);
-            SerializeCustomersFileAsync(adminsJsonString, adminFileName);
+            SerializeAdminsFileAsync(adminsJsonString, adminFileName);
         }
 
         /// <summary>

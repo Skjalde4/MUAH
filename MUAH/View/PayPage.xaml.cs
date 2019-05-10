@@ -195,17 +195,6 @@ namespace MUAH.View
                 return false;
         }
 
-        //private void EnabelPayButton()
-        //{
-        //    if (txbKortnummer.Text.Length == 16 && txbMåned.Text.Length == 2 && txbÅr.Text.Length == 2
-        //        && txbKontrolcifre.Text.Length == 3 )
-        //    {
-        //        btnGennemførBetaling.IsEnabled = true;
-        //    }
-        //}
-
-        
-
         private void BtnGennemførBetaling_Click(object sender, RoutedEventArgs e)
         {
             if (txbKortnummer.Text.Length == 16 && txbMåned.Text.Length == 2 && txbÅr.Text.Length == 2

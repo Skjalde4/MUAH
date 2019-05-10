@@ -16,6 +16,12 @@ namespace MUAH.Model
 
         public static bool isLoggedIn;
 
+        /// <summary>
+        /// Her tjekkes der for, om måneden er mindre end 13, eftersom at der kun er 12 måneder på et år.
+        /// </summary>
+        /// <param name="month"></param>
+        /// <param name="c"></param>
+        /// <returns></returns>
         public static bool isMaxMonth(string month, VirtualKey c)
         {
             int digMonth = Convert.ToInt16(month + ((Char)c).ToString());
@@ -30,6 +36,7 @@ namespace MUAH.Model
                 return false;
             }
         }
+
 
         public static bool isMinimumYear(string year, VirtualKey c)
         {

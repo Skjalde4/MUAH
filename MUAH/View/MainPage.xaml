@@ -20,5 +20,10 @@
         <Button x:Name="btnSearch" Content="Søg" HorizontalAlignment="Left" Margin="530,249,0,0" VerticalAlignment="Top" Click="BtnSearch_Click" Height="56" Width="75" Background="#FFBD0B1D" Foreground="White" FontWeight="Bold" FontSize="20" IsEnabled="False"/>
         <TextBox x:Name="txtSearch" PlaceholderText="Indtast dit postnummer her" HorizontalAlignment="Left" Margin="160,249,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="56" Width="345" KeyDown="TxtSearch_KeyDown" TextChanged="TxtSearch_TextChanged"/>
         <Image HorizontalAlignment="Left" Height="95" Margin="435,20,0,0" VerticalAlignment="Top" Width="300" Source="ms-appx:///Assets/coop.png" FocusVisualPrimaryBrush="#FFBD0B1D"/>
+        <Button x:Name="btnAdminLogin" Content="" HorizontalAlignment="Left" Margin="1315,41,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="BtnAdminLogin_Click">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="ms-appx:///Assets/admin.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Page>

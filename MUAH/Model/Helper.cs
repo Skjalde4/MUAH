@@ -52,5 +52,7 @@ namespace MUAH.Model
                 return false;
             }
         }
+
+        public const string ServerUrl = "HTTP://localhost:58058";
     }
 }

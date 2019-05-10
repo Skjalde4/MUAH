@@ -7,26 +7,27 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
+using Windows.Storage.Pickers.Provider;
 using Windows.UI.Popups;
 using MUAH.Model;
 using Newtonsoft.Json;
 
 namespace MUAH.PersistencyService
 {
-    class PersistencyServiceCustomer
+    class PersistencyServiceAdmin 
     {
-        private static string customerFileName = "Customers.json";
-        
+        private static string adminFileName = "Admins.json";
+
         /// <summary>
         /// JSON står for JavaScript Object Notation - JSON bliver brugt når data bliver sendt fra en server til en hjemmeside.
         /// JSON er nemt for maskiner og systemer at genere om til læseligt materiale for mennesker.
         /// Denne metode bruges til at gemme en collection af customers til databasen. 
         /// </summary>
         /// <param name="customers"></param>
-        public static async void SaveCustomersAsJsonAsync(ObservableCollection<Customer> customers)
+        public static async void SaveAdminsAsJsonAsync(ObservableCollection<Admin> admins)
         {
-            string customersJsonString = JsonConvert.SerializeObject(customers);
-            SerializeCustomersFileAsync(customersJsonString, customerFileName);
+            string adminsJsonString = JsonConvert.SerializeObject(admins);
+            SerializeAdminsFileAsync(adminsJsonString, adminFileName);
         }
 
         /// <summary>
@@ -34,12 +35,12 @@ namespace MUAH.PersistencyService
         /// </summary>
         /// <param name="customersString"></param>
         /// <param name="fileName"></param>
-        public static async void SerializeCustomersFileAsync(string customersString, string fileName)
+        public static async void SerializeAdminsFileAsync(string adminsString, string fileName)
         {
             StorageFile localFile =
                 await ApplicationData.Current.LocalFolder.CreateFileAsync(fileName,
                     CreationCollisionOption.ReplaceExisting);
-            await FileIO.WriteTextAsync(localFile, customersString);
+            await FileIO.WriteTextAsync(localFile, adminsString);
         }
 
         /// <summary>
@@ -47,7 +48,7 @@ namespace MUAH.PersistencyService
         /// </summary>
         /// <param name="fileName"></param>
         /// <returns>Hvis den ikke kan finde filen returnere den null ellers returneres filen</returns>
-        public static async Task<string> DeSerializeCustomersFileAsync(String fileName)
+        public static async Task<string> DeSerializeAdminsFileAsync(String fileName)
         {
             try
             {
@@ -66,7 +67,7 @@ namespace MUAH.PersistencyService
         /// metoden henter listen af kunder fra databasen via http. 
         /// </summary>
         /// <returns> returnere de kunder der allerede er oprettet i databasen</returns>
-        public static async Task<List<Customer>> GetCustomerAsync()
+        public static async Task<List<Admin>> GetAdminAsync()
         {
             HttpClientHandler handler = new HttpClientHandler();
             handler.UseDefaultCredentials = true;
@@ -78,11 +79,11 @@ namespace MUAH.PersistencyService
 
                 try
                 {
-                    var response = client.GetAsync("api/Customers").Result;
+                    var response = client.GetAsync("api/Admins").Result;
                     if (response.IsSuccessStatusCode)
                     {
-                        var customers = await response.Content.ReadAsAsync<IEnumerable<Customer>>();
-                        return (List<Customer>) customers;
+                        var admins = await response.Content.ReadAsAsync<IEnumerable<Admin>>();
+                        return (List<Admin>)admins;
                     }
 
                     return null;
@@ -98,7 +99,7 @@ namespace MUAH.PersistencyService
         /// Tilføjer en customer til databasen via web api ved brug af HTTP. 
         /// </summary>
         /// <param name="customers">customer objektet der skal tilføjes</param>
-        public static async void PostCustomerAsync(Customer customers)
+        public static async void PostAdminAsync(Admin admins)
         {
             HttpClientHandler handler = new HttpClientHandler();
             handler.UseDefaultCredentials = true;
@@ -109,7 +110,7 @@ namespace MUAH.PersistencyService
                 client.DefaultRequestHeaders.Clear();
                 try
                 {
-                    var post = await client.PostAsJsonAsync("Api/Customers", customers);
+                    var post = await client.PostAsJsonAsync("Api/Admins", admins);
                 }
                 catch (Exception e)
                 {
@@ -123,7 +124,7 @@ namespace MUAH.PersistencyService
         /// Det nye customer objekt erstatter det gamle, med de nye ændringer. 
         /// </summary>
         /// <param name="customers">det nye customer objekt</param>
-        public static async void PutCustomerAsync(Customer customers)
+        public static async void PutAdminAsync(Admin admins)
         {
             HttpClientHandler handler = new HttpClientHandler();
             handler.UseDefaultCredentials = true;
@@ -135,7 +136,7 @@ namespace MUAH.PersistencyService
 
                 try
                 {
-                    var put = await client.PutAsJsonAsync("api/customers/" + customers.PhoneNo, customers);
+                    var put = await client.PutAsJsonAsync("api/admins/" + admins.CVRNo, admins);
                 }
                 catch (Exception e)
                 {
@@ -148,7 +149,7 @@ namespace MUAH.PersistencyService
         /// Sletter et customer objekt fra databasen via web api ved brug af HTTP. 
         /// </summary>
         /// <param name="customers">customer objekt der skal slettes</param>
-        public static async void DeleteCustomerAsync(Customer customers)
+        public static async void DeleteAdminAsync(Admin admins)
         {
             HttpClientHandler handler = new HttpClientHandler();
             handler.UseDefaultCredentials = true;
@@ -160,7 +161,7 @@ namespace MUAH.PersistencyService
 
                 try
                 {
-                    var delete = await client.DeleteAsync("api/customers/" + customers.Id);
+                    var delete = await client.DeleteAsync("api/admins/" + admins.Id);
                 }
                 catch (Exception e)
                 {
@@ -168,6 +169,5 @@ namespace MUAH.PersistencyService
                 }
             }
         }
-
     }
 }

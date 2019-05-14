@@ -27,6 +27,7 @@ namespace MUAH.Model
         public AdminSingleton()
         {
             Admins = new ObservableCollection<Admin>();
+            GetAdmins();
         }
 
         public bool CheckExistingAdmin(int CVRNo)

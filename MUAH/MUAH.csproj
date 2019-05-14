@@ -140,7 +140,6 @@
     <Compile Include="ViewModel\BasketViewModel.cs" />
     <Compile Include="ViewModel\CustomerViewModel.cs" />
     <Compile Include="ViewModel\StoresViewModel.cs" />
-    <Compile Include="View\AdminEdit.cs" />
     <Compile Include="View\AdminLogin.xaml.cs">
       <DependentUpon>AdminLogin.xaml</DependentUpon>
     </Compile>

@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MUAH.PersistencyService;
 using MUAH.View;
 
 namespace MUAH.Model
@@ -29,7 +30,8 @@ namespace MUAH.Model
         {
             foreach (var product in MenuPage.session)
             {
-                BasketProducts.Add(product);   
+                BasketProducts.Add(product);
+                PersistencyServiceBasket.PostBasketAsync(product);
             }
         }
     }

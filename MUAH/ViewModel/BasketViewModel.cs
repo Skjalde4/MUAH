@@ -39,7 +39,6 @@ namespace MUAH.ViewModel
             set => _sessions = value;
         }
 
-        public Guid SessionId { get; set; }
         public int ProductId { get; set; }
         public string ProductName { get; set; }
         public double ProductPrice { get; set; }

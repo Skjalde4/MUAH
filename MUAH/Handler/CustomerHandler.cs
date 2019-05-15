@@ -32,7 +32,7 @@ namespace MUAH.Handler
         {
             if (!CustomerViewModel.CustomerSingleton.CheckExistingCustomer(CustomerViewModel.phoneNo))
             {
-                CustomerViewModel.CustomerSingleton.PostCustomer(CustomerViewModel.phoneNo, CustomerViewModel.password, CustomerViewModel.Name, CustomerViewModel.id);
+                CustomerViewModel.CustomerSingleton.PostCustomer(CustomerViewModel.phoneNo, CustomerViewModel.password, CustomerViewModel.Name, CustomerViewModel.id, CustomerViewModel.email);
             }
             else
             {

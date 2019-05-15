@@ -48,9 +48,9 @@ namespace MUAH.ViewModel
             set => _customerSessions = value;
         }
 
-        public string phoneNo { get; set; }
-        public string password { get; set; }
-        public int id { get; set; }
+        public string PhoneNo { get; set; }
+        public string Password { get; set; }
+        public int Id { get; set; }
 
 
         public ObservableCollection<Customer> Customers
@@ -75,7 +75,7 @@ namespace MUAH.ViewModel
         {
             foreach (var customer in CustomerSingleton.Customers)
             {
-                if (customer.PhoneNo == phoneNo && customer.Password == password)
+                if (customer.PhoneNo == PhoneNo && customer.Password == Password)
                 {
                     Helper.isLoggedIn = true;
 

@@ -14,7 +14,7 @@ namespace ConsoleTest
         static void Main(string[] args)
         {
 
-            const string ServerUrl = "HTTP://localhost:58058";
+            const string ServerUrl = "HTTP://muahcloudserver.database.windows.net";
             HttpClientHandler handler = new HttpClientHandler();
             handler.UseDefaultCredentials = true;
 
@@ -25,9 +25,9 @@ namespace ConsoleTest
                 try
                 {
                     //Dette er post metoden
-                    //Customer customer2 = new Customer() { Name = "Alexander Rasmussen", Password = "alexergrim", PhoneNo = "27317110" };
-                    //var post = client.PostAsJsonAsync("Api/Customers", customer2).Result;
-                    //Console.WriteLine(post.StatusCode);
+                    Customer customer2 = new Customer() { Name = "Alexander Rasmussen", Password = "alexergrim", PhoneNo = "27317110" };
+                    var post = client.PostAsJsonAsync("Api/Customers", customer2).Result;
+                    Console.WriteLine(post.StatusCode);
 
                     //Dette er delete metoden            
                     var delete = client.DeleteAsync("api/Customers/20").Result;
@@ -39,10 +39,10 @@ namespace ConsoleTest
                     //Dette er get metoden
                     var response = client.GetAsync("api/Customers").Result;
                     Console.WriteLine(response);
-                    //if (response.IsSuccessStatusCode)
-                    //{
-                    //    var customers = response.Content.ReadAsAsync<IEnumerable<Customer>>().Result;
-                    //}
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var customers = response.Content.ReadAsAsync<IEnumerable<Customer>>().Result;
+                    }
                 }
                 catch (Exception e)
                 {

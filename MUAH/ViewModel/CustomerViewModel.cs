@@ -15,13 +15,17 @@ namespace MUAH.ViewModel
     class CustomerViewModel : INotifyPropertyChanged
     {
         private string _text;
+        //private static string _name;
         public static string Name { get; set; }
         private ObservableCollection<CustomerSession> _customerSessions;
         private ObservableCollection<Customer> _customers;
         public CustomerSingleton CustomerSingleton { get; set; }
 
         private ICommand _createCustomerCommand;
+        private ICommand _selectCustomerCommand;
         public CustomerHandler CustomerHandler { get; set; }
+        public Customer SelectedCustomer { get; set; }
+
         
         public CustomerViewModel()
         {
@@ -37,11 +41,9 @@ namespace MUAH.ViewModel
             set => _customerSessions = value;
         }
 
-        
-        public string phoneNo { get; set; }
-        public string password { get; set; }
-        public int id { get; set; }
-        public string email { get; set; }
+        public string PhoneNo { get; set; }
+        public string Password { get; set; }
+        public int Id { get; set; }
 
 
         public ObservableCollection<Customer> Customers
@@ -65,7 +67,7 @@ namespace MUAH.ViewModel
         {
             foreach (var customer in CustomerSingleton.Customers)
             {
-                if (customer.PhoneNo == phoneNo && customer.Password == password)
+                if (customer.PhoneNo == PhoneNo && customer.Password == Password)
                 {
                     Helper.isLoggedIn = true;
 

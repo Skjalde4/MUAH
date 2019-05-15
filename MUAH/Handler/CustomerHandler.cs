@@ -8,7 +8,7 @@ namespace MUAH.Handler
         /// Specifikt er en handler en mellemmand mellem singleton og viewmodel.
         /// Derfor skal handleren have en viewmodel property, samt hvorfor vi i metoden CreateCustomer anvender singletonen. 
         /// </summary>
-        public CustomerViewModel CViewModel { get; set; }
+        public CustomerViewModel CustomerViewModel { get; set; }
 
         /// <summary>
         /// Skaber et nyt CustomerHandler objekt, som initialiseres med en reference til viewmodellen.
@@ -16,7 +16,7 @@ namespace MUAH.Handler
         /// <param name="customerViewModel">reference til viewmodellen</param>
         public CustomerHandler(CustomerViewModel customerViewModel)
         {
-            CViewModel = customerViewModel;
+            CustomerViewModel = customerViewModel;
         }
 
         /// <summary>
@@ -24,14 +24,14 @@ namespace MUAH.Handler
         /// </summary>
         public void CreateCustomer()
         {
-            if (!CViewModel.CustomerSingleton.CheckExistingCustomer(CViewModel.phoneNo))
+            if (!CustomerViewModel.CustomerSingleton.CheckExistingCustomer(CustomerViewModel.PhoneNo))
             {
-                CViewModel.CustomerSingleton.PostCustomer(CViewModel.phoneNo, CViewModel.password, CViewModel., CViewModel.id, CViewModel.email);
+                CustomerViewModel.CustomerSingleton.PostCustomer(CustomerViewModel.PhoneNo, CustomerViewModel.Password, CustomerViewModel.Name, CustomerViewModel.Id);
             }
             else
             {
                 CustomerViewModel.Name = "";
-                CViewModel.Text = "Brugeren findes allerede";
+                CustomerViewModel.Text = "Brugeren findes allerede";
             }
         }
 

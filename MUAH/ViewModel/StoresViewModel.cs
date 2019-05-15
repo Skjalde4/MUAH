@@ -100,9 +100,6 @@ namespace MUAH.ViewModel
 
             Stores myStore25 = new Stores("Vestergade 15, 7700 Thisted", 7700, "SuperBrugsen Thisted", 56.95467575, 8.68754744);
             _store.Add(myStore25);
-            
-
-
 
         }
     }

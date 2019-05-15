@@ -19,7 +19,7 @@
             <RelativePanel.Background>
                 <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/food frame.jpg"/>
             </RelativePanel.Background>
-            <RelativePanel x:Name="pnlLogin" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="443" Background="White" Margin="222,54,-565,-712">
+            <RelativePanel x:Name="pnlLogin" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="443" Background="White" Margin="222,54,-565,-712" d:IsHidden="True">
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Height="55" Width="122" FontWeight="Bold" FontSize="36" Margin="179,40,-28,-10"/>
                 <TextBlock x:Name="txtNummerLogin" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Telefon nummer: " VerticalAlignment="Top" Height="45" Width="210" Margin="45,150,-45,-140" FontWeight="Bold" FontSize="20"/>
                 <TextBlock x:Name="txtAdgangskodeLogin" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Adgangskode:" VerticalAlignment="Top" Height="45" Width="210" Margin="45,315,-45,-305" FontWeight="Bold" FontSize="20"/>
@@ -36,19 +36,21 @@
                 <Button x:Name="btnOpretBrugerLogin" Content="Opret bruger" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="130" Margin="160,523,-240,-478" Click="BtnOpretBrugerLogin_Click" Background="#FFBD0B1D" FontWeight="Bold" Foreground="White"/>
                 <TextBlock x:Name="txtCustomerNotFound" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Text}" VerticalAlignment="Top" Height="35" Width="255" Margin="45,446,-45,-446"/>
             </RelativePanel>
-            <RelativePanel x:Name="pnlCreate" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="443" Background="White" Margin="222,54,-565,-712" d:IsHidden="True">
+            <RelativePanel x:Name="pnlCreate" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="443" Background="White" Margin="222,54,-565,-712">
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="237" FontWeight="Bold" FontSize="36" Margin="125,40,-240,-55">
                     <Run Text="Opret bruger"/>
                 </TextBlock>
-                <TextBlock x:Name="txtNummerOpretBruger" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Telefon nummer: " VerticalAlignment="Top" Height="45" Width="210" Margin="45,150,-45,-140" FontWeight="Bold" FontSize="20"/>
-                <TextBox x:Name="txtboxNumberOpretBruger" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding phoneNo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="50" Width="256" FontSize="20" Margin="45,195,-101,-195" PlaceholderText="+45"/>
-                <TextBlock x:Name="txtAdgangskodeOpretBruger" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Adgangskode:" VerticalAlignment="Top" Height="45" Width="210" Margin="45,315,-45,-305" FontWeight="Bold" FontSize="20"/>
-                <PasswordBox x:Name="passwordOpretBruger" HorizontalAlignment="Left" Width="256" Margin="45,360,-101,-360" Height="50" Password="{Binding password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-                <TextBlock x:Name="txtNavnOpretBruger" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Navn:" VerticalAlignment="Top" Height="45" Width="210" Margin="45,475,-45,-465" FontWeight="Bold" FontSize="20"/>
-                <TextBox x:Name="txtboxNavnOpretBruger" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="256" FontSize="20" Margin="45,520,-101,-520" PlaceholderText="" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock x:Name="txtNummerOpretBruger" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Telefon nummer: " VerticalAlignment="Top" Height="45" Width="210" Margin="45,106,-45,-96" FontWeight="Bold" FontSize="20"/>
+                <TextBox x:Name="txtboxNumberOpretBruger" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding phoneNo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="50" Width="256" FontSize="20" Margin="45,151,-101,-151" PlaceholderText="+45"/>
+                <TextBlock x:Name="txtAdgangskodeOpretBruger" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Adgangskode:" VerticalAlignment="Top" Height="45" Width="210" Margin="45,241,-45,-231" FontWeight="Bold" FontSize="20"/>
+                <PasswordBox x:Name="passwordOpretBruger" HorizontalAlignment="Left" Width="256" Margin="45,286,-101,-286" Height="50" Password="{Binding password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBlock x:Name="txtNavnOpretBruger" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Navn:" VerticalAlignment="Top" Height="45" Width="210" Margin="45,373,-45,-363" FontWeight="Bold" FontSize="20"/>
+                <TextBox x:Name="txtboxNavnOpretBruger" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="256" FontSize="20" Margin="45,418,-101,-418" PlaceholderText="" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <Button x:Name="btnOpretBruger" Content="Opret bruger" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="145" Margin="45,683,-125,-638" Command="{Binding CreateCustomerCommand}" Click="BtnOpretBruger_Click" Background="#FFBD0B1D" Foreground="White" FontWeight="Bold"/>
                 <Button x:Name="btnAnnullerOpretBruger" Content="Annuller" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="145" Margin="266,683,-346,-543" Click="BtnAnnullerOpretBruger_Click" Background="#FFBD0B1D" Foreground="White" FontWeight="Bold"/>
-                <TextBlock x:Name="txtCustomerAlreadyExist" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="{Binding Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="256" Margin="45,601,-239,-621"/>
+                <TextBlock x:Name="txtCustomerAlreadyExist" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="{Binding Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="256" Margin="45,613,-239,-633"/>
+                <TextBlock x:Name="txtEmailOpretBruger" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" Height="45" Width="210" Margin="45,507,-45,-497" FontWeight="Bold" FontSize="20"/>
+                <TextBox x:Name="txtboxEmailOpretBruger" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="50" Width="256" FontSize="20" Margin="45,552,-101,-552" PlaceholderText="" Text="{Binding email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             </RelativePanel>
         </RelativePanel>
 

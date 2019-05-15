@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-using MUAHWebServer;
+using WebServerMUAH;
 
 namespace ConsoleTest
 {
@@ -14,7 +14,7 @@ namespace ConsoleTest
         static void Main(string[] args)
         {
 
-            const string ServerUrl = "HTTP://muahcloudserver.database.window.net";
+            const string ServerUrl = "HTTP://localhost:58058";
             HttpClientHandler handler = new HttpClientHandler();
             handler.UseDefaultCredentials = true;
 

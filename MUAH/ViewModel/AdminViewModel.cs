@@ -58,7 +58,7 @@ namespace MUAH.ViewModel
             {
                 if (admin.Username == username && admin.Password == password && admin.CVRNo == cVRNo)
                 {
-                    ((Frame) Window.Current.Content).Navigate(typeof(AdminEdit));
+                    ((Frame) Window.Current.Content).Navigate(typeof(MenuPage));
                 }
                 else
                 {

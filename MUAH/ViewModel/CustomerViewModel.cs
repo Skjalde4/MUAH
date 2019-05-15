@@ -15,17 +15,13 @@ namespace MUAH.ViewModel
     class CustomerViewModel : INotifyPropertyChanged
     {
         private string _text;
-        //private static string _name;
         public static string Name { get; set; }
         private ObservableCollection<CustomerSession> _customerSessions;
         private ObservableCollection<Customer> _customers;
         public CustomerSingleton CustomerSingleton { get; set; }
 
         private ICommand _createCustomerCommand;
-        private ICommand _selectCustomerCommand;
         public CustomerHandler CustomerHandler { get; set; }
-        public Customer SelectedCustomer { get; set; }
-
         
         public CustomerViewModel()
         {

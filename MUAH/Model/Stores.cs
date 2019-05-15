@@ -8,7 +8,7 @@ namespace MUAH.Model
 {
     class Stores
     {
-        public string Adress { get; set; }
+        public string Address { get; set; }
         public int Zipcode { get; set; }
         public string StoreName { get; set; }
         public double Latitude { get; set; }
@@ -16,7 +16,7 @@ namespace MUAH.Model
 
         public Stores(string adress, int zipcode, string storeName, double latitude, double longitude)
         {
-            Adress = adress;
+            Address = adress;
             Zipcode = zipcode;
             StoreName = storeName;
             Latitude = latitude;

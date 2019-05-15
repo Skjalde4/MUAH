@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MUAH.ViewModel;
-using MUAH.Model;
+﻿using MUAH.ViewModel;
 
 namespace MUAH.Handler
 {
@@ -30,9 +24,9 @@ namespace MUAH.Handler
         /// </summary>
         public void CreateCustomer()
         {
-            if (!CustomerViewModel.CustomerSingleton.CheckExistingCustomer(CustomerViewModel.phoneNo))
+            if (!CustomerViewModel.CustomerSingleton.CheckExistingCustomer(CustomerViewModel.PhoneNo))
             {
-                CustomerViewModel.CustomerSingleton.PostCustomer(CustomerViewModel.phoneNo, CustomerViewModel.password, CustomerViewModel.Name, CustomerViewModel.id, CustomerViewModel.email);
+                CustomerViewModel.CustomerSingleton.PostCustomer(CustomerViewModel.PhoneNo, CustomerViewModel.Password, CustomerViewModel.Name, CustomerViewModel.Id);
             }
             else
             {

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
-using Windows.Networking.Vpn;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using MUAH.Annotations;
@@ -47,10 +41,9 @@ namespace MUAH.ViewModel
             set => _customerSessions = value;
         }
 
-        public string phoneNo { get; set; }
-        public string password { get; set; }
-        public int id { get; set; }
-        public string email { get; set; }
+        public string PhoneNo { get; set; }
+        public string Password { get; set; }
+        public int Id { get; set; }
 
 
         public ObservableCollection<Customer> Customers
@@ -74,7 +67,7 @@ namespace MUAH.ViewModel
         {
             foreach (var customer in CustomerSingleton.Customers)
             {
-                if (customer.PhoneNo == phoneNo && customer.Password == password)
+                if (customer.PhoneNo == PhoneNo && customer.Password == Password)
                 {
                     Helper.isLoggedIn = true;
 

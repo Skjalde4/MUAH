@@ -26,7 +26,7 @@ namespace MUAH.Model
             BasketProducts = new ObservableCollection<CustomerSession>();
         }
 
-        public void AddProductsToBasket()
+        public void PostBasket()
         {
             foreach (var product in MenuPage.session)
             {

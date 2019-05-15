@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -35,10 +30,10 @@ namespace MUAH.ViewModel
             AdminHandler = new AdminHandler(this);
         }
 
-        public string Username { get; set; }
-        public string Password { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
+        public int cVRNo { get; set; }
         public int Id { get; set; }
-        public int CVRNo { get; set; }
 
         public ObservableCollection<Admin> Admins
         {
@@ -61,7 +56,7 @@ namespace MUAH.ViewModel
         {
             foreach (var admin in AdminSingleton.Admins)
             {
-                if (admin.Username == Username && admin.Password == Password && admin.CVRNo == CVRNo)
+                if (admin.Username == username && admin.Password == password && admin.CVRNo == cVRNo)
                 {
                     ((Frame) Window.Current.Content).Navigate(typeof(AdminEdit));
                 }

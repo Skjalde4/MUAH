@@ -1,14 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Windows.System.Threading;
-using Windows.UI.Core;
-using Windows.UI.Xaml;
+﻿using System.Collections.ObjectModel;
 using MUAH.PersistencyService;
-using MUAH.ViewModel;
 
 namespace MUAH.Model
 {
@@ -66,7 +57,6 @@ namespace MUAH.Model
                     Customers.Add(cu);
                 }
         }
-
 
 
         /// <summary>

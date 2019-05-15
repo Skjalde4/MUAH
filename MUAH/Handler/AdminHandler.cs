@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MUAH.ViewModel;
+﻿using MUAH.ViewModel;
 
 namespace MUAH.Handler
 {
@@ -18,9 +13,9 @@ namespace MUAH.Handler
 
         public void CreateAdmin()
         {
-            if (!AdminViewModel.AdminSingleton.CheckExistingAdmin(AdminViewModel.CVRNo))
+            if (!AdminViewModel.AdminSingleton.CheckExistingAdmin(AdminViewModel.cVRNo))
             {
-                AdminViewModel.AdminSingleton.PostAdmin(AdminViewModel.Id, AdminViewModel.Username, AdminViewModel.Password, AdminViewModel.CVRNo);
+                AdminViewModel.AdminSingleton.PostAdmin(AdminViewModel.Id, AdminViewModel.username, AdminViewModel.password, AdminViewModel.cVRNo);
             }
             else
             {

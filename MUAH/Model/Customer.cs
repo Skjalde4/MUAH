@@ -8,6 +8,15 @@ namespace MUAH.Model
 {
     class Customer
     {
+        public Customer(string phoneNo, string password, string name, int id, string email)
+        {
+            PhoneNo = phoneNo;
+            Password = password;
+            Name = name;
+            Id = id;
+            Email = email;
+        }
+
         /// <summary>
         /// PhoneNo og password er de properties kunden skal bruge for at logge ind, hvorimod en ny kunde skal bruge alle 4 properties.
         /// Alle properties skal konverteres til en streng, hvorfor vi bruger ToString metoden.
@@ -28,14 +37,9 @@ namespace MUAH.Model
         /// <param name=”customerName”> kundens navn </param>
         /// <param name=”id”> et id der bliver tildelt kunderne </param>
         /// </summary>
-        public Customer(string phoneNo, string password, string name, int id, string email)
-        {
-            PhoneNo = phoneNo;
-            Password = password;
-            Name = name;
-            Id = id;
-            Email = email;
-        }
+       
+        
+
         /// <summary>
         /// Returnerer en string der repræsenterer objektet. 
         /// </summary>

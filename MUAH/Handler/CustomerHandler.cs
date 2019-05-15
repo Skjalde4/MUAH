@@ -24,9 +24,9 @@ namespace MUAH.Handler
         /// </summary>
         public void CreateCustomer()
         {
-            if (!CustomerViewModel.CustomerSingleton.CheckExistingCustomer(CustomerViewModel.phoneNo))
+            if (!CustomerViewModel.CustomerSingleton.CheckExistingCustomer(CustomerViewModel.PhoneNo))
             {
-                CustomerViewModel.CustomerSingleton.PostCustomer(CustomerViewModel.phoneNo, CustomerViewModel.password, CustomerViewModel.Name, CustomerViewModel.id);
+                CustomerViewModel.CustomerSingleton.PostCustomer(CustomerViewModel.PhoneNo, CustomerViewModel.Password, CustomerViewModel.Name, CustomerViewModel.Id);
             }
             else
             {

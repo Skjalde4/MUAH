@@ -22,6 +22,7 @@ using MUAH.Model;
 using MUAH.ViewModel;
 using System.Net.Http;
 using Windows.Networking.Connectivity;
+using MUAH.View;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -40,6 +41,13 @@ namespace MUAH
             MapSample.Loaded += MapSample_Loaded;
         }
 
+
+        /// <summary>
+        /// Her loades kortet, samt får tildelt DKs koordinater, så kortet starter på DK.
+        /// Derudover udregnes radius samt hvor meget der skal være zoomet ind på kortet. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void MapSample_Loaded(object sender, RoutedEventArgs e)
         {
             var center = new Geopoint(new BasicGeoposition()
@@ -52,6 +60,10 @@ namespace MUAH
             LoadStores();
         }
 
+        /// <summary>
+        /// Her loades de butikker, som der er blevet oprettet, og vises derefter på kortet.
+        /// Derudover bliver butikkerne tildelt et mapIcon, så 
+        /// </summary>
         private void LoadStores()
         {
             Geopoint center = new Geopoint(new BasicGeoposition());
@@ -177,6 +189,11 @@ namespace MUAH
                Application.Current.Exit();
             }
             
+        }
+
+        private void BtnAdminLogin_Click(object sender, RoutedEventArgs e)
+        {
+            ((Frame) Window.Current.Content).Navigate(typeof(AdminLogin));
         }
     }
 }

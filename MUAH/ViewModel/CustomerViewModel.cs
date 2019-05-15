@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
-using Windows.Networking.Vpn;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using MUAH.Annotations;
@@ -33,7 +27,6 @@ namespace MUAH.ViewModel
         public Customer SelectedCustomer { get; set; }
 
         
-
         public CustomerViewModel()
         {
             _customerSessions = new ObservableCollection<CustomerSession>();
@@ -68,7 +61,6 @@ namespace MUAH.ViewModel
                 OnPropertyChanged("Text");
             }
         }
-
         
 
         public void CheckCustomer()
@@ -88,7 +80,6 @@ namespace MUAH.ViewModel
                     {
                         ((Frame)Window.Current.Content).Navigate(typeof(PayPage));
                     }
-                   
                 }
             }
 
@@ -97,25 +88,7 @@ namespace MUAH.ViewModel
                 Text = "Brugeren blev ikke fundet";
                 Helper.isLoggedIn = false;
             }
-            
-
         }
-
-        //public void CheckExistingCustomer()
-        //{
-        //    foreach (var customer in CustomerSingleton.Customers)
-        //    {
-        //        if (customer.PhoneNo == phoneNo)
-        //        {
-        //            Helper.customerExist = true;
-        //            Text = "Brugeren findes allerede";
-        //        }
-        //        else
-        //        {
-        //            Helper.customerExist = false;
-        //        }
-        //    }
-        //}
 
         public ICommand CreateCustomerCommand
         {

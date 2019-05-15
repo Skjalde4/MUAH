@@ -4,11 +4,14 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MUAH.PersistencyService;
+using MUAH.View;
 
 namespace MUAH.Model
 {
     class CustomerSessionSingleton
     {
+        //TODO
         private static CustomerSessionSingleton _instance = null;
 
         public static CustomerSessionSingleton Instance
@@ -23,9 +26,13 @@ namespace MUAH.Model
             BasketProducts = new ObservableCollection<CustomerSession>();
         }
 
-        public void AddProductToBasket()
+        public void AddProductsToBasket()
         {
-
+            foreach (var product in MenuPage.session)
+            {
+                BasketProducts.Add(product);
+                PersistencyServiceBasket.PostBasketAsync(product);
+            }
         }
     }
 }

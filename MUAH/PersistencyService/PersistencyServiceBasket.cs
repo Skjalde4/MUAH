@@ -6,11 +6,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
 using MUAH.Model;
+using Newtonsoft.Json;
 
 namespace MUAH.PersistencyService
 {
     class PersistencyServiceBasket
     {
+
+        private static string basketFileName = "Baskets.json";
+
         public static async Task<List<CustomerSession>> GetBasketAsync()
         {
             HttpClientHandler handler = new HttpClientHandler();

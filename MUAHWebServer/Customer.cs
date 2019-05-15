@@ -22,5 +22,6 @@ namespace MUAHWebServer
         [Required]
         [StringLength(11)]
         public string PhoneNo { get; set; }
+        
     }
 }

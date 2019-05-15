@@ -14,7 +14,7 @@ namespace MUAH.Handler
 
         public void AddProducts()
         {
-            ProductViewModel.CsSingleton.AddProductsToBasket();
+            ProductViewModel.CsSingleton.PostBasket();
         }
 
         //public void DeleteProduct()

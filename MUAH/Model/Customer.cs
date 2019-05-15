@@ -8,13 +8,12 @@ namespace MUAH.Model
 {
     class Customer
     {
-        public Customer(string phoneNo, string password, string name, int id, string email)
+        public Customer(string phoneNo, string password, string name, int id)
         {
             PhoneNo = phoneNo;
             Password = password;
             Name = name;
             Id = id;
-            Email = email;
         }
 
         /// <summary>
@@ -28,8 +27,7 @@ namespace MUAH.Model
         //Things used to create an account
         public string Name { get; set; }
         public int Id { get; set; }
-        public string Email { get; set; }
-
+        
         /// <summary>
         /// Constructor - Skaber et nyt kunde objekt. 
         /// <param name=”phoneNo”> kundens telefonnummer </param>
@@ -37,7 +35,7 @@ namespace MUAH.Model
         /// <param name=”customerName”> kundens navn </param>
         /// <param name=”id”> et id der bliver tildelt kunderne </param>
         /// </summary>
-       
+
         
 
         /// <summary>
@@ -46,7 +44,7 @@ namespace MUAH.Model
         /// <returns></returns>
         public override string ToString()
         {
-            return $"{nameof(PhoneNo)}: {PhoneNo}, {nameof(Password)}: {Password}, {nameof(Name)}: {Name}, {nameof(Id)}: {Id}, {nameof(Email)}: {Email}";
+            return $"{nameof(PhoneNo)}: {PhoneNo}, {nameof(Password)}: {Password}, {nameof(Name)}: {Name}, {nameof(Id)}: {Id}";
         }
     }
 }

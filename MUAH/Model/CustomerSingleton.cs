@@ -66,9 +66,9 @@ namespace MUAH.Model
         /// <param name="password"></param>
         /// <param name="name"></param>
         /// <param name="id"></param>
-        public void PostCustomer(string phoneNo, string password, string name, int id, string email)
+        public void PostCustomer(string phoneNo, string password, string name, int id)
         {
-            Customer customers = new Customer(phoneNo, password, name, id, email);
+            Customer customers = new Customer(phoneNo, password, name, id);
             Customers.Add(customers);
             PersistencyServiceCustomer.PostCustomerAsync(customers);
         }
@@ -81,9 +81,9 @@ namespace MUAH.Model
         /// <param name="password"></param>
         /// <param name="name"></param>
         /// <param name="id"></param>
-        public void PutCustomer(Customer oldCustomer, string phoneNo, string password, string name, int id, string email)
+        public void PutCustomer(Customer oldCustomer, string phoneNo, string password, string name, int id)
         {
-            Customer customers = new Customer(phoneNo, password, name, id, email);
+            Customer customers = new Customer(phoneNo, password, name, id);
             Customers.Remove(oldCustomer);
             Customers.Add(customers);
             PersistencyServiceCustomer.PutCustomerAsync(customers);

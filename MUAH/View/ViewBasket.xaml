@@ -14,20 +14,31 @@
     <Page.Resources>
         <DataTemplate x:DataType="model:CustomerSession" x:Key="SessionDataTemplate">
             <StackPanel>
-                <ListView Height="30"
+                <ListView Height="70"
                           ScrollViewer.HorizontalScrollMode="Enabled" 
-                          ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                          ScrollViewer.VerticalScrollMode="Disabled"
-                          ScrollViewer.VerticalScrollBarVisibility="Hidden"             
+                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                          ScrollViewer.VerticalScrollMode="Enabled"
+                          ScrollViewer.VerticalScrollBarVisibility="Auto"             
                 >
                     <ListView.ItemsPanel>
                         <ItemsPanelTemplate>
                             <ItemsStackPanel Orientation="Horizontal"/>
                         </ItemsPanelTemplate>
                     </ListView.ItemsPanel>
-                    <TextBlock Height="20" Width="243" Text="{x:Bind ProductName}"/>
-                    <TextBlock Height="20"  Width="243" Text="{x:Bind ProductPrice}"/>
-                    <TextBlock Height="20" Width="243" Text="{x:Bind NoOfProduct}"/>
+                    <TextBlock x:Name="txtProductName" Height="30" Width="300" Text="{x:Bind ProductName}"/>
+                    <TextBlock x:Name="txtProductPrice" Height="30"  Width="100" Text="{x:Bind ProductPrice}"/>
+                    <TextBlock x:Name="txtNoOfProducts" Height="30" Width="231" Text="{x:Bind NoOfProduct}" Margin="130,0,0,0"/>
+                    <Button x:Name="btnPlusNoOfProducts" Height="15" Width="15" Margin="-150,0,0,0">
+                        <Button.Background>
+                            <ImageBrush Stretch="Uniform" ImageSource="ms-appx:///Assets/plus.png" AlignmentX="Left"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btnMinusNoOfProducts" Height="15" Width="15" Margin="-200,0,0,0">
+                        <Button.Background>
+                            <ImageBrush ImageSource="ms-appx:///Assets/minus.jpg" AlignmentX="Right" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                    <TextBlock x:Name="txtPriceAdded" Height="30" Width="80" Margin="-280,0,0,0" Text="{x:Bind TotalPrice}"/>
                 </ListView>
             </StackPanel>
         </DataTemplate>
@@ -35,6 +46,9 @@
 
 
     <Grid Loading="Grid_Loading">
+        <FlyoutBase.AttachedFlyout>
+            <MenuFlyout/>
+        </FlyoutBase.AttachedFlyout>
         <Button x:Name="btnRetur" Content="" HorizontalAlignment="Left" Margin="1415,37,0,0" VerticalAlignment="Top" Height="57" Width="55" Click="BtnRetur_Click">
             <Button.Background>
                 <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/retur.png"/>
@@ -52,7 +66,7 @@
             </RelativePanel>
             <RelativePanel x:Name="pnlTotalPris" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="1025" Background="White" Margin="95,682,-95,-682">
                 <TextBlock x:Name="txtTotalPris" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="Total pris DKK: " VerticalAlignment="Top" Width="195" Margin="692,6,-825,-26" FontSize="24" FontWeight="Bold"/>
-                <TextBlock x:Name="txtKurvTotalPris" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="118" Margin="890,10,-946,-30" FontWeight="Bold" FontSize="24"/>
+                <TextBlock x:Name="txtKurvTotalPris" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="118" Margin="890,10,-946,-30" FontWeight="Bold" FontSize="24"/>
                 <TextBlock HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="443" Margin="4,6,-385,-26" FontSize="24" FontWeight="Bold" Text="Valg dato og tidspunkt"/>
                 <CalendarDatePicker HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="127" Margin="278,10,-278,-10"/>
                 <TimePicker HorizontalAlignment="Left" VerticalAlignment="Top" Margin="421,10,-421,-10"/>

@@ -24,7 +24,9 @@ namespace MUAH.View
     /// </summary>
     public partial class ViewBasket : Page
     {
-        private List<CustomerSession> Sessions;
+        List<CustomerSession> Sessions = new List<CustomerSession>();
+
+        private double totalPrice;
 
         public ViewBasket()
         {
@@ -38,12 +40,17 @@ namespace MUAH.View
 
         private void Grid_Loading(FrameworkElement sender, object args)
         {
-            //foreach (var items in MenuPage.session)
-            //{
-            //    //lstBasket.Items.Add(items.ProductName);
-            //    //produktNavn.Text = items.ProductName;
-            //    //stkPris.Text = items.ProductPrice.ToString();
-            //}
+            int i = 0;
+          
+            foreach (var items in MenuPage.session)
+            {
+                Sessions.Add(items);
+                Sessions[i].TotalPrice = items.NoOfProduct * items.ProductPrice;
+                totalPrice += Sessions[i].TotalPrice;
+                i++;
+            }
+
+            txtKurvTotalPris.Text = totalPrice.ToString();
         }
 
         private void BtnKurvGåTilBestilling_Click(object sender, RoutedEventArgs e)
@@ -58,15 +65,5 @@ namespace MUAH.View
             }
            
         }
-
-        //private static void ShowCustomerName()
-        //{
-        //    if (Helper.isLoggedIn)
-        //    {
-                
-        //    }
-        //}
-
-       
     }
 }

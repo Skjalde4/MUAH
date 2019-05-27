@@ -138,7 +138,7 @@
                     </TextBlock>
                 </RelativePanel>
             </RelativePanel>
-            <RelativePanel x:Name="pnlForret" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30">
+            <RelativePanel x:Name="pnlForret" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30" d:IsHidden="True">
                 <TextBlock x:Name="txtForretVarmrøgetLaks" HorizontalAlignment="Left" Height="95" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="56,243,-203,-318" FontSize="16" FontWeight="Bold">
                     <Run Text="Varmrøget laks m. krydderurte dressing og pynt"/>
                     <LineBreak/>
@@ -839,7 +839,7 @@
                     <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
                 </TextBlock>
             </RelativePanel>
-            <RelativePanel x:Name="pnlSalater" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30" d:IsHidden="True">
+            <RelativePanel x:Name="pnlSalater" HorizontalAlignment="Left" Height="758" VerticalAlignment="Top" Width="795" Background="#FFF7F7F7" Margin="30,30,-30,-30">
                 <TextBlock x:Name="txtBroccolisalatInfo" HorizontalAlignment="Left" Height="113" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" Margin="56,127,-218,-220" FontSize="16" FontWeight="Bold">
                     <Run Text="Broccolisalat m. rødvinsdressing og bacon"/>
                     <LineBreak/>
@@ -957,22 +957,22 @@
                         <ImageBrush Stretch="Fill"/>
                     </Button.FocusVisualPrimaryBrush>
                 </Button>
-                <TextBlock x:Name="txtPrisBrocolisalat" HorizontalAlignment="Left" Height="59" Margin="56,219,-203,-258" TextWrapping="Wrap" VerticalAlignment="Top" Width="209">
+                <TextBlock x:Name="txtPrisBrocolisalat" HorizontalAlignment="Left" Height="59" Margin="56,219,-181,-258" TextWrapping="Wrap" VerticalAlignment="Top" Width="187">
                     <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
                     <LineBreak FontWeight="Bold" FontSize="16"/>
                     <Run FontWeight="Normal" FontSize="16" Text="(Mimimum 4 kuverter)"/>
                 </TextBlock>
-                <TextBlock x:Name="txtPrisGrønsalat" HorizontalAlignment="Left" Height="59" Margin="56,439,-203,-478" TextWrapping="Wrap" VerticalAlignment="Top" Width="209">
+                <TextBlock x:Name="txtPrisGrønsalat" HorizontalAlignment="Left" Height="59" Margin="56,439,-181,-478" TextWrapping="Wrap" VerticalAlignment="Top" Width="187">
                     <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
                     <LineBreak FontWeight="Bold" FontSize="16"/>
                     <Run FontWeight="Normal" FontSize="16" Text="(Mimimum 4 kuverter)"/>
                 </TextBlock>
-                <TextBlock x:Name="txtPrisTomatsalat" HorizontalAlignment="Left" Height="59" Margin="477,229,-624,-268" TextWrapping="Wrap" VerticalAlignment="Top" Width="209">
+                <TextBlock x:Name="txtPrisTomatsalat" HorizontalAlignment="Left" Height="59" Margin="477,229,-592,-268" TextWrapping="Wrap" VerticalAlignment="Top" Width="177">
                     <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
                     <LineBreak FontWeight="Bold" FontSize="16"/>
                     <Run FontWeight="Normal" FontSize="16" Text="(Mimimum 4 kuverter)"/>
                 </TextBlock>
-                <TextBlock x:Name="txtPrisPastasalat" HorizontalAlignment="Left" Height="59" Margin="477,441,-624,-480" TextWrapping="Wrap" VerticalAlignment="Top" Width="209">
+                <TextBlock x:Name="txtPrisPastasalat" HorizontalAlignment="Left" Height="59" Margin="477,441,-592,-480" TextWrapping="Wrap" VerticalAlignment="Top" Width="177">
                     <Run FontWeight="Bold" FontSize="16" Text="Pris pr. kuvert"/>
                     <LineBreak FontWeight="Bold" FontSize="16"/>
                     <Run FontWeight="Normal" FontSize="16" Text="(Mimimum 4 kuverter)"/>
@@ -2242,6 +2242,7 @@
                 <ImageBrush ImageSource="ms-appx:///Assets/Unlocked.JPG" Stretch="Uniform"/>
             </Button.Background>
         </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="1565,355,-74,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

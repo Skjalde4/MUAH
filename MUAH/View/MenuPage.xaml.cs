@@ -1923,9 +1923,6 @@ namespace MUAH.View
             enabledDisabled(chkPastasalat, btnPlusPastasalat, btnMinusPastasalat, txtAntalPastasalat);
         }
 
-
-
-
         #endregion
 
         #region SandwichToList

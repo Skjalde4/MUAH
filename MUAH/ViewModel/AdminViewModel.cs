@@ -30,9 +30,9 @@ namespace MUAH.ViewModel
             AdminHandler = new AdminHandler(this);
         }
 
-        public string username { get; set; }
-        public string password { get; set; }
-        public int cVRNo { get; set; }
+        public static string Username { get; set; }
+        public string Password { get; set; }
+        public int CVRNo { get; set; }
         public int Id { get; set; }
 
         public ObservableCollection<Admin> Admins
@@ -56,9 +56,10 @@ namespace MUAH.ViewModel
         {
             foreach (var admin in AdminSingleton.Admins)
             {
-                if (admin.Username == username && admin.Password == password && admin.CVRNo == cVRNo)
+                if (admin.Username == Username && admin.Password == Password && admin.CVRNo == CVRNo)
                 {
-                    ((Frame) Window.Current.Content).Navigate(typeof(MenuPage));
+                    Username = admin.Username;
+                    ((Frame) Window.Current.Content).Navigate(typeof(AdminEdit));
                 }
                 else
                 {

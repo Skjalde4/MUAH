@@ -15,7 +15,7 @@
     <Page.Resources>
         <DataTemplate x:DataType="model:CustomerSession" x:Key="SessionDataTemplate">
             <StackPanel>
-                <ListView Height="70"
+                <ListView Height="30"
                           ScrollViewer.HorizontalScrollMode="Enabled" 
                           ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                           ScrollViewer.VerticalScrollMode="Enabled"
@@ -39,7 +39,7 @@
                             <ImageBrush ImageSource="ms-appx:///Assets/minus.jpg" AlignmentX="Right" Stretch="Uniform"/>
                         </Button.Background>
                     </Button>
-                    <TextBlock x:Name="txtPriceAdded" Height="30" Width="80" Margin="-70,0,0,0" Text="{x:Bind TotalPrice}"/>
+                    <TextBlock x:Name="txtPriceAdded" Height="30" Width="80" Margin="-40,0,0,0" Text="{x:Bind TotalPrice}"/>
                 </ListView>
             </StackPanel>
         </DataTemplate>
@@ -62,9 +62,9 @@
             </RelativePanel.Background>
             <RelativePanel x:Name="pnlVarebeskrivelse" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="1025" Margin="95,37,-120,-37" Background="White">
                 <TextBlock x:Name="txtValgtProdukt" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Valgt produkt" VerticalAlignment="Top" Width="243" Margin="22,2,-203,-22" FontSize="24" FontWeight="Bold" TextAlignment="Center"/>
-                <TextBlock x:Name="txtPrisPrStk" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Pris pr. stk" VerticalAlignment="Top" Width="243" Margin="270,4,-451,-24" FontSize="24" FontWeight="Bold" TextAlignment="Center"/>
-                <TextBlock x:Name="txtValgtAntal" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Antal" VerticalAlignment="Top" Width="243" FontSize="24" FontWeight="Bold" Margin="518,4,-518,-4" TextAlignment="Center"/>
-                <TextBlock x:Name="txtSamletPris" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Samlet pris" VerticalAlignment="Top" Width="243" FontSize="24" FontWeight="Bold" Margin="761,4,-761,-4" TextAlignment="Center"/>
+                <TextBlock x:Name="txtPrisPrStk" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Pris pr. stk" VerticalAlignment="Top" Width="243" Margin="292,4,-473,-24" FontSize="24" FontWeight="Bold" TextAlignment="Center"/>
+                <TextBlock x:Name="txtValgtAntal" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Antal" VerticalAlignment="Top" Width="243" FontSize="24" FontWeight="Bold" Margin="540,4,-540,-4" TextAlignment="Center"/>
+                <TextBlock x:Name="txtSamletPris" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Samlet pris" VerticalAlignment="Top" Width="243" FontSize="24" FontWeight="Bold" Margin="783,4,-783,-4" TextAlignment="Center"/>
             </RelativePanel>
             <RelativePanel x:Name="pnlTotalPris" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="1025" Background="White" Margin="95,682,-95,-682">
                 <TextBlock x:Name="txtTotalPris" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="Total pris DKK: " VerticalAlignment="Top" Width="195" Margin="692,6,-825,-26" FontSize="24" FontWeight="Bold"/>

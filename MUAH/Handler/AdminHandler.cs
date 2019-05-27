@@ -13,13 +13,14 @@ namespace MUAH.Handler
 
         public void CreateAdmin()
         {
-            if (!AdminViewModel.AdminSingleton.CheckExistingAdmin(AdminViewModel.cVRNo))
+            if (!AdminViewModel.AdminSingleton.CheckExistingAdmin(AdminViewModel.CVRNo))
             {
-                AdminViewModel.AdminSingleton.PostAdmin(AdminViewModel.Id, AdminViewModel.username, AdminViewModel.password, AdminViewModel.cVRNo);
+                AdminViewModel.AdminSingleton.PostAdmin(AdminViewModel.Id, AdminViewModel.Username, AdminViewModel.Password, AdminViewModel.CVRNo);
             }
             else
             {
                 AdminViewModel.Text = "Admin findes allerede";
+                AdminViewModel.Username = "";
             }
         }
     }

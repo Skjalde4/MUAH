@@ -247,8 +247,6 @@ namespace MUAH.View
 
         #endregion
 
-        
-
         public MenuPage()
         {
             this.InitializeComponent();
@@ -2488,8 +2486,8 @@ namespace MUAH.View
         {  
                 ContentDialog deleteFileDialog = new ContentDialog
                 {
-                    Title = "Log ud",
-                    Content = "Er du sikker på at du vil logge ud?",
+                    Title = "Log af",
+                    Content = "Er du sikker på at du vil logge af?",
                     PrimaryButtonText = "Ja",
                     CloseButtonText = "Nej"
                 };

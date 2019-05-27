@@ -30,7 +30,7 @@ namespace MUAH.ViewModel
             _sessions = new List<CustomerSession>();
 
             BasketHandler = new BasketHandler(this);
-            AddProductsCommand = new RelayCommand(BasketHandler.AddProducts);
+            //AddProductsCommand = new RelayCommand(BasketHandler.AddProducts);
         }
 
         public List<CustomerSession> Session

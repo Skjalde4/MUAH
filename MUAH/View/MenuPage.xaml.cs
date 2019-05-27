@@ -2358,8 +2358,7 @@ namespace MUAH.View
             }
         }
         #endregion
-
-
+        
         #region TapasToList
 
         private void BtnPlusTapas_Click(object sender, RoutedEventArgs e)

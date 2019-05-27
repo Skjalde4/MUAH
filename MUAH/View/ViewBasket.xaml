@@ -4,13 +4,35 @@
     xmlns:local="using:MUAH.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:ViewModel="using:MUAH.ViewModel" x:Name="BasketPageHide"
+    xmlns:ViewModel="using:MUAH.ViewModel"
+    xmlns:model="using:MUAH.Model"
+    x:Name="BasketPageHide"
     x:Class="MUAH.View.ViewBasket"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <Page.DataContext>
-        <ViewModel:BasketViewModel/>
-    </Page.DataContext>
+
+    <Page.Resources>
+        <DataTemplate x:DataType="model:CustomerSession" x:Key="SessionDataTemplate">
+            <StackPanel>
+                <ListView Height="30"
+                          ScrollViewer.HorizontalScrollMode="Enabled" 
+                          ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                          ScrollViewer.VerticalScrollMode="Disabled"
+                          ScrollViewer.VerticalScrollBarVisibility="Hidden"             
+                >
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <ItemsStackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <TextBlock Height="20" Width="243" Text="{x:Bind ProductName}"/>
+                    <TextBlock Height="20"  Width="243" Text="{x:Bind ProductPrice}"/>
+                    <TextBlock Height="20" Width="243" Text="{x:Bind NoOfProduct}"/>
+                </ListView>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+
 
     <Grid Loading="Grid_Loading">
         <Button x:Name="btnRetur" Content="" HorizontalAlignment="Left" Margin="1415,37,0,0" VerticalAlignment="Top" Height="57" Width="55" Click="BtnRetur_Click">
@@ -22,29 +44,28 @@
             <RelativePanel.Background>
                 <ImageBrush ImageSource="ms-appx:///Assets/food frame.jpg" Stretch="UniformToFill"/>
             </RelativePanel.Background>
-
-            <ListView x:Name="lstBasket" HorizontalAlignment="Left" Height="585" VerticalAlignment="Top" Width="1025" Margin="95,92,-435,0" Background="White" ItemsSource="{Binding Session}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
             <RelativePanel x:Name="pnlVarebeskrivelse" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="1025" Margin="95,37,-120,-37" Background="White">
-                <TextBlock x:Name="txtValgtProdukt" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Valgt produkt" VerticalAlignment="Top" Width="243" Margin="22,2,-203,-22" FontSize="24" FontWeight="Bold"/>
-                <TextBlock x:Name="txtPrisPrStk" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Pris pr. stk" VerticalAlignment="Top" Width="243" Margin="270,4,-451,-24" FontSize="24" FontWeight="Bold"/>
-                <TextBlock x:Name="txtValgtAntal" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Antal" VerticalAlignment="Top" Width="243" FontSize="24" FontWeight="Bold" Margin="518,4,-518,-4"/>
-                <TextBlock x:Name="txtSamletPris" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Samlet pris" VerticalAlignment="Top" Width="243" FontSize="24" FontWeight="Bold" Margin="761,4,-761,-4"/>
+                <TextBlock x:Name="txtValgtProdukt" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Valgt produkt" VerticalAlignment="Top" Width="243" Margin="22,2,-203,-22" FontSize="24" FontWeight="Bold" TextAlignment="Center"/>
+                <TextBlock x:Name="txtPrisPrStk" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Pris pr. stk" VerticalAlignment="Top" Width="243" Margin="270,4,-451,-24" FontSize="24" FontWeight="Bold" TextAlignment="Center"/>
+                <TextBlock x:Name="txtValgtAntal" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Antal" VerticalAlignment="Top" Width="243" FontSize="24" FontWeight="Bold" Margin="518,4,-518,-4" TextAlignment="Center"/>
+                <TextBlock x:Name="txtSamletPris" HorizontalAlignment="Left" Height="42" TextWrapping="Wrap" Text="Samlet pris" VerticalAlignment="Top" Width="243" FontSize="24" FontWeight="Bold" Margin="761,4,-761,-4" TextAlignment="Center"/>
             </RelativePanel>
             <RelativePanel x:Name="pnlTotalPris" HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="1025" Background="White" Margin="95,682,-95,-682">
-                <TextBlock x:Name="txtTotalPris" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="Total pris DKK: " VerticalAlignment="Top" Width="195" Margin="676,10,-809,-30" FontSize="24" FontWeight="Bold"/>
-                <TextBlock x:Name="txtKurvTotalPris" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="118" Margin="876,10,-932,-30" FontWeight="Bold" FontSize="24"/>
+                <TextBlock x:Name="txtTotalPris" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="Total pris DKK: " VerticalAlignment="Top" Width="195" Margin="692,6,-825,-26" FontSize="24" FontWeight="Bold"/>
+                <TextBlock x:Name="txtKurvTotalPris" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="118" Margin="890,10,-946,-30" FontWeight="Bold" FontSize="24"/>
+                <TextBlock HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" VerticalAlignment="Top" Width="443" Margin="4,6,-385,-26" FontSize="24" FontWeight="Bold" Text="Valg dato og tidspunkt"/>
+                <CalendarDatePicker HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="127" Margin="278,10,-278,-10"/>
+                <TimePicker HorizontalAlignment="Left" VerticalAlignment="Top" Margin="421,10,-421,-10"/>
             </RelativePanel>
+            <StackPanel Width="1025" Orientation="Vertical" Background="White" Margin="94,94,-94,-677" Height="554">
+                <GridView ItemsSource="{x:Bind Sessions}" ItemTemplate="{StaticResource SessionDataTemplate}" Margin="22,0,5,0" Height="500"/>
+            </StackPanel>
+
+
         </RelativePanel>
         <TextBlock HorizontalAlignment="Center" Margin="626,28,474,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="400" Foreground="#FFC71515" FocusVisualPrimaryBrush="#FFBD0B1C" FontSize="48" Text="Varekurv" FontWeight="Bold"/>
         <Button x:Name="btnKurvGåTilBestilling" Content="Gå til betaling" HorizontalAlignment="Left" Margin="1177,865,0,0" VerticalAlignment="Top" Height="55" Width="175" Background="#FFBD0B1C" FontSize="20" FontWeight="Bold" Foreground="White" Click="BtnKurvGåTilBestilling_Click"/>
-        <TextBlock x:Name="txtCustomerName" Margin="1097,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" HorizontalAlignment="Left" Width="255" TextAlignment="Right" FontWeight="Bold" FontSize="16" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-        <Button x:Name="btnOpdater" Content="Opdater" HorizontalAlignment="Left" Height="50" Margin="1357,193,0,0" VerticalAlignment="Top" Width="73" Command="{Binding AddProductsCommand, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBlock x:Name="txtCustomerName" Margin="1075,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21" HorizontalAlignment="Left" Width="255" TextAlignment="Right" FontWeight="Bold" FontSize="16" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
     </Grid>
 </Page>

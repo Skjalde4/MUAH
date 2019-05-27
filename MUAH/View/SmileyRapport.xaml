@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="MUAH.View.SmileyRapport"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MUAH.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Image Height="826" Margin="43,100,42,0" VerticalAlignment="Top" Source="ms-appx:///Assets/SmileyRapport.JPG"/>
+        <Button x:Name="btnExit" HorizontalAlignment="Left" Margin="1370,40,0,0" VerticalAlignment="Top" Height="25" Width="25" Click="BtnExit_Click">
+            <Button.Background>
+                <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/kryds.png"/>
+            </Button.Background>
+            <Button.FocusVisualPrimaryBrush>
+                <ImageBrush Stretch="Fill"/>
+            </Button.FocusVisualPrimaryBrush>
+        </Button>
+
+    </Grid>
+</Page>

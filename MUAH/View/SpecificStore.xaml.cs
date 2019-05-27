@@ -37,6 +37,9 @@ namespace MUAH
         {
             HidePanels(null);
             pnlBackground.Visibility = Visibility.Collapsed;
+            txtUgensTilbud.Visibility = Visibility.Collapsed;
+            btnGlobalAvis.Visibility = Visibility.Collapsed;
+            btnLokalAvis.Visibility = Visibility.Collapsed;
         }
 
         private void HidePanels(RelativePanel myPanel)
@@ -63,16 +66,40 @@ namespace MUAH
         private void BtnÅbningstider_Click(object sender, RoutedEventArgs e)
         {
             HidePanels(pnlÅbningstider);
+            txtUgensTilbud.Visibility = Visibility.Collapsed;
+            btnGlobalAvis.Visibility = Visibility.Collapsed;
+            btnLokalAvis.Visibility = Visibility.Collapsed;
         }
 
         private void BtnAfdelinger_Click(object sender, RoutedEventArgs e)
         {
             HidePanels(pnlAfdelinger);
+            txtUgensTilbud.Visibility = Visibility.Collapsed;
+            btnGlobalAvis.Visibility = Visibility.Collapsed;
+            btnLokalAvis.Visibility = Visibility.Collapsed;
         }
 
         private void BtnKundeservice_Click(object sender, RoutedEventArgs e)
         {
             HidePanels(pnlKundeservice);
+            txtUgensTilbud.Visibility = Visibility.Collapsed;
+            btnGlobalAvis.Visibility = Visibility.Collapsed;
+            btnLokalAvis.Visibility = Visibility.Collapsed;
+        }
+
+        private void BtnTilbud_Click(object sender, RoutedEventArgs e)
+        {
+            HidePanels(null);
+            pnlBackground.Visibility = Visibility.Collapsed;
+
+            txtUgensTilbud.Visibility = Visibility.Visible;
+            btnGlobalAvis.Visibility = Visibility.Visible;
+            btnLokalAvis.Visibility = Visibility.Visible;
+        }
+
+        private void BtnSmileyRapport_Click(object sender, RoutedEventArgs e)
+        {
+            ((Frame)Window.Current.Content).Navigate(typeof(SmileyRapport));
         }
     }
 }

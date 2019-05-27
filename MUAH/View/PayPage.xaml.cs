@@ -25,6 +25,9 @@ namespace MUAH.View
     /// </summary>
     public sealed partial class PayPage : Page
     {
+        List<CustomerSession> Sessions = new List<CustomerSession>();
+        private double totalPrice;
+
         public PayPage()
         {
             this.InitializeComponent();
@@ -36,6 +39,18 @@ namespace MUAH.View
             imgCheckKortnummer.Visibility = Visibility.Collapsed;
             imgCheckUdløbsdatoMåned.Visibility = Visibility.Collapsed;
             imgCheckUdløbsdatoÅr.Visibility = Visibility.Collapsed;
+
+            int i = 0;
+
+            foreach (var items in MenuPage.session)
+            {
+                Sessions.Add(items);
+                Sessions[i].TotalPrice = items.NoOfProduct * items.ProductPrice;
+                totalPrice += Sessions[i].TotalPrice;
+                i++;
+            }
+
+            txtTotalPris.Text = totalPrice.ToString();
         }
 
         private void TxbKortnummer_KeyDown(object sender, KeyRoutedEventArgs e)
@@ -138,6 +153,7 @@ namespace MUAH.View
             {
                 imgCheckKortnummer.Visibility = Visibility.Collapsed;
                 imgCrossKortnummer.Visibility = Visibility.Visible;
+                btnGennemførBetaling.IsEnabled = false;
             }
         }
 
@@ -153,6 +169,7 @@ namespace MUAH.View
             {
                 imgCheckUdløbsdatoMåned.Visibility = Visibility.Collapsed;
                 imgCrossUdløbsdatoMåned.Visibility = Visibility.Visible;
+                btnGennemførBetaling.IsEnabled = false;
             }
         }
 
@@ -168,6 +185,7 @@ namespace MUAH.View
             {
                 imgCheckUdløbsdatoÅr.Visibility = Visibility.Collapsed;
                 imgCrossUdløbsdatoÅr.Visibility = Visibility.Visible;
+                btnGennemførBetaling.IsEnabled = false;
             }
         }
 
@@ -183,6 +201,7 @@ namespace MUAH.View
             {
                 imgCheckKontrolcifre.Visibility = Visibility.Collapsed;
                 imgCrossKontrolcifre.Visibility = Visibility.Visible;
+                btnGennemførBetaling.IsEnabled = false;
             }
         }
 

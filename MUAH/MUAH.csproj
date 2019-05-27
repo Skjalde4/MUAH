@@ -156,6 +156,9 @@
     <Compile Include="View\PayPage.xaml.cs">
       <DependentUpon>PayPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\SmileyRapport.xaml.cs">
+      <DependentUpon>SmileyRapport.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\SpecificStore.xaml.cs">
       <DependentUpon>SpecificStore.xaml</DependentUpon>
     </Compile>
@@ -187,14 +190,19 @@
     <Content Include="Assets\food frame.jpg" />
     <Content Include="Assets\frokost.jpg" />
     <Content Include="Assets\frokost2.jpg" />
+    <Content Include="Assets\GlobalAvis.JPG" />
     <Content Include="Assets\koldtbord.jpg" />
     <Content Include="Assets\kontrolcifre.JPG" />
+    <Content Include="Assets\kryds.png" />
     <Content Include="Assets\Locked.JPG" />
     <Content Include="Assets\login.png" />
+    <Content Include="Assets\LokalAvis.jpg" />
+    <Content Include="Assets\Lokalavis2.jpg" />
     <Content Include="Assets\mastercard.png" />
     <Content Include="Assets\minus.jpg" />
     <Content Include="Assets\plus.png" />
     <Content Include="Assets\retur.png" />
+    <Content Include="Assets\SmileyRapport.JPG" />
     <Content Include="Assets\smørrebrød.jpg" />
     <Content Include="Assets\tapas.jpg" />
     <Content Include="Assets\tapas1.jpg" />
@@ -232,6 +240,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\PayPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SmileyRapport.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -82,13 +83,55 @@ namespace MUAH.View
             {
                 ((Frame)Window.Current.Content).Navigate(typeof(PayPage));
             }
-
-            
         }
 
         private void BtnAnnullerOpretBruger_Click(object sender, RoutedEventArgs e)
         {
             ((Frame)Window.Current.Content).Navigate(typeof(MenuPage));
+        }
+
+        private void TxtboxNumberLogin_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if ((e.Key == VirtualKey.Number0 ||
+                 e.Key == VirtualKey.Number1 ||
+                 e.Key == VirtualKey.Number2 ||
+                 e.Key == VirtualKey.Number3 ||
+                 e.Key == VirtualKey.Number4 ||
+                 e.Key == VirtualKey.Number5 ||
+                 e.Key == VirtualKey.Number6 ||
+                 e.Key == VirtualKey.Number7 ||
+                 e.Key == VirtualKey.Number8 ||
+                 e.Key == VirtualKey.Number9) &&
+                txtboxNumberLogin.Text.Length <= 7)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TxtboxNumberOpretBruger_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if ((e.Key == VirtualKey.Number0 ||
+                 e.Key == VirtualKey.Number1 ||
+                 e.Key == VirtualKey.Number2 ||
+                 e.Key == VirtualKey.Number3 ||
+                 e.Key == VirtualKey.Number4 ||
+                 e.Key == VirtualKey.Number5 ||
+                 e.Key == VirtualKey.Number6 ||
+                 e.Key == VirtualKey.Number7 ||
+                 e.Key == VirtualKey.Number8 ||
+                 e.Key == VirtualKey.Number9) &&
+                txtboxNumberOpretBruger.Text.Length <= 7)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }

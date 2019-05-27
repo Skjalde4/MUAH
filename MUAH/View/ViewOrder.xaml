@@ -5,17 +5,57 @@
     xmlns:local="using:MUAH.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:model="using:MUAH.Model"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Page.Resources>
+        <DataTemplate x:DataType="model:CustomerSession" x:Key="SessionDataTemplate">
+            <StackPanel>
+                <ListView Height="30"
+                          ScrollViewer.HorizontalScrollMode="Enabled" 
+                          ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                          ScrollViewer.VerticalScrollMode="Enabled"
+                          ScrollViewer.VerticalScrollBarVisibility="Auto"             
+                >
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <ItemsStackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <TextBlock x:Name="txtProductName" Height="30" Width="320" Text="{x:Bind ProductName}"/>
+                    <TextBlock x:Name="txtProductPrice" Height="30"  Width="80" Text="{x:Bind ProductPrice}"/>
+                    <TextBlock x:Name="txtNoOfProducts" Height="30" Width="80" Text="{x:Bind NoOfProduct}" Margin="130,0,0,0"/>
+                    <TextBlock x:Name="txtPriceAdded" Height="30" Width="80" Margin="20,0,0,0" Text="{x:Bind TotalPrice}"/>
+                </ListView>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid Loading="Grid_Loading">
         <Image HorizontalAlignment="Left" Height="87" Margin="90,20,0,0" VerticalAlignment="Top" Width="300" Source="ms-appx:///Assets/coop.png"/>
         <TextBlock Margin="450,141,450,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" FontSize="48" FontWeight="Bold" TextAlignment="Center" Text="Tak for din bestilling"/>
-        <TextBlock HorizontalAlignment="Left" Margin="450,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="84" Width="600" FontWeight="Bold" Foreground="Gray" TextAlignment="Center">
-            <Run Text="Vi glæder os til at betjene dig, og håber du bliver tilfreds med din ordre. "/>
+        <TextBlock HorizontalAlignment="Left" Margin="450,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="179" Width="600" FontWeight="Bold" Foreground="Gray" TextAlignment="Center">
+            <Run Text="Vi glæder os til at betjene dig, og håber du bliver tilfreds med din ordre."/>
             <LineBreak/>
-            <Run Text="Du vil få en bekræftelses SMS på din ordre, så snart din valgte butik har bekræftet din ordre."/>
+            <Run Text="Du vil få en bekræftelses SMS på din ordre, så snart din valgte butik har bekræftet denne."/>
+            <LineBreak/>
+            <Run/>
+            <LineBreak/>
+            <Run/>
+            <LineBreak/>
+            <Run Text="Har du spørgsmål vedrørende din ordre, kontakt os venligst på telefonnummer: 46181300."/>
         </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="305,385,0,0" TextWrapping="Wrap" Text="Din ordre" VerticalAlignment="Top" Height="50" Width="169" FontWeight="Bold" FontSize="36"/>
+
+        <StackPanel Width="1025" Orientation="Vertical" Background="White" Margin="237,460,238,316">
+            <GridView ItemsSource="{x:Bind Sessions}" ItemTemplate="{StaticResource SessionDataTemplate}" Margin="68,0,-68,0" Height="225" Width="1025"/>
+        </StackPanel>
+        <TextBlock HorizontalAlignment="Left" Margin="305,689,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="169" FontWeight="Bold" FontSize="24">
+            <Run Text="Total pris DKK:"/>
+        </TextBlock>
+        <TextBlock x:Name="txtTotalPrice" HorizontalAlignment="Left" Margin="395,689,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="30" Width="75"/>
+
 
     </Grid>
 </Page>

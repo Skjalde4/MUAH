@@ -25,5 +25,8 @@
                 <ImageBrush Stretch="Uniform" ImageSource="ms-appx:///Assets/admin.png"/>
             </Button.Background>
         </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="160,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="345" FontWeight="Bold" FontSize="20">
+            <Run Text="Søg blandt Coops butikker nær dig"/>
+        </TextBlock>
     </Grid>
 </Page>

@@ -14,7 +14,7 @@
         <Button x:Name="btnÅbningstider" Content="Åbningstider" HorizontalAlignment="Left" Height="70" Margin="90,257,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnÅbningstider_Click" FocusVisualPrimaryBrush="#FFBD0B1D" Background="#FFBD0B1D" Foreground="White"/>
         <Button x:Name="btnAfdelinger" Content="Afdelinger" HorizontalAlignment="Left" Height="70" Margin="90,332,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnAfdelinger_Click" Background="#FFBD0B1D" Foreground="White"/>
         <Button x:Name="btnMUAH" Content="Mad ud af huset" HorizontalAlignment="Left" Height="70" Margin="90,407,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnMUAH_Click" Background="#FFBD0B1D" Foreground="White"/>
-        <Button x:Name="btnTilbud" Content="Tilbud" HorizontalAlignment="Left" Height="70" Margin="90,482,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Background="#FFBD0B1D" Foreground="White"/>
+        <Button x:Name="btnTilbud" Content="Tilbud" HorizontalAlignment="Left" Height="70" Margin="90,482,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Background="#FFBD0B1D" Foreground="White" Click="BtnTilbud_Click"/>
         <Button x:Name="btnKundeservice" Content="Kundeservice" HorizontalAlignment="Left" Height="70" Margin="90,557,0,0" VerticalAlignment="Top" Width="300" FontSize="20" FontWeight="Bold" Click="BtnKundeservice_Click" Background="#FFBD0B1D" Foreground="White"/>
         <RelativePanel x:Name="pnlBackground" HorizontalAlignment="Left" Height="370" Margin="510,257,0,0" VerticalAlignment="Top" Width="575" Background="#FFC12626" FocusVisualPrimaryBrush="#FFBD0B1D">
             <RelativePanel x:Name="pnlÅbningstider" HorizontalAlignment="Left" Height="290" VerticalAlignment="Top" Width="495" Background="#FFFAFAFA" Margin="40,38,-40,-38" RenderTransformOrigin="0.04,0.069" d:IsHidden="True">
@@ -53,10 +53,40 @@
                 <Button x:Name="btnVinhandler" Content="Vinhandler" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="115" Margin="249,115,-249,-115"/>
                 <Button x:Name="btnMejeri" Content="Mejeri" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="115" Margin="249,157,-249,-157"/>
             </RelativePanel>
-            <RelativePanel x:Name="pnlKundeservice" HorizontalAlignment="Left" Height="290" VerticalAlignment="Top" Width="495" Background="#FFFAFAFA" Margin="40,38,-40,-38"/>
-            <RelativePanel HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="0" FocusVisualPrimaryBrush="#FFB42020"/>
+            <RelativePanel x:Name="pnlKundeservice" HorizontalAlignment="Left" Height="290" VerticalAlignment="Top" Width="495" Background="#FFFAFAFA" Margin="40,38,-40,-38">
+                <TextBlock HorizontalAlignment="Left" Height="235" TextWrapping="Wrap" VerticalAlignment="Top" Width="290" Margin="16,14,-244,-229">
+                    <Run FontWeight="Bold" FontSize="20" Text="Adresse:"/>
+                    <LineBreak/>
+                    <Run FontSize="20" Text="Skovvej 3, 4622 Havdrup"/>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <Run FontWeight="Bold" FontSize="20" Text="Telefonnummer:"/>
+                    <LineBreak/>
+                    <Run FontSize="20" Text="46181300"/>
+                    <LineBreak/>
+                    <Run FontSize="20"/>
+                    <LineBreak/>
+                    <Run FontWeight="Bold" FontSize="20" Text="CVR nummmer:"/>
+                    <LineBreak/>
+                    <Run FontSize="20" Text="18623978"/>
+                    <LineBreak/>
+                    <Run FontSize="20"/>
+                </TextBlock>
+                <Button x:Name="btnSmileyRapport" Content="Se fødevarestyrelsens smiley rapporter" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="475" Margin="10,248,-420,-248" FontWeight="Bold" Click="BtnSmileyRapport_Click"/>
+            </RelativePanel>
         </RelativePanel>
         <Image HorizontalAlignment="Left" Height="95" Margin="90,20,0,0" VerticalAlignment="Top" Width="300" Source="ms-appx:///Assets/coop.png" FocusVisualPrimaryBrush="#FFBD0B1D"/>
+        <TextBlock x:Name="txtUgensTilbud" TextAlignment="Center" Margin="590,200,590,0" TextWrapping="Wrap" Text="Ugens tilbud" VerticalAlignment="Top" Height="70" FontSize="36" FontWeight="Bold" d:IsHidden="True"/>
+        <Button x:Name="btnLokalAvis" Content="" HorizontalAlignment="Left" Margin="456,265,0,0" VerticalAlignment="Top" Height="468" Width="340" d:IsHidden="True">
+            <Button.Background>
+                <ImageBrush Stretch="UniformToFill" ImageSource="ms-appx:///Assets/Lokalavis2.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnGlobalAvis" Content="" HorizontalAlignment="Left" Margin="825,257,0,0" VerticalAlignment="Top" Height="468" Width="375" d:IsHidden="True">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="ms-appx:///Assets/GlobalAvis.JPG"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Page>

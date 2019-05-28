@@ -5,23 +5,57 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ViewModel="using:MUAH.ViewModel"
+    xmlns:model="using:MUAH.Model"
     x:Class="MUAH.View.AdminEdit"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <DataTemplate x:DataType="model:Admin" x:Key="AdminDataTemplate">
+            <StackPanel>
+                <ListView x:Name="lstAdmin" Height="30"
+                          ScrollViewer.HorizontalScrollMode="Enabled" 
+                          ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                          ScrollViewer.VerticalScrollMode="Enabled"
+                          ScrollViewer.VerticalScrollBarVisibility="Hidden" 
+                                  
+                >
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <ItemsStackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <TextBlock Height="20" Width="250" Text="{x:Bind Username}"/>
+                    <TextBlock Height="20" Width="200" Text="{x:Bind Password}"/>
+                    <TextBlock Height="20" Width="200" Text="{x:Bind CVRNo}"/>
+                </ListView>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
 
     <Page.DataContext>
         <ViewModel:AdminViewModel/>
     </Page.DataContext>
 
-    <Grid>
-        <TextBlock x:Name="txtAdminName" HorizontalAlignment="Left" Margin="1075,73,0,0" TextWrapping="Wrap" Text="{Binding Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="25
-                   " Width="255" FontWeight="Bold" FontSize="20"/>
-        <TextBlock HorizontalAlignment="Left" Margin="857,73,0,0" TextWrapping="Wrap" Text="Du er logget ind som:" VerticalAlignment="Top" Height="25" Width="220" FontWeight="Bold" FontSize="20"/>
+    <Grid Loading="Grid_Loading">
+        <TextBlock x:Name="txtAdminName" HorizontalAlignment="Left" Margin="1075,73,0,0" TextWrapping="Wrap" Text="{Binding Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Height="30" Width="255" FontWeight="Bold" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="857,73,0,0" TextWrapping="Wrap" Text="Du er logget ind som:" VerticalAlignment="Top" Height="30" Width="220" FontWeight="Bold" FontSize="20"/>
         <Image HorizontalAlignment="Left" Height="87" Margin="90,20,0,0" VerticalAlignment="Top" Width="300" Source="ms-appx:///Assets/coop.png"/>
         <Button x:Name="btnLogout" Content="" HorizontalAlignment="Left" Margin="1335,50,0,0" VerticalAlignment="Top" Height="57" Width="55" Click="BtnLogout_Click">
             <Button.Background>
                 <ImageBrush ImageSource="ms-appx:///Assets/Unlocked.JPG" Stretch="Uniform"/>
             </Button.Background>
         </Button>
+        <Button Content="Bekræft kundeordre" HorizontalAlignment="Left" Margin="90,180,0,0" VerticalAlignment="Top" Height="70" Width="300" FontSize="20" FontWeight="Bold" Background="#FFBD0B1C" Foreground="White"/>
+        <Button Content="Rediger i kunder" HorizontalAlignment="Left" Margin="90,255,0,0" VerticalAlignment="Top" Height="70" Width="300" FontSize="20" FontWeight="Bold" Background="#FFBD0B1C" Foreground="White"/>
+        <Button x:Name="btnRedigerMadUdAfHuset" Content="Rediger i mad ud af huset" HorizontalAlignment="Left" Margin="90,330,0,0" VerticalAlignment="Top" Height="70" Width="300" FontSize="20" FontWeight="Bold" Background="#FFBD0B1C" Foreground="White" Click="BtnRedigerMadUdAfHuset_Click"/>
+        <Button x:Name="btnRedigerAdmin" Content="Rediger i administratorer" HorizontalAlignment="Left" Margin="90,405,0,0" VerticalAlignment="Top" Height="70" Width="300" FontSize="20" FontWeight="Bold" Background="#FFBD0B1C" Foreground="White" Click="BtnRedigerAdmin_Click"/>
+        <TextBlock Margin="908,886,45,45" TextWrapping="Wrap" Text="Som administrator har du adgang til at ændre i alt, som kunne ønskes ændret i programmet. Ved hjælp af menubaren ude til venstre, kan du nemt komme ind og ændre det du ønsker. "/>
+        <Button x:Name="btnTilføjAdmin" Content="Tilføj administrator" HorizontalAlignment="Left" Margin="570,520,0,0" VerticalAlignment="Top" Height="60" Width="170" FontWeight="Bold" Foreground="White" Background="#FFBD0B1C"/>
+        <Button x:Name="btnFjernAdmin" Content="Fjern administrator" HorizontalAlignment="Left" Margin="1115,520,0,0" VerticalAlignment="Top" Height="60" Width="170" FontWeight="Bold" Foreground="White" Background="#FFBD0B1C"/>
+
+        <StackPanel x:Name="pnlAdmin" Orientation="Vertical" Background="White" Margin="500,180,215,525">
+            <GridView x:Name="GWAdmin" ItemsSource="{x:Bind _admins}" ItemTemplate="{StaticResource AdminDataTemplate}"/>
+        </StackPanel>
     </Grid>
 </Page>

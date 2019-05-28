@@ -17,7 +17,7 @@ namespace MUAH.ViewModel
         private string _text;
 
         private ObservableCollection<Admin> _admins;
-        public AdminSingleton AdminSingleton { get; set; }
+        public static AdminSingleton AdminSingleton { get; set; }
 
         private ICommand _createAdminCommand;
         public AdminHandler AdminHandler { get; set; }

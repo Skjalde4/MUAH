@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -13,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using MUAH.Model;
+using MUAH.ViewModel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -23,6 +25,8 @@ namespace MUAH.View
     /// </summary>
     public sealed partial class AdminEdit : Page
     {
+        private ObservableCollection<Admin> _admins = new ObservableCollection<Admin>();
+
         public AdminEdit()
         {
             this.InitializeComponent();
@@ -51,6 +55,35 @@ namespace MUAH.View
                 // Brugeren trykkede på CloseButton, ESC eller lignende.
                 // Gør intet.
             }
+        }
+
+        private void Grid_Loading(FrameworkElement sender, object args)
+        {
+            btnFjernAdmin.Visibility = Visibility.Collapsed;
+            btnTilføjAdmin.Visibility = Visibility.Collapsed;
+            GWAdmin.Visibility = Visibility.Collapsed;
+            pnlAdmin.Visibility = Visibility.Collapsed;
+        }
+
+        private void BtnRedigerAdmin_Click(object sender, RoutedEventArgs e)
+        {
+            btnFjernAdmin.Visibility = Visibility.Visible;
+            btnTilføjAdmin.Visibility = Visibility.Visible;
+            GWAdmin.Visibility = Visibility.Visible;
+            pnlAdmin.Visibility = Visibility.Visible;
+
+            foreach (var admin in AdminViewModel.AdminSingleton.Admins)
+            {
+                _admins.Add(admin);
+            }
+        }
+
+        private void BtnRedigerMadUdAfHuset_Click(object sender, RoutedEventArgs e)
+        {
+            btnFjernAdmin.Visibility = Visibility.Collapsed;
+            btnTilføjAdmin.Visibility = Visibility.Collapsed;
+            GWAdmin.Visibility = Visibility.Collapsed;
+            pnlAdmin.Visibility = Visibility.Collapsed;
         }
     }
 }

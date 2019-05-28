@@ -51,10 +51,10 @@
         <StackPanel Width="1025" Orientation="Vertical" Background="White" Margin="237,460,238,316">
             <GridView ItemsSource="{x:Bind Sessions}" ItemTemplate="{StaticResource SessionDataTemplate}" Margin="68,0,-68,0" Height="225" Width="1025"/>
         </StackPanel>
-        <TextBlock HorizontalAlignment="Left" Margin="305,689,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="169" FontWeight="Bold" FontSize="24">
+        <TextBlock HorizontalAlignment="Left" Margin="305,681,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="169" FontWeight="Bold" FontSize="24">
             <Run Text="Total pris DKK:"/>
         </TextBlock>
-        <TextBlock x:Name="txtTotalPrice" HorizontalAlignment="Left" Margin="395,689,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="30" Width="75"/>
+        <TextBlock x:Name="txtTotalPrice" HorizontalAlignment="Left" Margin="473,681,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="30" Width="75" FontSize="20" FontWeight="Bold"/>
 
 
     </Grid>
